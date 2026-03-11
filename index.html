@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI API Pricing Calculator - Crazyrouter</title>
+<meta name="description" content="Calculate and compare AI API costs across GPT-5, Claude, Gemini, DeepSeek and 627+ models. Find the cheapest option for your use case.">
+<meta name="keywords" content="ai api pricing calculator, openai cost calculator, claude api cost, gemini pricing, ai token calculator, crazyrouter">
+<link rel="canonical" href="https://crazyrouter.com/tools/pricing-calculator">
+
+<!-- Open Graph -->
+<meta property="og:title" content="AI API Pricing Calculator - Crazyrouter">
+<meta property="og:description" content="Calculate and compare AI API costs across 627+ models. Find the cheapest option instantly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crazyrouter.com/tools/pricing-calculator">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI API Pricing Calculator",
+  "url": "https://crazyrouter.com/tools/pricing-calculator",
+  "description": "Calculate and compare AI API costs across GPT-5, Claude, Gemini, DeepSeek and 627+ models.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "creator": { "@type": "Organization", "name": "Crazyrouter", "url": "https://crazyrouter.com" }
+}
+</script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a0f;
+  --surface: #12121a;
+  --surface2: #1a1a25;
+  --border: #2a2a3a;
+  --text: #e4e4ef;
+  --text-muted: #8888a0;
+  --primary: #7c5cfc;
+  --primary-hover: #6a4ae0;
+  --green: #22c55e;
+  --red: #ef4444;
+  --yellow: #eab308;
+  --gradient: linear-gradient(135deg, #7c5cfc 0%, #c084fc 50%, #818cf8 100%);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 56px;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 32px;
+}
+
+.navbar-logo svg {
+  width: 28px;
+  height: 28px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: var(--text);
+}
+
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-nav {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-nav-outline {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: transparent;
+}
+
+.btn-nav-primary {
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.btn-nav-primary:hover {
+  background: var(--primary-hover);
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 60px 24px 40px;
+  background: radial-gradient(ellipse at top, rgba(124, 92, 252, 0.08) 0%, transparent 60%);
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== CALCULATOR ===== */
+.calculator {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+
+.calc-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.calc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .calc-row { grid-template-columns: 1fr; }
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  border-color: var(--primary);
+}
+
+.form-group select option {
+  background: var(--surface2);
+}
+
+.calc-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.calc-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* ===== RESULTS ===== */
+.results {
+  margin-top: 32px;
+  display: none;
+}
+
+.results.show { display: block; }
+
+.results h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result-table th,
+.result-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.result-table th {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-table tr:hover {
+  background: rgba(124, 92, 252, 0.04);
+}
+
+.badge-cheapest {
+  display: inline-block;
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--green);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.badge-via {
+  display: inline-block;
+  background: rgba(124, 92, 252, 0.15);
+  color: var(--primary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.savings-box {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.savings-box .icon { font-size: 24px; }
+
+.savings-box .text {
+  font-size: 15px;
+  color: var(--green);
+  font-weight: 500;
+}
+
+.savings-box .text span {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  text-align: center;
+  padding: 48px 24px;
+  margin-top: 20px;
+}
+
+.cta-section p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+
+.btn-cta:hover { background: var(--primary-hover); }
+
+/* ===== FAQ ===== */
+.faq-section {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+
+.faq-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.faq-q {
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-q::after { content: '+'; color: var(--text-muted); font-size: 18px; }
+.faq-item.open .faq-q::after { content: '−'; }
+
+.faq-a {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+}
+
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding-top: 12px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 32px 24px;
+  color: var(--text-muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+}
+
+.footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="https://crazyrouter.com" class="navbar-logo">
+    <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#7c5cfc" stroke-width="2"/><path d="M10 16c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#7c5cfc" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="16" r="2" fill="#7c5cfc"/></svg>
+    Crazyrouter
+  </a>
+  <ul class="navbar-links">
+    <li><a href="https://crazyrouter.com">Home</a></li>
+    <li><a href="https://crazyrouter.com/console">Console</a></li>
+    <li><a href="https://crazyrouter.com/models">Models</a></li>
+    <li><a href="https://docs.crazyrouter.com">API Docs</a></li>
+    <li><a href="https://crazyrouter.com/blog">Blog</a></li>
+    <li><a href="https://crazyrouter.com/tools/pricing-calculator" class="active">Tools</a></li>
+  </ul>
+  <div class="navbar-right">
+    <a href="https://crazyrouter.com/login" class="btn-nav btn-nav-outline">Log in</a>
+    <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=calculator&utm_campaign=pricing_calc" class="btn-nav btn-nav-primary">Sign up</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>AI API Pricing Calculator</h1>
+  <p>Compare costs across GPT-5, Claude, Gemini, DeepSeek and 627+ models. Find the cheapest option for your workload.</p>
+</section>
+
+<!-- Calculator -->
+<section class="calculator">
+  <div class="calc-card">
+    <div class="calc-row">
+      <div class="form-group">
+        <label>Use Case</label>
+        <select id="useCase">
+          <option value="chatbot">Chatbot / Customer Support</option>
+          <option value="coding">Code Generation / Copilot</option>
+          <option value="analysis">Data Analysis / Research</option>
+          <option value="content">Content Writing</option>
+          <option value="translation">Translation</option>
+          <option value="embedding">Embeddings / RAG</option>
+          <option value="image">Image Generation</option>
+          <option value="custom">Custom (set tokens manually)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Monthly Requests</label>
+        <input type="number" id="requests" value="10000" min="1" step="1000">
+      </div>
+    </div>
+    <div class="calc-row">
+      <div class="form-group">
+        <label>Avg Input Tokens per Request</label>
+        <input type="number" id="inputTokens" value="500" min="1">
+      </div>
+      <div class="form-group">
+        <label>Avg Output Tokens per Request</label>
+        <input type="number" id="outputTokens" value="300" min="1">
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calculate()">Calculate Cost →</button>
+
+    <!-- Results -->
+    <div class="results" id="results">
+      <h2>Cost Comparison</h2>
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Provider</th>
+            <th>Direct Cost</th>
+            <th>via Crazyrouter</th>
+            <th>You Save</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+      <div class="savings-box" id="savingsBox">
+        <div class="icon">💰</div>
+        <div class="text" id="savingsText"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <p>Start saving on AI API costs today. One key, 627+ models, lower prices.</p>
+    <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=calculator&utm_campaign=pricing_calc" class="btn-cta">Get Free API Key →</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">How does Crazyrouter offer lower prices than direct API providers?</div>
+    <div class="faq-a">Crazyrouter aggregates demand across thousands of developers and negotiates volume pricing with providers. We pass the savings to you — no markup on most models.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">Is the pricing calculator accurate?</div>
+    <div class="faq-a">The calculator uses current list prices from each provider and Crazyrouter's published rates. Actual costs may vary based on caching, batching, and prompt efficiency. Check crazyrouter.com/pricing for live rates.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">What does "tokens" mean?</div>
+    <div class="faq-a">Tokens are the basic units AI models use to process text. Roughly 1 token ≈ 4 characters in English, or about ¾ of a word. A 1,000-word article is approximately 1,300 tokens.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">Can I switch between models without changing my code?</div>
+    <div class="faq-a">Yes! Crazyrouter uses an OpenAI-compatible API. Just change the model name in your request — no SDK changes, no new API keys. Works with Python, Node.js, curl, LangChain, and more.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">Do you support image and video generation models?</div>
+    <div class="faq-a">Yes. Crazyrouter supports DALL-E 3, Midjourney, Flux, Stable Diffusion, Sora 2, Kling, Runway, and more — all through a unified API.</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 <a href="https://crazyrouter.com">Crazyrouter</a>. One API for 627+ AI models.</p>
+  <p style="margin-top:8px">
+    <a href="https://crazyrouter.com/pricing">Pricing</a> · 
+    <a href="https://docs.crazyrouter.com">API Docs</a> · 
+    <a href="https://t.me/crzrouter">Telegram</a> · 
+    <a href="https://twitter.com/metaviiii">Twitter</a>
+  </p>
+</footer>
+
+<script>
+// Model pricing data (per 1M tokens)
+const models = [
+  { name: 'GPT-5', provider: 'OpenAI', input: 1.25, output: 10.00, crInput: 0.94, crOutput: 7.50, tier: 'flagship' },
+  { name: 'GPT-5.2', provider: 'OpenAI', input: 1.75, output: 14.00, crInput: 1.31, crOutput: 10.50, tier: 'flagship' },
+  { name: 'GPT-5 Mini', provider: 'OpenAI', input: 0.25, output: 2.00, crInput: 0.19, crOutput: 1.50, tier: 'mid' },
+  { name: 'GPT-5 Nano', provider: 'OpenAI', input: 0.05, output: 0.40, crInput: 0.04, crOutput: 0.30, tier: 'budget' },
+  { name: 'o3', provider: 'OpenAI', input: 2.00, output: 8.00, crInput: 1.50, crOutput: 6.00, tier: 'reasoning' },
+  { name: 'o4-mini', provider: 'OpenAI', input: 1.10, output: 4.40, crInput: 0.83, crOutput: 3.30, tier: 'reasoning' },
+  { name: 'Claude Opus 4.6', provider: 'Anthropic', input: 5.00, output: 25.00, crInput: 3.75, crOutput: 18.75, tier: 'flagship' },
+  { name: 'Claude Sonnet 4.6', provider: 'Anthropic', input: 3.00, output: 15.00, crInput: 2.25, crOutput: 11.25, tier: 'flagship' },
+  { name: 'Claude Haiku 4.5', provider: 'Anthropic', input: 1.00, output: 5.00, crInput: 0.75, crOutput: 3.75, tier: 'mid' },
+  { name: 'Gemini 2.5 Pro', provider: 'Google', input: 1.25, output: 10.00, crInput: 0.94, crOutput: 7.50, tier: 'flagship' },
+  { name: 'Gemini 2.5 Flash', provider: 'Google', input: 0.30, output: 2.50, crInput: 0.23, crOutput: 1.88, tier: 'mid' },
+  { name: 'Gemini 2.5 Flash-Lite', provider: 'Google', input: 0.10, output: 0.40, crInput: 0.08, crOutput: 0.30, tier: 'budget' },
+  { name: 'DeepSeek V3.2', provider: 'DeepSeek', input: 0.28, output: 0.42, crInput: 0.14, crOutput: 0.21, tier: 'budget' },
+  { name: 'Grok 4', provider: 'xAI', input: 3.00, output: 15.00, crInput: 2.25, crOutput: 11.25, tier: 'flagship' },
+  { name: 'Kimi K2', provider: 'Moonshot', input: 0.60, output: 2.40, crInput: 0.30, crOutput: 1.20, tier: 'mid' },
+  { name: 'MiniMax M2.1', provider: 'MiniMax', input: 0.50, output: 2.00, crInput: 0.25, crOutput: 1.00, tier: 'mid' },
+  { name: 'Qwen3 235B', provider: 'Alibaba', input: 0.80, output: 3.20, crInput: 0.40, crOutput: 1.60, tier: 'mid' },
+];
+
+// Use case presets
+const presets = {
+  chatbot:     { input: 300, output: 200, tiers: ['mid', 'budget'] },
+  coding:      { input: 800, output: 600, tiers: ['flagship', 'reasoning'] },
+  analysis:    { input: 2000, output: 1000, tiers: ['flagship', 'reasoning'] },
+  content:     { input: 200, output: 1500, tiers: ['flagship', 'mid'] },
+  translation: { input: 500, output: 500, tiers: ['mid', 'budget'] },
+  embedding:   { input: 500, output: 0, tiers: ['budget'] },
+  image:       { input: 100, output: 100, tiers: ['flagship'] },
+  custom:      { input: null, output: null, tiers: ['flagship', 'mid', 'budget', 'reasoning'] },
+};
+
+document.getElementById('useCase').addEventListener('change', function() {
+  const p = presets[this.value];
+  if (p.input !== null) {
+    document.getElementById('inputTokens').value = p.input;
+    document.getElementById('outputTokens').value = p.output;
+  }
+});
+
+function calculate() {
+  const requests = parseInt(document.getElementById('requests').value) || 10000;
+  const inputTk = parseInt(document.getElementById('inputTokens').value) || 500;
+  const outputTk = parseInt(document.getElementById('outputTokens').value) || 300;
+  const useCase = document.getElementById('useCase').value;
+  const preset = presets[useCase];
+
+  const totalInputM = (requests * inputTk) / 1_000_000;
+  const totalOutputM = (requests * outputTk) / 1_000_000;
+
+  let results = models
+    .filter(m => preset.tiers.includes(m.tier))
+    .map(m => {
+      const directCost = totalInputM * m.input + totalOutputM * m.output;
+      const crCost = totalInputM * m.crInput + totalOutputM * m.crOutput;
+      const savings = directCost - crCost;
+      const savingsPct = directCost > 0 ? (savings / directCost * 100) : 0;
+      return { ...m, directCost, crCost, savings, savingsPct };
+    })
+    .sort((a, b) => a.crCost - b.crCost);
+
+  const tbody = document.getElementById('resultsBody');
+  tbody.innerHTML = '';
+
+  results.forEach((r, i) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${r.name}${i === 0 ? '<span class="badge-cheapest">CHEAPEST</span>' : ''}</td>
+      <td>${r.provider}</td>
+      <td>$${r.directCost.toFixed(2)}</td>
+      <td><span class="badge-via">Crazyrouter</span> $${r.crCost.toFixed(2)}</td>
+      <td style="color: var(--green)">-$${r.savings.toFixed(2)} (${r.savingsPct.toFixed(0)}%)</td>
+    `;
+    tbody.appendChild(row);
+  });
+
+  // Find max savings
+  const maxSave = results.reduce((max, r) => r.savings > max.savings ? r : max, results[0]);
+  document.getElementById('savingsText').innerHTML = 
+    `With <span>${maxSave.name}</span> via Crazyrouter, you save <span>$${maxSave.savings.toFixed(2)}/month</span> (${maxSave.savingsPct.toFixed(0)}% off direct pricing)`;
+
+  document.getElementById('results').classList.add('show');
+}
+
+// Auto-calculate on load
+window.addEventListener('load', calculate);
+</script>
+</body>
+</html>

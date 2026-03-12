@@ -4,208 +4,263 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Model Release Timeline - Crazyrouter</title>
-<meta name="description" content="Interactive timeline of AI model releases from OpenAI, Anthropic, Google, Meta, DeepSeek and more. Track every major LLM launch from GPT-3 to today.">
-<meta name="keywords" content="ai model timeline, llm release dates, gpt release history, claude release date, gemini launch, ai model history, crazyrouter">
+<meta name="description" content="Interactive horizontal timeline of AI model releases from OpenAI, Anthropic, Google, Meta, DeepSeek and more.">
 <link rel="canonical" href="https://crazyrouter.com/tools/model-timeline">
-<meta property="og:title" content="AI Model Release Timeline - Crazyrouter">
-<meta property="og:description" content="Interactive timeline of every major AI model release. Track GPT, Claude, Gemini, Llama, DeepSeek and more.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://crazyrouter.com/tools/model-timeline">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "AI Model Release Timeline",
-  "url": "https://crazyrouter.com/tools/model-timeline",
-  "description": "Interactive timeline of AI model releases from OpenAI, Anthropic, Google, Meta, DeepSeek and more.",
-  "applicationCategory": "DeveloperApplication",
-  "operatingSystem": "Web",
-  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-  "publisher": {"@type": "Organization", "name": "Crazyrouter", "url": "https://crazyrouter.com"}
-}
-</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;color:#111;line-height:1.5}
-.header{max-width:900px;margin:40px auto 0;padding:0 20px;text-align:center}
-.header h1{font-size:28px;margin-bottom:6px}
-.header p{color:#6b7280;font-size:15px;margin-bottom:24px}
-.controls{max-width:900px;margin:0 auto 20px;padding:0 20px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-.controls button{padding:6px 14px;border:1px solid #e5e7eb;border-radius:20px;background:#fff;cursor:pointer;font-size:13px;transition:all .2s}
-.controls button:hover{border-color:#2563eb;color:#2563eb}
-.controls button.active{background:#2563eb;color:#fff;border-color:#2563eb}
-.search-box{padding:6px 14px;border:1px solid #e5e7eb;border-radius:20px;font-size:13px;outline:none;width:200px}
-.search-box:focus{border-color:#2563eb}
-.timeline{max-width:900px;margin:0 auto;padding:0 20px 60px;position:relative}
-.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:#e5e7eb;transform:translateX(-1px)}
-.year-label{text-align:center;position:relative;z-index:1;margin:30px 0 16px}
-.year-label span{background:#111;color:#fff;padding:4px 16px;border-radius:20px;font-size:14px;font-weight:600}
-.event{position:relative;width:45%;margin-bottom:16px;padding:14px 18px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;transition:all .2s}
-.event:hover{border-color:#2563eb;box-shadow:0 2px 12px rgba(37,99,235,.1)}
-.event.left{margin-right:auto;margin-left:5%}
-.event.right{margin-left:auto;margin-right:5%}
-.event::after{content:'';position:absolute;top:20px;width:10px;height:10px;border-radius:50%;background:#2563eb}
-.event.left::after{right:-26px}
-.event.right::after{left:-26px}
-.event .date{font-size:12px;color:#6b7280;margin-bottom:2px}
-.event .name{font-size:15px;font-weight:600;margin-bottom:2px}
-.event .provider{font-size:12px;color:#fff;padding:1px 8px;border-radius:10px;display:inline-block;margin-bottom:4px}
-.event .desc{font-size:13px;color:#6b7280}
-.p-openai{background:#10a37f}
-.p-anthropic{background:#d97706}
-.p-google{background:#4285f4}
-.p-meta{background:#1877f2}
-.p-deepseek{background:#6366f1}
-.p-mistral{background:#f43f5e}
-.p-xai{background:#111}
-.p-other{background:#6b7280}
-.hidden{display:none!important}
-.cta{max-width:900px;margin:0 auto 40px;padding:20px;text-align:center;background:#f0f7ff;border-radius:12px}
-.cta a{color:#2563eb;text-decoration:none;font-weight:600}
-.footer{text-align:center;padding:20px;color:#9ca3af;font-size:13px}
-.footer a{color:#6b7280;text-decoration:none}
-.stats{display:flex;gap:20px;justify-content:center;margin-bottom:24px;flex-wrap:wrap}
-.stat{text-align:center}
-.stat .num{font-size:24px;font-weight:700;color:#2563eb}
-.stat .label{font-size:12px;color:#6b7280}
-@media(max-width:640px){
-  .timeline::before{left:20px}
-  .event{width:calc(100% - 40px);margin-left:40px!important;margin-right:0!important}
-  .event.left::after,.event.right::after{left:-21px;right:auto}
-  .event.right{margin-left:40px!important}
-}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#ffffff;color:#1e293b;overflow-x:hidden}
+.header{text-align:center;padding:36px 20px 12px}
+.header h1{font-size:28px;font-weight:700;color:#0f172a;margin-bottom:6px}
+.header p{color:#64748b;font-size:14px}
+.controls{display:flex;justify-content:center;gap:6px;padding:10px 20px 10px;flex-wrap:wrap}
+.controls button{padding:6px 14px;border:1.5px solid #e2e8f0;border-radius:20px;background:#fff;color:#64748b;cursor:pointer;font-size:12px;font-weight:500;transition:all .15s}
+.controls button:hover{border-color:#3b82f6;color:#3b82f6}
+.controls button.active{background:#3b82f6;color:#fff;border-color:#3b82f6;box-shadow:0 2px 8px rgba(59,130,246,.2)}
+.zoom{display:flex;justify-content:center;align-items:center;gap:8px;padding:4px 20px 14px}
+.zoom button{width:30px;height:30px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;color:#64748b;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.zoom button:hover{border-color:#3b82f6;color:#3b82f6}
+.zoom span{font-size:12px;color:#94a3b8;min-width:40px;text-align:center}
+.chart-wrap{overflow-x:auto;padding:0 20px 20px;-webkit-overflow-scrolling:touch}
+.chart{position:relative;min-width:100%}
+.grid-line{position:absolute;top:0;bottom:0;width:1px;background:#f1f5f9;z-index:0}
+.grid-line.year{background:#e2e8f0}
+.now-line{position:absolute;top:0;bottom:0;width:2px;background:#ef4444;z-index:4;opacity:.5}
+.now-dot{position:absolute;top:-4px;left:-3px;width:8px;height:8px;border-radius:50%;background:#ef4444}
+.now-label{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:9px;color:#ef4444;font-weight:700;white-space:nowrap;background:#fff;padding:0 4px;border-radius:3px}
+.row{display:flex;align-items:center;border-bottom:1px solid #f1f5f9;min-height:60px;position:relative}
+.row:nth-child(even){background:#fafbfc}
+.row-label{width:110px;min-width:110px;padding:0 14px;position:sticky;left:0;z-index:5;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#334155}
+.row:nth-child(even) .row-label{background:#fafbfc}
+.row:nth-child(odd) .row-label{background:#fff}
+.prov-icon{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0}
+.row-track{position:relative;flex:1;height:60px}
+.series-line{position:absolute;top:50%;height:2px;transform:translateY(-50%);border-radius:1px;opacity:.15;z-index:1}
+/* Model markers */
+.model{position:absolute;top:50%;transform:translate(-50%,-50%);cursor:pointer;z-index:3;transition:transform .12s}
+.model:hover{transform:translate(-50%,-50%) scale(1.15);z-index:10}
+.marker{width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;transition:all .12s;position:relative;letter-spacing:-.3px}
+.model:hover .marker{box-shadow:0 4px 16px rgba(0,0,0,.15)}
+/* Type shapes */
+.shape-flagship{border-radius:8px}
+.shape-reasoning{border-radius:50%}
+.shape-fast{border-radius:4px;transform:rotate(45deg)}
+.shape-fast .m-txt{transform:rotate(-45deg)}
+.shape-open{clip-path:polygon(50% 0%,100% 100%,0% 100%);width:32px;height:28px;padding-top:8px}
+.mlabel{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:600;white-space:nowrap;color:#475569;opacity:0;transition:opacity .12s;pointer-events:none;background:#fff;padding:1px 5px;border-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid #f1f5f9}
+.model:hover .mlabel{opacity:1}
+/* Tooltip */
+.tooltip{position:fixed;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px 18px;font-size:13px;z-index:100;pointer-events:none;opacity:0;transition:opacity .12s;max-width:300px;box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.tooltip.show{opacity:1}
+.tooltip .t-name{font-weight:700;font-size:15px;color:#0f172a;margin-bottom:2px}
+.tooltip .t-prov{font-size:11px;color:#94a3b8;margin-bottom:4px}
+.tooltip .t-date{color:#3b82f6;font-size:12px;font-weight:600;margin-bottom:6px}
+.tooltip .t-badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;color:#fff;margin-bottom:6px}
+.tooltip .t-desc{color:#64748b;font-size:12px;line-height:1.5}
+.time-axis{position:relative;margin-left:110px;border-top:2px solid #e2e8f0;padding-top:8px;height:34px}
+.time-tick{position:absolute;font-size:11px;color:#94a3b8;transform:translateX(-50%);font-weight:500}
+.time-tick.yr{color:#0f172a;font-weight:700;font-size:13px}
+.time-tick::before{content:'';position:absolute;top:-12px;left:50%;width:1px;height:6px;background:#cbd5e1}
+.time-tick.yr::before{height:10px;background:#94a3b8}
+.legend{display:flex;justify-content:center;gap:18px;padding:16px 20px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#64748b}
+.l-shape{width:14px;height:14px;display:flex;align-items:center;justify-content:center}
+.l-sq{border-radius:4px}
+.l-ci{border-radius:50%}
+.l-di{border-radius:2px;transform:rotate(45deg)}
+.l-tr{clip-path:polygon(50% 0%,100% 100%,0% 100%)}
+.cta{max-width:680px;margin:12px auto;padding:16px 24px;text-align:center;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;font-size:13px;color:#64748b}
+.cta a{color:#3b82f6;text-decoration:none;font-weight:600}
+.footer{text-align:center;padding:16px;color:#94a3b8;font-size:12px}
+.footer a{color:#94a3b8;text-decoration:none}
 </style>
 </head>
 <body>
 <div class="header">
-<h1>🕐 AI Model Release Timeline</h1>
-<p>Track every major AI model launch — from GPT-3 to the latest releases</p>
-<div class="stats" id="stats"></div>
+<h1>📊 AI Model Release Timeline</h1>
+<p>Every major AI model launch on a single timeline</p>
 </div>
-<div class="controls">
-<input type="text" class="search-box" id="search" placeholder="Search models...">
-<button class="active" data-filter="all">All</button>
-<button data-filter="openai">OpenAI</button>
-<button data-filter="anthropic">Anthropic</button>
-<button data-filter="google">Google</button>
-<button data-filter="meta">Meta</button>
-<button data-filter="deepseek">DeepSeek</button>
-<button data-filter="mistral">Mistral</button>
-<button data-filter="xai">xAI</button>
+<div class="controls" id="controls">
+<button class="active" data-filter="all">All Models</button>
+<button data-filter="flagship">■ Flagship</button>
+<button data-filter="reasoning">● Reasoning</button>
+<button data-filter="fast">◆ Fast</button>
+<button data-filter="open">▲ Open Source</button>
 </div>
-<div class="timeline" id="timeline"></div>
-<div class="cta">
-Access all these models through one API — <a href="https://crazyrouter.com?utm_source=tools&utm_medium=timeline&utm_campaign=model_timeline">Try Crazyrouter free →</a>
+<div class="zoom">
+<button id="zoomOut">−</button>
+<span id="zoomLabel">100%</span>
+<button id="zoomIn">+</button>
+<button id="zoomFit" style="width:auto;padding:0 10px;font-size:11px;font-weight:500">Fit</button>
 </div>
+<div class="chart-wrap" id="container">
+<div class="chart" id="chart"></div>
+</div>
+<div class="legend">
+<div class="legend-item"><div class="l-shape l-sq" style="width:14px;height:14px;background:#3b82f6"></div>Flagship</div>
+<div class="legend-item"><div class="l-shape l-ci" style="width:14px;height:14px;background:#7c3aed"></div>Reasoning</div>
+<div class="legend-item"><div class="l-shape l-di" style="width:12px;height:12px;background:#059669"></div>Fast</div>
+<div class="legend-item"><div class="l-shape l-tr" style="width:14px;height:14px;background:#d97706"></div>Open Source</div>
+</div>
+<div class="cta">Access all these models through one API — <a href="https://crazyrouter.com?utm_source=tools&utm_medium=timeline&utm_campaign=model_timeline">Try Crazyrouter free →</a></div>
 <div class="footer"><a href="../">← Back to Tools</a> · <a href="https://crazyrouter.com">Crazyrouter</a></div>
+<div class="tooltip" id="tooltip"></div>
 <script>
 const models=[
-{date:"2020-06-11",name:"GPT-3",provider:"openai",desc:"175B params. The model that started the LLM era."},
-{date:"2022-11-30",name:"ChatGPT (GPT-3.5)",provider:"openai",desc:"Fine-tuned GPT-3.5. Launched ChatGPT to the public."},
-{date:"2023-02-06",name:"Bard (PaLM 2)",provider:"google",desc:"Google's first public chatbot response to ChatGPT."},
-{date:"2023-02-24",name:"LLaMA",provider:"meta",desc:"Meta's first open-source LLM. 7B-65B params."},
-{date:"2023-03-14",name:"GPT-4",provider:"openai",desc:"Multimodal model. Major leap in reasoning."},
-{date:"2023-03-14",name:"Claude 1",provider:"anthropic",desc:"Anthropic's first public model. Constitutional AI."},
-{date:"2023-07-11",name:"Claude 2",provider:"anthropic",desc:"100K context window. Improved coding & math."},
-{date:"2023-07-18",name:"Llama 2",provider:"meta",desc:"Open-source. 7B-70B. Commercial license."},
-{date:"2023-09-27",name:"Mistral 7B",provider:"mistral",desc:"First Mistral model. Outperformed Llama 2 13B."},
-{date:"2023-12-06",name:"Gemini 1.0",provider:"google",desc:"Ultra, Pro, Nano. Google's multimodal flagship."},
-{date:"2023-12-11",name:"Mixtral 8x7B",provider:"mistral",desc:"Mixture of Experts. 46.7B total, 12.9B active."},
-{date:"2024-02-15",name:"Gemini 1.5 Pro",provider:"google",desc:"1M token context window. Breakthrough in long context."},
-{date:"2024-03-04",name:"Claude 3 (Opus/Sonnet/Haiku)",provider:"anthropic",desc:"Three tiers. Opus topped benchmarks at launch."},
-{date:"2024-04-18",name:"Llama 3",provider:"meta",desc:"8B and 70B. State-of-art open-source."},
-{date:"2024-05-13",name:"GPT-4o",provider:"openai",desc:"Omni model. Native multimodal, 2x faster, 50% cheaper."},
-{date:"2024-06-20",name:"Claude 3.5 Sonnet",provider:"anthropic",desc:"Outperformed Claude 3 Opus at lower cost."},
-{date:"2024-07-23",name:"Llama 3.1 405B",provider:"meta",desc:"Largest open-source model. Competitive with GPT-4o."},
-{date:"2024-09-12",name:"o1-preview",provider:"openai",desc:"First reasoning model. Chain-of-thought at inference."},
-{date:"2024-10-22",name:"Claude 3.5 Sonnet (new)",provider:"anthropic",desc:"Updated Sonnet. Computer use capability."},
-{date:"2024-11-20",name:"Grok-2",provider:"xai",desc:"xAI's flagship. Real-time X/Twitter data access."},
-{date:"2024-12-05",name:"Gemini 2.0 Flash",provider:"google",desc:"Next-gen multimodal. Agentic capabilities."},
-{date:"2024-12-09",name:"Llama 3.3 70B",provider:"meta",desc:"Matched 405B performance at 70B size."},
-{date:"2025-01-20",name:"DeepSeek-R1",provider:"deepseek",desc:"Open-source reasoning model. MIT license. Shook the industry."},
-{date:"2025-01-30",name:"o3-mini",provider:"openai",desc:"Smaller reasoning model. Cost-effective."},
-{date:"2025-02-19",name:"Grok-3",provider:"xai",desc:"Trained on 200K H100s. Top benchmark scores."},
-{date:"2025-02-24",name:"Claude 3.5 Haiku",provider:"anthropic",desc:"Fast and cheap. Great for high-volume tasks."},
-{date:"2025-02-25",name:"GPT-4.5",provider:"openai",desc:"Largest model yet. Improved EQ and creativity."},
-{date:"2025-03-04",name:"Gemini 2.5 Pro",provider:"google",desc:"Thinking model. Top of Chatbot Arena."},
-{date:"2025-03-12",name:"Claude 3.7 Sonnet",provider:"anthropic",desc:"Hybrid reasoning. Extended thinking mode."},
-{date:"2025-04-14",name:"o3 / o4-mini",provider:"openai",desc:"Full o3 reasoning model + efficient o4-mini."},
-{date:"2025-04-17",name:"Claude Opus 4 / Sonnet 4",provider:"anthropic",desc:"Opus 4: best coding model. Sonnet 4: disciplined reasoning."},
-{date:"2025-04-29",name:"Llama 4 (Scout/Maverick)",provider:"meta",desc:"Scout: 17B active/109B MoE. Maverick: 17B/400B MoE."},
-{date:"2025-05-06",name:"DeepSeek-R2",provider:"deepseek",desc:"Next-gen reasoning. Improved math and code."},
-{date:"2025-05-20",name:"Gemini 2.5 Flash",provider:"google",desc:"Fast thinking model. Great cost-performance ratio."},
-{date:"2025-06-10",name:"GPT-5",provider:"openai",desc:"Unified model. PhD-level reasoning across domains."},
-{date:"2025-07-16",name:"DeepSeek-V3.5",provider:"deepseek",desc:"Unified model merging V3 and R2 capabilities."},
-{date:"2025-09-09",name:"o3-pro",provider:"openai",desc:"Enhanced o3 with more compute for hard problems."},
-{date:"2025-12-19",name:"Gemini 2.5 Pro (0219)",provider:"google",desc:"Updated Gemini 2.5 Pro with improved capabilities."},
-{date:"2026-01-23",name:"DeepSeek-R1-0120",provider:"deepseek",desc:"Updated R1 with improved reasoning."},
-{date:"2026-02-24",name:"Claude 3.7 Opus",provider:"anthropic",desc:"Most capable Claude model to date."},
-{date:"2026-03-05",name:"GPT-5.5",provider:"openai",desc:"Next evolution. Enhanced multimodal reasoning."},
+{date:"2020-06-11",name:"GPT-3",provider:"openai",series:"GPT",type:"flagship",icon:"3",desc:"175B params. The model that started the LLM era."},
+{date:"2022-11-30",name:"ChatGPT",provider:"openai",series:"GPT",type:"flagship",icon:"3.5",desc:"Fine-tuned GPT-3.5. Launched ChatGPT to the public."},
+{date:"2023-03-14",name:"GPT-4",provider:"openai",series:"GPT",type:"flagship",icon:"4",desc:"Multimodal model. Major leap in reasoning."},
+{date:"2024-05-13",name:"GPT-4o",provider:"openai",series:"GPT",type:"flagship",icon:"4o",desc:"Omni model. Native multimodal, 2x faster, 50% cheaper."},
+{date:"2024-07-18",name:"GPT-4o mini",provider:"openai",series:"GPT",type:"fast",icon:"4m",desc:"Small, fast, cheap. Great for high-volume tasks."},
+{date:"2024-09-12",name:"o1",provider:"openai",series:"o",type:"reasoning",icon:"o1",desc:"First reasoning model. Chain-of-thought at inference."},
+{date:"2025-01-30",name:"o3-mini",provider:"openai",series:"o",type:"reasoning",icon:"o3m",desc:"Smaller reasoning model. Cost-effective."},
+{date:"2025-02-25",name:"GPT-4.5",provider:"openai",series:"GPT",type:"flagship",icon:"4.5",desc:"Largest model yet. Improved EQ and creativity."},
+{date:"2025-04-14",name:"o3",provider:"openai",series:"o",type:"reasoning",icon:"o3",desc:"Full o3 reasoning model."},
+{date:"2025-04-14",name:"o4-mini",provider:"openai",series:"o",type:"reasoning",icon:"o4m",desc:"Efficient reasoning. Great cost-performance."},
+{date:"2025-06-10",name:"GPT-5",provider:"openai",series:"GPT",type:"flagship",icon:"5",desc:"Unified model. PhD-level reasoning across domains."},
+{date:"2025-09-09",name:"o3-pro",provider:"openai",series:"o",type:"reasoning",icon:"o3p",desc:"Enhanced o3 with more compute."},
+{date:"2026-03-05",name:"GPT-5.5",provider:"openai",series:"GPT",type:"flagship",icon:"5.5",desc:"Next evolution. Enhanced multimodal reasoning."},
+{date:"2023-03-14",name:"Claude 1",provider:"anthropic",series:"Claude",type:"flagship",icon:"1",desc:"Anthropic's first public model. Constitutional AI."},
+{date:"2023-07-11",name:"Claude 2",provider:"anthropic",series:"Claude",type:"flagship",icon:"2",desc:"100K context window. Improved coding & math."},
+{date:"2024-03-04",name:"Claude 3 Opus",provider:"anthropic",series:"Claude 3",type:"flagship",icon:"3O",desc:"Most capable Claude 3. Topped benchmarks at launch."},
+{date:"2024-03-04",name:"Claude 3 Haiku",provider:"anthropic",series:"Claude 3",type:"fast",icon:"3H",desc:"Fastest Claude 3. Near-instant responses."},
+{date:"2024-06-20",name:"Claude 3.5 Sonnet",provider:"anthropic",series:"Claude 3.5",type:"flagship",icon:"3.5",desc:"Outperformed Claude 3 Opus at lower cost."},
+{date:"2025-02-24",name:"Claude 3.5 Haiku",provider:"anthropic",series:"Claude 3.5",type:"fast",icon:"H",desc:"Fast and cheap. Great for high-volume."},
+{date:"2025-03-12",name:"Claude 3.7 Sonnet",provider:"anthropic",series:"Claude 3.7",type:"reasoning",icon:"3.7",desc:"Hybrid reasoning. Extended thinking mode."},
+{date:"2025-04-17",name:"Claude Opus 4",provider:"anthropic",series:"Claude 4",type:"flagship",icon:"O4",desc:"Best coding model at launch."},
+{date:"2025-04-17",name:"Claude Sonnet 4",provider:"anthropic",series:"Claude 4",type:"flagship",icon:"S4",desc:"Disciplined reasoning. Great value."},
+{date:"2026-02-24",name:"Claude Opus 4.6",provider:"anthropic",series:"Claude 4",type:"flagship",icon:"4.6",desc:"Most capable Claude to date."},
+{date:"2023-12-06",name:"Gemini 1.0",provider:"google",series:"Gemini",type:"flagship",icon:"1.0",desc:"Ultra, Pro, Nano. Google's multimodal flagship."},
+{date:"2024-02-15",name:"Gemini 1.5 Pro",provider:"google",series:"Gemini",type:"flagship",icon:"1.5",desc:"1M token context window breakthrough."},
+{date:"2024-12-05",name:"Gemini 2.0 Flash",provider:"google",series:"Gemini",type:"fast",icon:"2F",desc:"Next-gen multimodal. Agentic capabilities."},
+{date:"2025-03-04",name:"Gemini 2.5 Pro",provider:"google",series:"Gemini",type:"reasoning",icon:"2.5",desc:"Thinking model. Top of Chatbot Arena."},
+{date:"2025-05-20",name:"Gemini 2.5 Flash",provider:"google",series:"Gemini",type:"fast",icon:"2.5F",desc:"Fast thinking model. Great cost-performance."},
+{date:"2026-01-15",name:"Gemini 3",provider:"google",series:"Gemini",type:"flagship",icon:"3",desc:"Next-gen Gemini flagship."},
+{date:"2023-02-24",name:"LLaMA",provider:"meta",series:"Llama",type:"open",icon:"1",desc:"Meta's first open-source LLM. 7B-65B."},
+{date:"2023-07-18",name:"Llama 2",provider:"meta",series:"Llama",type:"open",icon:"2",desc:"Open-source. 7B-70B. Commercial license."},
+{date:"2024-04-18",name:"Llama 3",provider:"meta",series:"Llama",type:"open",icon:"3",desc:"8B and 70B. State-of-art open-source."},
+{date:"2024-07-23",name:"Llama 3.1 405B",provider:"meta",series:"Llama",type:"open",icon:"3.1",desc:"Largest open-source model. Competitive with GPT-4o."},
+{date:"2025-04-29",name:"Llama 4 Scout",provider:"meta",series:"Llama 4",type:"open",icon:"4S",desc:"17B active / 109B MoE. 10M context."},
+{date:"2025-04-29",name:"Llama 4 Maverick",provider:"meta",series:"Llama 4",type:"open",icon:"4M",desc:"17B active / 400B MoE."},
+{date:"2024-12-26",name:"DeepSeek-V3",provider:"deepseek",series:"DS-V",type:"flagship",icon:"V3",desc:"671B MoE. Top open-source performance."},
+{date:"2025-01-20",name:"DeepSeek-R1",provider:"deepseek",series:"DS-R",type:"reasoning",icon:"R1",desc:"Open-source reasoning. MIT license. Shook the industry."},
+{date:"2025-05-06",name:"DeepSeek-R2",provider:"deepseek",series:"DS-R",type:"reasoning",icon:"R2",desc:"Next-gen reasoning. Improved math and code."},
+{date:"2025-07-16",name:"DeepSeek-V3.5",provider:"deepseek",series:"DS-V",type:"flagship",icon:"3.5",desc:"Unified V3 + R2 capabilities."},
+{date:"2026-01-23",name:"DeepSeek-R1-0120",provider:"deepseek",series:"DS-R",type:"reasoning",icon:"R1+",desc:"Updated R1 with improved reasoning."},
+{date:"2023-09-27",name:"Mistral 7B",provider:"mistral",series:"Mistral",type:"open",icon:"7B",desc:"First Mistral model. Outperformed Llama 2 13B."},
+{date:"2023-12-11",name:"Mixtral 8x7B",provider:"mistral",series:"Mixtral",type:"open",icon:"8x7",desc:"MoE. 46.7B total, 12.9B active."},
+{date:"2024-02-26",name:"Mistral Large",provider:"mistral",series:"Mistral",type:"flagship",icon:"L",desc:"Mistral's flagship commercial model."},
+{date:"2025-02-19",name:"Grok-3",provider:"xai",series:"Grok",type:"flagship",icon:"3",desc:"Trained on 200K H100s. Top benchmarks."},
 ];
 
-const timeline=document.getElementById('timeline');
-const searchInput=document.getElementById('search');
-const statsDiv=document.getElementById('stats');
-let activeFilter='all';
+const provOrder=["openai","anthropic","google","meta","deepseek","mistral","xai"];
+const provNames={openai:"OpenAI",anthropic:"Anthropic",google:"Google",meta:"Meta",deepseek:"DeepSeek",mistral:"Mistral",xai:"xAI"};
+const provColors={openai:"#10a37f",anthropic:"#d97706",google:"#4285f4",meta:"#0668E1",deepseek:"#6366f1",mistral:"#f43f5e",xai:"#1a1a2e"};
+const typeColors={flagship:"#3b82f6",reasoning:"#7c3aed",fast:"#059669",open:"#d97706"};
+const shapeClass={flagship:"shape-flagship",reasoning:"shape-reasoning",fast:"shape-fast",open:"shape-open"};
+
+let zoom=1,filter='all';
+const LW=110,BPD=2.2;
+const allD=models.map(m=>new Date(m.date+'T00:00:00Z'));
+const dMin=new Date(Math.min(...allD)),dMax=new Date(Math.max(...allD));
+dMin.setMonth(dMin.getMonth()-2);dMax.setMonth(dMax.getMonth()+2);
+const tDays=(dMax-dMin)/864e5;
+const t2026=new Date('2026-06-01T00:00:00Z');
+
+function dOff(d){return(new Date(d+'T00:00:00Z')-dMin)/864e5}
+function ppd(){return BPD*zoom}
+
+const $c=document.getElementById('chart'),$w=document.getElementById('container'),$t=document.getElementById('tooltip');
 
 function render(){
-  const q=searchInput.value.toLowerCase();
-  const filtered=models.filter(m=>{
-    if(activeFilter!=='all'&&m.provider!==activeFilter)return false;
-    if(q&&!m.name.toLowerCase().includes(q)&&!m.provider.toLowerCase().includes(q)&&!m.desc.toLowerCase().includes(q))return false;
-    return true;
-  });
-  
-  // Stats
-  const providers=new Set(models.map(m=>m.provider));
-  const years=new Set(models.map(m=>m.date.slice(0,4)));
-  statsDiv.innerHTML=`
-    <div class="stat"><div class="num">${models.length}</div><div class="label">Models Tracked</div></div>
-    <div class="stat"><div class="num">${providers.size}</div><div class="label">Providers</div></div>
-    <div class="stat"><div class="num">${Math.min(...[...years])}-${Math.max(...[...years])}</div><div class="label">Year Range</div></div>
-  `;
-
-  // Group by year
-  const byYear={};
-  filtered.sort((a,b)=>a.date.localeCompare(b.date));
-  filtered.forEach(m=>{
-    const y=m.date.slice(0,4);
-    if(!byYear[y])byYear[y]=[];
-    byYear[y].push(m);
-  });
-
-  let html='';
-  let side=0;
-  Object.keys(byYear).sort().forEach(year=>{
-    html+=`<div class="year-label"><span>${year}</span></div>`;
-    byYear[year].forEach(m=>{
-      const cls=side%2===0?'left':'right';
-      const d=new Date(m.date+'T00:00:00');
-      const dateStr=d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
-      html+=`<div class="event ${cls}">
-        <div class="date">${dateStr}</div>
-        <span class="provider p-${m.provider}">${m.provider}</span>
-        <div class="name">${m.name}</div>
-        <div class="desc">${m.desc}</div>
-      </div>`;
-      side++;
+  const p=ppd(),tw=tDays*p;
+  $c.style.width=(LW+tw+60)+'px';
+  const fl=filter==='all'?models:models.filter(m=>m.type===filter);
+  const bp={};provOrder.forEach(k=>bp[k]=[]);
+  fl.forEach(m=>{if(bp[m.provider])bp[m.provider].push(m)});
+  let h='';
+  // grids
+  for(let y=dMin.getFullYear();y<=dMax.getFullYear();y++){
+    for(let mo=0;mo<12;mo++){
+      const d=new Date(Date.UTC(y,mo,1));
+      if(d<dMin||d>dMax)continue;
+      h+=`<div class="grid-line${mo===0?' year':''}" style="left:${LW+((d-dMin)/864e5)*p}px"></div>`;
+    }
+  }
+  // now
+  const nOff=(new Date()-dMin)/864e5;
+  if(nOff>0&&nOff<tDays){
+    const nx=LW+nOff*p;
+    h+=`<div class="now-line" style="left:${nx}px"><div class="now-dot"></div><div class="now-label">Today</div></div>`;
+  }
+  // rows
+  provOrder.forEach(pv=>{
+    const items=bp[pv],col=provColors[pv];
+    h+=`<div class="row"><div class="row-label"><div class="prov-icon" style="background:${col}">${provNames[pv][0]}</div>${provNames[pv]}</div><div class="row-track">`;
+    // series lines
+    const bs={};items.forEach(m=>{if(!bs[m.series])bs[m.series]=[];bs[m.series].push(m)});
+    Object.values(bs).forEach(g=>{
+      if(g.length<2)return;
+      const xs=g.map(m=>dOff(m.date)*p),mn=Math.min(...xs),mx=Math.max(...xs);
+      h+=`<div class="series-line" style="left:${mn}px;width:${mx-mn}px;background:${col}"></div>`;
     });
+    // dots
+    items.forEach(m=>{
+      const x=dOff(m.date)*p,tc=typeColors[m.type]||'#64748b';
+      const sc=shapeClass[m.type]||'shape-flagship';
+      const safe=JSON.stringify(m).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+      h+=`<div class="model" style="left:${x}px" data-m="${safe}"><div class="marker ${sc}" style="background:${tc}"><span class="m-txt">${m.icon}</span></div><div class="mlabel">${m.name}</div></div>`;
+    });
+    h+=`</div></div>`;
   });
-  
-  if(!filtered.length)html='<p style="text-align:center;color:#6b7280;padding:40px">No models found.</p>';
-  timeline.innerHTML=html;
+  // axis
+  h+=`<div class="time-axis" style="width:${tw+60}px">`;
+  for(let y=dMin.getFullYear();y<=dMax.getFullYear();y++){
+    for(let q=0;q<4;q++){
+      const d=new Date(Date.UTC(y,q*3,1));
+      if(d<dMin||d>dMax)continue;
+      const x=((d-dMin)/864e5)*p;
+      h+=q===0?`<div class="time-tick yr" style="left:${x}px">${y}</div>`:`<div class="time-tick" style="left:${x}px">Q${q+1}</div>`;
+    }
+  }
+  h+=`</div>`;
+  $c.innerHTML=h;
+  // tooltip
+  $c.querySelectorAll('.model').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{
+      const m=JSON.parse(el.dataset.m.replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&amp;/g,'&'));
+      const ds=new Date(m.date+'T00:00:00Z').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+      const tc=typeColors[m.type];
+      $t.innerHTML=`<div class="t-name">${m.name}</div><div class="t-prov">${provNames[m.provider]} · ${m.series}</div><div class="t-date">${ds}</div><span class="t-badge" style="background:${tc}">${m.type}</span><div class="t-desc">${m.desc}</div>`;
+      $t.classList.add('show');
+    });
+    el.addEventListener('mousemove',e=>{
+      let x=e.clientX+14,y=e.clientY-10;
+      if(x+310>innerWidth)x=e.clientX-310;
+      if(y+120>innerHeight)y=e.clientY-120;
+      $t.style.left=x+'px';$t.style.top=y+'px';
+    });
+    el.addEventListener('mouseleave',()=>$t.classList.remove('show'));
+  });
 }
 
-document.querySelectorAll('.controls button').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.controls button').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilter=btn.dataset.filter;
-    render();
+function scrollCenter(){
+  const p=ppd(),tx=LW+((t2026-dMin)/864e5)*p;
+  $w.scrollLeft=Math.max(0,tx-$w.clientWidth/2);
+}
+
+document.querySelectorAll('.controls button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.controls button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');filter=b.dataset.filter;render();scrollCenter();
   });
 });
-searchInput.addEventListener('input',render);
-render();
+
+function uz(){document.getElementById('zoomLabel').textContent=Math.round(zoom*100)+'%';render();scrollCenter()}
+document.getElementById('zoomIn').addEventListener('click',()=>{zoom=Math.min(zoom*1.3,5);uz()});
+document.getElementById('zoomOut').addEventListener('click',()=>{zoom=Math.max(zoom/1.3,.3);uz()});
+document.getElementById('zoomFit').addEventListener('click',()=>{zoom=Math.max(.3,Math.min(($w.clientWidth-LW-80)/(tDays*BPD),5));uz()});
+
+render();requestAnimationFrame(scrollCenter);
 </script>
 </body>
 </html>

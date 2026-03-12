@@ -51,7 +51,7 @@ td{padding:10px 12px;border-bottom:1px solid #f3f4f6;vertical-align:middle}
 tr:hover{background:#f0f7ff}
 .model-name{font-weight:600;white-space:nowrap}
 .provider-badge{font-size:11px;color:#fff;padding:1px 8px;border-radius:10px;white-space:nowrap}
-.p-openai{background:#10a37f}.p-anthropic{background:#d97706}.p-google{background:#4285f4}.p-meta{background:#1877f2}.p-deepseek{background:#6366f1}.p-mistral{background:#f43f5e}.p-xai{background:#111}
+.p-openai{background:#10a37f}.p-anthropic{background:#d97706}.p-google{background:#4285f4}.p-meta{background:#1877f2}.p-deepseek{background:#6366f1}.p-mistral{background:#f43f5e}.p-xai{background:#111}.p-qwen{background:#f97316}
 .bar{height:6px;border-radius:3px;background:#e5e7eb;position:relative;min-width:60px}
 .bar-fill{height:100%;border-radius:3px;background:#2563eb}
 .price{font-family:monospace;white-space:nowrap}
@@ -81,6 +81,7 @@ tr:hover{background:#f0f7ff}
 <option value="deepseek">DeepSeek</option>
 <option value="mistral">Mistral</option>
 <option value="xai">xAI</option>
+<option value="qwen">Qwen</option>
 </select>
 <label>Type:</label>
 <select id="typeFilter">
@@ -124,31 +125,53 @@ Access all these models through one API with up to 45% savings — <a href="http
 <div class="footer"><a href="../">← Back to Tools</a> · <a href="https://crazyrouter.com">Crazyrouter</a></div>
 <script>
 const models=[
+// OpenAI - current models
+{name:"GPT-5.4",provider:"openai",type:"flagship",context:270000,mmlu:93.5,humaneval:95.8,math:88.0,input:2.5,output:15,vision:true,tools:true},
+{name:"GPT-5 mini",provider:"openai",type:"fast",context:270000,mmlu:89.0,humaneval:92.0,math:82.0,input:0.25,output:2,vision:true,tools:true},
+{name:"GPT-4.1",provider:"openai",type:"flagship",context:1047576,mmlu:90.2,humaneval:93.5,math:80.0,input:3,output:12,vision:true,tools:true},
+{name:"GPT-4.1 mini",provider:"openai",type:"fast",context:1047576,mmlu:87.5,humaneval:91.0,math:76.0,input:0.8,output:3.2,vision:true,tools:true},
+{name:"GPT-4.1 nano",provider:"openai",type:"fast",context:1047576,mmlu:83.0,humaneval:87.0,math:70.0,input:0.2,output:0.8,vision:true,tools:true},
+{name:"o3",provider:"openai",type:"reasoning",context:200000,mmlu:92.3,humaneval:95.2,math:98.6,input:10,output:40,vision:true,tools:true},
+{name:"o4-mini",provider:"openai",type:"reasoning",context:200000,mmlu:88.5,humaneval:93.4,math:98.2,input:4,output:16,vision:true,tools:true},
+{name:"o3-mini",provider:"openai",type:"reasoning",context:200000,mmlu:86.9,humaneval:92.7,math:97.9,input:1.1,output:4.4,vision:false,tools:true},
 {name:"GPT-4o",provider:"openai",type:"flagship",context:128000,mmlu:88.7,humaneval:90.2,math:76.6,input:2.5,output:10,vision:true,tools:true},
 {name:"GPT-4o mini",provider:"openai",type:"fast",context:128000,mmlu:82.0,humaneval:87.0,math:70.2,input:0.15,output:0.6,vision:true,tools:true},
-{name:"GPT-4.5",provider:"openai",type:"flagship",context:128000,mmlu:90.2,humaneval:91.5,math:78.0,input:75,output:150,vision:true,tools:true},
-{name:"GPT-5",provider:"openai",type:"flagship",context:256000,mmlu:92.5,humaneval:94.0,math:85.0,input:10,output:40,vision:true,tools:true},
-{name:"o1",provider:"openai",type:"reasoning",context:200000,mmlu:91.8,humaneval:92.4,math:96.4,input:15,output:60,vision:true,tools:false},
-{name:"o3-mini",provider:"openai",type:"reasoning",context:200000,mmlu:86.9,humaneval:92.7,math:97.9,input:1.1,output:4.4,vision:false,tools:true},
-{name:"o3",provider:"openai",type:"reasoning",context:200000,mmlu:92.3,humaneval:95.2,math:98.6,input:10,output:40,vision:true,tools:true},
-{name:"o4-mini",provider:"openai",type:"reasoning",context:200000,mmlu:88.5,humaneval:93.4,math:98.2,input:1.1,output:4.4,vision:true,tools:true},
-{name:"Claude 3.5 Sonnet",provider:"anthropic",type:"flagship",context:200000,mmlu:88.7,humaneval:92.0,math:78.3,input:3,output:15,vision:true,tools:true},
-{name:"Claude 3.5 Haiku",provider:"anthropic",type:"fast",context:200000,mmlu:84.0,humaneval:88.1,math:69.2,input:0.8,output:4,vision:true,tools:true},
-{name:"Claude 3.7 Sonnet",provider:"anthropic",type:"reasoning",context:200000,mmlu:89.5,humaneval:93.8,math:83.0,input:3,output:15,vision:true,tools:true},
+// Anthropic - current models
+{name:"Claude Opus 4.6",provider:"anthropic",type:"flagship",context:200000,mmlu:93.0,humaneval:96.5,math:89.0,input:15,output:75,vision:true,tools:true},
+{name:"Claude Sonnet 4.6",provider:"anthropic",type:"flagship",context:200000,mmlu:91.5,humaneval:95.5,math:86.5,input:3,output:15,vision:true,tools:true},
+{name:"Claude Opus 4.1",provider:"anthropic",type:"flagship",context:200000,mmlu:92.0,humaneval:96.0,math:87.5,input:15,output:75,vision:true,tools:true},
+{name:"Claude Sonnet 4.5",provider:"anthropic",type:"flagship",context:200000,mmlu:91.0,humaneval:95.0,math:85.5,input:3,output:15,vision:true,tools:true},
+{name:"Claude Haiku 4.5",provider:"anthropic",type:"fast",context:200000,mmlu:86.0,humaneval:90.0,math:75.0,input:0.8,output:4,vision:true,tools:true},
 {name:"Claude Opus 4",provider:"anthropic",type:"flagship",context:200000,mmlu:91.0,humaneval:95.5,math:86.0,input:15,output:75,vision:true,tools:true},
 {name:"Claude Sonnet 4",provider:"anthropic",type:"flagship",context:200000,mmlu:89.8,humaneval:94.2,math:84.5,input:3,output:15,vision:true,tools:true},
-{name:"Gemini 2.0 Flash",provider:"google",type:"fast",context:1000000,mmlu:85.2,humaneval:89.0,math:73.5,input:0.1,output:0.4,vision:true,tools:true},
+{name:"Claude 3.7 Sonnet",provider:"anthropic",type:"reasoning",context:200000,mmlu:89.5,humaneval:93.8,math:83.0,input:3,output:15,vision:true,tools:true},
+// Google - current models
+{name:"Gemini 3.1 Pro",provider:"google",type:"flagship",context:2000000,mmlu:93.2,humaneval:96.0,math:89.5,input:1.25,output:10,vision:true,tools:true},
+{name:"Gemini 3 Deep Think",provider:"google",type:"reasoning",context:1000000,mmlu:92.5,humaneval:95.5,math:92.0,input:5,output:25,vision:true,tools:true},
+{name:"Gemini 3 Flash",provider:"google",type:"fast",context:1000000,mmlu:89.0,humaneval:92.5,math:83.0,input:0.15,output:0.6,vision:true,tools:true},
 {name:"Gemini 2.5 Pro",provider:"google",type:"reasoning",context:1000000,mmlu:90.8,humaneval:94.0,math:86.5,input:1.25,output:10,vision:true,tools:true},
 {name:"Gemini 2.5 Flash",provider:"google",type:"fast",context:1000000,mmlu:87.5,humaneval:91.2,math:80.0,input:0.15,output:0.6,vision:true,tools:true},
-{name:"DeepSeek-V3",provider:"deepseek",type:"flagship",context:128000,mmlu:87.1,humaneval:89.2,math:75.9,input:0.27,output:1.1,vision:false,tools:true},
+{name:"Gemini 2.0 Flash",provider:"google",type:"fast",context:1000000,mmlu:85.2,humaneval:89.0,math:73.5,input:0.1,output:0.4,vision:true,tools:true},
+// DeepSeek
+{name:"DeepSeek-V3 0324",provider:"deepseek",type:"flagship",context:128000,mmlu:88.5,humaneval:91.0,math:78.5,input:0.27,output:1.1,vision:false,tools:true},
+{name:"DeepSeek-R1-0528",provider:"deepseek",type:"reasoning",context:128000,mmlu:91.5,humaneval:93.5,math:97.8,input:0.55,output:2.19,vision:false,tools:true},
 {name:"DeepSeek-R1",provider:"deepseek",type:"reasoning",context:128000,mmlu:90.8,humaneval:92.8,math:97.3,input:0.55,output:2.19,vision:false,tools:false},
-{name:"Llama 3.1 405B",provider:"meta",type:"open",context:128000,mmlu:87.3,humaneval:89.0,math:73.8,input:3,output:3,vision:false,tools:true},
-{name:"Llama 3.3 70B",provider:"meta",type:"open",context:128000,mmlu:86.0,humaneval:88.4,math:77.0,input:0.6,output:0.6,vision:false,tools:true},
-{name:"Llama 4 Scout",provider:"meta",type:"open",context:512000,mmlu:87.5,humaneval:90.0,math:78.0,input:0.15,output:0.4,vision:true,tools:true},
+{name:"DeepSeek-V3",provider:"deepseek",type:"flagship",context:128000,mmlu:87.1,humaneval:89.2,math:75.9,input:0.27,output:1.1,vision:false,tools:true},
+// Meta
 {name:"Llama 4 Maverick",provider:"meta",type:"open",context:256000,mmlu:89.2,humaneval:91.5,math:80.5,input:0.5,output:1.5,vision:true,tools:true},
-{name:"Mistral Large",provider:"mistral",type:"flagship",context:128000,mmlu:84.0,humaneval:89.0,math:69.1,input:2,output:6,vision:false,tools:true},
-{name:"Mixtral 8x22B",provider:"mistral",type:"open",context:65000,mmlu:77.8,humaneval:75.0,math:41.5,input:0.9,output:0.9,vision:false,tools:true},
+{name:"Llama 4 Scout",provider:"meta",type:"open",context:512000,mmlu:87.5,humaneval:90.0,math:78.0,input:0.15,output:0.4,vision:true,tools:true},
+{name:"Llama 3.3 70B",provider:"meta",type:"open",context:128000,mmlu:86.0,humaneval:88.4,math:77.0,input:0.6,output:0.6,vision:false,tools:true},
+// Mistral
+{name:"Mistral Medium 3",provider:"mistral",type:"flagship",context:128000,mmlu:87.0,humaneval:91.5,math:76.0,input:2,output:6,vision:true,tools:true},
+{name:"Mistral Small 3.1",provider:"mistral",type:"fast",context:128000,mmlu:83.5,humaneval:88.0,math:68.0,input:0.1,output:0.3,vision:true,tools:true},
+{name:"Mistral Large 2",provider:"mistral",type:"flagship",context:128000,mmlu:84.0,humaneval:89.0,math:69.1,input:2,output:6,vision:false,tools:true},
+// xAI
+{name:"Grok 4",provider:"xai",type:"reasoning",context:256000,mmlu:93.0,humaneval:96.0,math:93.0,input:5,output:25,vision:true,tools:true},
 {name:"Grok-3",provider:"xai",type:"flagship",context:131072,mmlu:91.2,humaneval:93.0,math:85.0,input:3,output:15,vision:true,tools:true},
+// Qwen / Alibaba
+{name:"Qwen3-Max",provider:"qwen",type:"flagship",context:128000,mmlu:91.0,humaneval:94.0,math:85.0,input:0.4,output:1.6,vision:true,tools:true},
+{name:"Qwen3 235B",provider:"qwen",type:"open",context:128000,mmlu:89.5,humaneval:92.5,math:82.0,input:0.3,output:1.2,vision:true,tools:true},
+{name:"QwQ-32B",provider:"qwen",type:"reasoning",context:128000,mmlu:86.5,humaneval:90.0,math:95.0,input:0.15,output:0.6,vision:false,tools:true},
 ];
 
 let sortCol='name',sortDir=1,compareSet=new Set(),compareMode=false;

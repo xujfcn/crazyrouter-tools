@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Model Comparison - Benchmarks, Pricing & Capabilities | Crazyrouter</title>
+<meta name="description" content="Compare AI models side-by-side: GPT-4o vs Claude vs Gemini vs DeepSeek. Benchmarks, pricing, context window, and capabilities in one table.">
+<meta name="keywords" content="ai model comparison, gpt vs claude, gemini vs gpt, deepseek vs claude, llm benchmark comparison, ai model pricing comparison, crazyrouter">
+<link rel="canonical" href="https://crazyrouter.com/tools/model-comparison">
+<meta property="og:title" content="AI Model Comparison - Benchmarks & Pricing | Crazyrouter">
+<meta property="og:description" content="Compare GPT-4o, Claude, Gemini, DeepSeek and more. Side-by-side benchmarks, pricing, and capabilities.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crazyrouter.com/tools/model-comparison">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI Model Comparison Tool",
+  "url": "https://crazyrouter.com/tools/model-comparison",
+  "description": "Compare AI models side-by-side: benchmarks, pricing, context windows, and capabilities.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "publisher": {"@type": "Organization", "name": "Crazyrouter", "url": "https://crazyrouter.com"}
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;color:#111;line-height:1.5}
+.header{max-width:1100px;margin:40px auto 0;padding:0 20px;text-align:center}
+.header h1{font-size:28px;margin-bottom:6px}
+.header p{color:#6b7280;font-size:15px;margin-bottom:20px}
+.controls{max-width:1100px;margin:0 auto 16px;padding:0 20px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.controls label{font-size:13px;color:#6b7280;margin-right:4px}
+.controls select,.controls input{padding:6px 12px;border:1px solid #e5e7eb;border-radius:8px;font-size:13px;outline:none}
+.controls select:focus,.controls input:focus{border-color:#2563eb}
+.controls button{padding:6px 14px;border:1px solid #e5e7eb;border-radius:8px;background:#fff;cursor:pointer;font-size:13px;transition:all .2s}
+.controls button:hover{border-color:#2563eb;color:#2563eb}
+.controls button.active{background:#2563eb;color:#fff;border-color:#2563eb}
+.compare-bar{max-width:1100px;margin:0 auto 12px;padding:8px 20px;display:none;align-items:center;gap:8px;flex-wrap:wrap}
+.compare-bar.show{display:flex}
+.compare-bar .tag{background:#eff6ff;color:#2563eb;padding:2px 10px;border-radius:12px;font-size:12px;display:flex;align-items:center;gap:4px}
+.compare-bar .tag .x{cursor:pointer;font-weight:700}
+.compare-bar .btn-compare{padding:6px 16px;background:#2563eb;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:13px}
+.table-wrap{max-width:1100px;margin:0 auto;padding:0 20px 20px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#f9fafb;padding:10px 12px;text-align:left;border-bottom:2px solid #e5e7eb;white-space:nowrap;cursor:pointer;user-select:none;position:sticky;top:0}
+th:hover{color:#2563eb}
+th .arrow{font-size:10px;margin-left:2px}
+td{padding:10px 12px;border-bottom:1px solid #f3f4f6;vertical-align:middle}
+tr:hover{background:#f0f7ff}
+.model-name{font-weight:600;white-space:nowrap}
+.provider-badge{font-size:11px;color:#fff;padding:1px 8px;border-radius:10px;white-space:nowrap}
+.p-openai{background:#10a37f}.p-anthropic{background:#d97706}.p-google{background:#4285f4}.p-meta{background:#1877f2}.p-deepseek{background:#6366f1}.p-mistral{background:#f43f5e}.p-xai{background:#111}
+.bar{height:6px;border-radius:3px;background:#e5e7eb;position:relative;min-width:60px}
+.bar-fill{height:100%;border-radius:3px;background:#2563eb}
+.price{font-family:monospace;white-space:nowrap}
+.check{color:#10b981}.cross{color:#d1d5db}
+.highlight{background:#fffbeb!important}
+.cta{max-width:1100px;margin:0 auto 40px;padding:20px;text-align:center;background:#f0f7ff;border-radius:12px}
+.cta a{color:#2563eb;text-decoration:none;font-weight:600}
+.footer{text-align:center;padding:20px;color:#9ca3af;font-size:13px}
+.footer a{color:#6b7280;text-decoration:none}
+.cb{width:16px;height:16px;cursor:pointer}
+@media(max-width:768px){table{font-size:12px}td,th{padding:6px 8px}}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>⚡ AI Model Comparison</h1>
+<p>Compare benchmarks, pricing, context windows, and capabilities across top AI models</p>
+</div>
+<div class="controls">
+<label>Provider:</label>
+<select id="providerFilter">
+<option value="all">All Providers</option>
+<option value="openai">OpenAI</option>
+<option value="anthropic">Anthropic</option>
+<option value="google">Google</option>
+<option value="meta">Meta</option>
+<option value="deepseek">DeepSeek</option>
+<option value="mistral">Mistral</option>
+<option value="xai">xAI</option>
+</select>
+<label>Type:</label>
+<select id="typeFilter">
+<option value="all">All Types</option>
+<option value="flagship">Flagship</option>
+<option value="reasoning">Reasoning</option>
+<option value="fast">Fast / Lite</option>
+<option value="open">Open Source</option>
+</select>
+<input type="text" id="search" placeholder="Search models..." style="width:180px">
+</div>
+<div class="compare-bar" id="compareBar">
+<span style="font-size:13px;color:#6b7280">Compare:</span>
+<div id="compareTags"></div>
+<button class="btn-compare" id="btnCompare" onclick="toggleCompareView()">Show only selected</button>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th style="width:30px"></th>
+<th data-sort="name">Model <span class="arrow"></span></th>
+<th data-sort="provider">Provider <span class="arrow"></span></th>
+<th data-sort="type">Type <span class="arrow"></span></th>
+<th data-sort="context">Context <span class="arrow"></span></th>
+<th data-sort="mmlu">MMLU <span class="arrow"></span></th>
+<th data-sort="humaneval">HumanEval <span class="arrow"></span></th>
+<th data-sort="math">MATH <span class="arrow"></span></th>
+<th data-sort="input">Input $/M <span class="arrow"></span></th>
+<th data-sort="output">Output $/M <span class="arrow"></span></th>
+<th data-sort="vision">Vision</th>
+<th data-sort="tools">Tools</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+<div class="cta">
+Access all these models through one API with up to 45% savings — <a href="https://crazyrouter.com?utm_source=tools&utm_medium=comparison&utm_campaign=model_comparison">Try Crazyrouter free →</a>
+</div>
+<div class="footer"><a href="../">← Back to Tools</a> · <a href="https://crazyrouter.com">Crazyrouter</a></div>
+<script>
+const models=[
+{name:"GPT-4o",provider:"openai",type:"flagship",context:128000,mmlu:88.7,humaneval:90.2,math:76.6,input:2.5,output:10,vision:true,tools:true},
+{name:"GPT-4o mini",provider:"openai",type:"fast",context:128000,mmlu:82.0,humaneval:87.0,math:70.2,input:0.15,output:0.6,vision:true,tools:true},
+{name:"GPT-4.5",provider:"openai",type:"flagship",context:128000,mmlu:90.2,humaneval:91.5,math:78.0,input:75,output:150,vision:true,tools:true},
+{name:"GPT-5",provider:"openai",type:"flagship",context:256000,mmlu:92.5,humaneval:94.0,math:85.0,input:10,output:40,vision:true,tools:true},
+{name:"o1",provider:"openai",type:"reasoning",context:200000,mmlu:91.8,humaneval:92.4,math:96.4,input:15,output:60,vision:true,tools:false},
+{name:"o3-mini",provider:"openai",type:"reasoning",context:200000,mmlu:86.9,humaneval:92.7,math:97.9,input:1.1,output:4.4,vision:false,tools:true},
+{name:"o3",provider:"openai",type:"reasoning",context:200000,mmlu:92.3,humaneval:95.2,math:98.6,input:10,output:40,vision:true,tools:true},
+{name:"o4-mini",provider:"openai",type:"reasoning",context:200000,mmlu:88.5,humaneval:93.4,math:98.2,input:1.1,output:4.4,vision:true,tools:true},
+{name:"Claude 3.5 Sonnet",provider:"anthropic",type:"flagship",context:200000,mmlu:88.7,humaneval:92.0,math:78.3,input:3,output:15,vision:true,tools:true},
+{name:"Claude 3.5 Haiku",provider:"anthropic",type:"fast",context:200000,mmlu:84.0,humaneval:88.1,math:69.2,input:0.8,output:4,vision:true,tools:true},
+{name:"Claude 3.7 Sonnet",provider:"anthropic",type:"reasoning",context:200000,mmlu:89.5,humaneval:93.8,math:83.0,input:3,output:15,vision:true,tools:true},
+{name:"Claude Opus 4",provider:"anthropic",type:"flagship",context:200000,mmlu:91.0,humaneval:95.5,math:86.0,input:15,output:75,vision:true,tools:true},
+{name:"Claude Sonnet 4",provider:"anthropic",type:"flagship",context:200000,mmlu:89.8,humaneval:94.2,math:84.5,input:3,output:15,vision:true,tools:true},
+{name:"Gemini 2.0 Flash",provider:"google",type:"fast",context:1000000,mmlu:85.2,humaneval:89.0,math:73.5,input:0.1,output:0.4,vision:true,tools:true},
+{name:"Gemini 2.5 Pro",provider:"google",type:"reasoning",context:1000000,mmlu:90.8,humaneval:94.0,math:86.5,input:1.25,output:10,vision:true,tools:true},
+{name:"Gemini 2.5 Flash",provider:"google",type:"fast",context:1000000,mmlu:87.5,humaneval:91.2,math:80.0,input:0.15,output:0.6,vision:true,tools:true},
+{name:"DeepSeek-V3",provider:"deepseek",type:"flagship",context:128000,mmlu:87.1,humaneval:89.2,math:75.9,input:0.27,output:1.1,vision:false,tools:true},
+{name:"DeepSeek-R1",provider:"deepseek",type:"reasoning",context:128000,mmlu:90.8,humaneval:92.8,math:97.3,input:0.55,output:2.19,vision:false,tools:false},
+{name:"Llama 3.1 405B",provider:"meta",type:"open",context:128000,mmlu:87.3,humaneval:89.0,math:73.8,input:3,output:3,vision:false,tools:true},
+{name:"Llama 3.3 70B",provider:"meta",type:"open",context:128000,mmlu:86.0,humaneval:88.4,math:77.0,input:0.6,output:0.6,vision:false,tools:true},
+{name:"Llama 4 Scout",provider:"meta",type:"open",context:512000,mmlu:87.5,humaneval:90.0,math:78.0,input:0.15,output:0.4,vision:true,tools:true},
+{name:"Llama 4 Maverick",provider:"meta",type:"open",context:256000,mmlu:89.2,humaneval:91.5,math:80.5,input:0.5,output:1.5,vision:true,tools:true},
+{name:"Mistral Large",provider:"mistral",type:"flagship",context:128000,mmlu:84.0,humaneval:89.0,math:69.1,input:2,output:6,vision:false,tools:true},
+{name:"Mixtral 8x22B",provider:"mistral",type:"open",context:65000,mmlu:77.8,humaneval:75.0,math:41.5,input:0.9,output:0.9,vision:false,tools:true},
+{name:"Grok-3",provider:"xai",type:"flagship",context:131072,mmlu:91.2,humaneval:93.0,math:85.0,input:3,output:15,vision:true,tools:true},
+];
+
+let sortCol='name',sortDir=1,compareSet=new Set(),compareMode=false;
+const tbody=document.getElementById('tbody');
+const compareBar=document.getElementById('compareBar');
+const compareTags=document.getElementById('compareTags');
+
+function fmtCtx(n){if(n>=1000000)return(n/1000000)+'M';if(n>=1000)return(n/1000)+'K';return n}
+function bar(val,max){const pct=Math.round(val/max*100);return `<div class="bar"><div class="bar-fill" style="width:${pct}%"></div></div><span style="font-size:11px;color:#6b7280">${val}</span>`}
+function yn(v){return v?'<span class="check">✓</span>':'<span class="cross">✗</span>'}
+
+function getFiltered(){
+  const pf=document.getElementById('providerFilter').value;
+  const tf=document.getElementById('typeFilter').value;
+  const q=document.getElementById('search').value.toLowerCase();
+  let list=models.filter(m=>{
+    if(pf!=='all'&&m.provider!==pf)return false;
+    if(tf!=='all'&&m.type!==tf)return false;
+    if(q&&!m.name.toLowerCase().includes(q)&&!m.provider.toLowerCase().includes(q))return false;
+    if(compareMode&&!compareSet.has(m.name))return false;
+    return true;
+  });
+  list.sort((a,b)=>{
+    let va=a[sortCol],vb=b[sortCol];
+    if(typeof va==='string')return va.localeCompare(vb)*sortDir;
+    return (va-vb)*sortDir;
+  });
+  return list;
+}
+
+function render(){
+  const list=getFiltered();
+  const maxMmlu=Math.max(...models.map(m=>m.mmlu));
+  const maxHe=Math.max(...models.map(m=>m.humaneval));
+  const maxMath=Math.max(...models.map(m=>m.math));
+  let html='';
+  list.forEach(m=>{
+    const hl=compareSet.has(m.name)?' highlight':'';
+    html+=`<tr class="${hl}">
+      <td><input type="checkbox" class="cb" data-name="${m.name}" ${compareSet.has(m.name)?'checked':''}></td>
+      <td class="model-name">${m.name}</td>
+      <td><span class="provider-badge p-${m.provider}">${m.provider}</span></td>
+      <td>${m.type}</td>
+      <td>${fmtCtx(m.context)}</td>
+      <td>${bar(m.mmlu,maxMmlu)}</td>
+      <td>${bar(m.humaneval,maxHe)}</td>
+      <td>${bar(m.math,maxMath)}</td>
+      <td class="price">$${m.input}</td>
+      <td class="price">$${m.output}</td>
+      <td>${yn(m.vision)}</td>
+      <td>${yn(m.tools)}</td>
+    </tr>`;
+  });
+  if(!list.length)html='<tr><td colspan="12" style="text-align:center;color:#6b7280;padding:30px">No models found.</td></tr>';
+  tbody.innerHTML=html;
+  tbody.querySelectorAll('.cb').forEach(cb=>{
+    cb.addEventListener('change',e=>{
+      const n=e.target.dataset.name;
+      if(e.target.checked)compareSet.add(n);else compareSet.delete(n);
+      updateCompareBar();
+      render();
+    });
+  });
+}
+
+function updateCompareBar(){
+  if(compareSet.size>0){
+    compareBar.classList.add('show');
+    compareTags.innerHTML=[...compareSet].map(n=>`<span class="tag">${n} <span class="x" onclick="removeCompare('${n}')">×</span></span>`).join('');
+  }else{
+    compareBar.classList.remove('show');
+    compareMode=false;
+    document.getElementById('btnCompare').textContent='Show only selected';
+  }
+}
+
+window.removeCompare=function(n){compareSet.delete(n);updateCompareBar();render()};
+window.toggleCompareView=function(){
+  compareMode=!compareMode;
+  document.getElementById('btnCompare').textContent=compareMode?'Show all':'Show only selected';
+  render();
+};
+
+document.querySelectorAll('th[data-sort]').forEach(th=>{
+  th.addEventListener('click',()=>{
+    const col=th.dataset.sort;
+    if(sortCol===col)sortDir*=-1;else{sortCol=col;sortDir=1}
+    document.querySelectorAll('th .arrow').forEach(a=>a.textContent='');
+    th.querySelector('.arrow').textContent=sortDir===1?' ↑':' ↓';
+    render();
+  });
+});
+
+document.getElementById('providerFilter').addEventListener('change',render);
+document.getElementById('typeFilter').addEventListener('change',render);
+document.getElementById('search').addEventListener('input',render);
+render();
+</script>
+</body>
+</html>

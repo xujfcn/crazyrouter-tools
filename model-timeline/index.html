@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Model Release Timeline - Crazyrouter</title>
+<meta name="description" content="Interactive timeline of AI model releases from OpenAI, Anthropic, Google, Meta, DeepSeek and more. Track every major LLM launch from GPT-3 to today.">
+<meta name="keywords" content="ai model timeline, llm release dates, gpt release history, claude release date, gemini launch, ai model history, crazyrouter">
+<link rel="canonical" href="https://crazyrouter.com/tools/model-timeline">
+<meta property="og:title" content="AI Model Release Timeline - Crazyrouter">
+<meta property="og:description" content="Interactive timeline of every major AI model release. Track GPT, Claude, Gemini, Llama, DeepSeek and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crazyrouter.com/tools/model-timeline">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI Model Release Timeline",
+  "url": "https://crazyrouter.com/tools/model-timeline",
+  "description": "Interactive timeline of AI model releases from OpenAI, Anthropic, Google, Meta, DeepSeek and more.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "publisher": {"@type": "Organization", "name": "Crazyrouter", "url": "https://crazyrouter.com"}
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;color:#111;line-height:1.5}
+.header{max-width:900px;margin:40px auto 0;padding:0 20px;text-align:center}
+.header h1{font-size:28px;margin-bottom:6px}
+.header p{color:#6b7280;font-size:15px;margin-bottom:24px}
+.controls{max-width:900px;margin:0 auto 20px;padding:0 20px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.controls button{padding:6px 14px;border:1px solid #e5e7eb;border-radius:20px;background:#fff;cursor:pointer;font-size:13px;transition:all .2s}
+.controls button:hover{border-color:#2563eb;color:#2563eb}
+.controls button.active{background:#2563eb;color:#fff;border-color:#2563eb}
+.search-box{padding:6px 14px;border:1px solid #e5e7eb;border-radius:20px;font-size:13px;outline:none;width:200px}
+.search-box:focus{border-color:#2563eb}
+.timeline{max-width:900px;margin:0 auto;padding:0 20px 60px;position:relative}
+.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:#e5e7eb;transform:translateX(-1px)}
+.year-label{text-align:center;position:relative;z-index:1;margin:30px 0 16px}
+.year-label span{background:#111;color:#fff;padding:4px 16px;border-radius:20px;font-size:14px;font-weight:600}
+.event{position:relative;width:45%;margin-bottom:16px;padding:14px 18px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;transition:all .2s}
+.event:hover{border-color:#2563eb;box-shadow:0 2px 12px rgba(37,99,235,.1)}
+.event.left{margin-right:auto;margin-left:5%}
+.event.right{margin-left:auto;margin-right:5%}
+.event::after{content:'';position:absolute;top:20px;width:10px;height:10px;border-radius:50%;background:#2563eb}
+.event.left::after{right:-26px}
+.event.right::after{left:-26px}
+.event .date{font-size:12px;color:#6b7280;margin-bottom:2px}
+.event .name{font-size:15px;font-weight:600;margin-bottom:2px}
+.event .provider{font-size:12px;color:#fff;padding:1px 8px;border-radius:10px;display:inline-block;margin-bottom:4px}
+.event .desc{font-size:13px;color:#6b7280}
+.p-openai{background:#10a37f}
+.p-anthropic{background:#d97706}
+.p-google{background:#4285f4}
+.p-meta{background:#1877f2}
+.p-deepseek{background:#6366f1}
+.p-mistral{background:#f43f5e}
+.p-xai{background:#111}
+.p-other{background:#6b7280}
+.hidden{display:none!important}
+.cta{max-width:900px;margin:0 auto 40px;padding:20px;text-align:center;background:#f0f7ff;border-radius:12px}
+.cta a{color:#2563eb;text-decoration:none;font-weight:600}
+.footer{text-align:center;padding:20px;color:#9ca3af;font-size:13px}
+.footer a{color:#6b7280;text-decoration:none}
+.stats{display:flex;gap:20px;justify-content:center;margin-bottom:24px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat .num{font-size:24px;font-weight:700;color:#2563eb}
+.stat .label{font-size:12px;color:#6b7280}
+@media(max-width:640px){
+  .timeline::before{left:20px}
+  .event{width:calc(100% - 40px);margin-left:40px!important;margin-right:0!important}
+  .event.left::after,.event.right::after{left:-21px;right:auto}
+  .event.right{margin-left:40px!important}
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>🕐 AI Model Release Timeline</h1>
+<p>Track every major AI model launch — from GPT-3 to the latest releases</p>
+<div class="stats" id="stats"></div>
+</div>
+<div class="controls">
+<input type="text" class="search-box" id="search" placeholder="Search models...">
+<button class="active" data-filter="all">All</button>
+<button data-filter="openai">OpenAI</button>
+<button data-filter="anthropic">Anthropic</button>
+<button data-filter="google">Google</button>
+<button data-filter="meta">Meta</button>
+<button data-filter="deepseek">DeepSeek</button>
+<button data-filter="mistral">Mistral</button>
+<button data-filter="xai">xAI</button>
+</div>
+<div class="timeline" id="timeline"></div>
+<div class="cta">
+Access all these models through one API — <a href="https://crazyrouter.com?utm_source=tools&utm_medium=timeline&utm_campaign=model_timeline">Try Crazyrouter free →</a>
+</div>
+<div class="footer"><a href="../">← Back to Tools</a> · <a href="https://crazyrouter.com">Crazyrouter</a></div>
+<script>
+const models=[
+{date:"2020-06-11",name:"GPT-3",provider:"openai",desc:"175B params. The model that started the LLM era."},
+{date:"2022-11-30",name:"ChatGPT (GPT-3.5)",provider:"openai",desc:"Fine-tuned GPT-3.5. Launched ChatGPT to the public."},
+{date:"2023-02-06",name:"Bard (PaLM 2)",provider:"google",desc:"Google's first public chatbot response to ChatGPT."},
+{date:"2023-02-24",name:"LLaMA",provider:"meta",desc:"Meta's first open-source LLM. 7B-65B params."},
+{date:"2023-03-14",name:"GPT-4",provider:"openai",desc:"Multimodal model. Major leap in reasoning."},
+{date:"2023-03-14",name:"Claude 1",provider:"anthropic",desc:"Anthropic's first public model. Constitutional AI."},
+{date:"2023-07-11",name:"Claude 2",provider:"anthropic",desc:"100K context window. Improved coding & math."},
+{date:"2023-07-18",name:"Llama 2",provider:"meta",desc:"Open-source. 7B-70B. Commercial license."},
+{date:"2023-09-27",name:"Mistral 7B",provider:"mistral",desc:"First Mistral model. Outperformed Llama 2 13B."},
+{date:"2023-12-06",name:"Gemini 1.0",provider:"google",desc:"Ultra, Pro, Nano. Google's multimodal flagship."},
+{date:"2023-12-11",name:"Mixtral 8x7B",provider:"mistral",desc:"Mixture of Experts. 46.7B total, 12.9B active."},
+{date:"2024-02-15",name:"Gemini 1.5 Pro",provider:"google",desc:"1M token context window. Breakthrough in long context."},
+{date:"2024-03-04",name:"Claude 3 (Opus/Sonnet/Haiku)",provider:"anthropic",desc:"Three tiers. Opus topped benchmarks at launch."},
+{date:"2024-04-18",name:"Llama 3",provider:"meta",desc:"8B and 70B. State-of-art open-source."},
+{date:"2024-05-13",name:"GPT-4o",provider:"openai",desc:"Omni model. Native multimodal, 2x faster, 50% cheaper."},
+{date:"2024-06-20",name:"Claude 3.5 Sonnet",provider:"anthropic",desc:"Outperformed Claude 3 Opus at lower cost."},
+{date:"2024-07-23",name:"Llama 3.1 405B",provider:"meta",desc:"Largest open-source model. Competitive with GPT-4o."},
+{date:"2024-09-12",name:"o1-preview",provider:"openai",desc:"First reasoning model. Chain-of-thought at inference."},
+{date:"2024-10-22",name:"Claude 3.5 Sonnet (new)",provider:"anthropic",desc:"Updated Sonnet. Computer use capability."},
+{date:"2024-11-20",name:"Grok-2",provider:"xai",desc:"xAI's flagship. Real-time X/Twitter data access."},
+{date:"2024-12-05",name:"Gemini 2.0 Flash",provider:"google",desc:"Next-gen multimodal. Agentic capabilities."},
+{date:"2024-12-09",name:"Llama 3.3 70B",provider:"meta",desc:"Matched 405B performance at 70B size."},
+{date:"2025-01-20",name:"DeepSeek-R1",provider:"deepseek",desc:"Open-source reasoning model. MIT license. Shook the industry."},
+{date:"2025-01-30",name:"o3-mini",provider:"openai",desc:"Smaller reasoning model. Cost-effective."},
+{date:"2025-02-19",name:"Grok-3",provider:"xai",desc:"Trained on 200K H100s. Top benchmark scores."},
+{date:"2025-02-24",name:"Claude 3.5 Haiku",provider:"anthropic",desc:"Fast and cheap. Great for high-volume tasks."},
+{date:"2025-02-25",name:"GPT-4.5",provider:"openai",desc:"Largest model yet. Improved EQ and creativity."},
+{date:"2025-03-04",name:"Gemini 2.5 Pro",provider:"google",desc:"Thinking model. Top of Chatbot Arena."},
+{date:"2025-03-12",name:"Claude 3.7 Sonnet",provider:"anthropic",desc:"Hybrid reasoning. Extended thinking mode."},
+{date:"2025-04-14",name:"o3 / o4-mini",provider:"openai",desc:"Full o3 reasoning model + efficient o4-mini."},
+{date:"2025-04-17",name:"Claude Opus 4 / Sonnet 4",provider:"anthropic",desc:"Opus 4: best coding model. Sonnet 4: disciplined reasoning."},
+{date:"2025-04-29",name:"Llama 4 (Scout/Maverick)",provider:"meta",desc:"Scout: 17B active/109B MoE. Maverick: 17B/400B MoE."},
+{date:"2025-05-06",name:"DeepSeek-R2",provider:"deepseek",desc:"Next-gen reasoning. Improved math and code."},
+{date:"2025-05-20",name:"Gemini 2.5 Flash",provider:"google",desc:"Fast thinking model. Great cost-performance ratio."},
+{date:"2025-06-10",name:"GPT-5",provider:"openai",desc:"Unified model. PhD-level reasoning across domains."},
+{date:"2025-07-16",name:"DeepSeek-V3.5",provider:"deepseek",desc:"Unified model merging V3 and R2 capabilities."},
+{date:"2025-09-09",name:"o3-pro",provider:"openai",desc:"Enhanced o3 with more compute for hard problems."},
+{date:"2025-12-19",name:"Gemini 2.5 Pro (0219)",provider:"google",desc:"Updated Gemini 2.5 Pro with improved capabilities."},
+{date:"2026-01-23",name:"DeepSeek-R1-0120",provider:"deepseek",desc:"Updated R1 with improved reasoning."},
+{date:"2026-02-24",name:"Claude 3.7 Opus",provider:"anthropic",desc:"Most capable Claude model to date."},
+{date:"2026-03-05",name:"GPT-5.5",provider:"openai",desc:"Next evolution. Enhanced multimodal reasoning."},
+];
+
+const timeline=document.getElementById('timeline');
+const searchInput=document.getElementById('search');
+const statsDiv=document.getElementById('stats');
+let activeFilter='all';
+
+function render(){
+  const q=searchInput.value.toLowerCase();
+  const filtered=models.filter(m=>{
+    if(activeFilter!=='all'&&m.provider!==activeFilter)return false;
+    if(q&&!m.name.toLowerCase().includes(q)&&!m.provider.toLowerCase().includes(q)&&!m.desc.toLowerCase().includes(q))return false;
+    return true;
+  });
+  
+  // Stats
+  const providers=new Set(models.map(m=>m.provider));
+  const years=new Set(models.map(m=>m.date.slice(0,4)));
+  statsDiv.innerHTML=`
+    <div class="stat"><div class="num">${models.length}</div><div class="label">Models Tracked</div></div>
+    <div class="stat"><div class="num">${providers.size}</div><div class="label">Providers</div></div>
+    <div class="stat"><div class="num">${Math.min(...[...years])}-${Math.max(...[...years])}</div><div class="label">Year Range</div></div>
+  `;
+
+  // Group by year
+  const byYear={};
+  filtered.sort((a,b)=>a.date.localeCompare(b.date));
+  filtered.forEach(m=>{
+    const y=m.date.slice(0,4);
+    if(!byYear[y])byYear[y]=[];
+    byYear[y].push(m);
+  });
+
+  let html='';
+  let side=0;
+  Object.keys(byYear).sort().forEach(year=>{
+    html+=`<div class="year-label"><span>${year}</span></div>`;
+    byYear[year].forEach(m=>{
+      const cls=side%2===0?'left':'right';
+      const d=new Date(m.date+'T00:00:00');
+      const dateStr=d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+      html+=`<div class="event ${cls}">
+        <div class="date">${dateStr}</div>
+        <span class="provider p-${m.provider}">${m.provider}</span>
+        <div class="name">${m.name}</div>
+        <div class="desc">${m.desc}</div>
+      </div>`;
+      side++;
+    });
+  });
+  
+  if(!filtered.length)html='<p style="text-align:center;color:#6b7280;padding:40px">No models found.</p>';
+  timeline.innerHTML=html;
+}
+
+document.querySelectorAll('.controls button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.controls button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter=btn.dataset.filter;
+    render();
+  });
+});
+searchInput.addEventListener('input',render);
+render();
+</script>
+</body>
+</html>

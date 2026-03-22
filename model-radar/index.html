@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Model Radar - Ranking Tracker & Support Priorities | Crazyrouter</title>
+<meta name="description" content="Track AI model popularity across OpenRouter, LMSYS, Artificial Analysis, and OpenCompass. Prioritize which models Crazyrouter should support and spotlight.">
+<link rel="canonical" href="https://crazyrouter.com/tools/model-radar">
+<meta property="og:title" content="AI Model Radar | Crazyrouter">
+<meta property="og:description" content="A practical radar for tracking hot AI models, support priorities, and model selection guidance.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crazyrouter.com/tools/model-radar">
+<style>
+:root{--bg:#f7f6f2;--panel:#fffdf8;--ink:#1d2733;--muted:#667385;--line:#e5dfd4;--accent:#1f6feb;--accent-soft:#eaf2ff;--good:#0f9d58;--warn:#c97a00;--watch:#7a4ce0;--chip:#f1ede4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at top,#fff8e8 0,#f7f6f2 38%,#f3f0e8 100%);color:var(--ink);line-height:1.5}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:32px 20px 48px}
+.hero{background:linear-gradient(135deg,rgba(255,251,240,.95),rgba(255,255,255,.92));border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 18px 50px rgba(29,39,51,.07);margin-bottom:20px}
+.kicker{font:700 12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(34px,5vw,58px);line-height:.95;margin-bottom:14px;max-width:820px}
+.hero p{max-width:780px;color:var(--muted);font-size:18px}
+.hero-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px}
+.card h2,.card h3{font-size:18px;margin-bottom:10px}
+.small{font-size:13px;color:var(--muted)}
+.metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.metric{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:16px;padding:14px}
+.metric strong{display:block;font-size:27px;line-height:1;margin-bottom:6px}
+.metric span{font-size:12px;color:var(--muted)}
+.section{margin-top:20px}
+.section-title{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:12px}
+.section-title h2{font-size:27px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap}
+.toolbar input,.toolbar select{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:#fff;font-size:14px;color:var(--ink)}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:20px;background:var(--panel)}
+table{width:100%;border-collapse:collapse;min-width:980px}
+th,td{padding:12px 14px;border-bottom:1px solid #efe7da;text-align:left;vertical-align:top}
+th{font:700 12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:#fcfaf4;position:sticky;top:0}
+tr:hover td{background:#fffcf3}
+.score{font:700 20px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
+.rank-list{display:flex;gap:6px;flex-wrap:wrap}
+.rank-chip,.tag,.source-chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 10px;font-size:12px;background:var(--chip);color:#534b3f}
+.priority{font-weight:700;color:#fff}
+.priority.p0{background:var(--good)}
+.priority.p1{background:var(--accent)}
+.priority.p2{background:var(--warn)}
+.priority.p3{background:var(--watch)}
+.status{font-weight:700}
+.status.supported{color:var(--good)}
+.status.candidate{color:var(--accent)}
+.status.watchlist{color:var(--watch)}
+.grid-2{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+.list{display:grid;gap:10px}
+.list-item{padding:14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.72)}
+.list-item strong{display:block;margin-bottom:4px}
+.method{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.method .card{min-height:150px}
+.footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+.note{font-size:14px;color:var(--muted)}
+@media (max-width:900px){.hero-grid,.grid-2,.method,.metric-grid{grid-template-columns:1fr}h1{font-size:40px}.section-title{display:block}.section-title p{margin-top:8px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <section class="hero">
+    <div class="kicker">Model Strategy / Ranking Tracker</div>
+    <h1>AI Model Radar</h1>
+    <p>Use public leaderboards to decide which models Crazyrouter should support, which ones deserve homepage exposure, and how to guide users toward the right model for each task.</p>
+    <div class="metric-grid" id="metrics"></div>
+    <div class="hero-grid">
+      <div class="card">
+        <h2>What this version already does</h2>
+        <div class="list">
+          <div class="list-item"><strong>Unifies four external signals</strong><span class="small">OpenRouter, LMSYS, Artificial Analysis, and OpenCompass are normalized into a single hotness score.</span></div>
+          <div class="list-item"><strong>Produces support priorities</strong><span class="small">Every model gets a practical output: `P0`, `P1`, `P2`, or `P3`, plus support status.</span></div>
+          <div class="list-item"><strong>Supports content planning</strong><span class="small">Recommended use cases make it easy to spin up model comparison pages and selection guides.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Source Weights</h2>
+        <div id="sourceWeights" class="list"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Priority Table</h2>
+        <p class="note">Start here every week: check ranking movement, refresh support priorities, and decide what to feature on the site.</p>
+      </div>
+      <div class="toolbar">
+        <input id="search" type="text" placeholder="Search model or provider">
+        <select id="priorityFilter">
+          <option value="all">All priorities</option>
+          <option value="P0">P0</option>
+          <option value="P1">P1</option>
+          <option value="P2">P2</option>
+          <option value="P3">P3</option>
+        </select>
+        <select id="statusFilter">
+          <option value="all">All statuses</option>
+          <option value="supported">Supported</option>
+          <option value="candidate">Candidate</option>
+          <option value="watchlist">Watchlist</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Provider</th>
+            <th>Hotness</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Rank Signals</th>
+            <th>Recommended For</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="radarBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section grid-2">
+    <div class="card">
+      <h2>Support Recommendations</h2>
+      <div id="recommendations" class="list"></div>
+    </div>
+    <div class="card">
+      <h2>Content Angles</h2>
+      <div id="contentAngles" class="list"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Scoring Method</h2>
+        <p class="note">This is intentionally simple enough to use weekly without building a whole backend first.</p>
+      </div>
+    </div>
+    <div class="method">
+      <div class="card"><h3>1. Normalize each rank</h3><p class="small">Every source rank becomes a 0-100 score using a simple formula: <code>100 - (rank - 1) * 4</code>, capped at 20.</p></div>
+      <div class="card"><h3>2. Compute hotness</h3><p class="small">Weighted blend of all four sources. OpenRouter carries the highest weight because it reflects public ecosystem pull most directly.</p></div>
+      <div class="card"><h3>3. Add capability + business</h3><p class="small">Capability score reflects task fitness; business score reflects actual value to Crazyrouter growth and product positioning.</p></div>
+      <div class="card"><h3>4. Output priority</h3><p class="small">P0 means support and feature aggressively. P1 means support or evaluate. P2 means keep on radar. P3 means no need to highlight.</p></div>
+    </div>
+  </section>
+
+  <div class="footer">Back to <a href="../">Tools</a> · Powered by Crazyrouter strategy data</div>
+</div>
+<script src="./data.js"></script>
+<script>
+const data = window.MODEL_RADAR_DATA;
+const scoreFromRank = rank => Math.max(0, 100 - (Math.min(rank, 20) - 1) * 4);
+const avg = arr => arr.reduce((a, b) => a + b, 0) / (arr.length || 1);
+
+function computeModel(model) {
+  const rankScores = Object.entries(model.ranks).map(([source, rank]) => ({ source, rank, score: scoreFromRank(rank) }));
+  const hotness = rankScores.reduce((sum, item) => sum + item.score * data.weights[item.source], 0);
+  const blended = hotness * 0.55 + model.capabilityScore * 0.2 + model.businessScore * 0.25;
+  let priority = "P3";
+  if (blended >= 88 || (hotness >= 84 && model.businessScore >= 88)) priority = "P0";
+  else if (blended >= 78) priority = "P1";
+  else if (blended >= 68) priority = "P2";
+  return { ...model, hotness: Math.round(hotness), blended: Math.round(blended), priority, rankScores };
+}
+
+const computed = data.models.map(computeModel).sort((a, b) => b.blended - a.blended);
+
+function renderMetrics() {
+  const p0 = computed.filter(item => item.priority === "P0").length;
+  const supported = computed.filter(item => item.supportStatus === "supported").length;
+  const candidates = computed.filter(item => item.supportStatus === "candidate").length;
+  const avgHotness = Math.round(avg(computed.map(item => item.hotness)));
+  document.getElementById("metrics").innerHTML = [
+    `<div class="metric"><strong>${computed.length}</strong><span>Tracked models</span></div>`,
+    `<div class="metric"><strong>${p0}</strong><span>P0 models to feature</span></div>`,
+    `<div class="metric"><strong>${supported}</strong><span>Already supported</span></div>`,
+    `<div class="metric"><strong>${avgHotness}</strong><span>Average hotness score</span></div>`
+  ].join("");
+
+  document.getElementById("sourceWeights").innerHTML = Object.entries(data.sourceMeta).map(([key, source]) =>
+    `<div class="list-item"><strong>${source.label} <span class="source-chip">${Math.round(data.weights[key] * 100)}%</span></strong><span class="small">${source.description} · <a href="${source.url}" target="_blank" rel="noopener noreferrer">source</a></span></div>`
+  ).join("");
+}
+
+function renderTable() {
+  const query = document.getElementById("search").value.trim().toLowerCase();
+  const priority = document.getElementById("priorityFilter").value;
+  const status = document.getElementById("statusFilter").value;
+  const rows = computed.filter(item => {
+    if (priority !== "all" && item.priority !== priority) return false;
+    if (status !== "all" && item.supportStatus !== status) return false;
+    if (!query) return true;
+    return [item.name, item.provider, item.notes, item.recommendedFor.join(" ")].join(" ").toLowerCase().includes(query);
+  });
+
+  document.getElementById("radarBody").innerHTML = rows.map(item => `
+    <tr>
+      <td><strong>${item.name}</strong><div class="small">${item.category}</div></td>
+      <td>${item.provider}</td>
+      <td><div class="score">${item.blended}</div><div class="small">Hotness ${item.hotness}</div></td>
+      <td><span class="rank-chip priority ${item.priority.toLowerCase()}">${item.priority}</span></td>
+      <td><span class="status ${item.supportStatus}">${item.supportStatus}</span></td>
+      <td><div class="rank-list">${item.rankScores.map(rank => `<span class="rank-chip">${rank.source}: #${rank.rank}</span>`).join("")}</div></td>
+      <td>${item.recommendedFor.map(tag => `<span class="tag">${tag}</span>`).join("")}</td>
+      <td class="small">${item.notes}</td>
+    </tr>
+  `).join("") || `<tr><td colspan="8" class="small">No matching models.</td></tr>`;
+}
+
+function renderRecommendations() {
+  const p0 = computed.filter(item => item.priority === "P0").slice(0, 5);
+  const candidates = computed.filter(item => item.supportStatus === "candidate").slice(0, 4);
+  const html = [
+    ...p0.map(item => `<div class="list-item"><strong>${item.name} — feature now</strong><span class="small">Blended score ${item.blended}. Use on homepage, model pages, and selection guides.</span></div>`),
+    ...candidates.map(item => `<div class="list-item"><strong>${item.name} — candidate to add</strong><span class="small">High external signal. Validate support path and create launch content early.</span></div>`)
+  ];
+  document.getElementById("recommendations").innerHTML = html.join("");
+}
+
+function renderContentAngles() {
+  const angles = [
+    "Best AI Models for Coding in 2026",
+    "How to Choose an AI Model: Speed vs Quality vs Cost",
+    "Gemini vs Claude vs GPT: Which Model Should You Use?",
+    "Most Popular AI Models Developers Actually Use",
+    "Best Budget Models for Chatbots and Support Automation"
+  ];
+  document.getElementById("contentAngles").innerHTML = angles.map(title => `<div class="list-item"><strong>${title}</strong><span class="small">Built directly from the same radar data, so product strategy and SEO stay aligned.</span></div>`).join("");
+}
+
+["search", "priorityFilter", "statusFilter"].forEach(id => {
+  document.getElementById(id).addEventListener(id === "search" ? "input" : "change", renderTable);
+});
+
+renderMetrics();
+renderRecommendations();
+renderContentAngles();
+renderTable();
+</script>
+</body>
+</html>

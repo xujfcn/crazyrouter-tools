@@ -1,0 +1,15 @@
+key,rank
+claude-3-7-sonnet,3
+gpt-4o,5
+gemini-2-5-pro,7
+gemini-2-5-flash,10
+deepseek-r1,6
+deepseek-v3,9
+claude-sonnet-4-6,4
+claude-opus-4-6,8
+grok-4,12
+qwen3-max,15
+llama-4-maverick,17
+mistral-medium-3,20
+gemini-3-1-pro,11
+gpt-5-4,14

@@ -19,14 +19,14 @@
     },
     {
       "key": "gpt-4o",
-      "name": "GPT-4o",
+      "name": "GPT-4o / GPT-4o mini",
       "provider": "OpenAI",
       "category": "flagship",
       "supportStatus": "supported",
       "capabilityScore": 90,
       "businessScore": 95,
       "recommendedFor": ["chat", "vision", "agents"],
-      "notes": "Mainstream default choice with strong brand pull."
+      "notes": "Mainstream default choice with strong brand pull and broad compatibility."
     },
     {
       "key": "gemini-2-5-pro",
@@ -41,7 +41,7 @@
     },
     {
       "key": "gemini-2-5-flash",
-      "name": "Gemini 2.5 Flash",
+      "name": "Gemini Flash family",
       "provider": "Google",
       "category": "fast",
       "supportStatus": "supported",
@@ -63,14 +63,14 @@
     },
     {
       "key": "deepseek-v3",
-      "name": "DeepSeek V3",
+      "name": "DeepSeek V3 / V3.2",
       "provider": "DeepSeek",
       "category": "flagship",
       "supportStatus": "supported",
-      "capabilityScore": 83,
-      "businessScore": 85,
+      "capabilityScore": 86,
+      "businessScore": 89,
       "recommendedFor": ["cheap", "general", "coding"],
-      "notes": "Solid baseline model with favorable pricing optics."
+      "notes": "Strong usage momentum on OpenRouter with excellent price-to-performance optics."
     },
     {
       "key": "claude-sonnet-4-6",
@@ -79,7 +79,7 @@
       "category": "flagship",
       "supportStatus": "supported",
       "capabilityScore": 95,
-      "businessScore": 89,
+      "businessScore": 90,
       "recommendedFor": ["coding", "writing", "agents"],
       "notes": "Premium high-quality default for coding and writing."
     },
@@ -90,9 +90,9 @@
       "category": "flagship",
       "supportStatus": "supported",
       "capabilityScore": 97,
-      "businessScore": 83,
+      "businessScore": 84,
       "recommendedFor": ["quality", "coding", "research"],
-      "notes": "High prestige model; may not be price-efficient for most traffic."
+      "notes": "Prestige flagship model for best-quality positioning."
     },
     {
       "key": "grok-4",
@@ -125,7 +125,7 @@
       "capabilityScore": 82,
       "businessScore": 68,
       "recommendedFor": ["open-source", "experimentation"],
-      "notes": "Good ecosystem value, but less urgent for homepage focus."
+      "notes": "Useful ecosystem anchor for open-source model coverage."
     },
     {
       "key": "mistral-medium-3",
@@ -158,7 +158,62 @@
       "capabilityScore": 96,
       "businessScore": 92,
       "recommendedFor": ["flagship", "coding", "agents"],
-      "notes": "Likely valuable for positioning even if usage cost is higher."
+      "notes": "Important for flagship positioning and demand capture."
+    },
+    {
+      "key": "stepfun-flash",
+      "name": "Stepfun / Step 3.5 Flash",
+      "provider": "Stepfun",
+      "category": "fast",
+      "supportStatus": "watchlist",
+      "capabilityScore": 78,
+      "businessScore": 72,
+      "recommendedFor": ["cheap", "chat", "china"],
+      "notes": "Fast-rising traffic signal on OpenRouter; worth watching for demand."
+    },
+    {
+      "key": "glm-5-turbo",
+      "name": "GLM-5 Turbo",
+      "provider": "Z.ai",
+      "category": "fast",
+      "supportStatus": "watchlist",
+      "capabilityScore": 80,
+      "businessScore": 74,
+      "recommendedFor": ["cheap", "multilingual", "china"],
+      "notes": "Could become useful if Chinese-market demand continues rising."
+    },
+    {
+      "key": "mimo-v2-pro",
+      "name": "Xiaomi MiMo V2 Pro",
+      "provider": "Xiaomi",
+      "category": "reasoning",
+      "supportStatus": "candidate",
+      "capabilityScore": 88,
+      "businessScore": 82,
+      "recommendedFor": ["reasoning", "new-model", "seo"],
+      "notes": "Fresh model with strong novelty and content marketing value."
+    },
+    {
+      "key": "openrouter-hunter-alpha",
+      "name": "OpenRouter Hunter Alpha",
+      "provider": "OpenRouter",
+      "category": "fast",
+      "supportStatus": "watchlist",
+      "capabilityScore": 77,
+      "businessScore": 69,
+      "recommendedFor": ["cheap", "routing", "experiments"],
+      "notes": "Internal OpenRouter ecosystem signal; monitor rather than feature."
+    },
+    {
+      "key": "openrouter-optimus-alpha",
+      "name": "OpenRouter Optimus Alpha",
+      "provider": "OpenRouter",
+      "category": "flagship",
+      "supportStatus": "watchlist",
+      "capabilityScore": 79,
+      "businessScore": 70,
+      "recommendedFor": ["routing", "experiments"],
+      "notes": "Good market-signal model, but less critical than major provider flagships."
     }
   ]
 }

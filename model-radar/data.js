@@ -43,7 +43,6 @@ window.MODEL_RADAR_DATA = {
       ],
       "notes": "Strong coding model with stable demand across dev workflows.",
       "ranks": {
-        "openrouter": 3,
         "lmsys": 5,
         "artificial": 4,
         "opencompass": 12
@@ -51,7 +50,7 @@ window.MODEL_RADAR_DATA = {
     },
     {
       "key": "gpt-4o",
-      "name": "GPT-4o",
+      "name": "GPT-4o / GPT-4o mini",
       "provider": "OpenAI",
       "category": "flagship",
       "supportStatus": "supported",
@@ -62,9 +61,8 @@ window.MODEL_RADAR_DATA = {
         "vision",
         "agents"
       ],
-      "notes": "Mainstream default choice with strong brand pull.",
+      "notes": "Mainstream default choice with strong brand pull and broad compatibility.",
       "ranks": {
-        "openrouter": 5,
         "lmsys": 8,
         "artificial": 6,
         "opencompass": 15
@@ -85,7 +83,6 @@ window.MODEL_RADAR_DATA = {
       ],
       "notes": "High-end reasoning and context window coverage.",
       "ranks": {
-        "openrouter": 7,
         "lmsys": 4,
         "artificial": 5,
         "opencompass": 9
@@ -93,7 +90,7 @@ window.MODEL_RADAR_DATA = {
     },
     {
       "key": "gemini-2-5-flash",
-      "name": "Gemini 2.5 Flash",
+      "name": "Gemini Flash family",
       "provider": "Google",
       "category": "fast",
       "supportStatus": "supported",
@@ -106,7 +103,6 @@ window.MODEL_RADAR_DATA = {
       ],
       "notes": "Fast and low-cost option for high-volume chat tasks.",
       "ranks": {
-        "openrouter": 10,
         "lmsys": 14,
         "artificial": 8,
         "opencompass": 22
@@ -127,7 +123,6 @@ window.MODEL_RADAR_DATA = {
       ],
       "notes": "Very strong value story and high interest from price-sensitive users.",
       "ranks": {
-        "openrouter": 6,
         "lmsys": 11,
         "artificial": 9,
         "opencompass": 4
@@ -135,20 +130,20 @@ window.MODEL_RADAR_DATA = {
     },
     {
       "key": "deepseek-v3",
-      "name": "DeepSeek V3",
+      "name": "DeepSeek V3 / V3.2",
       "provider": "DeepSeek",
       "category": "flagship",
       "supportStatus": "supported",
-      "capabilityScore": 83,
-      "businessScore": 85,
+      "capabilityScore": 86,
+      "businessScore": 89,
       "recommendedFor": [
         "cheap",
         "general",
         "coding"
       ],
-      "notes": "Solid baseline model with favorable pricing optics.",
+      "notes": "Strong usage momentum on OpenRouter with excellent price-to-performance optics.",
       "ranks": {
-        "openrouter": 9,
+        "openrouter": 4,
         "lmsys": 18,
         "artificial": 13,
         "opencompass": 8
@@ -161,7 +156,7 @@ window.MODEL_RADAR_DATA = {
       "category": "flagship",
       "supportStatus": "supported",
       "capabilityScore": 95,
-      "businessScore": 89,
+      "businessScore": 90,
       "recommendedFor": [
         "coding",
         "writing",
@@ -169,7 +164,7 @@ window.MODEL_RADAR_DATA = {
       ],
       "notes": "Premium high-quality default for coding and writing.",
       "ranks": {
-        "openrouter": 4,
+        "openrouter": 5,
         "lmsys": 6,
         "artificial": 3,
         "opencompass": 10
@@ -182,13 +177,13 @@ window.MODEL_RADAR_DATA = {
       "category": "flagship",
       "supportStatus": "supported",
       "capabilityScore": 97,
-      "businessScore": 83,
+      "businessScore": 84,
       "recommendedFor": [
         "quality",
         "coding",
         "research"
       ],
-      "notes": "High prestige model; may not be price-efficient for most traffic.",
+      "notes": "Prestige flagship model for best-quality positioning.",
       "ranks": {
         "openrouter": 8,
         "lmsys": 3,
@@ -210,7 +205,6 @@ window.MODEL_RADAR_DATA = {
       ],
       "notes": "Attention-grabbing model; watch demand before prioritizing full exposure.",
       "ranks": {
-        "openrouter": 12,
         "lmsys": 7,
         "artificial": 7,
         "opencompass": 18
@@ -231,7 +225,6 @@ window.MODEL_RADAR_DATA = {
       ],
       "notes": "Strong Asia-focused coverage and pricing angle.",
       "ranks": {
-        "openrouter": 15,
         "lmsys": 10,
         "artificial": 11,
         "opencompass": 5
@@ -249,9 +242,8 @@ window.MODEL_RADAR_DATA = {
         "open-source",
         "experimentation"
       ],
-      "notes": "Good ecosystem value, but less urgent for homepage focus.",
+      "notes": "Useful ecosystem anchor for open-source model coverage.",
       "ranks": {
-        "openrouter": 17,
         "lmsys": 16,
         "artificial": 16,
         "opencompass": 20
@@ -271,7 +263,6 @@ window.MODEL_RADAR_DATA = {
       ],
       "notes": "Worth keeping on radar, but not a top acquisition driver yet.",
       "ranks": {
-        "openrouter": 20,
         "lmsys": 22,
         "artificial": 17,
         "opencompass": 24
@@ -292,7 +283,7 @@ window.MODEL_RADAR_DATA = {
       ],
       "notes": "New flagship; candidate for prominent support and content push.",
       "ranks": {
-        "openrouter": 11,
+        "openrouter": 9,
         "lmsys": 2,
         "artificial": 1,
         "opencompass": 6
@@ -311,12 +302,115 @@ window.MODEL_RADAR_DATA = {
         "coding",
         "agents"
       ],
-      "notes": "Likely valuable for positioning even if usage cost is higher.",
+      "notes": "Important for flagship positioning and demand capture.",
       "ranks": {
-        "openrouter": 14,
         "lmsys": 1,
         "artificial": 10,
         "opencompass": 13
+      }
+    },
+    {
+      "key": "stepfun-flash",
+      "name": "Stepfun / Step 3.5 Flash",
+      "provider": "Stepfun",
+      "category": "fast",
+      "supportStatus": "watchlist",
+      "capabilityScore": 78,
+      "businessScore": 72,
+      "recommendedFor": [
+        "cheap",
+        "chat",
+        "china"
+      ],
+      "notes": "Fast-rising traffic signal on OpenRouter; worth watching for demand.",
+      "ranks": {
+        "openrouter": 1
+      }
+    },
+    {
+      "key": "glm-5-turbo",
+      "name": "GLM-5 Turbo",
+      "provider": "Z.ai",
+      "category": "fast",
+      "supportStatus": "watchlist",
+      "capabilityScore": 80,
+      "businessScore": 74,
+      "recommendedFor": [
+        "cheap",
+        "multilingual",
+        "china"
+      ],
+      "notes": "Could become useful if Chinese-market demand continues rising.",
+      "ranks": {
+        "openrouter": 6
+      }
+    },
+    {
+      "key": "mimo-v2-pro",
+      "name": "Xiaomi MiMo V2 Pro",
+      "provider": "Xiaomi",
+      "category": "reasoning",
+      "supportStatus": "candidate",
+      "capabilityScore": 88,
+      "businessScore": 82,
+      "recommendedFor": [
+        "reasoning",
+        "new-model",
+        "seo"
+      ],
+      "notes": "Fresh model with strong novelty and content marketing value.",
+      "ranks": {
+        "openrouter": 3
+      }
+    },
+    {
+      "key": "openrouter-hunter-alpha",
+      "name": "OpenRouter Hunter Alpha",
+      "provider": "OpenRouter",
+      "category": "fast",
+      "supportStatus": "watchlist",
+      "capabilityScore": 77,
+      "businessScore": 69,
+      "recommendedFor": [
+        "cheap",
+        "routing",
+        "experiments"
+      ],
+      "notes": "Internal OpenRouter ecosystem signal; monitor rather than feature.",
+      "ranks": {
+        "openrouter": 7
+      }
+    },
+    {
+      "key": "openrouter-optimus-alpha",
+      "name": "OpenRouter Optimus Alpha",
+      "provider": "OpenRouter",
+      "category": "flagship",
+      "supportStatus": "watchlist",
+      "capabilityScore": 79,
+      "businessScore": 70,
+      "recommendedFor": [
+        "routing",
+        "experiments"
+      ],
+      "notes": "Good market-signal model, but less critical than major provider flagships.",
+      "ranks": {}
+    },
+    {
+      "key": "or_minimax-minimax-m2-5-20260211",
+      "name": "Minimax M2 5 20260211",
+      "provider": "MiniMax",
+      "category": "fast",
+      "supportStatus": "watchlist",
+      "capabilityScore": 72,
+      "businessScore": 60,
+      "recommendedFor": [
+        "watchlist",
+        "new-model"
+      ],
+      "notes": "Auto-imported from OpenRouter rankings: minimax/minimax-m2.5-20260211",
+      "ranks": {
+        "openrouter": 2
       }
     }
   ]

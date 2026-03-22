@@ -3,13 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Model Radar - Ranking Tracker & Support Priorities | Crazyrouter</title>
-<meta name="description" content="Track AI model popularity across OpenRouter, LMSYS, Artificial Analysis, and OpenCompass. Prioritize which models Crazyrouter should support and spotlight.">
+<title>Best AI Models in 2026 - Rankings, Pricing & Selection Guide | Crazyrouter</title>
+<meta name="description" content="Compare the best AI models in 2026 by use case, popularity, and cost. Find the right model for coding, chatbots, reasoning, and long context — then try them on Crazyrouter.">
+<meta name="keywords" content="best ai models, ai model rankings, ai model comparison, best model for coding, cheapest ai model api, how to choose ai model, crazyrouter">
 <link rel="canonical" href="https://crazyrouter.com/tools/model-radar">
-<meta property="og:title" content="AI Model Radar | Crazyrouter">
-<meta property="og:description" content="A practical radar for tracking hot AI models, support priorities, and model selection guidance.">
+<meta property="og:title" content="Best AI Models in 2026 | Crazyrouter">
+<meta property="og:description" content="Choose the right AI model for coding, chatbots, reasoning, and cost-sensitive production workloads.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://crazyrouter.com/tools/model-radar">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI Model Selection Guide",
+  "url": "https://crazyrouter.com/tools/model-radar",
+  "description": "Choose the best AI model by use case, rankings, and cost.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "creator": {"@type": "Organization", "name": "Crazyrouter", "url": "https://crazyrouter.com"}
+}
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#fff;color:#111827;min-height:100vh;-webkit-font-smoothing:antialiased}
@@ -28,24 +42,61 @@ a{color:#2563eb;text-decoration:none}
 .btn-signup{display:inline-block;padding:8px 16px;border-radius:9999px;background:#111827;color:#fff;font-size:14px;font-weight:500;text-decoration:none;transition:background .2s}
 .btn-signup:hover{background:#374151}
 
-.container{max-width:72rem;margin:0 auto;padding:32px 16px 60px}
-.hero{background:linear-gradient(135deg,#f9fbff,#ffffff);border:1px solid #e5e7eb;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.04);margin-bottom:20px}
-.kicker{font:700 12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;color:#2563eb;text-transform:uppercase;margin-bottom:10px}
-h1{font-size:42px;line-height:1.02;margin-bottom:14px;max-width:820px;color:#111827}
-.hero p{max-width:760px;color:#6b7280;font-size:17px}
-.hero-grid{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:22px}
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:18px}
-.card h2,.card h3{font-size:18px;margin-bottom:10px;color:#111827}
-.small{font-size:13px;color:#6b7280}
-.metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
-.metric{background:#f9fafb;border:1px solid #e5e7eb;border-radius:14px;padding:14px}
-.metric strong{display:block;font-size:28px;line-height:1;margin-bottom:6px;color:#111827}
+.container{max-width:72rem;margin:0 auto;padding:0 16px 60px}
+.section{padding:48px 0}
+.section-sm{padding:28px 0}
+.section-title{text-align:center;max-width:720px;margin:0 auto 24px}
+.section-title h2{font-size:30px;font-weight:700;color:#111827;margin-bottom:10px}
+.section-title p{font-size:16px;color:#6b7280;line-height:1.6}
+
+/* Hero */
+.hero{padding:48px 0 28px;text-align:center}
+.hero h1{font-size:44px;line-height:1.05;font-weight:750;letter-spacing:-.03em;color:#111827;max-width:860px;margin:0 auto 16px}
+.hero p{color:#6b7280;font-size:18px;max-width:760px;margin:0 auto}
+.hero-cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn-primary,.btn-secondary{display:inline-block;padding:12px 22px;border-radius:9999px;font-size:15px;font-weight:600;transition:all .2s}
+.btn-primary{background:#2563eb;color:#fff}
+.btn-primary:hover{background:#1d4ed8}
+.btn-secondary{border:1px solid #d1d5db;color:#111827;background:#fff}
+.btn-secondary:hover{border-color:#2563eb;color:#2563eb;background:#eff6ff}
+.metric-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:28px}
+.metric{padding:16px;border:1px solid #e5e7eb;border-radius:14px;background:#f9fafb}
+.metric strong{display:block;font-size:28px;line-height:1;margin-bottom:6px}
 .metric span{font-size:12px;color:#6b7280}
-.section{margin-top:24px}
-.section-title{display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:12px}
-.section-title h2{font-size:26px;color:#111827}
-.note{font-size:14px;color:#6b7280}
-.toolbar{display:flex;gap:10px;flex-wrap:wrap}
+
+/* start here */
+.jump-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.jump-card{display:block;padding:18px;border:1px solid #e5e7eb;border-radius:16px;background:#fff;color:#111827;text-decoration:none;transition:all .2s}
+.jump-card:hover{border-color:#2563eb;background:#f0f7ff;transform:translateY(-1px)}
+.jump-card strong{display:block;font-size:15px;margin-bottom:6px}
+.jump-card span{display:block;font-size:13px;color:#6b7280;line-height:1.5}
+
+/* Cards */
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card{border:1px solid #e5e7eb;border-radius:18px;background:#fff;padding:20px}
+.card:hover{box-shadow:0 8px 28px rgba(0,0,0,.05)}
+.card h3{font-size:18px;font-weight:700;color:#111827;margin-bottom:8px}
+.card p{font-size:14px;color:#6b7280;line-height:1.6}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+.badge{display:inline-flex;align-items:center;padding:4px 10px;border-radius:9999px;font-size:12px;font-weight:600;background:#eff6ff;color:#2563eb}
+.badge-dark{background:#f3f4f6;color:#374151}
+.card ul{margin:12px 0 0 18px;color:#374151;font-size:14px;line-height:1.7}
+.card li{margin-bottom:4px}
+.card-cta{margin-top:14px}
+.card-cta a{font-size:14px;font-weight:600}
+
+/* use-case recommendations */
+.use-case-card{border:1px solid #e5e7eb;border-radius:18px;background:#fff;padding:20px}
+.use-case-card h3{font-size:19px;margin-bottom:8px}
+.use-case-card .winner{font-size:22px;font-weight:800;color:#111827;margin-bottom:4px}
+.use-case-card .sub{font-size:13px;color:#6b7280;margin-bottom:10px}
+.use-case-card p{font-size:14px;color:#4b5563;line-height:1.6}
+.use-case-card .mini{margin-top:12px;font-size:13px;color:#6b7280}
+
+/* table */
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}
 .toolbar input,.toolbar select{padding:10px 12px;border-radius:10px;border:1px solid #e5e7eb;background:#fff;font-size:14px;color:#111827;outline:none}
 .toolbar input:focus,.toolbar select:focus{border-color:#2563eb}
 .table-wrap{overflow:auto;border:1px solid #e5e7eb;border-radius:16px;background:#fff}
@@ -56,29 +107,37 @@ tr:hover td{background:#f0f7ff}
 .score{font:700 20px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:#111827}
 .rank-list{display:flex;gap:6px;flex-wrap:wrap}
 .rank-chip,.tag,.source-chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 10px;font-size:12px;background:#f3f4f6;color:#374151}
-.priority{font-weight:700;color:#fff}
-.priority.p0{background:#10b981}
-.priority.p1{background:#2563eb}
-.priority.p2{background:#f59e0b}
-.priority.p3{background:#8b5cf6}
-.status{font-weight:700}
-.status.supported{color:#10b981}
-.status.candidate{color:#2563eb}
-.status.watchlist{color:#8b5cf6}
-.grid-2{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
-.list{display:grid;gap:10px}
-.list-item{padding:14px;border:1px solid #e5e7eb;border-radius:14px;background:#f9fafb}
-.list-item strong{display:block;margin-bottom:4px;color:#111827}
-.method{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.method .card{min-height:150px}
-.cta-section{text-align:center;padding:36px 16px 0}
+.status-label{display:inline-flex;align-items:center;border-radius:9999px;padding:4px 10px;font-size:12px;font-weight:700;color:#fff}
+.status-top{background:#10b981}
+.status-rec{background:#2563eb}
+.status-emerging{background:#f59e0b}
+.status-watch{background:#8b5cf6}
+.provider-chip{font-size:12px;color:#6b7280}
+.small{font-size:13px;color:#6b7280}
+
+/* methodology / faq */
+.method-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.method-card{border:1px solid #e5e7eb;border-radius:16px;background:#f9fafb;padding:18px}
+.method-card h3{font-size:16px;margin-bottom:8px}
+.method-card p{font-size:14px;color:#6b7280;line-height:1.6}
+.faq-section{max-width:72rem;margin:0 auto;padding:16px 0 0}
+.faq-item{border-bottom:1px solid #e5e7eb;padding:16px 0}
+.faq-q{font-weight:600;font-size:15px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#111827}
+.faq-q::after{content:'+';color:#9ca3af;font-size:18px;transition:transform .2s}
+.faq-item.open .faq-q::after{content:'−'}
+.faq-a{color:#6b7280;font-size:14px;line-height:1.6;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
+.faq-item.open .faq-a{max-height:220px;padding-top:12px}
+
+/* CTA / footer */
+.cta-section{text-align:center;padding:48px 16px 0}
 .cta-section p{color:#6b7280;margin-bottom:16px;font-size:15px}
 .btn-cta{display:inline-block;padding:12px 32px;background:#2563eb;color:#fff;text-decoration:none;border-radius:9999px;font-weight:600;font-size:15px;transition:background .2s}
 .btn-cta:hover{background:#1d4ed8}
 .footer{text-align:center;padding:32px 16px;color:#9ca3af;font-size:13px;border-top:1px solid #e5e7eb;margin-top:48px}
 .footer a{color:#2563eb;text-decoration:none}
-@media(max-width:900px){.hero-grid,.grid-2,.method,.metric-grid{grid-template-columns:1fr}h1{font-size:32px}.section-title{display:block}.section-title p{margin-top:8px}}
-@media(max-width:768px){.nav-left{gap:16px}.nav-links{display:none}.navbar-inner{height:60px}}
+
+@media(max-width:1024px){.jump-grid,.grid-4,.method-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-left{gap:16px}.nav-links{display:none}.navbar-inner{height:60px}.hero h1{font-size:32px}.metric-row,.jump-grid,.grid-2,.grid-3,.grid-4,.method-grid{grid-template-columns:1fr}.toolbar{justify-content:flex-start}}
 </style>
 </head>
 <body>
@@ -105,48 +164,154 @@ tr:hover td{background:#f0f7ff}
 
 <div class="container">
   <section class="hero">
-    <div class="kicker">Model Strategy / Ranking Tracker</div>
-    <h1>AI Model Radar</h1>
-    <p>Track hot AI models across OpenRouter, LMSYS, Artificial Analysis, and OpenCompass. Use one practical view to decide what Crazyrouter should support, feature, and teach users to choose.</p>
-    <div class="metric-grid" id="metrics"></div>
-    <div class="hero-grid">
+    <h1>Best AI Models in 2026: Rankings, Pricing, and Selection Guide</h1>
+    <p>Not sure which model to use? This guide helps you choose the right AI model for coding, chatbots, reasoning, long context, and budget-sensitive workloads — using market signals from OpenRouter, LMSYS, Artificial Analysis, and OpenCompass.</p>
+    <div class="hero-cta">
+      <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=model_radar&utm_campaign=hero_cta" class="btn-primary">Try Models on Crazyrouter →</a>
+      <a href="#table" class="btn-secondary">View Rankings Table</a>
+    </div>
+    <div class="metric-row" id="metrics"></div>
+  </section>
+
+  <section class="section-sm">
+    <div class="section-title">
+      <h2>Start Here</h2>
+      <p>Choose the shortcut that matches what you actually need to build.</p>
+    </div>
+    <div class="jump-grid">
+      <a class="jump-card" href="#coding"><strong>💻 Best for Coding</strong><span>Choose a model for code generation, debugging, agents, and repo work.</span></a>
+      <a class="jump-card" href="#chatbots"><strong>💬 Best for Chatbots</strong><span>Find a strong default for support bots and conversational products.</span></a>
+      <a class="jump-card" href="#cheap"><strong>💸 Best on Budget</strong><span>Optimize for low cost while keeping quality usable.</span></a>
+      <a class="jump-card" href="#reasoning"><strong>🧠 Best for Reasoning</strong><span>Pick a model for hard prompts, analysis, and chain-of-thought style tasks.</span></a>
+      <a class="jump-card" href="#long-context"><strong>📚 Best for Long Context</strong><span>Compare models for docs, reports, transcripts, and RAG workflows.</span></a>
+    </div>
+  </section>
+
+  <section class="section" id="top-picks">
+    <div class="section-title">
+      <h2>Top Picks by Use Case</h2>
+      <p>This section gives you the fast answer first. If you want the raw ranking signals, scroll down to the full table.</p>
+    </div>
+    <div class="grid-3" id="useCaseGrid"></div>
+  </section>
+
+  <section class="section" id="coding">
+    <div class="section-title">
+      <h2>Best AI Models for Coding</h2>
+      <p>If you're building coding agents, assistants, code review tools, or internal dev copilots, these are the most practical models to start with.</p>
+    </div>
+    <div class="grid-3">
       <div class="card">
-        <h2>What this version already does</h2>
-        <div class="list">
-          <div class="list-item"><strong>Unifies four external signals</strong><span class="small">OpenRouter, LMSYS, Artificial Analysis, and OpenCompass are normalized into a single hotness score.</span></div>
-          <div class="list-item"><strong>Produces support priorities</strong><span class="small">Every model gets a practical output: `P0`, `P1`, `P2`, or `P3`, plus support status.</span></div>
-          <div class="list-item"><strong>Supports content planning</strong><span class="small">Recommended use cases make it easy to spin up model comparison pages and selection guides.</span></div>
-        </div>
+        <h3>Claude Sonnet 4.6</h3>
+        <div class="badge-row"><span class="badge">Best for coding</span><span class="badge badge-dark">Top pick</span></div>
+        <p>Great for agent flows, long files, clean rewrites, and reliable code output. A strong default if quality matters more than absolute lowest cost.</p>
+        <ul>
+          <li>Use for: coding agents, refactors, repo-level reasoning</li>
+          <li>Why choose it: strong quality and disciplined outputs</li>
+          <li>Watch out: premium cost versus budget models</li>
+        </ul>
       </div>
       <div class="card">
-        <h2>Source Weights</h2>
-        <div id="sourceWeights" class="list"></div>
+        <h3>GPT-5.4</h3>
+        <div class="badge-row"><span class="badge">Flagship</span><span class="badge badge-dark">Tool-heavy workflows</span></div>
+        <p>Useful for tool calling, productized agent flows, and cases where you want mainstream ecosystem compatibility.</p>
+        <ul>
+          <li>Use for: agents, tools, broad SDK compatibility</li>
+          <li>Why choose it: flagship positioning and strong brand trust</li>
+          <li>Watch out: may be overkill for cheap bulk workloads</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>DeepSeek V3 / V3.2</h3>
+        <div class="badge-row"><span class="badge">Best value</span><span class="badge badge-dark">Cost-sensitive coding</span></div>
+        <p>A great choice when you need useful coding performance without paying flagship prices.</p>
+        <ul>
+          <li>Use for: startup apps, internal tools, cheap coding routes</li>
+          <li>Why choose it: strong price-to-performance ratio</li>
+          <li>Watch out: slightly less polished than top premium models</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="chatbots">
     <div class="section-title">
-      <div>
-        <h2>Priority Table</h2>
-        <p class="note">Start here every week: check ranking movement, refresh support priorities, and decide what to feature on the site.</p>
+      <h2>Best AI Models for Chatbots</h2>
+      <p>For support bots, SaaS chat, and product assistants, the best model is often the one with the right balance of price, speed, and response quality.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <h3>GPT-4o / GPT-4o mini</h3>
+        <div class="badge-row"><span class="badge">Best general chatbot choice</span></div>
+        <p>A practical default for chat products because it balances compatibility, speed, and user familiarity.</p>
       </div>
-      <div class="toolbar">
-        <input id="search" type="text" placeholder="Search model or provider">
-        <select id="priorityFilter">
-          <option value="all">All priorities</option>
-          <option value="P0">P0</option>
-          <option value="P1">P1</option>
-          <option value="P2">P2</option>
-          <option value="P3">P3</option>
-        </select>
-        <select id="statusFilter">
-          <option value="all">All statuses</option>
-          <option value="supported">Supported</option>
-          <option value="candidate">Candidate</option>
-          <option value="watchlist">Watchlist</option>
-        </select>
+      <div class="card">
+        <h3>Gemini Flash family</h3>
+        <div class="badge-row"><span class="badge">Fast</span><span class="badge badge-dark">Budget friendly</span></div>
+        <p>Good for high-volume chat systems where speed and cost matter more than absolute premium writing quality.</p>
       </div>
+      <div class="card">
+        <h3>Claude Sonnet 4.6</h3>
+        <div class="badge-row"><span class="badge">Premium quality</span></div>
+        <p>Use when tone, writing quality, and more refined responses matter for your support or product experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cheap">
+    <div class="section-title">
+      <h2>Best Cheap AI Models</h2>
+      <p>If you care most about cost efficiency, these are the models worth testing first before you scale traffic.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card"><h3>Step 3.5 Flash</h3><p>Currently showing very strong OpenRouter usage momentum. Interesting for fast, low-cost workloads.</p></div>
+      <div class="card"><h3>DeepSeek V3</h3><p>One of the strongest value options for general and coding-heavy tasks.</p></div>
+      <div class="card"><h3>GLM-5 Turbo</h3><p>Worth watching for multilingual and cost-sensitive Chinese-market demand.</p></div>
+      <div class="card"><h3>Gemini Flash</h3><p>Fast enough for many production chat workloads without premium pricing.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="reasoning">
+    <div class="section-title">
+      <h2>Best Models for Reasoning</h2>
+      <p>Use these when the job is harder than ordinary chat — analysis, multi-step reasoning, difficult coding prompts, or structured decision support.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h3>Claude 3.7 Sonnet</h3><p>A strong reasoning/coding hybrid with broad developer trust.</p></div>
+      <div class="card"><h3>Gemini 2.5 Pro</h3><p>High-end reasoning and long-context coverage, especially useful for analysis-heavy tasks.</p></div>
+      <div class="card"><h3>DeepSeek R1</h3><p>Excellent value if you want serious reasoning capability without premium flagship pricing.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="long-context">
+    <div class="section-title">
+      <h2>Best Models for Long Context</h2>
+      <p>When you need to process transcripts, docs, legal text, or large codebases, context handling matters as much as pure benchmark scores.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><h3>Gemini 2.5 Pro</h3><p>A strong default for long-context analysis and document-heavy workflows.</p></div>
+      <div class="card"><h3>Claude Sonnet 4.6</h3><p>Very good for long coding and writing contexts when quality matters.</p></div>
+      <div class="card"><h3>GPT-5.4</h3><p>Useful when you want top-tier ecosystem support plus strong all-around capability.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="table">
+    <div class="section-title">
+      <h2>Market Signal Table</h2>
+      <p>This table combines user-facing guidance with market signals from public model leaderboards. Use it when you want more detail than the quick recommendations above.</p>
+    </div>
+    <div class="toolbar">
+      <input id="search" type="text" placeholder="Search model or provider">
+      <select id="statusFilter">
+        <option value="all">All labels</option>
+        <option value="Top Pick">Top Pick</option>
+        <option value="Recommended">Recommended</option>
+        <option value="Emerging">Emerging</option>
+        <option value="Market Watch">Market Watch</option>
+      </select>
+      <select id="providerFilter">
+        <option value="all">All providers</option>
+      </select>
     </div>
     <div class="table-wrap">
       <table>
@@ -154,12 +319,12 @@ tr:hover td{background:#f0f7ff}
           <tr>
             <th>Model</th>
             <th>Provider</th>
-            <th>Hotness</th>
-            <th>Priority</th>
-            <th>Status</th>
-            <th>Rank Signals</th>
-            <th>Recommended For</th>
-            <th>Notes</th>
+            <th>Score</th>
+            <th>Label</th>
+            <th>Availability</th>
+            <th>Market Signals</th>
+            <th>Best For</th>
+            <th>Why Choose It</th>
           </tr>
         </thead>
         <tbody id="radarBody"></tbody>
@@ -167,29 +332,47 @@ tr:hover td{background:#f0f7ff}
     </div>
   </section>
 
-  <section class="section grid-2">
-    <div class="card">
-      <h2>Support Recommendations</h2>
-      <div id="recommendations" class="list"></div>
+  <section class="section">
+    <div class="section-title">
+      <h2>How We Rank Models</h2>
+      <p>No single leaderboard tells the whole story. We combine multiple public signals to create a more practical selection guide.</p>
     </div>
-    <div class="card">
-      <h2>Content Angles</h2>
-      <div id="contentAngles" class="list"></div>
-    </div>
+    <div class="method-grid" id="sourceWeights"></div>
   </section>
 
   <section class="section">
     <div class="section-title">
-      <div>
-        <h2>Scoring Method</h2>
-        <p class="note">This is intentionally simple enough to use weekly without building a whole backend first.</p>
-      </div>
+      <h2>What These Rankings Mean</h2>
+      <p>Think of this page as a decision helper, not a universal truth. The best model depends on your use case, your budget, and how much quality you need.</p>
     </div>
-    <div class="method">
-      <div class="card"><h3>1. Normalize each rank</h3><p class="small">Every source rank becomes a 0-100 score using a simple formula: <code>100 - (rank - 1) * 4</code>, capped at 20.</p></div>
-      <div class="card"><h3>2. Compute hotness</h3><p class="small">Weighted blend of all four sources. OpenRouter carries the highest weight because it reflects public ecosystem pull most directly.</p></div>
-      <div class="card"><h3>3. Add capability + business</h3><p class="small">Capability score reflects task fitness; business score reflects actual value to Crazyrouter growth and product positioning.</p></div>
-      <div class="card"><h3>4. Output priority</h3><p class="small">P0 means support and feature aggressively. P1 means support or evaluate. P2 means keep on radar. P3 means no need to highlight.</p></div>
+    <div class="method-grid">
+      <div class="method-card"><h3>1. Popularity is not everything</h3><p>OpenRouter shows what developers actually use, which is valuable, but it does not automatically mean a model is the best fit for your app.</p></div>
+      <div class="method-card"><h3>2. Quality depends on the task</h3><p>One model can be best for coding, while another is better for cheap chatbot traffic or long document analysis.</p></div>
+      <div class="method-card"><h3>3. Cost matters in production</h3><p>A premium flagship may win benchmarks, but a cheaper model can still be the better product decision at scale.</p></div>
+      <div class="method-card"><h3>4. Try before you commit</h3><p>The easiest way to choose is to compare 2-3 candidates against your actual prompts and routes — not just public leaderboards.</p></div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <p>Short answers to the questions people usually ask before choosing a model.</p>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">What is the best AI model for coding?</div>
+      <div class="faq-a">For premium coding quality, Claude Sonnet 4.6 is one of the strongest defaults. For broader flagship positioning and tool compatibility, GPT-5.4 is important. For value-focused coding, DeepSeek V3 is often a smart place to start.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">What is the cheapest good AI model?</div>
+      <div class="faq-a">That depends on your task, but budget-friendly families like Gemini Flash, DeepSeek V3, Step 3.5 Flash, and GLM-5 Turbo are worth testing first for high-volume workloads.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">Why do different rankings disagree?</div>
+      <div class="faq-a">Because they measure different things. OpenRouter reflects ecosystem usage. LMSYS reflects human preference. Artificial Analysis leans toward quality/speed/value comparisons. OpenCompass is benchmark-oriented. You need multiple signals to make a practical decision.</div>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-q">How should I actually choose a model?</div>
+      <div class="faq-a">Start from your use case: coding, chat, reasoning, long context, or low cost. Pick 2-3 candidates, compare them on your real prompts, and then optimize around quality, speed, and unit economics.</div>
     </div>
   </section>
 
@@ -216,88 +399,115 @@ const scoreFromRank = rank => Math.max(0, 100 - (Math.min(rank, 20) - 1) * 4);
 const avg = arr => arr.reduce((a, b) => a + b, 0) / (arr.length || 1);
 
 function computeModel(model) {
-  const rankScores = Object.entries(model.ranks).map(([source, rank]) => ({ source, rank, score: scoreFromRank(rank) }));
-  const hotness = rankScores.reduce((sum, item) => sum + item.score * data.weights[item.source], 0);
-  const blended = hotness * 0.55 + model.capabilityScore * 0.2 + model.businessScore * 0.25;
-  let priority = "P3";
-  if (blended >= 88 || (hotness >= 84 && model.businessScore >= 88)) priority = "P0";
-  else if (blended >= 78) priority = "P1";
-  else if (blended >= 68) priority = "P2";
-  return { ...model, hotness: Math.round(hotness), blended: Math.round(blended), priority, rankScores };
+  const rankScores = Object.entries(model.ranks || {}).map(([source, rank]) => ({ source, rank, score: scoreFromRank(rank) }));
+  const hotness = rankScores.length ? rankScores.reduce((sum, item) => sum + item.score * (data.weights[item.source] || 0), 0) : 0;
+  const blended = hotness * 0.55 + (model.capabilityScore || 0) * 0.2 + (model.businessScore || 0) * 0.25;
+  let label = 'Market Watch';
+  if (blended >= 88 || (hotness >= 84 && (model.businessScore || 0) >= 88)) label = 'Top Pick';
+  else if (blended >= 78) label = 'Recommended';
+  else if (blended >= 68) label = 'Emerging';
+
+  let labelClass = 'status-watch';
+  if (label === 'Top Pick') labelClass = 'status-top';
+  else if (label === 'Recommended') labelClass = 'status-rec';
+  else if (label === 'Emerging') labelClass = 'status-emerging';
+
+  return { ...model, hotness: Math.round(hotness), blended: Math.round(blended), label, labelClass, rankScores };
 }
 
 const computed = data.models.map(computeModel).sort((a, b) => b.blended - a.blended);
 
 function renderMetrics() {
-  const p0 = computed.filter(item => item.priority === "P0").length;
-  const supported = computed.filter(item => item.supportStatus === "supported").length;
-  const candidates = computed.filter(item => item.supportStatus === "candidate").length;
+  const topPicks = computed.filter(item => item.label === 'Top Pick').length;
   const avgHotness = Math.round(avg(computed.map(item => item.hotness)));
-  document.getElementById("metrics").innerHTML = [
+  const providerCount = new Set(computed.map(item => item.provider)).size;
+  document.getElementById('metrics').innerHTML = [
     `<div class="metric"><strong>${computed.length}</strong><span>Tracked models</span></div>`,
-    `<div class="metric"><strong>${p0}</strong><span>P0 models to feature</span></div>`,
-    `<div class="metric"><strong>${supported}</strong><span>Already supported</span></div>`,
-    `<div class="metric"><strong>${avgHotness}</strong><span>Average hotness score</span></div>`
-  ].join("");
+    `<div class="metric"><strong>${topPicks}</strong><span>Top picks right now</span></div>`,
+    `<div class="metric"><strong>${providerCount}</strong><span>Providers covered</span></div>`,
+    `<div class="metric"><strong>${avgHotness}</strong><span>Average market signal score</span></div>`
+  ].join('');
+}
 
-  document.getElementById("sourceWeights").innerHTML = Object.entries(data.sourceMeta).map(([key, source]) =>
-    `<div class="list-item"><strong>${source.label} <span class="source-chip">${Math.round(data.weights[key] * 100)}%</span></strong><span class="small">${source.description} · <a href="${source.url}" target="_blank" rel="noopener noreferrer">source</a></span></div>`
-  ).join("");
+function findByKey(key) {
+  return computed.find(item => item.key === key) || null;
+}
+
+function useCaseCard(title, key, note, tags = []) {
+  const item = findByKey(key);
+  if (!item) return '';
+  return `
+    <div class="use-case-card">
+      <h3>${title}</h3>
+      <div class="winner">${item.name}</div>
+      <div class="sub">${item.provider} · ${item.label}</div>
+      <div class="badge-row">${tags.map(t => `<span class="badge">${t}</span>`).join('')}</div>
+      <p>${note}</p>
+      <div class="mini">Best for: ${item.recommendedFor.join(', ')}</div>
+    </div>
+  `;
+}
+
+function renderUseCases() {
+  document.getElementById('useCaseGrid').innerHTML = [
+    useCaseCard('Best for Coding', 'claude-sonnet-4-6', 'A strong default for code generation, editing, and coding agents when you want premium output quality.', ['Coding', 'Agents']),
+    useCaseCard('Best for Chatbots', 'gpt-4o', 'A practical all-around choice for support bots and product chat with strong ecosystem compatibility.', ['Chatbots', 'General']),
+    useCaseCard('Best for Budget Traffic', 'deepseek-v3', 'Use this when you need to keep unit costs low without dropping too far in quality.', ['Cheap', 'Value']),
+    useCaseCard('Best for Reasoning', 'claude-3-7-sonnet', 'A strong hybrid model for difficult tasks that mix reasoning, coding, and structured analysis.', ['Reasoning', 'Hybrid']),
+    useCaseCard('Best for Long Context', 'gemini-2-5-pro', 'A strong choice for large docs, transcripts, and document-heavy workflows.', ['Long Context', 'Analysis']),
+    useCaseCard('Fastest Emerging Choice', 'stepfun-flash', 'A fast-rising model in market usage signals that may become a useful low-cost production option.', ['Emerging', 'Fast'])
+  ].join('');
+}
+
+function renderSourceWeights() {
+  document.getElementById('sourceWeights').innerHTML = Object.entries(data.sourceMeta).map(([key, source]) => `
+    <div class="method-card">
+      <h3>${source.label}</h3>
+      <p>${source.description}</p>
+      <p style="margin-top:8px"><span class="source-chip">${Math.round((data.weights[key] || 0) * 100)}% weight</span></p>
+    </div>
+  `).join('');
+}
+
+function renderProviderFilter() {
+  const providers = [...new Set(computed.map(item => item.provider))].sort();
+  const el = document.getElementById('providerFilter');
+  el.innerHTML = '<option value="all">All providers</option>' + providers.map(p => `<option value="${p}">${p}</option>`).join('');
 }
 
 function renderTable() {
-  const query = document.getElementById("search").value.trim().toLowerCase();
-  const priority = document.getElementById("priorityFilter").value;
-  const status = document.getElementById("statusFilter").value;
+  const query = document.getElementById('search').value.trim().toLowerCase();
+  const label = document.getElementById('statusFilter').value;
+  const provider = document.getElementById('providerFilter').value;
   const rows = computed.filter(item => {
-    if (priority !== "all" && item.priority !== priority) return false;
-    if (status !== "all" && item.supportStatus !== status) return false;
+    if (label !== 'all' && item.label !== label) return false;
+    if (provider !== 'all' && item.provider !== provider) return false;
     if (!query) return true;
-    return [item.name, item.provider, item.notes, item.recommendedFor.join(" ")].join(" ").toLowerCase().includes(query);
+    return [item.name, item.provider, item.notes, item.recommendedFor.join(' ')].join(' ').toLowerCase().includes(query);
   });
 
-  document.getElementById("radarBody").innerHTML = rows.map(item => `
+  document.getElementById('radarBody').innerHTML = rows.map(item => `
     <tr>
       <td><strong>${item.name}</strong><div class="small">${item.category}</div></td>
-      <td>${item.provider}</td>
-      <td><div class="score">${item.blended}</div><div class="small">Hotness ${item.hotness}</div></td>
-      <td><span class="rank-chip priority ${item.priority.toLowerCase()}">${item.priority}</span></td>
-      <td><span class="status ${item.supportStatus}">${item.supportStatus}</span></td>
-      <td><div class="rank-list">${item.rankScores.map(rank => `<span class="rank-chip">${rank.source}: #${rank.rank}</span>`).join("")}</div></td>
-      <td>${item.recommendedFor.map(tag => `<span class="tag">${tag}</span>`).join("")}</td>
+      <td><span class="provider-chip">${item.provider}</span></td>
+      <td><div class="score">${item.blended}</div><div class="small">Signal ${item.hotness}</div></td>
+      <td><span class="status-label ${item.labelClass}">${item.label}</span></td>
+      <td><span class="small">${item.supportStatus === 'supported' ? 'Available on Crazyrouter' : item.supportStatus === 'candidate' ? 'Candidate / evaluate' : 'Watchlist'}</span></td>
+      <td><div class="rank-list">${item.rankScores.length ? item.rankScores.map(rank => `<span class="rank-chip">${rank.source}: #${rank.rank}</span>`).join('') : '<span class="small">No external ranking yet</span>'}</div></td>
+      <td>${item.recommendedFor.map(tag => `<span class="tag">${tag}</span>`).join('')}</td>
       <td class="small">${item.notes}</td>
     </tr>
-  `).join("") || `<tr><td colspan="8" class="small">No matching models.</td></tr>`;
+  `).join('') || `<tr><td colspan="8" class="small">No matching models.</td></tr>`;
 }
 
-function renderRecommendations() {
-  const p0 = computed.filter(item => item.priority === "P0").slice(0, 5);
-  const candidates = computed.filter(item => item.supportStatus === "candidate").slice(0, 4);
-  const html = [
-    ...p0.map(item => `<div class="list-item"><strong>${item.name} — feature now</strong><span class="small">Blended score ${item.blended}. Use on homepage, model pages, and selection guides.</span></div>`),
-    ...candidates.map(item => `<div class="list-item"><strong>${item.name} — candidate to add</strong><span class="small">High external signal. Validate support path and create launch content early.</span></div>`)
-  ];
-  document.getElementById("recommendations").innerHTML = html.join("");
-}
-
-function renderContentAngles() {
-  const angles = [
-    "Best AI Models for Coding in 2026",
-    "How to Choose an AI Model: Speed vs Quality vs Cost",
-    "Gemini vs Claude vs GPT: Which Model Should You Use?",
-    "Most Popular AI Models Developers Actually Use",
-    "Best Budget Models for Chatbots and Support Automation"
-  ];
-  document.getElementById("contentAngles").innerHTML = angles.map(title => `<div class="list-item"><strong>${title}</strong><span class="small">Built directly from the same radar data, so product strategy and SEO stay aligned.</span></div>`).join("");
-}
-
-["search", "priorityFilter", "statusFilter"].forEach(id => {
-  document.getElementById(id).addEventListener(id === "search" ? "input" : "change", renderTable);
+['search', 'statusFilter', 'providerFilter'].forEach(id => {
+  document.getElementById(id).addEventListener(id === 'search' ? 'input' : 'change', renderTable);
 });
 
 renderMetrics();
-renderRecommendations();
-renderContentAngles();
+renderUseCases();
+renderSourceWeights();
+renderProviderFilter();
 renderTable();
 </script>
 </body>

@@ -3,27 +3,501 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free AI Developer Tools - Crazyrouter</title>
-<meta name="description" content="Free tools for AI developers: pricing calculator, model comparison, release timeline, and ranking radar. Compare 627+ AI models.">
+<title>AI Developer Tools & Calculators - Crazyrouter</title>
+<meta name="description" content="Free AI developer tools from Crazyrouter: AI API pricing calculator, model comparison, token cost estimation, model release timeline, and AI model research tools. Compare GPT, Claude, Gemini, DeepSeek, and 627+ models.">
+<meta name="keywords" content="ai developer tools, ai api pricing calculator, ai model comparison, token cost calculator, openai pricing calculator, claude api cost, gemini pricing, ai model timeline, crazyrouter tools, openrouter alternative">
 <link rel="canonical" href="https://crazyrouter.com/tools/">
+<meta property="og:title" content="AI Developer Tools & Calculators - Crazyrouter">
+<meta property="og:description" content="Free tools for AI developers: pricing calculators, model comparison, token cost estimation, model timeline, and AI model selection.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crazyrouter.com/tools/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Crazyrouter Tools",
+  "url": "https://crazyrouter.com/tools/",
+  "description": "Free AI developer tools for pricing comparison, cost estimation, token math, model release tracking, and model selection across GPT, Claude, Gemini, DeepSeek, and more.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Crazyrouter",
+    "url": "https://crazyrouter.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Crazyrouter",
+    "url": "https://crazyrouter.com"
+  }
+}
+</script>
 <style>
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;color:#111;max-width:600px;margin:80px auto;padding:0 16px;text-align:center}
-h1{font-size:28px;margin-bottom:8px}
-p{color:#6b7280;margin-bottom:32px}
-a{display:block;padding:16px;border:1px solid #e5e7eb;border-radius:12px;text-decoration:none;color:#111;margin-bottom:12px;transition:all .2s}
-a:hover{border-color:#2563eb;background:#f0f7ff}
-a span{color:#6b7280;font-size:13px}
-.footer{margin-top:40px;color:#9ca3af;font-size:13px}
-.footer a{display:inline;border:none;padding:0;color:#6b7280;font-size:13px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#fff;color:#111827;min-height:100vh;-webkit-font-smoothing:antialiased}
+a{text-decoration:none}
+
+/* Navbar */
+.navbar{position:sticky;top:0;z-index:50;width:100%;border-bottom:1px solid #e5e7eb;background:rgba(255,255,255,.8);backdrop-filter:blur(12px)}
+.navbar-inner{max-width:72rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 16px;gap:16px}
+.nav-left{display:flex;align-items:center;gap:32px;min-width:0}
+.navbar-logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-size:20px;font-weight:700;color:#111827;white-space:nowrap}
+.navbar-logo svg{width:32px;height:32px;flex:none}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none;flex-wrap:wrap}
+.nav-links a{font-size:14px;font-weight:500;color:#4b5563;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#111827}
+.nav-links a.active{color:#2563eb}
+.btn-signup{display:inline-block;padding:8px 16px;border-radius:9999px;background:#111827;color:#fff;font-size:14px;font-weight:500;text-decoration:none;transition:background .2s;white-space:nowrap}
+.btn-signup:hover{background:#374151}
+
+/* Hero */
+.hero{max-width:72rem;margin:0 auto;padding:56px 16px 32px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid #dbeafe;border-radius:9999px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:600;margin-bottom:18px}
+.hero h1{font-size:44px;line-height:1.08;font-weight:800;color:#111827;margin-bottom:14px;letter-spacing:-.02em}
+.hero p{color:#6b7280;font-size:17px;max-width:760px;margin:0 auto;line-height:1.7}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn-primary{display:inline-block;padding:12px 22px;border-radius:9999px;background:#111827;color:#fff;font-size:15px;font-weight:600;transition:background .2s}
+.btn-primary:hover{background:#374151}
+.btn-secondary{display:inline-block;padding:12px 22px;border-radius:9999px;border:1px solid #e5e7eb;background:#fff;color:#111827;font-size:15px;font-weight:600;transition:all .2s}
+.btn-secondary:hover{border-color:#2563eb;background:#f8fbff}
+
+/* Stats */
+.stats{max-width:72rem;margin:0 auto;padding:0 16px 24px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat-card{border:1px solid #e5e7eb;border-radius:16px;padding:20px;background:#fff}
+.stat-value{font-size:28px;font-weight:800;color:#111827;margin-bottom:6px}
+.stat-label{font-size:13px;color:#6b7280;line-height:1.5}
+
+/* Sections */
+.section{max-width:72rem;margin:0 auto;padding:24px 16px 56px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.section-head h2{font-size:28px;font-weight:800;color:#111827;letter-spacing:-.02em}
+.section-head p{color:#6b7280;font-size:15px;max-width:680px;line-height:1.7}
+
+/* Cards */
+.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tool-card{position:relative;display:flex;flex-direction:column;gap:14px;padding:24px;border:1px solid #e5e7eb;border-radius:18px;background:#fff;transition:transform .2s,box-shadow .25s,border-color .25s;min-height:280px}
+.tool-card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.06);border-color:#bfdbfe}
+.tool-card.coming-soon{background:linear-gradient(180deg,#fff 0%,#fafafa 100%)}
+.tool-icon{font-size:32px;line-height:1}
+.tool-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.tool-title{font-size:20px;font-weight:800;color:#111827;line-height:1.3}
+.tool-desc{font-size:14px;line-height:1.7;color:#6b7280;flex:1}
+.tool-meta{display:flex;flex-wrap:wrap;gap:8px}
+.badge{display:inline-flex;align-items:center;padding:5px 10px;border-radius:9999px;font-size:12px;font-weight:600;border:1px solid #e5e7eb;color:#6b7280;background:#fff}
+.badge.live{background:#ecfdf5;border-color:#bbf7d0;color:#166534}
+.badge.soon{background:#fffbeb;border-color:#fde68a;color:#92400e}
+.badge.free{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
+.tool-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.card-link{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:9999px;background:#111827;color:#fff;font-size:14px;font-weight:600;transition:background .2s}
+.card-link:hover{background:#374151}
+.card-link.secondary{background:#fff;color:#111827;border:1px solid #e5e7eb}
+.card-link.secondary:hover{border-color:#2563eb;background:#f8fbff}
+
+/* Why section */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.why-card{padding:24px;border:1px solid #e5e7eb;border-radius:16px;background:#fff}
+.why-card h3{font-size:18px;font-weight:700;margin-bottom:10px;color:#111827}
+.why-card p{font-size:14px;line-height:1.7;color:#6b7280}
+
+/* Search intent block */
+.intent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.intent-card{padding:22px;border:1px solid #e5e7eb;border-radius:16px;background:#fff}
+.intent-card h3{font-size:17px;font-weight:700;color:#111827;margin-bottom:10px}
+.intent-links{display:flex;flex-wrap:wrap;gap:10px}
+.intent-links a{display:inline-flex;align-items:center;padding:8px 12px;border:1px solid #e5e7eb;border-radius:9999px;font-size:13px;color:#4b5563;background:#fff;transition:all .2s}
+.intent-links a:hover{border-color:#2563eb;color:#2563eb;background:#eff6ff}
+
+/* Comparison section */
+.compare-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:stretch}
+.compare-card{padding:24px;border:1px solid #e5e7eb;border-radius:18px;background:#fff}
+.compare-card h3{font-size:22px;font-weight:800;color:#111827;margin-bottom:12px;letter-spacing:-.02em}
+.compare-card p{font-size:14px;line-height:1.8;color:#6b7280;margin-bottom:16px}
+.compare-list{display:grid;gap:12px}
+.compare-item{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:14px 16px;border:1px solid #eef2f7;border-radius:12px;background:#fafcff}
+.compare-item strong{display:block;font-size:13px;color:#111827;margin-bottom:4px}
+.compare-item span{font-size:13px;line-height:1.6;color:#6b7280}
+
+/* Code block */
+.code-card{padding:24px;border:1px solid #e5e7eb;border-radius:18px;background:#fff}
+.code-card h3{font-size:22px;font-weight:800;color:#111827;margin-bottom:12px;letter-spacing:-.02em}
+.code-card p{font-size:14px;line-height:1.8;color:#6b7280;margin-bottom:16px}
+.code-block{background:#111827;color:#e5e7eb;border-radius:14px;padding:18px;overflow:auto;font-size:13px;line-height:1.7;border:1px solid #1f2937}
+.code-note{margin-top:14px;font-size:13px;color:#6b7280;line-height:1.7}
+
+/* CTA */
+.cta-wrap{max-width:72rem;margin:0 auto;padding:0 16px 56px}
+.cta-box{border:1px solid #dbeafe;background:linear-gradient(135deg,#eff6ff 0%,#ffffff 100%);border-radius:24px;padding:36px 28px;text-align:center}
+.cta-box h2{font-size:30px;font-weight:800;color:#111827;margin-bottom:12px;letter-spacing:-.02em}
+.cta-box p{font-size:15px;line-height:1.7;color:#6b7280;max-width:720px;margin:0 auto 22px}
+
+/* FAQ */
+.faq-section{max-width:72rem;margin:0 auto;padding:8px 16px 60px}
+.faq-section h2{font-size:28px;font-weight:800;margin-bottom:24px;text-align:center;color:#111827;letter-spacing:-.02em}
+.faq-item{border-bottom:1px solid #e5e7eb;padding:18px 0}
+.faq-q{font-weight:700;font-size:15px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#111827;gap:16px}
+.faq-q::after{content:'+';color:#9ca3af;font-size:20px;transition:transform .2s}
+.faq-item.open .faq-q::after{content:'−'}
+.faq-a{color:#6b7280;font-size:14px;line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s}
+.faq-item.open .faq-a{max-height:220px;padding-top:12px}
+
+/* Footer */
+.footer{text-align:center;padding:32px 16px;color:#9ca3af;font-size:13px;border-top:1px solid #e5e7eb}
+.footer a{color:#2563eb;text-decoration:none}
+
+@media(max-width:1024px){
+  .tools-grid,.why-grid,.stats-grid,.intent-grid,.compare-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .navbar-inner{height:auto;padding-top:12px;padding-bottom:12px;align-items:flex-start}
+  .nav-left{flex-direction:column;align-items:flex-start;gap:12px}
+  .nav-links{gap:14px}
+  .hero h1{font-size:34px}
+}
+@media(max-width:640px){
+  .tools-grid,.why-grid,.stats-grid,.intent-grid,.compare-grid{grid-template-columns:1fr}
+  .hero{padding-top:44px}
+  .hero h1{font-size:30px}
+  .section-head h2,.faq-section h2,.cta-box h2{font-size:24px}
+  .tool-card{min-height:auto}
+  .compare-item{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
-<h1>⚡ Crazyrouter Tools</h1>
-<p>Free developer tools for AI API cost optimization & model research</p>
-<a href="./pricing-calculator/">💰 AI API Pricing Calculator<br><span>Compare costs across 627+ models. Estimate savings with Crazyrouter.</span></a>
-<a href="./model-comparison/">⚡ AI Model Comparison<br><span>Side-by-side benchmarks, pricing, context windows & capabilities.</span></a>
-<a href="./model-radar/">📡 AI Model Radar<br><span>Track hot models across OpenRouter, LMSYS, Artificial Analysis, and OpenCompass.</span></a>
-<a href="./model-timeline/">🕐 AI Model Release Timeline<br><span>Track every major AI model launch from GPT-3 to today.</span></a>
-<div class="footer"><a href="https://crazyrouter.com">Crazyrouter</a> · One API for 627+ AI Models</div>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="nav-left">
+      <a href="https://crazyrouter.com" class="navbar-logo">
+        <svg viewBox="0 0 563 648" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#111827" d="M167.5 190L276.5 190L277 191.5L253 234L247.5 235L235.5 234L217.5 234L191.5 234L164.5 235L150.5 239Q132.7 246.7 121 260.5Q108.2 275.2 102 296.5L99 312.5L99 335.5L102 351.5L110 371.5Q118.1 386.4 130.5 397Q143.5 409 164.5 413L173.5 413L258.5 414L314.5 318L433.5 318Q449.3 314.8 457 303.5L462 294.5L465 283.5L465 269.5L460 253.5L449.5 241L440.5 236L430.5 234L332.5 234L258.5 361L212.5 361L212 359.5L310.5 190L438.5 190L448.5 192L461.5 197Q476 205 486 217.5L496 233.5L502 250.5L504 260.5L504 268.5L505 269.5L505 283.5L504 284.5L503 297.5L499 311.5Q490.8 331.8 475.5 345L462.5 354L446 360.5L502 452.5L504 458L456.5 458L454 455.5L416 389.5L398.5 362L336.5 362L335 363.5L285 452.5L280.5 458L167.5 458L153.5 456Q112.4 445.6 90 416.5Q72.7 396.3 64 367.5L59 343.5L58 314.5L59 313.5L60 297.5L64 280.5L73 257.5Q85.3 233.8 104.5 217Q116.8 206.3 132.5 199L149.5 193L166.5 191L167.5 190Z"/></svg>
+        Crazyrouter
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://crazyrouter.com">Home</a></li>
+        <li><a href="https://crazyrouter.com/console">Console</a></li>
+        <li><a href="https://crazyrouter.com/models">Models</a></li>
+        <li><a href="https://docs.crazyrouter.com">API Docs</a></li>
+        <li><a href="https://crazyrouter.com/blog">Blog</a></li>
+        <li><a href="https://crazyrouter.com/tools/" class="active">Tools</a></li>
+      </ul>
+    </div>
+    <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=hub&utm_campaign=tools_index" class="btn-signup">Get Started</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">🛠️ Free AI tools, calculators, and model selection resources</div>
+  <h1>AI developer tools for pricing, model comparison, and cost optimization</h1>
+  <p>
+    Explore free AI tools from Crazyrouter to compare AI API pricing, estimate token costs, evaluate GPT vs Claude vs Gemini vs DeepSeek, and choose the right model for production. Built for developers who want faster decisions, lower costs, and one API across 627+ models.
+  </p>
+  <div class="hero-actions">
+    <a href="./pricing-calculator/" class="btn-primary">Use AI Pricing Calculator →</a>
+    <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=hub&utm_campaign=tools_index" class="btn-secondary">Get Free API Key</a>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-value">627+</div>
+      <div class="stat-label">AI models across GPT, Claude, Gemini, DeepSeek, image, video, audio, and more</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">20+</div>
+      <div class="stat-label">Providers supported through one unified API</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">~45%</div>
+      <div class="stat-label">Typical cost savings vs official provider pricing</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">1 key</div>
+      <div class="stat-label">One endpoint and one API key for your full stack</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>AI pricing tools and model selection resources</h2>
+      <p>Use these tools to compare AI API costs, estimate token-based pricing, evaluate popular models, and choose the best API setup for your product. Start with pricing today, then move into deeper model comparison, ranking research, and release intelligence.</p>
+    </div>
+  </div>
+
+  <div class="tools-grid">
+    <article class="tool-card">
+      <div class="tool-top">
+        <div class="tool-icon">💰</div>
+        <div class="tool-meta">
+          <span class="badge live">Live</span>
+          <span class="badge free">Free</span>
+        </div>
+      </div>
+      <div class="tool-title">AI API Pricing Calculator</div>
+      <div class="tool-desc">
+        Compare AI API pricing across OpenAI, Anthropic, Google, DeepSeek, and other leading providers. Estimate monthly token costs, benchmark official pricing against Crazyrouter, and find the cheapest setup for chatbots, coding tools, agents, and production apps.
+      </div>
+      <div class="tool-meta">
+        <span class="badge">Cost estimation</span>
+        <span class="badge">Token math</span>
+        <span class="badge">Model comparison</span>
+      </div>
+      <div class="tool-actions">
+        <a class="card-link" href="./pricing-calculator/">Open Tool</a>
+        <a class="card-link secondary" href="https://crazyrouter.com/models">See Live Prices</a>
+      </div>
+    </article>
+
+    <article class="tool-card">
+      <div class="tool-top">
+        <div class="tool-icon">📊</div>
+        <div class="tool-meta">
+          <span class="badge live">Live</span>
+          <span class="badge free">Free</span>
+        </div>
+      </div>
+      <div class="tool-title">AI Model Comparison Tool</div>
+      <div class="tool-desc">
+        Compare top AI models by pricing, context window, latency, benchmark performance, and real-world use-case fit. Ideal for developers choosing between GPT, Claude, Gemini, DeepSeek, Qwen, Llama, and other production models.
+      </div>
+      <div class="tool-meta">
+        <span class="badge">Benchmarks</span>
+        <span class="badge">Pricing</span>
+        <span class="badge">Sorting & filters</span>
+      </div>
+      <div class="tool-actions">
+        <a class="card-link" href="./model-comparison/">Open Tool</a>
+        <a class="card-link secondary" href="https://crazyrouter.com/models">Explore Models</a>
+      </div>
+    </article>
+
+    <article class="tool-card">
+      <div class="tool-top">
+        <div class="tool-icon">📡</div>
+        <div class="tool-meta">
+          <span class="badge live">Live</span>
+          <span class="badge free">Free</span>
+        </div>
+      </div>
+      <div class="tool-title">AI Model Radar</div>
+      <div class="tool-desc">
+        Track fast-moving AI model signals across multiple sources. Useful for spotting momentum, new leaders, and emerging model names before they become mainstream search demand.
+      </div>
+      <div class="tool-meta">
+        <span class="badge">Trend tracking</span>
+        <span class="badge">Model research</span>
+        <span class="badge">Multi-source</span>
+      </div>
+      <div class="tool-actions">
+        <a class="card-link" href="./model-radar/">Open Tool</a>
+        <a class="card-link secondary" href="https://crazyrouter.com/blog">Read the Blog</a>
+      </div>
+    </article>
+
+    <article class="tool-card">
+      <div class="tool-top">
+        <div class="tool-icon">🕒</div>
+        <div class="tool-meta">
+          <span class="badge live">Live</span>
+          <span class="badge free">Free</span>
+        </div>
+      </div>
+      <div class="tool-title">AI Model Release Timeline</div>
+      <div class="tool-desc">
+        Track major AI model launches across OpenAI, Anthropic, Google, Meta, xAI, DeepSeek, Qwen, and more. Useful for content planning, competitor monitoring, and understanding how the AI model market is evolving.
+      </div>
+      <div class="tool-meta">
+        <span class="badge">Launch history</span>
+        <span class="badge">Provider filters</span>
+        <span class="badge">Research-friendly</span>
+      </div>
+      <div class="tool-actions">
+        <a class="card-link" href="./model-timeline/">Open Tool</a>
+        <a class="card-link secondary" href="https://crazyrouter.com/blog">Read the Blog</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>Why use Crazyrouter tools before choosing an AI API provider?</h2>
+      <p>Most AI API websites give you docs and price tables. We want to give you decision-making tools — the kind that help you compare models, estimate cost, and understand tradeoffs before you commit engineering time.</p>
+    </div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <h3>Search intent, not just branding</h3>
+      <p>These pages are built to match real queries developers search for: AI API pricing calculator, GPT vs Claude comparison, token cost estimator, and model selection guides.</p>
+    </div>
+    <div class="why-card">
+      <h3>Landing-page clarity</h3>
+      <p>Each tool page is meant to do double duty: rank for useful keywords and convert serious developers into product users through a clean, product-led experience.</p>
+    </div>
+    <div class="why-card">
+      <h3>Product-led conversion</h3>
+      <p>Useful tools build trust first. Then the natural next step is using Crazyrouter itself: one API key, 627+ models, lower pricing, and less vendor lock-in.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div>
+      <h2>Popular AI pricing and model comparison searches</h2>
+      <p>These are the kinds of questions developers usually have before choosing an AI API provider, a model stack, or a cost optimization strategy.</p>
+    </div>
+  </div>
+  <div class="intent-grid">
+    <div class="intent-card">
+      <h3>Pricing questions</h3>
+      <div class="intent-links">
+        <a href="./pricing-calculator/">AI API pricing calculator</a>
+        <a href="./pricing-calculator/">OpenAI pricing calculator</a>
+        <a href="./pricing-calculator/">Claude API cost calculator</a>
+        <a href="./pricing-calculator/">Gemini token cost estimator</a>
+      </div>
+    </div>
+    <div class="intent-card">
+      <h3>Model selection questions</h3>
+      <div class="intent-links">
+        <a href="./model-comparison/">GPT vs Claude vs Gemini</a>
+        <a href="./model-comparison/">Best AI model for coding</a>
+        <a href="https://crazyrouter.com/models">Cheapest AI API models</a>
+        <a href="./model-comparison/">Long-context model comparison</a>
+      </div>
+    </div>
+    <div class="intent-card">
+      <h3>Platform and architecture questions</h3>
+      <div class="intent-links">
+        <a href="https://crazyrouter.com/blog">OpenRouter alternative</a>
+        <a href="https://crazyrouter.com/blog">Best AI API gateway</a>
+        <a href="https://docs.crazyrouter.com">OpenAI-compatible AI API</a>
+        <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=hub&utm_campaign=tools_index">One API key for all models</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="compare-grid">
+    <div class="compare-card">
+      <h3>Why developers choose Crazyrouter over OpenRouter-style aggregators</h3>
+      <p>
+        If you are already looking for an AI API pricing calculator, there is a good chance you are also comparing API gateways. Crazyrouter is built for the same core need — one key, many models — but pushes further on pricing, modality coverage, and production flexibility.
+      </p>
+      <div class="compare-list">
+        <div class="compare-item">
+          <div>
+            <strong>Model coverage</strong>
+            <span>627+ models across text, image, video, audio, and more.</span>
+          </div>
+          <div>
+            <strong>Instead of just LLM access</strong>
+            <span>Use one API layer for chat, generation, media, and multimodal workflows.</span>
+          </div>
+        </div>
+        <div class="compare-item">
+          <div>
+            <strong>Lower cost structure</strong>
+            <span>Crazyrouter is built around price-sensitive, production-oriented usage.</span>
+          </div>
+          <div>
+            <strong>Useful for real workloads</strong>
+            <span>Especially when token volume, experimentation, and routing flexibility all matter.</span>
+          </div>
+        </div>
+        <div class="compare-item">
+          <div>
+            <strong>OpenAI-compatible API</strong>
+            <span>Fast migration path for existing SDKs, scripts, and apps.</span>
+          </div>
+          <div>
+            <strong>Less lock-in</strong>
+            <span>Swap models without rebuilding your app around a single provider ecosystem.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="code-card">
+      <h3>Use one API key after you finish comparing</h3>
+      <p>
+        The tools help you evaluate. The product helps you ship. Once you know the models and price range you want, plugging Crazyrouter into your app is straightforward.
+      </p>
+      <pre class="code-block">from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_CRAZYROUTER_KEY",
+    base_url="https://crazyrouter.com/v1"
+)
+
+resp = client.chat.completions.create(
+    model="gpt-5-mini",
+    messages=[
+        {"role": "user", "content": "Hello from Crazyrouter"}
+    ]
+)
+
+print(resp.choices[0].message.content)</pre>
+      <div class="code-note">
+        Same OpenAI-style workflow. More models. Lower pricing. Easier experimentation.
+      </div>
+      <div class="tool-actions" style="margin-top:18px">
+        <a class="card-link" href="https://crazyrouter.com/register?utm_source=tools&utm_medium=hub&utm_campaign=tools_index">Get API Key</a>
+        <a class="card-link secondary" href="https://docs.crazyrouter.com">View Docs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap">
+  <div class="cta-box">
+    <h2>Compare AI models, estimate costs, then ship with one API</h2>
+    <p>
+      Use these pages to research AI model pricing, compare GPT vs Claude vs Gemini vs DeepSeek, and estimate production costs before you write code. When you are ready to ship, Crazyrouter gives you one OpenAI-compatible API for 627+ models across text, image, video, audio, and more.
+    </p>
+    <div class="hero-actions">
+      <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=hub&utm_campaign=tools_index" class="btn-primary">Get Free API Key →</a>
+      <a href="https://docs.crazyrouter.com" class="btn-secondary">Read API Docs</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">What AI tools are available on this page?</div>
+    <div class="faq-a">Right now the live tools include the AI API Pricing Calculator, AI Model Comparison, AI Model Radar, and AI Model Release Timeline. Together they help with pricing, research, trend tracking, and model selection.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">Are these tools free to use?</div>
+    <div class="faq-a">Yes. The public tools on this page are free to access. They are designed to help developers evaluate AI API pricing, compare models, and understand token-based costs before building.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">Do I need a Crazyrouter account to use the tools?</div>
+    <div class="faq-a">No. You can browse and use the tools without signing in. If you want to make live API calls across models, then you will need a Crazyrouter API key.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">How is this different from just checking provider pricing pages?</div>
+    <div class="faq-a">Official pricing pages usually show raw rates, but they do not help you compare providers side by side for a real workload. These tools are designed to turn token pricing and model data into practical buying and architecture decisions.</div>
+  </div>
+  <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-q">Where can I see real pricing instead of estimates?</div>
+    <div class="faq-a">For live model and pricing information, go to <a href="https://crazyrouter.com/models" style="color:#2563eb">crazyrouter.com/models</a>. The calculator is useful for planning, but live pricing remains the source of truth.</div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 <a href="https://crazyrouter.com">Crazyrouter</a> — One API for 627+ AI Models</p>
+  <p style="margin-top:8px">
+    <a href="https://crazyrouter.com/models">Pricing</a> · 
+    <a href="https://docs.crazyrouter.com">API Docs</a> · 
+    <a href="https://t.me/crzrouter">Telegram</a> · 
+    <a href="https://twitter.com/metaviiii">Twitter</a>
+  </p>
+</footer>
+
 </body>
 </html>

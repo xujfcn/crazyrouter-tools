@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Agent Worktree Launcher - Cursor-Style Async AI Coding | Crazyrouter</title>
+<meta name="description" content="Free open-source tool to recreate Cursor-style background coding agents with git worktrees, isolated branches, task packets, JSONL traces, and review gates.">
+<meta name="keywords" content="background coding agents, Cursor background agents, git worktrees, AI coding workflow, Claude Code workflow, Codex workflow, Crazyrouter tools">
+<link rel="canonical" href="https://crazyrouter.com/tools/background-agent-worktree-launcher/">
+<meta property="og:title" content="Background Agent Worktree Launcher | Crazyrouter">
+<meta property="og:description" content="Recreate Cursor-style background coding agents with git worktrees, task packets, traces, and review gates.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crazyrouter.com/tools/background-agent-worktree-launcher/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Background Agent Worktree Launcher",
+  "url": "https://crazyrouter.com/tools/background-agent-worktree-launcher/",
+  "description": "Open-source shell tool that recreates Cursor-style background coding agents with git worktrees, isolated branches, task packets, JSONL traces, and review gates.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Linux, macOS, Windows WSL",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "publisher": {"@type": "Organization", "name": "Crazyrouter", "url": "https://crazyrouter.com"}
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;background:#fff;color:#111827;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:#2563eb}.navbar{position:sticky;top:0;z-index:50;border-bottom:1px solid #e5e7eb;background:rgba(255,255,255,.86);backdrop-filter:blur(12px)}
+.navbar-inner{max-width:72rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;min-height:64px;padding:0 16px;gap:16px}.nav-left{display:flex;align-items:center;gap:28px}.logo{font-size:20px;font-weight:800;color:#111827}.nav-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}.nav-links a{font-size:14px;font-weight:500;color:#4b5563}.nav-links a.active,.nav-links a:hover{color:#2563eb}.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:9999px;font-size:14px;font-weight:700;border:1px solid #e5e7eb;color:#111827;background:#fff}.btn.primary{background:#111827;color:#fff;border-color:#111827}.btn:hover{border-color:#2563eb;background:#f8fbff}.btn.primary:hover{background:#374151}
+.hero{max-width:72rem;margin:0 auto;padding:56px 16px 34px;display:grid;grid-template-columns:1.08fr .92fr;gap:32px;align-items:center}.eyebrow{display:inline-flex;padding:6px 12px;border-radius:9999px;background:#eff6ff;color:#2563eb;font-size:12px;font-weight:800;margin-bottom:18px}.hero h1{font-size:44px;line-height:1.08;letter-spacing:-.03em;margin-bottom:16px}.hero p{font-size:17px;color:#6b7280;max-width:740px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.panel{border:1px solid #e5e7eb;border-radius:22px;background:linear-gradient(180deg,#fff,#f8fbff);padding:22px;box-shadow:0 14px 40px rgba(0,0,0,.05)}.terminal{background:#111827;color:#e5e7eb;border-radius:16px;padding:18px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.7}.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.badge{display:inline-flex;padding:5px 10px;border-radius:9999px;border:1px solid #e5e7eb;background:#fff;color:#6b7280;font-size:12px;font-weight:700}.badge.live{background:#ecfdf5;border-color:#bbf7d0;color:#166534}.badge.free{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}.badge.oss{background:#faf5ff;border-color:#e9d5ff;color:#7e22ce}
+.section{max-width:72rem;margin:0 auto;padding:28px 16px}.section h2{font-size:30px;letter-spacing:-.02em;margin-bottom:14px}.section>p{color:#6b7280;font-size:15px;max-width:780px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}.card{border:1px solid #e5e7eb;border-radius:18px;background:#fff;padding:22px}.card h3{font-size:18px;margin-bottom:8px}.card p,.card li{font-size:14px;color:#6b7280}.card ul{padding-left:18px}.wide{grid-column:span 2}.code{background:#111827;color:#e5e7eb;border-radius:14px;padding:18px;overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.7;margin-top:16px}.steps{counter-reset:step;display:grid;gap:14px;margin-top:20px}.step{border:1px solid #e5e7eb;border-radius:16px;padding:18px;background:#fff}.step h3:before{counter-increment:step;content:counter(step);display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;border-radius:9999px;background:#111827;color:#fff;font-size:12px;margin-right:10px}.cta{max-width:72rem;margin:20px auto 56px;padding:0 16px}.cta-box{border:1px solid #dbeafe;background:linear-gradient(135deg,#eff6ff,#fff);border-radius:24px;padding:34px;text-align:center}.cta-box h2{font-size:30px;margin-bottom:10px}.cta-box p{color:#6b7280;margin-bottom:22px}.footer{text-align:center;border-top:1px solid #e5e7eb;color:#9ca3af;font-size:13px;padding:30px 16px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.wide{grid-column:span 1}.hero h1{font-size:34px}.nav-left{flex-direction:column;align-items:flex-start;gap:10px}.navbar-inner{align-items:flex-start;padding-top:12px;padding-bottom:12px}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner"><div class="nav-left"><a class="logo" href="https://crazyrouter.com">Crazyrouter</a><ul class="nav-links"><li><a href="https://crazyrouter.com">Home</a></li><li><a href="https://crazyrouter.com/models">Models</a></li><li><a href="https://docs.crazyrouter.com">API Docs</a></li><li><a href="https://crazyrouter.com/blog">Blog</a></li><li><a class="active" href="https://crazyrouter.com/tools/">Tools</a></li></ul></div><a class="btn primary" href="https://crazyrouter.com/register?utm_source=tools&utm_medium=tool_page&utm_campaign=background_agent_worktree_launcher">Get API Key</a></div></nav>
+
+<header class="hero">
+  <div>
+    <div class="eyebrow">⚙️ Free open-source AI coding workflow tool</div>
+    <h1>Background Agent Worktree Launcher</h1>
+    <p>Recreate the useful part of Cursor-style background coding agents with plain git worktrees: isolated branches, task packets, JSONL traces, and review gates before merge.</p>
+    <div class="badge-row"><span class="badge live">Live</span><span class="badge free">Free</span><span class="badge oss">Open Source</span><span class="badge">AI Coding</span></div>
+    <div class="actions">
+      <a class="btn primary" href="https://raw.githubusercontent.com/xujfcn/crazyrouter-tools/main/agent_workflows/agent_worktree_launcher.sh">Download Script</a>
+      <a class="btn" href="https://github.com/xujfcn/crazyrouter-tools/blob/main/agent_workflows/agent_worktree_launcher.sh">View on GitHub</a>
+      <a class="btn" href="https://crazyrouter.com/blog/background-coding-agents-without-lock-in-git-worktrees?utm_source=tools&utm_medium=tool_page&utm_campaign=background_agent_worktree_launcher">Read Tutorial</a>
+    </div>
+  </div>
+  <div class="panel">
+    <pre class="terminal">tools/agent_workflows/agent_worktree_launcher.sh \
+  --repo . \
+  --task "Add billing CSV export" \
+  --base main \
+  --out generated/background_agents/billing-export \
+  --mode dry-run</pre>
+  </div>
+</header>
+
+<section class="section">
+  <h2>What this tool does</h2>
+  <p>A background coding agent is useful only when the async work is isolated and reviewable. This launcher turns a coding task into a safe worktree workflow instead of letting an agent mutate your active branch.</p>
+  <div class="grid">
+    <div class="card"><h3>Isolated worktrees</h3><p>Create or prepare a separate git worktree and branch for the agent so your current workspace stays clean.</p></div>
+    <div class="card"><h3>Task packets</h3><p>Generate a clear packet with scope, branch, worktree path, output requirements, and review expectations.</p></div>
+    <div class="card"><h3>Review gates</h3><p>Create review commands that save status, diff stats, and full patch output before anything is merged.</p></div>
+    <div class="card"><h3>JSONL traces</h3><p>Log the packet and review-gate events so async work can be inspected later instead of trusted blindly.</p></div>
+    <div class="card"><h3>Dry-run first</h3><p>Default to dry-run mode to generate the workflow files without modifying your repository.</p></div>
+    <div class="card"><h3>Crazyrouter-ready</h3><p>Use Crazyrouter as the OpenAI-compatible API layer when routing planner, implementer, reviewer, and verifier calls.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Quick start</h2>
+  <p>Download the script, make it executable, and run it from your repository. Start with dry-run mode, inspect the generated packet, then switch to create mode when ready.</p>
+  <pre class="code">curl -L -o agent_worktree_launcher.sh \
+  https://raw.githubusercontent.com/xujfcn/crazyrouter-tools/main/agent_workflows/agent_worktree_launcher.sh
+
+chmod +x agent_worktree_launcher.sh
+
+./agent_worktree_launcher.sh \
+  --repo . \
+  --task "Add async billing export validation in an isolated background branch" \
+  --base main \
+  --out generated/background_agents/billing-export \
+  --mode dry-run</pre>
+</section>
+
+<section class="section">
+  <h2>Generated output</h2>
+  <p>The launcher creates a small workflow folder that can be handed to a human, Claude Code, Codex, OpenClaw, Cursor, or another coding agent.</p>
+  <pre class="code">generated/background_agents/billing-export/
+├── README.md
+├── trace.jsonl
+├── commands/
+│   ├── create-worktree.sh
+│   └── review-before-merge.sh
+└── packets/
+    └── 01-background-agent.md</pre>
+</section>
+
+<section class="section">
+  <h2>Recommended workflow</h2>
+  <div class="steps">
+    <div class="step"><h3>Generate the packet</h3><p>Use dry-run mode first. Read the packet and make sure the scope is narrow enough for async work.</p></div>
+    <div class="step"><h3>Create an isolated worktree</h3><p>Run create mode only when your repository is clean. The script refuses to create a worktree if there are uncommitted changes.</p></div>
+    <div class="step"><h3>Run your coding agent inside the worktree</h3><p>Point your agent to the packet and worktree path. Keep all edits inside that branch.</p></div>
+    <div class="step"><h3>Review before merge</h3><p>Run the review command, inspect the saved diff, verify tests, then decide merge / request changes / abandon.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why it fits Crazyrouter</h2>
+  <p>Background agents multiply model calls. A real async coding workflow can include planning, implementation, adversarial review, fixes, and verification. Crazyrouter gives you one OpenAI-compatible endpoint for routing those steps across different models.</p>
+  <pre class="code">from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_CRAZYROUTER_KEY",
+    base_url="https://crazyrouter.com/v1"
+)</pre>
+</section>
+
+<div class="cta"><div class="cta-box"><h2>Build async AI coding workflows without lock-in</h2><p>Use git worktrees for isolation, task packets for scope, trace logs for observability, and Crazyrouter for flexible model routing.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="https://raw.githubusercontent.com/xujfcn/crazyrouter-tools/main/agent_workflows/agent_worktree_launcher.sh">Download Script</a><a class="btn" href="https://crazyrouter.com/register?utm_source=tools&utm_medium=tool_page&utm_campaign=background_agent_worktree_launcher">Try Crazyrouter</a></div></div></div>
+<footer class="footer">© Crazyrouter · <a href="https://crazyrouter.com/tools/">All tools</a> · <a href="https://github.com/xujfcn/crazyrouter-tools">GitHub</a></footer>
+</body>
+</html>

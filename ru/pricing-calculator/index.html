@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI API Pricing Calculator - Crazyrouter</title>
+<title>Калькулятор цен AI API - Crazyrouter</title>
 <meta name="description" content="Calculate and compare AI API costs across GPT-4o, Claude, Gemini, DeepSeek and 627+ models. Find the cheapest option for your use case with Crazyrouter.">
 <meta name="keywords" content="ai api pricing calculator, openai cost calculator, claude api cost, gemini pricing, ai token calculator, crazyrouter, openrouter alternative">
-<link rel="canonical" href="https://crazyrouter.com/tools/pricing-calculator/">
+<link rel="canonical" href="https://crazyrouter.com/tools/ru/pricing-calculator/">
 <link rel="alternate" hreflang="en" href="https://crazyrouter.com/tools/pricing-calculator/">
 <link rel="alternate" hreflang="zh" href="https://crazyrouter.com/tools/zh/pricing-calculator/">
 <link rel="alternate" hreflang="ru" href="https://crazyrouter.com/tools/ru/pricing-calculator/">
 <link rel="alternate" hreflang="ja" href="https://crazyrouter.com/tools/ja/pricing-calculator/">
 <link rel="alternate" hreflang="x-default" href="https://crazyrouter.com/tools/pricing-calculator/">
-<meta property="og:title" content="AI API Pricing Calculator - Crazyrouter">
+<meta property="og:title" content="Калькулятор цен AI API - Crazyrouter">
 <meta property="og:description" content="Calculate and compare AI API costs across 627+ models. Save up to 45% with Crazyrouter.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://crazyrouter.com/tools/pricing-calculator/">
+<meta property="og:url" content="https://crazyrouter.com/tools/ru/pricing-calculator/">
 <script src="/tools/tracking-bridge.js" defer></script>
 <script src="/tools/language-switcher.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "AI API Pricing Calculator",
-  "url": "https://crazyrouter.com/tools/pricing-calculator",
+  "name": "Калькулятор цен AI API",
+  "url": "https://crazyrouter.com/tools/ru/pricing-calculator",
   "description": "Calculate and compare AI API costs across GPT-4o, Claude, Gemini, DeepSeek and 627+ models.",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Web",
@@ -128,22 +128,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
         Crazyrouter
       </a>
       <ul class="nav-links">
-        <li><a href="https://crazyrouter.com">Home</a></li>
-        <li><a href="https://crazyrouter.com/console">Console</a></li>
-        <li><a href="https://crazyrouter.com/models">Models</a></li>
-        <li><a href="https://docs.crazyrouter.com">API Docs</a></li>
-        <li><a href="https://crazyrouter.com/blog">Blog</a></li>
-        <li><a href="https://crazyrouter.com/tools/pricing-calculator" class="active">Tools</a></li>
+        <li><a href="https://crazyrouter.com">Главная</a></li>
+        <li><a href="https://crazyrouter.com/console">Консоль</a></li>
+        <li><a href="https://crazyrouter.com/models">Модели</a></li>
+        <li><a href="https://docs.crazyrouter.com">Документация API</a></li>
+        <li><a href="https://crazyrouter.com/blog">Блог</a></li>
+        <li><a href="https://crazyrouter.com/tools/ru/pricing-calculator" class="active">Инструменты</a></li>
       </ul>
     </div>
-    <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=calculator&utm_campaign=pricing_calc" class="btn-signup">Get Started</a>
+    <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=calculator&utm_campaign=pricing_calc" class="btn-signup">Начать</a>
   </div>
 </nav>
 
 <!-- Hero -->
 <section class="hero">
-  <h1>AI API Pricing Calculator</h1>
-  <p>Compare costs across GPT-4o, Claude, Gemini, DeepSeek and 627+ models. Estimate how much you can save with Crazyrouter.</p>
+  <h1>Калькулятор цен AI API</h1>
+  <p>Сравните стоимость GPT-4o, Claude, Gemini, DeepSeek и 627+ моделей. Оцените экономию с Crazyrouter.</p>
 </section>
 
 <!-- Use Case Tags -->
@@ -162,21 +162,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
   <div class="calc-card">
     <div class="calc-row">
       <div class="form-group">
-        <label>Monthly Requests</label>
+        <label>Запросов в месяц</label>
         <input type="number" id="requests" value="10000" min="1" step="1000">
       </div>
       <div class="form-group">
-        <label>Avg Input Tokens / Request</label>
+        <label>Среднее число входных токенов</label>
         <input type="number" id="inputTokens" value="300" min="1">
       </div>
     </div>
     <div class="calc-row">
       <div class="form-group">
-        <label>Avg Output Tokens / Request</label>
+        <label>Среднее число выходных токенов</label>
         <input type="number" id="outputTokens" value="200" min="1">
       </div>
       <div class="form-group">
-        <label>Currency</label>
+        <label>Валюта</label>
         <select id="currency">
           <option value="USD">USD ($)</option>
           <option value="CNY">CNY (¥)</option>
@@ -185,7 +185,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
         </select>
       </div>
     </div>
-    <button class="calc-btn" onclick="calculate()">Calculate Cost →</button>
+    <button class="calc-btn" onclick="calculate()">Рассчитать стоимость →</button>
 
     <!-- Disclaimer -->
     <div class="disclaimer">
@@ -194,7 +194,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 
     <!-- Results -->
     <div class="results" id="results">
-      <h2>Cost Comparison</h2>
+      <h2>Сравнение стоимости</h2>
       <table class="result-table">
         <thead>
           <tr>
@@ -216,14 +216,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 
   <!-- CTA -->
   <div class="cta-section">
-    <p>One API key. 627+ models. Lower costs.</p>
-    <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=calculator&utm_campaign=pricing_calc" class="btn-cta">Get Free API Key →</a>
+    <p>Один API Key. 627+ моделей. Ниже стоимость.</p>
+    <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=calculator&utm_campaign=pricing_calc" class="btn-cta">Получить бесплатный API Key →</a>
   </div>
 </section>
 
 <!-- FAQ -->
 <section class="faq-section">
-  <h2>Frequently Asked Questions</h2>
+  <h2>Частые вопросы</h2>
   <div class="faq-item" onclick="this.classList.toggle('open')">
     <div class="faq-q">How does Crazyrouter offer lower prices?</div>
     <div class="faq-a">Crazyrouter aggregates demand across thousands of developers and negotiates volume pricing with providers. Savings are passed directly to you — typically around 45% off official rates.</div>
@@ -252,10 +252,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 
 <!-- Footer -->
 <footer class="footer">
-  <p>© 2026 <a href="https://crazyrouter.com">Crazyrouter</a> — One API for 627+ AI Models</p>
+  <p>© 2026 <a href="https://crazyrouter.com">Crazyrouter</a> — Единый API для 627+ AI-моделей</p>
   <p style="margin-top:8px">
-    <a href="https://crazyrouter.com/models">Pricing</a> · 
-    <a href="https://docs.crazyrouter.com">API Docs</a> · 
+    <a href="https://crazyrouter.com/models">Цены</a> · 
+    <a href="https://docs.crazyrouter.com">Документация API</a> · 
     <a href="https://t.me/crzrouter">Telegram</a> · 
     <a href="https://twitter.com/metaviiii">Twitter</a>
   </p>

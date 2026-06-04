@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Model Comparison - Benchmarks, Pricing & Capabilities | Crazyrouter</title>
+<title>AI 模型对比 - 基准、价格与能力 | Crazyrouter</title>
 <meta name="description" content="Compare AI models side-by-side: GPT-4o vs Claude vs Gemini vs DeepSeek. Benchmarks, pricing, context window, and capabilities in one table.">
 <meta name="keywords" content="ai model comparison, gpt vs claude, gemini vs gpt, deepseek vs claude, llm benchmark comparison, ai model pricing comparison, crazyrouter">
-<link rel="canonical" href="https://crazyrouter.com/tools/model-comparison/">
+<link rel="canonical" href="https://crazyrouter.com/tools/zh/model-comparison/">
 <link rel="alternate" hreflang="en" href="https://crazyrouter.com/tools/model-comparison/">
 <link rel="alternate" hreflang="zh" href="https://crazyrouter.com/tools/zh/model-comparison/">
 <link rel="alternate" hreflang="ru" href="https://crazyrouter.com/tools/ru/model-comparison/">
 <link rel="alternate" hreflang="ja" href="https://crazyrouter.com/tools/ja/model-comparison/">
 <link rel="alternate" hreflang="x-default" href="https://crazyrouter.com/tools/model-comparison/">
-<meta property="og:title" content="AI Model Comparison - Benchmarks & Pricing | Crazyrouter">
+<meta property="og:title" content="AI 模型对比 - Benchmarks & 价格 | Crazyrouter">
 <meta property="og:description" content="Compare GPT-4o, Claude, Gemini, DeepSeek and more. Side-by-side benchmarks, pricing, and capabilities.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://crazyrouter.com/tools/model-comparison/">
+<meta property="og:url" content="https://crazyrouter.com/tools/zh/model-comparison/">
 <script src="/tools/tracking-bridge.js" defer></script>
 <script src="/tools/language-switcher.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "AI Model Comparison Tool",
-  "url": "https://crazyrouter.com/tools/model-comparison",
+  "name": "AI 模型对比 Tool",
+  "url": "https://crazyrouter.com/tools/zh/model-comparison",
   "description": "Compare AI models side-by-side: benchmarks, pricing, context windows, and capabilities.",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Web",
@@ -74,13 +74,13 @@ tr:hover{background:#f0f7ff}
 </head>
 <body>
 <div class="header">
-<h1>⚡ AI Model Comparison</h1>
-<p>Compare benchmarks, pricing, context windows, and capabilities across top AI models</p>
+<h1>⚡ AI 模型对比</h1>
+<p>对比顶级 AI 模型的基准、价格、上下文窗口和能力</p>
 </div>
 <div class="controls">
-<label>Provider:</label>
+<label>服务商：</label>
 <select id="providerFilter">
-<option value="all">All Providers</option>
+<option value="all">全部服务商</option>
 <option value="openai">OpenAI</option>
 <option value="anthropic">Anthropic</option>
 <option value="google">Google</option>
@@ -90,15 +90,15 @@ tr:hover{background:#f0f7ff}
 <option value="xai">xAI</option>
 <option value="qwen">Qwen</option>
 </select>
-<label>Type:</label>
+<label>类型：</label>
 <select id="typeFilter">
-<option value="all">All Types</option>
+<option value="all">全部类型</option>
 <option value="flagship">Flagship</option>
 <option value="reasoning">Reasoning</option>
 <option value="fast">Fast / Lite</option>
 <option value="open">Open Source</option>
 </select>
-<input type="text" id="search" placeholder="Search models..." style="width:180px">
+<input type="text" id="search" placeholder="搜索模型..." style="width:180px">
 </div>
 <div class="compare-bar" id="compareBar">
 <span style="font-size:13px;color:#6b7280">Compare:</span>
@@ -120,16 +120,16 @@ tr:hover{background:#f0f7ff}
 <th data-sort="input">Input $/M <span class="arrow"></span></th>
 <th data-sort="output">Output $/M <span class="arrow"></span></th>
 <th data-sort="vision">Vision</th>
-<th data-sort="tools">Tools</th>
+<th data-sort="tools">工具</th>
 </tr>
 </thead>
 <tbody id="tbody"></tbody>
 </table>
 </div>
 <div class="cta">
-Access all these models through one API with up to 45% savings — <a href="https://crazyrouter.com?utm_source=tools&utm_medium=comparison&utm_campaign=model_comparison">Try Crazyrouter free →</a>
+通过一个 API 使用这些模型，最高节省 45% — <a href="https://crazyrouter.com?utm_source=tools&utm_medium=comparison&utm_campaign=model_comparison">免费试用 Crazyrouter →</a>
 </div>
-<div class="footer"><a href="../">← Back to Tools</a> · <a href="https://crazyrouter.com">Crazyrouter</a></div>
+<div class="footer"><a href="../">← 返回工具</a> · <a href="https://crazyrouter.com">Crazyrouter</a></div>
 <script>
 const models=[
 // OpenAI - current models

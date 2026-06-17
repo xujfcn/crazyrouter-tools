@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI API 料金計算機 - Crazyrouter</title>
-<meta name="description" content="Calculate and compare AI API costs across GPT-4o, Claude, Gemini, DeepSeek and 627+ models. Find the cheapest option for your use case with Crazyrouter.">
-<meta name="keywords" content="ai api pricing calculator, openai cost calculator, claude api cost, gemini pricing, ai token calculator, crazyrouter, openrouter alternative">
+<meta name="description" content="GPT-4o、Claude、Gemini、DeepSeek など 627+ モデルの AI API コストを比較し、用途に合う低コストな選択肢を見つけられます。">
+<meta name="keywords" content="AI API 料金計算機, OpenAI コスト計算, Claude API コスト, Gemini 料金, AI token コスト計算, Crazyrouter">
 <link rel="canonical" href="https://crazyrouter.com/tools/ja/pricing-calculator/">
 <link rel="alternate" hreflang="en" href="https://crazyrouter.com/tools/pricing-calculator/">
 <link rel="alternate" hreflang="zh" href="https://crazyrouter.com/tools/zh/pricing-calculator/">
@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="ja" href="https://crazyrouter.com/tools/ja/pricing-calculator/">
 <link rel="alternate" hreflang="x-default" href="https://crazyrouter.com/tools/pricing-calculator/">
 <meta property="og:title" content="AI API 料金計算機 - Crazyrouter">
-<meta property="og:description" content="Calculate and compare AI API costs across 627+ models. Save up to 45% with Crazyrouter.">
+<meta property="og:description" content="627+ モデルの AI API コストを比較し、Crazyrouter でどれだけ節約できるかを見積もれます。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://crazyrouter.com/tools/ja/pricing-calculator/">
 <script src="/tools/tracking-bridge.js" defer></script>
@@ -24,10 +24,10 @@
   "@type": "WebApplication",
   "name": "AI API 料金計算機",
   "url": "https://crazyrouter.com/tools/ja/pricing-calculator",
-  "description": "Calculate and compare AI API costs across GPT-4o, Claude, Gemini, DeepSeek and 627+ models.",
+  "description": "GPT-4o、Claude、Gemini、DeepSeek など 627+ モデルの AI API コストを比較できます。",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Web",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "offers": { "@type": "Offer", "price": "0", "price通貨": "USD" },
   "creator": { "@type": "Organization", "name": "Crazyrouter", "url": "https://crazyrouter.com" }
 }
 </script>
@@ -84,6 +84,51 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 .savings-box .text{font-size:15px;color:#166534;font-weight:500}
 .savings-box .text span{font-size:22px;font-weight:700}
 
+/* Multi-model price comparison */
+.compare-card{margin-top:24px}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
+.card-head h2{font-size:22px;font-weight:700;color:#111827;margin-bottom:6px}
+.card-head p{font-size:14px;line-height:1.6;color:#6b7280;max-width:680px}
+.btn-light{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border:1px solid #d1d5db;border-radius:9999px;background:#fff;color:#111827;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn-light:hover{border-color:#2563eb;color:#2563eb;background:#f8fbff}
+.source-pill{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border:1px solid #e5e7eb;border-radius:9999px;color:#6b7280;background:#fff;font-size:12px}
+.source-pill strong{color:#111827}
+.workload-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+.model-list{display:grid;gap:12px}
+.model-row{display:grid;grid-template-columns:minmax(240px,.85fr) minmax(360px,1.35fr) 40px;gap:14px;align-items:start;padding:14px;border:1px solid #e5e7eb;border-radius:8px;background:#fcfcfd}
+.model-row .form-group label{font-size:12px}
+.model-row input,.model-row select{font-variant-numeric:tabular-nums}
+.provider-badge{display:inline-flex;align-items:center;justify-content:center;padding:5px 10px;border:1px solid #e5e7eb;border-radius:9999px;background:#fff;color:#4b5563;font-size:12px;font-weight:700;line-height:1}
+.model-combobox{position:relative}
+.model-search{height:40px}
+.model-menu{position:absolute;top:100%;left:0;right:0;z-index:20;margin-top:6px;max-height:260px;overflow:auto;border:1px solid #dbe3ef;border-radius:8px;background:#fff;box-shadow:0 14px 34px rgba(15,23,42,.12);display:none}
+.model-menu.open{display:block}
+.model-option{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border:0;background:#fff;text-align:left;cursor:pointer}
+.model-option:hover,.model-option.active{background:#f0f7ff}
+.model-option-main{display:grid;gap:4px;min-width:0}
+.model-option-name{font-size:13px;font-weight:700;color:#111827;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.model-option-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px;color:#6b7280}
+.model-option-price{font-size:12px;font-weight:700;color:#111827;white-space:nowrap}
+.picker-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px;font-size:12px;color:#6b7280}
+.price-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 8px;border:1px solid #e5e7eb;border-radius:9999px;background:#fff;color:#4b5563}
+.price-compare{display:grid;grid-template-columns:1fr 1fr minmax(120px,.55fr);gap:10px}
+.price-panel{border:1px solid #e5e7eb;border-radius:8px;background:#fff;padding:12px}
+.price-panel.cr{border-color:#bbf7d0;background:#f7fef9}
+.price-panel.final{border-color:#bfdbfe;background:#f8fbff;display:flex;flex-direction:column;justify-content:center}
+.price-panel-title{font-size:12px;font-weight:800;color:#6b7280;margin-bottom:10px;letter-spacing:.02em}
+.price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.price-cell span{display:block;font-size:11px;color:#6b7280;margin-bottom:2px}
+.price-cell strong{font-size:13px;color:#111827}
+.discount-line{display:inline-flex;margin-bottom:8px;padding:3px 8px;border-radius:9999px;background:#dcfce7;color:#166534;font-size:12px;font-weight:800}
+.final-value{font-size:22px;font-weight:800;color:#1d4ed8}
+.final-label{font-size:12px;color:#6b7280;margin-top:4px}
+.remove-btn{width:36px;height:36px;border:1px solid #e5e7eb;border-radius:9999px;background:#fff;color:#9ca3af;font-size:20px;line-height:1;cursor:pointer;transition:all .2s}
+.remove-btn:hover{border-color:#fecaca;color:#dc2626;background:#fff5f5}
+.compare-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.comparison-results{margin-top:24px}
+.muted-note{font-size:12px;color:#6b7280;line-height:1.5;margin-top:10px}
+.winner{color:#166534;font-weight:700}
+
 /* CTA */
 .cta-section{text-align:center;padding:40px 16px 0}
 .cta-section p{color:#6b7280;margin-bottom:16px;font-size:15px}
@@ -114,6 +159,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
   .result-table{font-size:12px}
   .result-table th,.result-table td{padding:8px 6px}
   .hero h1{font-size:28px}
+  .card-head{flex-direction:column}
+  .workload-grid{grid-template-columns:1fr 1fr}
+  .model-row{grid-template-columns:1fr 1fr}
+  .model-row .model-picker,.model-row .form-group,.model-row .remove-btn{grid-column:1 / -1}
+  .price-compare{grid-template-columns:1fr}
+  .remove-btn{width:100%;font-size:16px}
 }
 </style>
 </head>
@@ -143,22 +194,77 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 <!-- Hero -->
 <section class="hero">
   <h1>AI API 料金計算機</h1>
-  <p>GPT-4o、Claude、Gemini、DeepSeek と 627+ モデルのコストを比較し、Crazyrouter でどれだけ節約できるかを見積もります。</p>
+  <p>GPT-4o、Claude、Gemini、DeepSeek と 627+ モデルのコストを比較し、Crazyrouter でどれだけ節約できるかを見積もれます。</p>
 </section>
 
 <!-- Use Case Tags -->
 <div class="tags" id="useCaseTags">
-  <span class="tag active" data-uc="chatbot">💬 Chatbot</span>
-  <span class="tag" data-uc="coding">💻 Code Generation</span>
-  <span class="tag" data-uc="analysis">📊 Data Analysis</span>
-  <span class="tag" data-uc="content">✍️ Content Writing</span>
-  <span class="tag" data-uc="translation">🌐 Translation</span>
-  <span class="tag" data-uc="image">🎨 Image Generation</span>
-  <span class="tag" data-uc="custom">⚙️ Custom</span>
+  <span class="tag active" data-uc="chatbot">💬 チャットボット</span>
+  <span class="tag" data-uc="coding">💻 コード生成</span>
+  <span class="tag" data-uc="analysis">📊 データ分析</span>
+  <span class="tag" data-uc="content">✍️ コンテンツ作成</span>
+  <span class="tag" data-uc="translation">🌐 翻訳</span>
+  <span class="tag" data-uc="image">🎨 画像生成</span>
+  <span class="tag" data-uc="custom">⚙️ カスタム</span>
 </div>
 
 <!-- Calculator -->
 <section class="calc-section">
+  <div class="calc-card compare-card">
+    <div class="card-head">
+      <div>
+        <h2>複数モデル料金比較</h2>
+        <p>Crazyrouter の料金データからモデルを検索・選択し、入力、出力、キャッシュ作成、キャッシュ読み取り、割引後入力単価、最終コストを比較できます。</p>
+        <div class="source-pill" id="modelDataSource">モデルデータ：<strong>Crazyrouter 料金を読み込み中</strong></div>
+      </div>
+      <button class="btn-light" type="button" onclick="addPriceRow()">+ モデルを追加</button>
+    </div>
+
+    <div class="workload-grid">
+      <div class="form-group">
+        <label>入力 Tokens</label>
+        <input type="number" id="cmpInputTokens" value="1000000" min="0" step="10000">
+      </div>
+      <div class="form-group">
+        <label>出力 Tokens</label>
+        <input type="number" id="cmpOutputTokens" value="500000" min="0" step="10000">
+      </div>
+      <div class="form-group">
+        <label>キャッシュ作成 Tokens</label>
+        <input type="number" id="cmpCacheCreateTokens" value="0" min="0" step="10000">
+      </div>
+      <div class="form-group">
+        <label>キャッシュ読み取り Tokens</label>
+        <input type="number" id="cmpCacheReadTokens" value="0" min="0" step="10000">
+      </div>
+    </div>
+
+    <div class="model-list" id="priceRows"></div>
+    <div class="compare-actions">
+      <button class="calc-btn" type="button" style="width:auto;padding-left:22px;padding-right:22px" onclick="calculatePriceComparison()">料金を比較</button>
+      <button class="btn-light" type="button" onclick="resetPriceComparison()">初期値に戻す</button>
+    </div>
+
+    <div class="comparison-results" id="comparisonResults">
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>モデル</th>
+            <th>入力</th>
+            <th>割引後入力</th>
+            <th>出力</th>
+            <th>キャッシュ作成</th>
+            <th>キャッシュ読み取り</th>
+            <th>割引</th>
+            <th>最終価格</th>
+          </tr>
+        </thead>
+        <tbody id="comparisonBody"></tbody>
+      </table>
+      <div class="muted-note">割引率は Crazyrouter の見積もり値で固定されています。モデル名と表示入力価格は可能な場合 Crazyrouter 料金ページから読み込み、出力とキャッシュ価格はローカル推定値で補完します。</div>
+    </div>
+  </div>
+
   <div class="calc-card">
     <div class="calc-row">
       <div class="form-group">
@@ -166,13 +272,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
         <input type="number" id="requests" value="10000" min="1" step="1000">
       </div>
       <div class="form-group">
-        <label>1 リクエストあたりの平均入力 Token</label>
+        <label>Avg 入力 Tokens / Request</label>
         <input type="number" id="inputTokens" value="300" min="1">
       </div>
     </div>
     <div class="calc-row">
       <div class="form-group">
-        <label>1 リクエストあたりの平均出力 Token</label>
+        <label>Avg 出力 Tokens / Request</label>
         <input type="number" id="outputTokens" value="200" min="1">
       </div>
       <div class="form-group">
@@ -189,7 +295,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 
     <!-- Disclaimer -->
     <div class="disclaimer">
-      <strong>⚠️ Disclaimer:</strong> Crazyrouter prices shown are estimated at <strong>55% of official provider pricing</strong> for reference only. Actual costs are calculated based on real-time rates at the time of your API request. Please check <a href="https://crazyrouter.com/models" style="color:#2563eb">crazyrouter.com/models</a> for live pricing.
+      <strong>⚠️ 注記：</strong> 表示される Crazyrouter 価格は<strong>公式プロバイダー価格の 55%</strong>として見積もった参考値です。実際の費用は API リクエスト時点のリアルタイム価格で計算されます。最新価格は <a href="https://crazyrouter.com/models" style="color:#2563eb">crazyrouter.com/models</a> を確認してください。
     </div>
 
     <!-- Results -->
@@ -198,11 +304,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
       <table class="result-table">
         <thead>
           <tr>
-            <th>Model</th>
-            <th>Provider</th>
-            <th>Official Price</th>
-            <th>Crazyrouter Est.</th>
-            <th>Est. Savings</th>
+            <th>モデル</th>
+            <th>プロバイダー</th>
+            <th>公式価格</th>
+            <th>Crazyrouter 見積もり</th>
+            <th>推定節約額</th>
           </tr>
         </thead>
         <tbody id="resultsBody"></tbody>
@@ -216,7 +322,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 
   <!-- CTA -->
   <div class="cta-section">
-    <p>1 つの API Key。627+ モデル。低コスト。</p>
+    <p>1 つの API Key。627+ モデル。より低いコスト。</p>
     <a href="https://crazyrouter.com/register?utm_source=tools&utm_medium=calculator&utm_campaign=pricing_calc" class="btn-cta">無料 API Key を取得 →</a>
   </div>
 </section>
@@ -225,28 +331,28 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 <section class="faq-section">
   <h2>よくある質問</h2>
   <div class="faq-item" onclick="this.classList.toggle('open')">
-    <div class="faq-q">How does Crazyrouter offer lower prices?</div>
-    <div class="faq-a">Crazyrouter aggregates demand across thousands of developers and negotiates volume pricing with providers. Savings are passed directly to you — typically around 45% off official rates.</div>
+    <div class="faq-q">Crazyrouter はなぜ低価格を提供できるのですか？</div>
+    <div class="faq-a">Crazyrouter は多数の開発者需要を集約し、プロバイダーとボリューム価格を交渉します。その節約分をユーザー価格に反映しており、通常は公式価格より約 45% 低くなります。</div>
   </div>
   <div class="faq-item" onclick="this.classList.toggle('open')">
-    <div class="faq-q">Are the prices in this calculator accurate?</div>
-    <div class="faq-a">The calculator uses official list prices from each provider and estimates Crazyrouter pricing at 55% of those rates. Actual costs may vary — check <a href="https://crazyrouter.com/models" style="color:#2563eb">crazyrouter.com/models</a> for real-time pricing.</div>
+    <div class="faq-q">この計算機の価格は正確ですか？</div>
+    <div class="faq-a">この計算機は各プロバイダーの公開価格を参考にし、Crazyrouter 価格をその 55% として見積もります。実際の費用は変動する場合があるため、リアルタイム価格は <a href="https://crazyrouter.com/models" style="color:#2563eb">crazyrouter.com/models</a> を確認してください。</div>
   </div>
   <div class="faq-item" onclick="this.classList.toggle('open')">
-    <div class="faq-q">What are tokens?</div>
-    <div class="faq-a">Tokens are the basic units AI models use to process text. Roughly 1 token ≈ 4 characters in English, or about ¾ of a word. A 1,000-word article is approximately 1,300 tokens.</div>
+    <div class="faq-q">Token とは何ですか？</div>
+    <div class="faq-a">Token は AI モデルがテキストを処理する基本単位です。英語ではおよそ 1 token が 4 文字、または 0.75 語程度に相当します。1,000 語の記事はおよそ 1,300 token です。</div>
   </div>
   <div class="faq-item" onclick="this.classList.toggle('open')">
-    <div class="faq-q">Can I switch models without changing code?</div>
-    <div class="faq-a">Yes. Crazyrouter uses an OpenAI-compatible API. Just change the model name in your request — no SDK changes, no new API keys. Works with Python, Node.js, curl, LangChain, and more.</div>
+    <div class="faq-q">コードを変更せずにモデルを切り替えられますか？</div>
+    <div class="faq-a">はい。Crazyrouter は OpenAI 互換 API を使用しています。リクエスト内のモデル名を変更するだけで、SDK の変更や新しい API Key は不要です。Python、Node.js、curl、LangChain などで利用できます。</div>
   </div>
   <div class="faq-item" onclick="this.classList.toggle('open')">
-    <div class="faq-q">Do you support image and video generation?</div>
-    <div class="faq-a">Yes. Crazyrouter supports DALL-E 3, Midjourney, Flux, Stable Diffusion, Sora, Kling, Runway, and more — all through a unified API.</div>
+    <div class="faq-q">画像生成や動画生成に対応していますか？</div>
+    <div class="faq-a">はい。Crazyrouter は DALL-E 3、Midjourney、Flux、Stable Diffusion、Sora、Kling、Runway などに対応し、統一 API から利用できます。</div>
   </div>
   <div class="faq-item" onclick="this.classList.toggle('open')">
-    <div class="faq-q">How is Crazyrouter different from OpenRouter?</div>
-    <div class="faq-a">Crazyrouter offers more models (627+ vs ~300), lower pricing, and supports image/video/audio generation models that OpenRouter doesn't. Same OpenAI-compatible API format.</div>
+    <div class="faq-q">Crazyrouter は OpenRouter と何が違いますか？</div>
+    <div class="faq-a">Crazyrouter はより多くのモデル（627+ 対 約 300）、より低い価格、さらに画像・動画・音声生成モデルへの対応を提供します。API 形式は OpenAI 互換です。</div>
   </div>
 </section>
 
@@ -301,6 +407,24 @@ const currencyRates = { USD:1, CNY:7.25, EUR:0.92, JPY:149.5 };
 const currencySymbols = { USD:'$', CNY:'¥', EUR:'€', JPY:'¥' };
 
 let currentUseCase = 'chatbot';
+let priceRowId = 0;
+const FIXED_DISCOUNT = 45;
+const DISCOUNT_RATIO = 1 - FIXED_DISCOUNT / 100;
+const defaultSelectedModels = ['GPT-4o', 'Claude Sonnet 4.6', 'Gemini 2.5 Flash'];
+const fallbackCatalog = [
+  { name:'GPT-4o', provider:'OpenAI', input:2.75, output:10.00, cacheCreate:2.75, cacheRead:1.38, コンテキスト:'128K', source:'fallback' },
+  { name:'GPT-5', provider:'OpenAI', input:0.69, output:5.50, cacheCreate:0.69, cacheRead:0.17, コンテキスト:'400K', source:'fallback' },
+  { name:'GPT-5 Mini', provider:'OpenAI', input:0.14, output:1.20, cacheCreate:0.14, cacheRead:0.04, コンテキスト:'400K', source:'fallback' },
+  { name:'o3', provider:'OpenAI', input:1.10, output:4.40, cacheCreate:1.10, cacheRead:0.28, コンテキスト:'200K', source:'fallback' },
+  { name:'o4-mini', provider:'OpenAI', input:0.61, output:2.44, cacheCreate:0.61, cacheRead:0.15, コンテキスト:'200K', source:'fallback' },
+  { name:'Claude Sonnet 4.6', provider:'Anthropic', input:1.65, output:15.00, cacheCreate:2.06, cacheRead:0.17, コンテキスト:'200K', source:'fallback' },
+  { name:'Claude Opus 4.6', provider:'Anthropic', input:2.75, output:75.00, cacheCreate:3.44, cacheRead:0.28, コンテキスト:'200K', source:'fallback' },
+  { name:'Gemini 2.5 Pro', provider:'Google', input:0.69, output:5.52, cacheCreate:0.69, cacheRead:0.17, コンテキスト:'1M', source:'fallback' },
+  { name:'Gemini 2.5 Flash', provider:'Google', input:0.17, output:0.68, cacheCreate:0.17, cacheRead:0.04, コンテキスト:'1M', source:'fallback' },
+  { name:'DeepSeek V3', provider:'DeepSeek', input:1.80, output:1.10, cacheCreate:1.80, cacheRead:0.45, コンテキスト:'128K', source:'fallback' },
+  { name:'DeepSeek R1', provider:'DeepSeek', input:3.60, output:2.19, cacheCreate:3.60, cacheRead:0.90, コンテキスト:'128K', source:'fallback' },
+];
+let modelCatalog = mergeCatalog([]);
 
 // Tag click
 document.querySelectorAll('.tag').forEach(tag => {
@@ -351,7 +475,7 @@ function calculate() {
   results.forEach((r, i) => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${r.name}${i === 0 ? '<span class="badge-cheapest">CHEAPEST</span>' : ''}</td>
+      <td>${r.name}${i === 0 ? '<span class="badge-cheapest">最安</span>' : ''}</td>
       <td>${r.provider}</td>
       <td>${fmt(r.directCost)}</td>
       <td><span class="badge-cr">Crazyrouter</span> ${fmt(r.crCost)}</td>
@@ -362,9 +486,310 @@ function calculate() {
 
   const maxSave = results.reduce((max, r) => r.savings > max.savings ? r : max, results[0]);
   document.getElementById('savingsText').innerHTML = 
-    `With <span>${maxSave.name}</span> via Crazyrouter, estimated savings: <span>${fmt(maxSave.savings)}/mo</span> (${maxSave.savingsPct.toFixed(0)}% off official pricing)`;
+    `Crazyrouter で <span>${maxSave.name}</span> を使うと、推定節約額は <span>${fmt(maxSave.savings)}</span>/月（公式価格より約 ${maxSave.savingsPct.toFixed(0)}% 安）です`;
 
   document.getElementById('results').classList.add('show');
+}
+
+function priceFmt(v) {
+  if (!Number.isFinite(v)) return '$0.00';
+  if (v < 0.01 && v > 0) return '$' + v.toFixed(4);
+  return '$' + v.toFixed(2);
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, ch => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  }[ch]));
+}
+
+function slugプロバイダー(provider) {
+  return String(provider || 'other').toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function providerBadge(provider) {
+  return `<span class="provider-badge ${slugプロバイダー(provider)}">${escapeHtml(provider)}</span>`;
+}
+
+function normalizeName(name) {
+  return String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function estimateMissingPrices(model) {
+  const input = Number(model.input) || 0;
+  return {
+    ...model,
+    output: Number(model.output) || input * 4,
+    cacheCreate: Number(model.cacheCreate) || input,
+    cacheRead: Number(model.cacheRead) || input * 0.25,
+  };
+}
+
+function mergeCatalog(remoteModels) {
+  const byName = new Map(fallbackCatalog.map(model => [normalizeName(model.name), estimateMissingPrices(model)]));
+  remoteModels.forEach(remote => {
+    const key = normalizeName(remote.name);
+    const existing = byName.get(key) || {};
+    byName.set(key, estimateMissingPrices({ ...existing, ...remote, source:'crazyrouter.com/models' }));
+  });
+  return [...byName.values()].sort((a, b) => a.provider.localeCompare(b.provider) || a.name.localeCompare(b.name));
+}
+
+function parseModelsPage(html) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const lines = doc.body.innerText.split('\n').map(line => line.trim()).filter(Boolean);
+  const providers = new Set(['OpenAI', 'Anthropic', 'Google', 'DeepSeek', 'Meta', 'xAI', 'Alibaba', 'Qwen', 'Mistral']);
+  const parsed = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const provider = lines[i];
+    if (!providers.has(provider) || !/^(Index|Review)$/.test(lines[i + 1] || '')) continue;
+    const name = lines[i + 2];
+    const windowLines = lines.slice(i + 3, i + 8);
+    const priceLine = windowLines.find(line => /\$[\d.]+\s*\/\s*1M input/i.test(line));
+    if (!name || !priceLine) continue;
+    const priceMatch = priceLine.match(/\$([\d.]+)/);
+    const コンテキスト = (windowLines.find(line => /context$/i.test(line)) || '').replace(/\s*context$/i, '');
+    parsed.push({ name, provider, input: Number(priceMatch[1]), コンテキスト, source:'crazyrouter.com/models' });
+  }
+
+  return parsed;
+}
+
+async function loadModelCatalog() {
+  const sourceEl = document.getElementById('modelDataSource');
+  try {
+    const response = await fetch('https://crazyrouter.com/models/', { credentials:'omit' });
+    if (!response.ok) throw new Error('pricing page unavailable');
+    const html = await response.text();
+    const remoteModels = parseModelsPage(html);
+    if (!remoteModels.length) throw new Error('no pricing rows parsed');
+    modelCatalog = mergeCatalog(remoteModels);
+    sourceEl.innerHTML = `モデルデータ：<strong>crazyrouter.com/models から ${remoteModels.length} 件を読み込みました</strong>`;
+  } catch (error) {
+    modelCatalog = mergeCatalog([]);
+    sourceEl.innerHTML = `モデルデータ：<strong>ローカルの代替データを使用中</strong>`;
+  }
+  renderAllPriceRows();
+  calculatePriceComparison();
+}
+
+function modelOptions(selectedName, query = '') {
+  const q = normalizeName(query);
+  const filtered = modelCatalog
+    .filter(model => !q || normalizeName(`${model.name} ${model.provider}`).includes(q));
+  return filtered.slice(0, 24);
+}
+
+function findModel(name) {
+  return modelCatalog.find(model => model.name === name) || modelCatalog[0] || estimateMissingPrices(fallbackCatalog[0]);
+}
+
+function addPriceRow(selectedName) {
+  const rowId = ++priceRowId;
+  const selectedModel = findModel(selectedName || defaultSelectedModels[(rowId - 1) % defaultSelectedModels.length]);
+  const row = document.createElement('div');
+  row.className = 'model-row';
+  row.dataset.rowId = rowId;
+  row.dataset.modelName = selectedModel.name;
+  row.innerHTML = `
+    <div class="form-group model-picker">
+      <label>Model</label>
+      <div class="model-combobox">
+        <input class="model-search" type="search" data-field="modelSearch" placeholder="GPT、Claude、Gemini を検索..." autocomplete="off" role="combobox" aria-expanded="false">
+        <div class="model-menu" data-field="modelMenu"></div>
+      </div>
+      <div class="picker-meta" data-field="modelMeta"></div>
+    </div>
+    <div class="form-group">
+      <label>Pricing</label>
+      <div data-field="priceMeta"></div>
+    </div>
+    <button class="remove-btn" type="button" title="Remove model" onclick="removePriceRow(${rowId})">×</button>
+  `;
+  row.querySelector('[data-field="modelSearch"]').addEventListener('input', event => {
+    renderModelMenu(row, event.target.value);
+    openModelMenu(row);
+  });
+  row.querySelector('[data-field="modelSearch"]').addEventListener('focus', () => {
+    renderModelMenu(row, row.querySelector('[data-field="modelSearch"]').value);
+    openModelMenu(row);
+  });
+  row.querySelector('[data-field="modelSearch"]').addEventListener('keydown', event => {
+    const options = [...row.querySelectorAll('.model-option')];
+    const active = row.querySelector('.model-option.active');
+    const currentIndex = options.indexOf(active);
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      const next = options[Math.min(currentIndex + 1, options.length - 1)] || options[0];
+      options.forEach(option => option.classList.remove('active'));
+      next?.classList.add('active');
+      next?.scrollIntoView({ block:'nearest' });
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      const prev = options[Math.max(currentIndex - 1, 0)] || options[0];
+      options.forEach(option => option.classList.remove('active'));
+      prev?.classList.add('active');
+      prev?.scrollIntoView({ block:'nearest' });
+    } else if (event.key === 'Enter' && active) {
+      event.preventDefault();
+      selectModel(row, active.dataset.modelName);
+    } else if (event.key === 'Escape') {
+      closeModelMenu(row);
+    }
+  });
+  document.getElementById('priceRows').appendChild(row);
+  renderPriceRow(row);
+  calculatePriceComparison();
+}
+
+function openModelMenu(row) {
+  row.querySelector('[data-field="modelMenu"]').classList.add('open');
+  row.querySelector('[data-field="modelSearch"]').setAttribute('aria-expanded', 'true');
+}
+
+function closeModelMenu(row) {
+  row.querySelector('[data-field="modelMenu"]').classList.remove('open');
+  row.querySelector('[data-field="modelSearch"]').setAttribute('aria-expanded', 'false');
+}
+
+function renderModelMenu(row, query = '') {
+  const menu = row.querySelector('[data-field="modelMenu"]');
+  const selectedName = row.dataset.modelName;
+  const options = modelOptions(selectedName, query);
+  menu.innerHTML = options.map((model, index) => `
+    <button class="model-option ${model.name === selectedName ? 'active' : ''}" type="button" data-model-name="${escapeHtml(model.name)}">
+      <span class="model-option-main">
+        <span class="model-option-name">${escapeHtml(model.name)}</span>
+        <span class="model-option-meta">${providerBadge(model.provider)}${model.context ? `<span>${escapeHtml(model.context)} コンテキスト</span>` : ''}</span>
+      </span>
+      <span class="model-option-price">${priceFmt(model.input)}/1M 入力</span>
+    </button>
+  `).join('') || '<div class="model-option-main" style="padding:12px;color:#6b7280;font-size:13px">モデルが見つかりません</div>';
+  menu.querySelectorAll('.model-option').forEach(option => {
+    option.addEventListener('mousedown', event => event.preventDefault());
+    option.addEventListener('click', () => selectModel(row, option.dataset.modelName));
+  });
+}
+
+function selectModel(row, modelName) {
+  row.dataset.modelName = modelName;
+  row.querySelector('[data-field="modelSearch"]').value = '';
+  closeModelMenu(row);
+  renderPriceRow(row);
+  calculatePriceComparison();
+}
+
+function renderPriceRow(row) {
+  const model = findModel(row.dataset.modelName);
+  row.dataset.modelName = model.name;
+  const input = row.querySelector('[data-field="modelSearch"]');
+  input.value = model.name;
+  renderModelMenu(row, model.name);
+  row.querySelector('[data-field="modelMeta"]').innerHTML = `
+    ${providerBadge(model.provider)}
+    ${model.context ? `<span class="price-chip">${escapeHtml(model.context)} コンテキスト</span>` : ''}
+    <span class="price-chip">${model.source === 'crazyrouter.com/models' ? 'オンライン入力価格' : '代替入力価格'}</span>
+  `;
+  const discounted = {
+    input: model.input * DISCOUNT_RATIO,
+    output: model.output * DISCOUNT_RATIO,
+    cacheCreate: model.cacheCreate * DISCOUNT_RATIO,
+    cacheRead: model.cacheRead * DISCOUNT_RATIO,
+  };
+  const inputM = (parseFloat(document.getElementById('cmpInputTokens').value) || 0) / 1_000_000;
+  const outputM = (parseFloat(document.getElementById('cmpOutputTokens').value) || 0) / 1_000_000;
+  const cacheCreateM = (parseFloat(document.getElementById('cmpCacheCreateTokens').value) || 0) / 1_000_000;
+  const cacheReadM = (parseFloat(document.getElementById('cmpCacheReadTokens').value) || 0) / 1_000_000;
+  const row最終価格 = inputM * discounted.input + outputM * discounted.output + cacheCreateM * discounted.cacheCreate + cacheReadM * discounted.cacheRead;
+  row.querySelector('[data-field="priceMeta"]').innerHTML = `
+    <div class="price-compare">
+      <div class="price-panel">
+        <div class="price-panel-title">公式価格</div>
+        <div class="price-grid">
+          <div class="price-cell"><span>入力</span><strong>${priceFmt(model.input)}</strong></div>
+          <div class="price-cell"><span>出力</span><strong>${priceFmt(model.output)}</strong></div>
+          <div class="price-cell"><span>キャッシュ作成</span><strong>${priceFmt(model.cacheCreate)}</strong></div>
+          <div class="price-cell"><span>キャッシュ読み取り</span><strong>${priceFmt(model.cacheRead)}</strong></div>
+        </div>
+      </div>
+      <div class="price-panel cr">
+        <div class="price-panel-title">Crazyrouter 価格</div>
+        <div class="discount-line">${FIXED_DISCOUNT}% off</div>
+        <div class="price-grid">
+          <div class="price-cell"><span>入力</span><strong>${priceFmt(discounted.input)}</strong></div>
+          <div class="price-cell"><span>出力</span><strong>${priceFmt(discounted.output)}</strong></div>
+          <div class="price-cell"><span>キャッシュ作成</span><strong>${priceFmt(discounted.cacheCreate)}</strong></div>
+          <div class="price-cell"><span>キャッシュ読み取り</span><strong>${priceFmt(discounted.cacheRead)}</strong></div>
+        </div>
+      </div>
+      <div class="price-panel final">
+        <div class="price-panel-title">最終価格</div>
+        <div class="final-value">${priceFmt(row最終価格)}</div>
+        <div class="final-label">この使用量</div>
+      </div>
+    </div>
+  `;
+}
+
+function renderAllPriceRows() {
+  document.querySelectorAll('.model-row').forEach(renderPriceRow);
+}
+
+function removePriceRow(rowId) {
+  const rows = document.querySelectorAll('.model-row');
+  if (rows.length <= 2) return;
+  const row = document.querySelector(`.model-row[data-row-id="${rowId}"]`);
+  if (row) row.remove();
+  calculatePriceComparison();
+}
+
+function getPriceRows() {
+  return [...document.querySelectorAll('.model-row')].map(row => findModel(row.dataset.modelName));
+}
+
+function calculatePriceComparison() {
+  const inputM = (parseFloat(document.getElementById('cmpInputTokens').value) || 0) / 1_000_000;
+  const outputM = (parseFloat(document.getElementById('cmpOutputTokens').value) || 0) / 1_000_000;
+  const cacheCreateM = (parseFloat(document.getElementById('cmpCacheCreateTokens').value) || 0) / 1_000_000;
+  const cacheReadM = (parseFloat(document.getElementById('cmpCacheReadTokens').value) || 0) / 1_000_000;
+  const rows = getPriceRows()
+    .map(row => {
+      const discountedInput = row.input * DISCOUNT_RATIO;
+      const discountedOutput = row.output * DISCOUNT_RATIO;
+      const discountedCacheCreate = row.cacheCreate * DISCOUNT_RATIO;
+      const discountedCacheRead = row.cacheRead * DISCOUNT_RATIO;
+      const finalPrice = inputM * discountedInput + outputM * discountedOutput + cacheCreateM * discountedCacheCreate + cacheReadM * discountedCacheRead;
+      return { ...row, discountedInput, discountedOutput, discountedCacheCreate, discountedCacheRead, finalPrice };
+    })
+    .sort((a, b) => a.finalPrice - b.finalPrice);
+
+  const tbody = document.getElementById('comparisonBody');
+  tbody.innerHTML = '';
+  rows.forEach((row, index) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${escapeHtml(row.name)}${index === 0 ? '<span class="badge-cheapest">最安</span>' : ''}</td>
+      <td>${priceFmt(row.input)}</td>
+      <td>${priceFmt(row.discountedInput)}</td>
+      <td>${priceFmt(row.output)}</td>
+      <td>${priceFmt(row.cacheCreate)}</td>
+      <td>${priceFmt(row.cacheRead)}</td>
+      <td>${FIXED_DISCOUNT}% off</td>
+      <td class="${index === 0 ? 'winner' : ''}">${priceFmt(row.finalPrice)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+  renderAllPriceRows();
+}
+
+function resetPriceComparison() {
+  document.getElementById('priceRows').innerHTML = '';
+  defaultSelectedModels.forEach(name => addPriceRow(name));
 }
 
 // Auto-calculate on load
@@ -373,6 +798,16 @@ window.addEventListener('load', calculate);
 ['requests','inputTokens','outputTokens','currency'].forEach(id => {
   document.getElementById(id).addEventListener('input', calculate);
 });
+['cmpInputTokens','cmpOutputTokens','cmpCacheCreateTokens','cmpCacheReadTokens'].forEach(id => {
+  document.getElementById(id).addEventListener('input', calculatePriceComparison);
+});
+document.addEventListener('click', event => {
+  document.querySelectorAll('.model-row').forEach(row => {
+    if (!row.contains(event.target)) closeModelMenu(row);
+  });
+});
+resetPriceComparison();
+loadModelCatalog();
 </script>
 </body>
 </html>

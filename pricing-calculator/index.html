@@ -84,6 +84,51 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 .savings-box .text{font-size:15px;color:#166534;font-weight:500}
 .savings-box .text span{font-size:22px;font-weight:700}
 
+/* Multi-model price comparison */
+.compare-card{margin-top:24px}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
+.card-head h2{font-size:22px;font-weight:700;color:#111827;margin-bottom:6px}
+.card-head p{font-size:14px;line-height:1.6;color:#6b7280;max-width:680px}
+.btn-light{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border:1px solid #d1d5db;border-radius:9999px;background:#fff;color:#111827;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn-light:hover{border-color:#2563eb;color:#2563eb;background:#f8fbff}
+.source-pill{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 10px;border:1px solid #e5e7eb;border-radius:9999px;color:#6b7280;background:#fff;font-size:12px}
+.source-pill strong{color:#111827}
+.workload-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+.model-list{display:grid;gap:12px}
+.model-row{display:grid;grid-template-columns:minmax(240px,.85fr) minmax(360px,1.35fr) 40px;gap:14px;align-items:start;padding:14px;border:1px solid #e5e7eb;border-radius:8px;background:#fcfcfd}
+.model-row .form-group label{font-size:12px}
+.model-row input,.model-row select{font-variant-numeric:tabular-nums}
+.provider-badge{display:inline-flex;align-items:center;justify-content:center;padding:5px 10px;border:1px solid #e5e7eb;border-radius:9999px;background:#fff;color:#4b5563;font-size:12px;font-weight:700;line-height:1}
+.model-combobox{position:relative}
+.model-search{height:40px}
+.model-menu{position:absolute;top:100%;left:0;right:0;z-index:20;margin-top:6px;max-height:260px;overflow:auto;border:1px solid #dbe3ef;border-radius:8px;background:#fff;box-shadow:0 14px 34px rgba(15,23,42,.12);display:none}
+.model-menu.open{display:block}
+.model-option{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border:0;background:#fff;text-align:left;cursor:pointer}
+.model-option:hover,.model-option.active{background:#f0f7ff}
+.model-option-main{display:grid;gap:4px;min-width:0}
+.model-option-name{font-size:13px;font-weight:700;color:#111827;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.model-option-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px;color:#6b7280}
+.model-option-price{font-size:12px;font-weight:700;color:#111827;white-space:nowrap}
+.picker-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px;font-size:12px;color:#6b7280}
+.price-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 8px;border:1px solid #e5e7eb;border-radius:9999px;background:#fff;color:#4b5563}
+.price-compare{display:grid;grid-template-columns:1fr 1fr minmax(120px,.55fr);gap:10px}
+.price-panel{border:1px solid #e5e7eb;border-radius:8px;background:#fff;padding:12px}
+.price-panel.cr{border-color:#bbf7d0;background:#f7fef9}
+.price-panel.final{border-color:#bfdbfe;background:#f8fbff;display:flex;flex-direction:column;justify-content:center}
+.price-panel-title{font-size:12px;font-weight:800;color:#6b7280;margin-bottom:10px;letter-spacing:.02em}
+.price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.price-cell span{display:block;font-size:11px;color:#6b7280;margin-bottom:2px}
+.price-cell strong{font-size:13px;color:#111827}
+.discount-line{display:inline-flex;margin-bottom:8px;padding:3px 8px;border-radius:9999px;background:#dcfce7;color:#166534;font-size:12px;font-weight:800}
+.final-value{font-size:22px;font-weight:800;color:#1d4ed8}
+.final-label{font-size:12px;color:#6b7280;margin-top:4px}
+.remove-btn{width:36px;height:36px;border:1px solid #e5e7eb;border-radius:9999px;background:#fff;color:#9ca3af;font-size:20px;line-height:1;cursor:pointer;transition:all .2s}
+.remove-btn:hover{border-color:#fecaca;color:#dc2626;background:#fff5f5}
+.compare-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.comparison-results{margin-top:24px}
+.muted-note{font-size:12px;color:#6b7280;line-height:1.5;margin-top:10px}
+.winner{color:#166534;font-weight:700}
+
 /* CTA */
 .cta-section{text-align:center;padding:40px 16px 0}
 .cta-section p{color:#6b7280;margin-bottom:16px;font-size:15px}
@@ -114,6 +159,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
   .result-table{font-size:12px}
   .result-table th,.result-table td{padding:8px 6px}
   .hero h1{font-size:28px}
+  .card-head{flex-direction:column}
+  .workload-grid{grid-template-columns:1fr 1fr}
+  .model-row{grid-template-columns:1fr 1fr}
+  .model-row .model-picker,.model-row .form-group,.model-row .remove-btn{grid-column:1 / -1}
+  .price-compare{grid-template-columns:1fr}
+  .remove-btn{width:100%;font-size:16px}
 }
 </style>
 </head>
@@ -159,6 +210,61 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica N
 
 <!-- Calculator -->
 <section class="calc-section">
+  <div class="calc-card compare-card">
+    <div class="card-head">
+      <div>
+        <h2>Multi-model Price Comparison</h2>
+        <p>Search and select models from Crazyrouter pricing data, then compare input, output, cache write, cache read, discounted input price, and final workload cost.</p>
+        <div class="source-pill" id="modelDataSource">Model data: <strong>loading Crazyrouter pricing</strong></div>
+      </div>
+      <button class="btn-light" type="button" onclick="addPriceRow()">+ Add Model</button>
+    </div>
+
+    <div class="workload-grid">
+      <div class="form-group">
+        <label>Input Tokens</label>
+        <input type="number" id="cmpInputTokens" value="1000000" min="0" step="10000">
+      </div>
+      <div class="form-group">
+        <label>Output Tokens</label>
+        <input type="number" id="cmpOutputTokens" value="500000" min="0" step="10000">
+      </div>
+      <div class="form-group">
+        <label>Cache Write Tokens</label>
+        <input type="number" id="cmpCacheCreateTokens" value="0" min="0" step="10000">
+      </div>
+      <div class="form-group">
+        <label>Cache Read Tokens</label>
+        <input type="number" id="cmpCacheReadTokens" value="0" min="0" step="10000">
+      </div>
+    </div>
+
+    <div class="model-list" id="priceRows"></div>
+    <div class="compare-actions">
+      <button class="calc-btn" type="button" style="width:auto;padding-left:22px;padding-right:22px" onclick="calculatePriceComparison()">Compare Prices</button>
+      <button class="btn-light" type="button" onclick="resetPriceComparison()">Reset Defaults</button>
+    </div>
+
+    <div class="comparison-results" id="comparisonResults">
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Input</th>
+            <th>Discounted Input</th>
+            <th>Output</th>
+            <th>Cache Write</th>
+            <th>Cache Read</th>
+            <th>Discount</th>
+            <th>Final Price</th>
+          </tr>
+        </thead>
+        <tbody id="comparisonBody"></tbody>
+      </table>
+      <div class="muted-note">Discount is fixed at Crazyrouter's planning estimate. Model names and visible input prices are loaded from the Crazyrouter pricing page when available, with local fallback data for output and cache prices.</div>
+    </div>
+  </div>
+
   <div class="calc-card">
     <div class="calc-row">
       <div class="form-group">
@@ -301,6 +407,24 @@ const currencyRates = { USD:1, CNY:7.25, EUR:0.92, JPY:149.5 };
 const currencySymbols = { USD:'$', CNY:'¥', EUR:'€', JPY:'¥' };
 
 let currentUseCase = 'chatbot';
+let priceRowId = 0;
+const FIXED_DISCOUNT = 45;
+const DISCOUNT_RATIO = 1 - FIXED_DISCOUNT / 100;
+const defaultSelectedModels = ['GPT-4o', 'Claude Sonnet 4.6', 'Gemini 2.5 Flash'];
+const fallbackCatalog = [
+  { name:'GPT-4o', provider:'OpenAI', input:2.75, output:10.00, cacheCreate:2.75, cacheRead:1.38, context:'128K', source:'fallback' },
+  { name:'GPT-5', provider:'OpenAI', input:0.69, output:5.50, cacheCreate:0.69, cacheRead:0.17, context:'400K', source:'fallback' },
+  { name:'GPT-5 Mini', provider:'OpenAI', input:0.14, output:1.20, cacheCreate:0.14, cacheRead:0.04, context:'400K', source:'fallback' },
+  { name:'o3', provider:'OpenAI', input:1.10, output:4.40, cacheCreate:1.10, cacheRead:0.28, context:'200K', source:'fallback' },
+  { name:'o4-mini', provider:'OpenAI', input:0.61, output:2.44, cacheCreate:0.61, cacheRead:0.15, context:'200K', source:'fallback' },
+  { name:'Claude Sonnet 4.6', provider:'Anthropic', input:1.65, output:15.00, cacheCreate:2.06, cacheRead:0.17, context:'200K', source:'fallback' },
+  { name:'Claude Opus 4.6', provider:'Anthropic', input:2.75, output:75.00, cacheCreate:3.44, cacheRead:0.28, context:'200K', source:'fallback' },
+  { name:'Gemini 2.5 Pro', provider:'Google', input:0.69, output:5.52, cacheCreate:0.69, cacheRead:0.17, context:'1M', source:'fallback' },
+  { name:'Gemini 2.5 Flash', provider:'Google', input:0.17, output:0.68, cacheCreate:0.17, cacheRead:0.04, context:'1M', source:'fallback' },
+  { name:'DeepSeek V3', provider:'DeepSeek', input:1.80, output:1.10, cacheCreate:1.80, cacheRead:0.45, context:'128K', source:'fallback' },
+  { name:'DeepSeek R1', provider:'DeepSeek', input:3.60, output:2.19, cacheCreate:3.60, cacheRead:0.90, context:'128K', source:'fallback' },
+];
+let modelCatalog = mergeCatalog([]);
 
 // Tag click
 document.querySelectorAll('.tag').forEach(tag => {
@@ -367,12 +491,323 @@ function calculate() {
   document.getElementById('results').classList.add('show');
 }
 
+function priceFmt(v) {
+  if (!Number.isFinite(v)) return '$0.00';
+  if (v < 0.01 && v > 0) return '$' + v.toFixed(4);
+  return '$' + v.toFixed(2);
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, ch => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  }[ch]));
+}
+
+function slugProvider(provider) {
+  return String(provider || 'other').toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function providerBadge(provider) {
+  return `<span class="provider-badge ${slugProvider(provider)}">${escapeHtml(provider)}</span>`;
+}
+
+function normalizeName(name) {
+  return String(name || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function estimateMissingPrices(model) {
+  const input = Number(model.input) || 0;
+  return {
+    ...model,
+    output: Number(model.output) || input * 4,
+    cacheCreate: Number(model.cacheCreate) || input,
+    cacheRead: Number(model.cacheRead) || input * 0.25,
+  };
+}
+
+function mergeCatalog(remoteModels) {
+  const byName = new Map(fallbackCatalog.map(model => [normalizeName(model.name), estimateMissingPrices(model)]));
+  remoteModels.forEach(remote => {
+    const key = normalizeName(remote.name);
+    const existing = byName.get(key) || {};
+    byName.set(key, estimateMissingPrices({ ...existing, ...remote, source:'crazyrouter.com/models' }));
+  });
+  return [...byName.values()].sort((a, b) => a.provider.localeCompare(b.provider) || a.name.localeCompare(b.name));
+}
+
+function parseModelsPage(html) {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const lines = doc.body.innerText.split('\n').map(line => line.trim()).filter(Boolean);
+  const providers = new Set(['OpenAI', 'Anthropic', 'Google', 'DeepSeek', 'Meta', 'xAI', 'Alibaba', 'Qwen', 'Mistral']);
+  const parsed = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const provider = lines[i];
+    if (!providers.has(provider) || !/^(Index|Review)$/.test(lines[i + 1] || '')) continue;
+    const name = lines[i + 2];
+    const windowLines = lines.slice(i + 3, i + 8);
+    const priceLine = windowLines.find(line => /\$[\d.]+\s*\/\s*1M input/i.test(line));
+    if (!name || !priceLine) continue;
+    const priceMatch = priceLine.match(/\$([\d.]+)/);
+    const context = (windowLines.find(line => /context$/i.test(line)) || '').replace(/\s*context$/i, '');
+    parsed.push({ name, provider, input: Number(priceMatch[1]), context, source:'crazyrouter.com/models' });
+  }
+
+  return parsed;
+}
+
+async function loadModelCatalog() {
+  const sourceEl = document.getElementById('modelDataSource');
+  try {
+    const response = await fetch('https://crazyrouter.com/models/', { credentials:'omit' });
+    if (!response.ok) throw new Error('pricing page unavailable');
+    const html = await response.text();
+    const remoteModels = parseModelsPage(html);
+    if (!remoteModels.length) throw new Error('no pricing rows parsed');
+    modelCatalog = mergeCatalog(remoteModels);
+    sourceEl.innerHTML = `Model data: <strong>loaded ${remoteModels.length} models from crazyrouter.com/models</strong>`;
+  } catch (error) {
+    modelCatalog = mergeCatalog([]);
+    sourceEl.innerHTML = `Model data: <strong>using local fallback</strong>`;
+  }
+  renderAllPriceRows();
+  calculatePriceComparison();
+}
+
+function modelOptions(selectedName, query = '') {
+  const q = normalizeName(query);
+  const filtered = modelCatalog
+    .filter(model => !q || normalizeName(`${model.name} ${model.provider}`).includes(q));
+  return filtered.slice(0, 24);
+}
+
+function findModel(name) {
+  return modelCatalog.find(model => model.name === name) || modelCatalog[0] || estimateMissingPrices(fallbackCatalog[0]);
+}
+
+function addPriceRow(selectedName) {
+  const rowId = ++priceRowId;
+  const selectedModel = findModel(selectedName || defaultSelectedModels[(rowId - 1) % defaultSelectedModels.length]);
+  const row = document.createElement('div');
+  row.className = 'model-row';
+  row.dataset.rowId = rowId;
+  row.dataset.modelName = selectedModel.name;
+  row.innerHTML = `
+    <div class="form-group model-picker">
+      <label>Model</label>
+      <div class="model-combobox">
+        <input class="model-search" type="search" data-field="modelSearch" placeholder="Search GPT, Claude, Gemini..." autocomplete="off" role="combobox" aria-expanded="false">
+        <div class="model-menu" data-field="modelMenu"></div>
+      </div>
+      <div class="picker-meta" data-field="modelMeta"></div>
+    </div>
+    <div class="form-group">
+      <label>Pricing</label>
+      <div data-field="priceMeta"></div>
+    </div>
+    <button class="remove-btn" type="button" title="Remove model" onclick="removePriceRow(${rowId})">×</button>
+  `;
+  row.querySelector('[data-field="modelSearch"]').addEventListener('input', event => {
+    renderModelMenu(row, event.target.value);
+    openModelMenu(row);
+  });
+  row.querySelector('[data-field="modelSearch"]').addEventListener('focus', () => {
+    renderModelMenu(row, row.querySelector('[data-field="modelSearch"]').value);
+    openModelMenu(row);
+  });
+  row.querySelector('[data-field="modelSearch"]').addEventListener('keydown', event => {
+    const options = [...row.querySelectorAll('.model-option')];
+    const active = row.querySelector('.model-option.active');
+    const currentIndex = options.indexOf(active);
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      const next = options[Math.min(currentIndex + 1, options.length - 1)] || options[0];
+      options.forEach(option => option.classList.remove('active'));
+      next?.classList.add('active');
+      next?.scrollIntoView({ block:'nearest' });
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      const prev = options[Math.max(currentIndex - 1, 0)] || options[0];
+      options.forEach(option => option.classList.remove('active'));
+      prev?.classList.add('active');
+      prev?.scrollIntoView({ block:'nearest' });
+    } else if (event.key === 'Enter' && active) {
+      event.preventDefault();
+      selectModel(row, active.dataset.modelName);
+    } else if (event.key === 'Escape') {
+      closeModelMenu(row);
+    }
+  });
+  document.getElementById('priceRows').appendChild(row);
+  renderPriceRow(row);
+  calculatePriceComparison();
+}
+
+function openModelMenu(row) {
+  row.querySelector('[data-field="modelMenu"]').classList.add('open');
+  row.querySelector('[data-field="modelSearch"]').setAttribute('aria-expanded', 'true');
+}
+
+function closeModelMenu(row) {
+  row.querySelector('[data-field="modelMenu"]').classList.remove('open');
+  row.querySelector('[data-field="modelSearch"]').setAttribute('aria-expanded', 'false');
+}
+
+function renderModelMenu(row, query = '') {
+  const menu = row.querySelector('[data-field="modelMenu"]');
+  const selectedName = row.dataset.modelName;
+  const options = modelOptions(selectedName, query);
+  menu.innerHTML = options.map((model, index) => `
+    <button class="model-option ${model.name === selectedName ? 'active' : ''}" type="button" data-model-name="${escapeHtml(model.name)}">
+      <span class="model-option-main">
+        <span class="model-option-name">${escapeHtml(model.name)}</span>
+        <span class="model-option-meta">${providerBadge(model.provider)}${model.context ? `<span>${escapeHtml(model.context)} context</span>` : ''}</span>
+      </span>
+      <span class="model-option-price">${priceFmt(model.input)}/1M input</span>
+    </button>
+  `).join('') || '<div class="model-option-main" style="padding:12px;color:#6b7280;font-size:13px">No models found</div>';
+  menu.querySelectorAll('.model-option').forEach(option => {
+    option.addEventListener('mousedown', event => event.preventDefault());
+    option.addEventListener('click', () => selectModel(row, option.dataset.modelName));
+  });
+}
+
+function selectModel(row, modelName) {
+  row.dataset.modelName = modelName;
+  row.querySelector('[data-field="modelSearch"]').value = '';
+  closeModelMenu(row);
+  renderPriceRow(row);
+  calculatePriceComparison();
+}
+
+function renderPriceRow(row) {
+  const model = findModel(row.dataset.modelName);
+  row.dataset.modelName = model.name;
+  const input = row.querySelector('[data-field="modelSearch"]');
+  input.value = model.name;
+  renderModelMenu(row, model.name);
+  row.querySelector('[data-field="modelMeta"]').innerHTML = `
+    ${providerBadge(model.provider)}
+    ${model.context ? `<span class="price-chip">${escapeHtml(model.context)} context</span>` : ''}
+    <span class="price-chip">${model.source === 'crazyrouter.com/models' ? 'Live input' : 'Fallback input'}</span>
+  `;
+  const discounted = {
+    input: model.input * DISCOUNT_RATIO,
+    output: model.output * DISCOUNT_RATIO,
+    cacheCreate: model.cacheCreate * DISCOUNT_RATIO,
+    cacheRead: model.cacheRead * DISCOUNT_RATIO,
+  };
+  const inputM = (parseFloat(document.getElementById('cmpInputTokens').value) || 0) / 1_000_000;
+  const outputM = (parseFloat(document.getElementById('cmpOutputTokens').value) || 0) / 1_000_000;
+  const cacheCreateM = (parseFloat(document.getElementById('cmpCacheCreateTokens').value) || 0) / 1_000_000;
+  const cacheReadM = (parseFloat(document.getElementById('cmpCacheReadTokens').value) || 0) / 1_000_000;
+  const rowFinal = inputM * discounted.input + outputM * discounted.output + cacheCreateM * discounted.cacheCreate + cacheReadM * discounted.cacheRead;
+  row.querySelector('[data-field="priceMeta"]').innerHTML = `
+    <div class="price-compare">
+      <div class="price-panel">
+        <div class="price-panel-title">Official price</div>
+        <div class="price-grid">
+          <div class="price-cell"><span>Input</span><strong>${priceFmt(model.input)}</strong></div>
+          <div class="price-cell"><span>Output</span><strong>${priceFmt(model.output)}</strong></div>
+          <div class="price-cell"><span>Cache write</span><strong>${priceFmt(model.cacheCreate)}</strong></div>
+          <div class="price-cell"><span>Cache read</span><strong>${priceFmt(model.cacheRead)}</strong></div>
+        </div>
+      </div>
+      <div class="price-panel cr">
+        <div class="price-panel-title">Crazyrouter price</div>
+        <div class="discount-line">${FIXED_DISCOUNT}% off</div>
+        <div class="price-grid">
+          <div class="price-cell"><span>Input</span><strong>${priceFmt(discounted.input)}</strong></div>
+          <div class="price-cell"><span>Output</span><strong>${priceFmt(discounted.output)}</strong></div>
+          <div class="price-cell"><span>Cache write</span><strong>${priceFmt(discounted.cacheCreate)}</strong></div>
+          <div class="price-cell"><span>Cache read</span><strong>${priceFmt(discounted.cacheRead)}</strong></div>
+        </div>
+      </div>
+      <div class="price-panel final">
+        <div class="price-panel-title">Final</div>
+        <div class="final-value">${priceFmt(rowFinal)}</div>
+        <div class="final-label">for this workload</div>
+      </div>
+    </div>
+  `;
+}
+
+function renderAllPriceRows() {
+  document.querySelectorAll('.model-row').forEach(renderPriceRow);
+}
+
+function removePriceRow(rowId) {
+  const rows = document.querySelectorAll('.model-row');
+  if (rows.length <= 2) return;
+  const row = document.querySelector(`.model-row[data-row-id="${rowId}"]`);
+  if (row) row.remove();
+  calculatePriceComparison();
+}
+
+function getPriceRows() {
+  return [...document.querySelectorAll('.model-row')].map(row => findModel(row.dataset.modelName));
+}
+
+function calculatePriceComparison() {
+  const inputM = (parseFloat(document.getElementById('cmpInputTokens').value) || 0) / 1_000_000;
+  const outputM = (parseFloat(document.getElementById('cmpOutputTokens').value) || 0) / 1_000_000;
+  const cacheCreateM = (parseFloat(document.getElementById('cmpCacheCreateTokens').value) || 0) / 1_000_000;
+  const cacheReadM = (parseFloat(document.getElementById('cmpCacheReadTokens').value) || 0) / 1_000_000;
+  const rows = getPriceRows()
+    .map(row => {
+      const discountedInput = row.input * DISCOUNT_RATIO;
+      const discountedOutput = row.output * DISCOUNT_RATIO;
+      const discountedCacheCreate = row.cacheCreate * DISCOUNT_RATIO;
+      const discountedCacheRead = row.cacheRead * DISCOUNT_RATIO;
+      const finalPrice = inputM * discountedInput + outputM * discountedOutput + cacheCreateM * discountedCacheCreate + cacheReadM * discountedCacheRead;
+      return { ...row, discountedInput, discountedOutput, discountedCacheCreate, discountedCacheRead, finalPrice };
+    })
+    .sort((a, b) => a.finalPrice - b.finalPrice);
+
+  const tbody = document.getElementById('comparisonBody');
+  tbody.innerHTML = '';
+  rows.forEach((row, index) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${escapeHtml(row.name)}${index === 0 ? '<span class="badge-cheapest">LOWEST</span>' : ''}</td>
+      <td>${priceFmt(row.input)}</td>
+      <td>${priceFmt(row.discountedInput)}</td>
+      <td>${priceFmt(row.output)}</td>
+      <td>${priceFmt(row.cacheCreate)}</td>
+      <td>${priceFmt(row.cacheRead)}</td>
+      <td>${FIXED_DISCOUNT}% off</td>
+      <td class="${index === 0 ? 'winner' : ''}">${priceFmt(row.finalPrice)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+  renderAllPriceRows();
+}
+
+function resetPriceComparison() {
+  document.getElementById('priceRows').innerHTML = '';
+  defaultSelectedModels.forEach(name => addPriceRow(name));
+}
+
 // Auto-calculate on load
 window.addEventListener('load', calculate);
 // Recalculate on input change
 ['requests','inputTokens','outputTokens','currency'].forEach(id => {
   document.getElementById(id).addEventListener('input', calculate);
 });
+['cmpInputTokens','cmpOutputTokens','cmpCacheCreateTokens','cmpCacheReadTokens'].forEach(id => {
+  document.getElementById(id).addEventListener('input', calculatePriceComparison);
+});
+document.addEventListener('click', event => {
+  document.querySelectorAll('.model-row').forEach(row => {
+    if (!row.contains(event.target)) closeModelMenu(row);
+  });
+});
+resetPriceComparison();
+loadModelCatalog();
 </script>
 </body>
 </html>

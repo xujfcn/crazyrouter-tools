@@ -89,6 +89,7 @@
   }
 
   function inferTool(pathname) {
+    if (pathname.indexOf('/jev-decision-playground') !== -1) return 'jev_decision_playground';
     if (pathname.indexOf('/pricing-calculator') !== -1) return 'pricing_calculator';
     if (pathname.indexOf('/model-comparison') !== -1) return 'model_comparison';
     if (pathname.indexOf('/model-timeline') !== -1) return 'model_timeline';

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN" data-languages="en,zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JEV 决策工作台 - 结构化 AI 判断工具 | Crazyrouter</title>
+  <meta name="description" content="通过 Crazyrouter 运行 TypeSafe JEV，用 Choice、Noul 和 Score 结构化结果完成分类、判断与评分。">
+  <link rel="canonical" href="https://crazyrouter.com/tools/zh/jev-decision-playground/">
+  <link rel="alternate" hreflang="en" href="https://crazyrouter.com/tools/jev-decision-playground/">
+  <link rel="alternate" hreflang="zh" href="https://crazyrouter.com/tools/zh/jev-decision-playground/">
+  <link rel="alternate" hreflang="x-default" href="https://crazyrouter.com/tools/jev-decision-playground/">
+  <meta property="og:title" content="JEV 决策工作台 | Crazyrouter">
+  <meta property="og:description" content="使用 Crazyrouter Token 测试 12 个可编辑的结构化 AI 决策场景。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://crazyrouter.com/tools/zh/jev-decision-playground/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"JEV 决策工作台","url":"https://crazyrouter.com/tools/zh/jev-decision-playground/","description":"通过 Crazyrouter 运行 TypeSafe JEV 结构化决策的网页工作台。","applicationCategory":"DeveloperApplication","operatingSystem":"Web","publisher":{"@type":"Organization","name":"Crazyrouter","url":"https://crazyrouter.com"}}</script>
+  <link rel="stylesheet" href="/tools/jev-decision-playground/style.css">
+  <script src="/tools/tracking-bridge.js" defer></script>
+  <script src="/tools/language-switcher.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace" data-i18n="skip">Skip to workspace</a>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="nav-left">
+        <a href="https://crazyrouter.com" class="navbar-logo" aria-label="Crazyrouter home">
+          <svg viewBox="0 0 563 648" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#111827" d="M167.5 190L276.5 190L277 191.5L253 234L247.5 235L235.5 234L217.5 234L191.5 234L164.5 235L150.5 239Q132.7 246.7 121 260.5Q108.2 275.2 102 296.5L99 312.5L99 335.5L102 351.5L110 371.5Q118.1 386.4 130.5 397Q143.5 409 164.5 413L173.5 413L258.5 414L314.5 318L433.5 318Q449.3 314.8 457 303.5L462 294.5L465 283.5L465 269.5L460 253.5L449.5 241L440.5 236L430.5 234L332.5 234L258.5 361L212.5 361L212 359.5L310.5 190L438.5 190L448.5 192L461.5 197Q476 205 486 217.5L496 233.5L502 250.5L504 260.5L504 268.5L505 269.5L505 283.5L504 284.5L503 297.5L499 311.5Q490.8 331.8 475.5 345L462.5 354L446 360.5L502 452.5L504 458L456.5 458L454 455.5L416 389.5L398.5 362L336.5 362L335 363.5L285 452.5L280.5 458L167.5 458L153.5 456Q112.4 445.6 90 416.5Q72.7 396.3 64 367.5L59 343.5L58 314.5L59 313.5L60 297.5L64 280.5L73 257.5Q85.3 233.8 104.5 217Q116.8 206.3 132.5 199L149.5 193L166.5 191L167.5 190Z"/></svg>
+          Crazyrouter
+        </a>
+        <ul class="nav-links">
+          <li><a href="https://crazyrouter.com">首页</a></li>
+          <li><a href="https://crazyrouter.com/console">控制台</a></li>
+          <li><a href="https://crazyrouter.com/models">模型</a></li>
+          <li><a href="https://docs.crazyrouter.com">API 文档</a></li>
+          <li><a href="https://crazyrouter.com/blog">博客</a></li>
+          <li><a href="https://crazyrouter.com/tools/zh/" class="active">工具</a></li>
+        </ul>
+      </div>
+      <a class="btn-signup" href="https://crazyrouter.com/console/token?utm_source=tools&utm_medium=tool_page&utm_campaign=jev_decision_playground">获取 API Key</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">TYPESAFE JEV · CRAZYROUTER DECISIONS API</p>
+        <h1 data-i18n="title">JEV Decision Workspace</h1>
+        <p class="lead" data-i18n="subtitle">Classify, judge, and score through one endpoint, then send structured results directly into your workflow.</p>
+      </div>
+      <div class="heading-links">
+        <a href="https://docs.typesafe.ai/introduction/quickstart" target="_blank" rel="noreferrer" data-i18n="officialGuide">Official guide</a>
+        <a href="https://crazyrouter.com/models" target="_blank" rel="noreferrer">Crazyrouter Models</a>
+      </div>
+    </section>
+
+    <section class="primitive-strip" aria-label="JEV decision types">
+      <div><span class="primitive-icon">C</span><div><strong>Choice</strong><span data-i18n="choiceDesc">Select from defined options</span></div></div>
+      <div><span class="primitive-icon">N</span><div><strong>Noul</strong><span data-i18n="noulDesc">Return a yes/no probability</span></div></div>
+      <div><span class="primitive-icon">S</span><div><strong>Score</strong><span data-i18n="scoreDesc">Rate against ordered criteria</span></div></div>
+      <div class="price-cell"><span data-i18n="referencePrice">Reference price</span><strong>$0.042 / 1M input</strong><small>$0 output</small></div>
+    </section>
+
+    <section class="application-browser" aria-labelledby="application-heading">
+      <div class="section-heading browser-heading">
+        <div><h2 id="application-heading" data-i18n="applications">Applications</h2><p data-i18n="applicationsDesc">Choose a scenario, then edit its state and questions.</p></div>
+        <span id="application-count" class="count-badge">12 scenarios</span>
+      </div>
+      <div id="category-tabs" class="category-tabs" role="tablist" aria-label="Application categories"></div>
+      <div id="application-list" class="application-list"></div>
+    </section>
+
+    <div id="workspace" class="workspace">
+      <form id="request-form" class="editor panel">
+        <div class="section-heading">
+          <div><h2 data-i18n="requestTitle">Request setup</h2><p data-i18n="requestDesc">CrazyRouter token and decision input</p></div>
+          <span class="section-code">REQUEST</span>
+        </div>
+        <div class="connection">
+          <div class="field">
+            <label for="model" data-i18n="modelLabel">Model</label>
+            <input id="model" value="typesafe/jev-1.13" disabled spellcheck="false">
+          </div>
+          <div class="field">
+            <label for="token" id="token-label" data-i18n="tokenSite">CrazyRouter API Token</label>
+            <input id="token" type="password" placeholder="粘贴 Crazyrouter Token" autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+        <p class="endpoint" id="endpoint">https://crazyrouter.com/api/alpha/decisions</p>
+        <p class="hint token-hint" data-i18n="tokenHint">The token is used only by requests in this page and is never written to browser storage.</p>
+
+        <div class="field">
+          <div class="label-row compact-row">
+            <label for="example" data-i18n="scenarioLabel">Current scenario</label>
+            <span id="example-category" class="category-label"></span>
+          </div>
+          <select id="example"></select>
+        </div>
+
+        <div class="label-row">
+          <label for="state"><span data-i18n="stateLabel">State</span> <span class="field-code">STATE</span></label>
+          <select id="state-format" aria-label="State format">
+            <option value="text" data-i18n="plainText">Plain text</option>
+            <option value="json" data-i18n="jsonValue">JSON object / array</option>
+          </select>
+        </div>
+        <textarea id="state" rows="6" required></textarea>
+
+        <div class="label-row">
+          <label for="questions"><span data-i18n="questionsLabel">Questions</span> <span class="field-code">QUESTIONS</span></label>
+          <button class="quiet" id="format-json" type="button" data-i18n="formatJson">Format JSON</button>
+        </div>
+        <textarea id="questions" class="code" rows="17" spellcheck="false" required></textarea>
+        <p class="hint" data-i18n="questionHint">Choice uses an option object, Score uses a low-to-high array, and Noul may omit criteria.</p>
+
+        <details class="advanced">
+          <summary data-i18n="advancedFields">Advanced fields</summary>
+          <label for="extra">Provider / Session / Trace</label>
+          <textarea id="extra" class="code" rows="3" spellcheck="false">{}</textarea>
+        </details>
+
+        <div id="error" class="error" role="alert" hidden></div>
+        <div class="actions">
+          <button class="primary" id="run" type="submit"><span data-i18n="runDecision">Run decision</span><span aria-hidden="true">↗</span></button>
+          <button class="secondary" id="preview" type="button" data-i18n="previewRequest">Preview request</button>
+        </div>
+        <p class="hint" data-i18n="billingHint">Submitting makes a real paid request through CrazyRouter. The page does not retry automatically.</p>
+      </form>
+
+      <section id="results" class="results panel" aria-labelledby="result-heading">
+        <div class="section-heading">
+          <div><h2 id="result-heading" data-i18n="resultTitle">Decision result</h2><p id="result-source" data-i18n="resultDesc">Structured answers and request metrics</p></div>
+          <span class="status" id="status" role="status" aria-live="polite" data-i18n="waiting">Waiting</span>
+        </div>
+        <div id="empty" class="empty-state">
+          <div class="empty-symbol" aria-hidden="true">{ ? }</div>
+          <h3 data-i18n="emptyTitle">Choose a scenario to begin</h3>
+          <p data-i18n="emptyDesc">Answers, probability distributions, latency, and token usage will appear here.</p>
+          <div class="empty-tags"><span>Choice</span><span>Noul</span><span>Score</span></div>
+        </div>
+        <div id="metrics" class="metrics" hidden></div>
+        <div id="answers" aria-live="polite"></div>
+        <p id="confidence-note" class="notice" hidden data-i18n="confidenceNote">Confidence describes the certainty of a probability distribution. It is not a validated accuracy score.</p>
+        <details id="raw-section" hidden><summary data-i18n="rawResponse">Full response JSON</summary><pre id="raw"></pre></details>
+        <details id="request-section" hidden>
+          <summary data-i18n="requestCode">Request and integration code (key omitted)</summary>
+          <div class="code-tabs">
+            <button type="button" data-code="json" class="active">JSON</button>
+            <button type="button" data-code="curl">cURL</button>
+            <button type="button" data-code="js">JavaScript</button>
+            <button type="button" data-code="python">Python</button>
+            <button id="copy" type="button" data-i18n="copy">Copy</button>
+          </div>
+          <pre id="request-code"></pre>
+        </details>
+      </section>
+    </div>
+
+    <section class="resources" aria-labelledby="resources-heading">
+      <div class="section-heading">
+        <div><h2 id="resources-heading" data-i18n="resources">SDKs and examples</h2><p data-i18n="resourcesDesc">Official docs, clients, and community projects</p></div>
+        <span class="section-code">RESOURCES</span>
+      </div>
+      <div class="resource-list">
+        <a href="https://docs.typesafe.ai/introduction/quickstart" target="_blank" rel="noreferrer"><span>Docs</span><strong data-i18n="quickstart">TypeSafe quickstart</strong><small>docs.typesafe.ai ↗</small></a>
+        <a href="https://github.com/typesafe-ai/typesafe-sdk-python" target="_blank" rel="noreferrer"><span>Python</span><strong>typesafe-sdk</strong><small>GitHub ↗</small></a>
+        <a href="https://github.com/typesafe-ai/typesafe-sdk-js" target="_blank" rel="noreferrer"><span>JS / TS</span><strong>@typesafe-ai/sdk</strong><small>GitHub ↗</small></a>
+        <a href="https://docs.typesafe.ai/cookbooks/parallel_questions" target="_blank" rel="noreferrer"><span>Cookbook</span><strong>Parallel questions</strong><small>TypeSafe Docs ↗</small></a>
+        <a href="https://github.com/Anil-matcha/awesome-jev-by-typesafe" target="_blank" rel="noreferrer"><span>Community</span><strong>Awesome JEV</strong><small>GitHub ↗</small></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 <a href="https://crazyrouter.com">Crazyrouter</a> — 627+ AI 模型的一站式 API</p>
+    <p class="footer-links"><a href="https://crazyrouter.com/models">价格</a> · <a href="https://docs.crazyrouter.com">API 文档</a> · <a href="https://t.me/crzrouter">Telegram</a> · <a href="https://twitter.com/metaviiii">Twitter</a></p>
+    <p class="credential-note" data-i18n="footer">The token stays only in this page's memory</p>
+  </footer>
+  <script type="module" src="/tools/jev-decision-playground/app.js"></script>
+</body>
+</html>

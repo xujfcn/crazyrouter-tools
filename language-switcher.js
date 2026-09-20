@@ -25,6 +25,14 @@
     return base + pagePath + window.location.search + window.location.hash;
   }
 
+  function getEnabledLangs() {
+    var configured = (document.documentElement.getAttribute('data-languages') || '').split(',').map(function (code) {
+      return code.trim();
+    }).filter(Boolean);
+    if (!configured.length) return LANGS;
+    return LANGS.filter(function (lang) { return configured.indexOf(lang.code) !== -1; });
+  }
+
   function injectStyles() {
     if (document.getElementById('cr-lang-switcher-styles')) return;
     var style = document.createElement('style');
@@ -50,7 +58,7 @@
     nav.className = 'cr-lang-switcher ' + className;
     nav.setAttribute('aria-label', 'Language');
 
-    LANGS.forEach(function (lang) {
+    getEnabledLangs().forEach(function (lang) {
       var link = document.createElement('a');
       link.href = buildUrl(lang.code);
       link.textContent = lang.label;

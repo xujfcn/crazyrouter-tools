@@ -48,7 +48,8 @@ const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls)
 // HuggingFace build sets none of these, so every branch below is a no-op there.
 const SITE_MODE = window.ARENA_SITE_MODE === true;
 const ASSET_BASE = typeof window.ARENA_ASSET_BASE === 'string' ? window.ARENA_ASSET_BASE : '';
-const MODEL_PAGES = new Set((Array.isArray(window.ARENA_MODEL_PAGES) ? window.ARENA_MODEL_PAGES : []).filter(m => typeof m === 'string'));
+// { "<model name>": { en: "/en/models/<vendor>/<slug>", zh: "/zh/models/<vendor>/<slug>" } } from the site's page feed.
+const MODEL_PAGES = window.ARENA_MODEL_PAGES && typeof window.ARENA_MODEL_PAGES === 'object' && !Array.isArray(window.ARENA_MODEL_PAGES) ? window.ARENA_MODEL_PAGES : {};
 const PG_ENDPOINT = '/pg/images/generations';
 
 const state = { models: [], selected: new Set(), manual: false, batch: null, pricingController: null, pendingBase: '', loadedBase: '', objectUrls: [], timeoutMs: core.TIMEOUT_MS, pricingTimeoutMs: 20000, gallery: null, activePrompt: '', featured: [], prices: {}, pricingRows: {}, account: { available: false, mode: 'key', uid: '', username: '' } };
@@ -81,11 +82,18 @@ function notice(text, isError = false) {
   n.classList.toggle('error', isError);
 }
 
-// Model names are text; only names on the build-time ARENA_MODEL_PAGES list become a link,
+// Model names are text; only names on the build-time ARENA_MODEL_PAGES map become a link (page of the current language),
 // so nothing in gallery.json or a response can mint an anchor.
+function modelPagePath(model) {
+  const entry = Object.prototype.hasOwnProperty.call(MODEL_PAGES, model) ? MODEL_PAGES[model] : null;
+  const href = entry && typeof entry === 'object' ? entry[lang] || entry.en : null;
+  return typeof href === 'string' && /^\/[a-z0-9/._-]+$/i.test(href) ? href : null;
+}
+
 function modelHeading(model) {
   const h = el('h3');
-  if (MODEL_PAGES.has(model)) { const a = el('a', 'model-link', model); a.href = '/models/' + encodeURIComponent(model) + '/'; h.append(a); }
+  const href = modelPagePath(model);
+  if (href) { const a = el('a', 'model-link', model); a.href = href; h.append(a); }
   else h.textContent = model;
   return h;
 }

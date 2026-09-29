@@ -1,0 +1,2048 @@
+{
+  "generated": "2026-09-29T09:16:28Z",
+  "updated": "2026-09-29T10:34:48Z",
+  "base": "https://crazyrouter.com",
+  "size": "1024x1024",
+  "quality": 82,
+  "prompts": [
+    {
+      "id": "portrait",
+      "label_en": "Photoreal portrait",
+      "label_zh": "写实人像",
+      "prompt": "An elderly man holding a black umbrella on a rain-soaked city street at night, neon reflections on wet asphalt, 35mm film grain, shallow depth of field, cinematic",
+      "prompt_zh": "夜晚雨后的城市街道上，一位老人撑着黑伞，霓虹灯映在湿漉漉的柏油路上，35mm 胶片颗粒，浅景深，电影感"
+    },
+    {
+      "id": "product",
+      "label_en": "E-commerce product",
+      "label_zh": "电商产品图",
+      "prompt": "A minimalist glass perfume bottle with a gold cap on a pure white background, soft studio lighting, subtle reflection, product photography",
+      "prompt_zh": "纯白背景上一只极简风格的玻璃香水瓶，金色瓶盖，柔和的棚拍灯光，淡淡的倒影，产品摄影"
+    },
+    {
+      "id": "text-en",
+      "label_en": "English text rendering",
+      "label_zh": "英文文字渲染",
+      "prompt": "A café chalkboard sign that reads \"OPEN 7AM – 9PM · Fresh Bagels\" in neat white chalk lettering, wooden frame, warm light",
+      "prompt_zh": "一块咖啡馆黑板招牌，用整齐的白色粉笔字写着 \"OPEN 7AM – 9PM · Fresh Bagels\"，木质边框，暖光"
+    },
+    {
+      "id": "text-zh",
+      "label_en": "Chinese text rendering",
+      "label_zh": "中文文字渲染",
+      "prompt": "一副红纸金字的春联，上面写着“福满人间”四个楷体大字，挂在木门旁，喜庆，高清",
+      "prompt_zh": "一副红纸金字的春联，上面写着“福满人间”四个楷体大字，挂在木门旁，喜庆，高清"
+    },
+    {
+      "id": "composition",
+      "label_en": "Multi-subject scene",
+      "label_zh": "多主体构图",
+      "prompt": "Three animals — a fox, a raccoon and an owl — playing poker at a round wooden table, each with a distinct expression and prop (monocle, cigar, teacup), warm lamp light, detailed",
+      "prompt_zh": "三只动物——狐狸、浣熊和猫头鹰——围坐在圆木桌旁打扑克，各有不同的表情和道具（单片眼镜、雪茄、茶杯），暖色台灯光，细节丰富"
+    },
+    {
+      "id": "illustration",
+      "label_en": "Anime / illustration",
+      "label_zh": "动画 / 插画",
+      "prompt": "A small mountain town in a valley at dawn, thin morning mist, Studio Ghibli style illustration, soft colors, hand-painted look",
+      "prompt_zh": "黎明时分山谷中的小镇，薄薄的晨雾，吉卜力工作室风格插画，柔和的色彩，手绘质感"
+    }
+  ],
+  "models": [
+    {
+      "model": "gpt-image-1.5",
+      "vendor": "OpenAI",
+      "price_usd": 0.165,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/gpt-image-1.5.webp",
+          "latency_ms": 40889,
+          "source": "url",
+          "usage": {
+            "input_tokens": 41,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 41
+            },
+            "output_tokens": 4539,
+            "output_tokens_details": {
+              "image_tokens": 4160,
+              "text_tokens": 379
+            },
+            "total_tokens": 4580
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 197370,
+          "source_bytes": 2042984
+        },
+        "product": {
+          "file": "images/product/gpt-image-1.5.webp",
+          "latency_ms": 28811,
+          "source": "url",
+          "usage": {
+            "input_tokens": 30,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 30
+            },
+            "output_tokens": 4464,
+            "output_tokens_details": {
+              "image_tokens": 4160,
+              "text_tokens": 304
+            },
+            "total_tokens": 4494
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 15326,
+          "source_bytes": 440550
+        },
+        "text-en": {
+          "file": "images/text-en/gpt-image-1.5.webp",
+          "latency_ms": 39139,
+          "source": "url",
+          "usage": {
+            "input_tokens": 38,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 38
+            },
+            "output_tokens": 4564,
+            "output_tokens_details": {
+              "image_tokens": 4160,
+              "text_tokens": 404
+            },
+            "total_tokens": 4602
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 159006,
+          "source_bytes": 1909435
+        },
+        "text-zh": {
+          "file": "images/text-zh/gpt-image-1.5.webp",
+          "latency_ms": 41233,
+          "source": "url",
+          "usage": {
+            "input_tokens": 43,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 43
+            },
+            "output_tokens": 4542,
+            "output_tokens_details": {
+              "image_tokens": 4160,
+              "text_tokens": 382
+            },
+            "total_tokens": 4585
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 194052,
+          "source_bytes": 2078882
+        },
+        "composition": {
+          "file": "images/composition/gpt-image-1.5.webp",
+          "latency_ms": 41045,
+          "source": "url",
+          "usage": {
+            "input_tokens": 50,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 50
+            },
+            "output_tokens": 4668,
+            "output_tokens_details": {
+              "image_tokens": 4160,
+              "text_tokens": 508
+            },
+            "total_tokens": 4718
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 170614,
+          "source_bytes": 1970985
+        },
+        "illustration": {
+          "file": "images/illustration/gpt-image-1.5.webp",
+          "latency_ms": 47859,
+          "source": "url",
+          "usage": {
+            "input_tokens": 33,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 33
+            },
+            "output_tokens": 4602,
+            "output_tokens_details": {
+              "image_tokens": 4160,
+              "text_tokens": 442
+            },
+            "total_tokens": 4635
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 149790,
+          "source_bytes": 1925417
+        }
+      }
+    },
+    {
+      "model": "gpt-image-2",
+      "vendor": "OpenAI",
+      "price_usd": 0.058,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/gpt-image-2.webp",
+          "latency_ms": 30108,
+          "source": "url",
+          "usage": {
+            "input_tokens": 41,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 41
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 237
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 107024,
+          "source_bytes": 1770318
+        },
+        "product": {
+          "file": "images/product/gpt-image-2.webp",
+          "latency_ms": 28483,
+          "source": "url",
+          "usage": {
+            "input_tokens": 30,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 30
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 226
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 11062,
+          "source_bytes": 828781
+        },
+        "text-en": {
+          "file": "images/text-en/gpt-image-2.webp",
+          "latency_ms": 40452,
+          "source": "url",
+          "usage": {
+            "input_tokens": 38,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 38
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 234
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 144822,
+          "source_bytes": 1849362
+        },
+        "text-zh": {
+          "file": "images/text-zh/gpt-image-2.webp",
+          "latency_ms": 37421,
+          "source": "url",
+          "usage": {
+            "input_tokens": 43,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 43
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 239
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 138894,
+          "source_bytes": 1692556
+        },
+        "composition": {
+          "file": "images/composition/gpt-image-2.webp",
+          "latency_ms": 38327,
+          "source": "url",
+          "usage": {
+            "input_tokens": 50,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 50
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 246
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 162650,
+          "source_bytes": 1851094
+        },
+        "illustration": {
+          "file": "images/illustration/gpt-image-2.webp",
+          "latency_ms": 38670,
+          "source": "url",
+          "usage": {
+            "input_tokens": 33,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 33
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 229
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 175040,
+          "source_bytes": 2015406
+        }
+      }
+    },
+    {
+      "model": "gpt-image-2-t",
+      "vendor": "OpenAI",
+      "price_usd": null,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/gpt-image-2-t.webp",
+          "latency_ms": 24921,
+          "source": "url",
+          "usage": {
+            "input_tokens": 41,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 41
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 237
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 121936,
+          "source_bytes": 1866911
+        },
+        "product": {
+          "file": "images/product/gpt-image-2-t.webp",
+          "latency_ms": 60078,
+          "source": "url",
+          "usage": {
+            "input_tokens": 30,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 30
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 226
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 15054,
+          "source_bytes": 822678
+        },
+        "text-en": {
+          "file": "images/text-en/gpt-image-2-t.webp",
+          "latency_ms": 60657,
+          "source": "url",
+          "usage": {
+            "input_tokens": 38,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 38
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 234
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 141648,
+          "source_bytes": 1881511
+        },
+        "text-zh": {
+          "file": "images/text-zh/gpt-image-2-t.webp",
+          "latency_ms": 88500,
+          "source": "url",
+          "usage": {
+            "input_tokens": 43,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 43
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 239
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 149858,
+          "source_bytes": 1819521
+        },
+        "composition": {
+          "file": "images/composition/gpt-image-2-t.webp",
+          "latency_ms": 36469,
+          "source": "url",
+          "usage": {
+            "input_tokens": 50,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 50
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 246
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 152728,
+          "source_bytes": 1724598
+        },
+        "illustration": {
+          "file": "images/illustration/gpt-image-2-t.webp",
+          "latency_ms": 23391,
+          "source": "url",
+          "usage": {
+            "input_tokens": 33,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 33
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 229
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 134718,
+          "source_bytes": 1787303
+        }
+      }
+    },
+    {
+      "model": "gpt-image-2.5-flare",
+      "vendor": "OpenAI",
+      "price_usd": 0.058,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/gpt-image-2.5-flare.webp",
+          "latency_ms": 32406,
+          "source": "url",
+          "usage": {
+            "input_tokens": 41,
+            "output_tokens": 1055,
+            "total_tokens": 1096,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "input_tokens_details": {
+              "text_tokens": 41
+            }
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 112174,
+          "source_bytes": 1898184
+        },
+        "product": {
+          "file": "images/product/gpt-image-2.5-flare.webp",
+          "latency_ms": 29266,
+          "source": "url",
+          "usage": {
+            "input_tokens": 30,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 30
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 226
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 15946,
+          "source_bytes": 839199
+        },
+        "text-en": {
+          "file": "images/text-en/gpt-image-2.5-flare.webp",
+          "latency_ms": 26452,
+          "source": "url",
+          "usage": {
+            "input_tokens": 38,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 38
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 234
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 137232,
+          "source_bytes": 1858736
+        },
+        "text-zh": {
+          "file": "images/text-zh/gpt-image-2.5-flare.webp",
+          "latency_ms": 39750,
+          "source": "url",
+          "usage": {
+            "input_tokens": 38,
+            "output_tokens": 1043,
+            "total_tokens": 1081,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "input_tokens_details": {
+              "text_tokens": 38
+            }
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 159626,
+          "source_bytes": 1827812
+        },
+        "composition": {
+          "file": "images/composition/gpt-image-2.5-flare.webp",
+          "latency_ms": 41172,
+          "source": "url",
+          "usage": {
+            "input_tokens": 46,
+            "output_tokens": 1095,
+            "total_tokens": 1141,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "input_tokens_details": {
+              "text_tokens": 46
+            }
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 163468,
+          "source_bytes": 1788367
+        },
+        "illustration": {
+          "file": "images/illustration/gpt-image-2.5-flare.webp",
+          "latency_ms": 20875,
+          "source": "url",
+          "usage": {
+            "input_tokens": 33,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 33
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 229
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 149860,
+          "source_bytes": 1912709
+        }
+      }
+    },
+    {
+      "model": "gpt-image-2.5-sunburst",
+      "vendor": "OpenAI",
+      "price_usd": 0.058,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/gpt-image-2.5-sunburst.webp",
+          "latency_ms": 33141,
+          "source": "url",
+          "usage": {
+            "input_tokens": 41,
+            "output_tokens": 1089,
+            "total_tokens": 1130,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "input_tokens_details": {
+              "text_tokens": 41
+            }
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 120086,
+          "source_bytes": 1918447
+        },
+        "product": {
+          "file": "images/product/gpt-image-2.5-sunburst.webp",
+          "latency_ms": 18640,
+          "source": "url",
+          "usage": {
+            "input_tokens": 30,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 30
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 226
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 24358,
+          "source_bytes": 912802
+        },
+        "text-en": {
+          "file": "images/text-en/gpt-image-2.5-sunburst.webp",
+          "latency_ms": 39313,
+          "source": "url",
+          "usage": {
+            "input_tokens": 38,
+            "input_tokens_details": {
+              "image_tokens": 0,
+              "text_tokens": 38
+            },
+            "output_tokens": 196,
+            "output_tokens_details": {
+              "image_tokens": 196,
+              "text_tokens": 0
+            },
+            "total_tokens": 234
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 168052,
+          "source_bytes": 1985761
+        },
+        "text-zh": {
+          "file": "images/text-zh/gpt-image-2.5-sunburst.webp",
+          "latency_ms": 39281,
+          "source": "url",
+          "usage": {
+            "input_tokens": 38,
+            "output_tokens": 1067,
+            "total_tokens": 1105,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "input_tokens_details": {
+              "text_tokens": 38
+            }
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 144714,
+          "source_bytes": 1803357
+        },
+        "composition": {
+          "file": "images/composition/gpt-image-2.5-sunburst.webp",
+          "latency_ms": 45656,
+          "source": "url",
+          "usage": {
+            "input_tokens": 46,
+            "output_tokens": 1092,
+            "total_tokens": 1138,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "input_tokens_details": {
+              "text_tokens": 46
+            }
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 127682,
+          "source_bytes": 1620484
+        },
+        "illustration": {
+          "file": "images/illustration/gpt-image-2.5-sunburst.webp",
+          "latency_ms": 50375,
+          "source": "url",
+          "usage": {
+            "input_tokens": 32,
+            "output_tokens": 1082,
+            "total_tokens": 1114,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "input_tokens_details": {
+              "text_tokens": 32
+            }
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 135762,
+          "source_bytes": 1758431
+        }
+      }
+    },
+    {
+      "model": "nano-banana",
+      "vendor": "Google",
+      "price_usd": 0.039,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/nano-banana.webp",
+          "latency_ms": 16717,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 2,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 208208,
+          "source_bytes": 1987632
+        },
+        "product": {
+          "file": "images/product/nano-banana.webp",
+          "latency_ms": 10343,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 2,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 9010,
+          "source_bytes": 1004349
+        },
+        "text-en": {
+          "file": "images/text-en/nano-banana.webp",
+          "latency_ms": 11842,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 73628,
+          "source_bytes": 1681691
+        },
+        "text-zh": {
+          "file": "images/text-zh/nano-banana.webp",
+          "latency_ms": 13218,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 211536,
+          "source_bytes": 2042282
+        },
+        "composition": {
+          "file": "images/composition/nano-banana.webp",
+          "latency_ms": 19969,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 2,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 54192,
+          "source_bytes": 1484774
+        },
+        "illustration": {
+          "file": "images/illustration/nano-banana.webp",
+          "latency_ms": 18077,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 194730,
+          "source_bytes": 1957853
+        }
+      }
+    },
+    {
+      "model": "nano-banana-2",
+      "vendor": "Google",
+      "price_usd": 0.067,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/nano-banana-2.webp",
+          "latency_ms": 14875,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 179200,
+          "source_bytes": 972166
+        },
+        "product": {
+          "file": "images/product/nano-banana-2.webp",
+          "latency_ms": 12609,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 13320,
+          "source_bytes": 418402
+        },
+        "text-en": {
+          "file": "images/text-en/nano-banana-2.webp",
+          "latency_ms": 13827,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 181362,
+          "source_bytes": 962440
+        },
+        "text-zh": {
+          "file": "images/text-zh/nano-banana-2.webp",
+          "latency_ms": 14500,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 226870,
+          "source_bytes": 1036461
+        },
+        "composition": {
+          "file": "images/composition/nano-banana-2.webp",
+          "latency_ms": 13125,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 152944,
+          "source_bytes": 909034
+        },
+        "illustration": {
+          "file": "images/illustration/nano-banana-2.webp",
+          "latency_ms": 13203,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 227426,
+          "source_bytes": 1047151
+        }
+      }
+    },
+    {
+      "model": "nano-banana-pro",
+      "vendor": "Google",
+      "price_usd": 0.134,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/nano-banana-pro.webp",
+          "latency_ms": 25483,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 131942,
+          "source_bytes": 883571
+        },
+        "product": {
+          "file": "images/product/nano-banana-pro.webp",
+          "latency_ms": 37563,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 11916,
+          "source_bytes": 1076619
+        },
+        "text-en": {
+          "file": "images/text-en/nano-banana-pro.webp",
+          "latency_ms": 24812,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 114100,
+          "source_bytes": 841278
+        },
+        "text-zh": {
+          "file": "images/text-zh/nano-banana-pro.webp",
+          "latency_ms": 31452,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 186302,
+          "source_bytes": 956551
+        },
+        "composition": {
+          "file": "images/composition/nano-banana-pro.webp",
+          "latency_ms": 32718,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 121594,
+          "source_bytes": 857668
+        },
+        "illustration": {
+          "file": "images/illustration/nano-banana-pro.webp",
+          "latency_ms": 33578,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 203678,
+          "source_bytes": 2084195
+        }
+      }
+    },
+    {
+      "model": "doubao-seedream-4-0",
+      "vendor": "ByteDance",
+      "price_usd": 0.028571,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/doubao-seedream-4-0.webp",
+          "latency_ms": 13765,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 2,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 87208,
+          "source_bytes": 1227364
+        },
+        "product": {
+          "file": "images/product/doubao-seedream-4-0.webp",
+          "latency_ms": 8140,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 11952,
+          "source_bytes": 463824
+        },
+        "text-en": {
+          "file": "images/text-en/doubao-seedream-4-0.webp",
+          "latency_ms": 15000,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 75088,
+          "source_bytes": 1132647
+        },
+        "text-zh": {
+          "file": "images/text-zh/doubao-seedream-4-0.webp",
+          "latency_ms": 16703,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 98450,
+          "source_bytes": 1562773
+        },
+        "composition": {
+          "file": "images/composition/doubao-seedream-4-0.webp",
+          "latency_ms": 13562,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 126286,
+          "source_bytes": 1493028
+        },
+        "illustration": {
+          "file": "images/illustration/doubao-seedream-4-0.webp",
+          "latency_ms": 25390,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 159030,
+          "source_bytes": 1959028
+        }
+      }
+    },
+    {
+      "model": "doubao-seedream-4-5",
+      "vendor": "ByteDance",
+      "price_usd": 0.035714,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/doubao-seedream-4-5.webp",
+          "latency_ms": 11188,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 83212,
+          "source_bytes": 1115006
+        },
+        "product": {
+          "file": "images/product/doubao-seedream-4-5.webp",
+          "latency_ms": 13453,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 19084,
+          "source_bytes": 565717
+        },
+        "text-en": {
+          "file": "images/text-en/doubao-seedream-4-5.webp",
+          "latency_ms": 13313,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 68540,
+          "source_bytes": 1043385
+        },
+        "text-zh": {
+          "file": "images/text-zh/doubao-seedream-4-5.webp",
+          "latency_ms": 14358,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 64678,
+          "source_bytes": 964565
+        },
+        "composition": {
+          "file": "images/composition/doubao-seedream-4-5.webp",
+          "latency_ms": 16015,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 85956,
+          "source_bytes": 1058764
+        },
+        "illustration": {
+          "file": "images/illustration/doubao-seedream-4-5.webp",
+          "latency_ms": 16140,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 97204,
+          "source_bytes": 1267399
+        }
+      }
+    },
+    {
+      "model": "doubao-seedream-5-0",
+      "vendor": "ByteDance",
+      "price_usd": 0.031429,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/doubao-seedream-5-0.webp",
+          "latency_ms": 29735,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 96450,
+          "source_bytes": 624396
+        },
+        "product": {
+          "file": "images/product/doubao-seedream-5-0.webp",
+          "latency_ms": 21531,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 11016,
+          "source_bytes": 136335
+        },
+        "text-en": {
+          "file": "images/text-en/doubao-seedream-5-0.webp",
+          "latency_ms": 27547,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 116204,
+          "source_bytes": 690190
+        },
+        "text-zh": {
+          "file": "images/text-zh/doubao-seedream-5-0.webp",
+          "latency_ms": 19625,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 153072,
+          "source_bytes": 820351
+        },
+        "composition": {
+          "file": "images/composition/doubao-seedream-5-0.webp",
+          "latency_ms": 25436,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 96550,
+          "source_bytes": 543724
+        },
+        "illustration": {
+          "file": "images/illustration/doubao-seedream-5-0.webp",
+          "latency_ms": 28545,
+          "source": "b64",
+          "usage": {
+            "generated_images": 1,
+            "output_tokens": 16384,
+            "total_tokens": 16384
+          },
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 2048,
+          "source_height": 2048,
+          "bytes": 133634,
+          "source_bytes": 703673
+        }
+      }
+    },
+    {
+      "model": "aigc-image-kling-3.0",
+      "vendor": "ByteDance",
+      "price_usd": 0.0425,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/aigc-image-kling-3.0.webp",
+          "latency_ms": 59327,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 77464,
+          "source_bytes": 1503298
+        },
+        "product": {
+          "file": "images/product/aigc-image-kling-3.0.webp",
+          "latency_ms": 53594,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 28460,
+          "source_bytes": 698161
+        },
+        "text-en": {
+          "file": "images/text-en/aigc-image-kling-3.0.webp",
+          "latency_ms": 42766,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 61218,
+          "source_bytes": 1403315
+        },
+        "text-zh": {
+          "file": "images/text-zh/aigc-image-kling-3.0.webp",
+          "latency_ms": 38203,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 47910,
+          "source_bytes": 1402702
+        },
+        "composition": {
+          "file": "images/composition/aigc-image-kling-3.0.webp",
+          "latency_ms": 37766,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 90334,
+          "source_bytes": 1507032
+        },
+        "illustration": {
+          "file": "images/illustration/aigc-image-kling-3.0.webp",
+          "latency_ms": 37983,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 78390,
+          "source_bytes": 1386441
+        }
+      }
+    },
+    {
+      "model": "qwen-image-2.0",
+      "vendor": "Alibaba",
+      "price_usd": 0.028571,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/qwen-image-2.0.webp",
+          "latency_ms": 5547,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 3,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 141066,
+          "source_bytes": 1573818
+        },
+        "product": {
+          "file": "images/product/qwen-image-2.0.webp",
+          "latency_ms": 4092,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 4,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 13334,
+          "source_bytes": 884918
+        },
+        "text-en": {
+          "file": "images/text-en/qwen-image-2.0.webp",
+          "latency_ms": 4609,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 3,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 81210,
+          "source_bytes": 1323493
+        },
+        "text-zh": {
+          "file": "images/text-zh/qwen-image-2.0.webp",
+          "latency_ms": 4609,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 4,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 90220,
+          "source_bytes": 1356580
+        },
+        "composition": {
+          "file": "images/composition/qwen-image-2.0.webp",
+          "latency_ms": 5765,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 3,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 125726,
+          "source_bytes": 1546242
+        },
+        "illustration": {
+          "file": "images/illustration/qwen-image-2.0.webp",
+          "latency_ms": 5765,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 3,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 114138,
+          "source_bytes": 1540035
+        }
+      }
+    },
+    {
+      "model": "qwen-image-plus",
+      "vendor": "Alibaba",
+      "price_usd": 0.028571,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/qwen-image-plus.webp",
+          "latency_ms": 11343,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 69252,
+          "source_bytes": 1308371
+        },
+        "product": {
+          "file": "images/product/qwen-image-plus.webp",
+          "latency_ms": 11454,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 17722,
+          "source_bytes": 846421
+        },
+        "text-en": {
+          "file": "images/text-en/qwen-image-plus.webp",
+          "latency_ms": 13516,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 67654,
+          "source_bytes": 1292784
+        },
+        "text-zh": {
+          "file": "images/text-zh/qwen-image-plus.webp",
+          "latency_ms": 13422,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 81728,
+          "source_bytes": 1349693
+        },
+        "composition": {
+          "file": "images/composition/qwen-image-plus.webp",
+          "latency_ms": 12171,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 84090,
+          "source_bytes": 1339140
+        },
+        "illustration": {
+          "file": "images/illustration/qwen-image-plus.webp",
+          "latency_ms": 11718,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 71906,
+          "source_bytes": 1368699
+        }
+      }
+    },
+    {
+      "model": "qwen-image-max",
+      "vendor": "Alibaba",
+      "price_usd": 0.071429,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/qwen-image-max.webp",
+          "latency_ms": 14750,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 99446,
+          "source_bytes": 1679947
+        },
+        "product": {
+          "file": "images/product/qwen-image-max.webp",
+          "latency_ms": 14234,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 16848,
+          "source_bytes": 1087308
+        },
+        "text-en": {
+          "file": "images/text-en/qwen-image-max.webp",
+          "latency_ms": 13406,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 3,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 84896,
+          "source_bytes": 1537583
+        },
+        "text-zh": {
+          "file": "images/text-zh/qwen-image-max.webp",
+          "latency_ms": 12827,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 3,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 99678,
+          "source_bytes": 1591845
+        },
+        "composition": {
+          "file": "images/composition/qwen-image-max.webp",
+          "latency_ms": 16218,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 5,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 104802,
+          "source_bytes": 1621222
+        },
+        "illustration": {
+          "file": "images/illustration/qwen-image-max.webp",
+          "latency_ms": 14625,
+          "source": "url",
+          "usage": null,
+          "error": "",
+          "attempts": 3,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 110170,
+          "source_bytes": 1670951
+        }
+      }
+    },
+    {
+      "model": "cogview-3-flash",
+      "vendor": "Zhipu",
+      "price_usd": 0.005,
+      "cells": {
+        "portrait": {
+          "file": "images/portrait/cogview-3-flash.webp",
+          "latency_ms": 13015,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 1,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 61444,
+          "source_bytes": 86182
+        },
+        "product": {
+          "file": "images/product/cogview-3-flash.webp",
+          "latency_ms": 8342,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 3,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 16904,
+          "source_bytes": 38696
+        },
+        "text-en": {
+          "file": "images/text-en/cogview-3-flash.webp",
+          "latency_ms": 9718,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 3,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 119076,
+          "source_bytes": 140896
+        },
+        "text-zh": {
+          "file": "images/text-zh/cogview-3-flash.webp",
+          "latency_ms": 11875,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 4,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 137796,
+          "source_bytes": 150123
+        },
+        "composition": {
+          "file": "images/composition/cogview-3-flash.webp",
+          "latency_ms": 9733,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 4,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 118392,
+          "source_bytes": 133887
+        },
+        "illustration": {
+          "file": "images/illustration/cogview-3-flash.webp",
+          "latency_ms": 12766,
+          "source": "b64",
+          "usage": null,
+          "error": "",
+          "attempts": 4,
+          "width": 1024,
+          "height": 1024,
+          "source_width": 1024,
+          "source_height": 1024,
+          "bytes": 111074,
+          "source_bytes": 135619
+        }
+      }
+    },
+    {
+      "model": "cogview-4",
+      "vendor": "Zhipu",
+      "price_usd": 0.01,
+      "cells": {
+        "portrait": {
+          "file": "",
+          "latency_ms": 375,
+          "source": "",
+          "usage": null,
+          "error": "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103424527168534IhY2Lvsq)",
+          "errors": [
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 202609290916217338712451BpKNx45)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 202609290916222626812527h3UqaHZ)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091845399827147NS1GfDqx)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091853762155353M7nnHvGr)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 2026092910341647026525wU6Alejf)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103424527168534IhY2Lvsq)"
+          ],
+          "attempts": 6,
+          "width": 0,
+          "height": 0,
+          "bytes": 0
+        },
+        "product": {
+          "file": "",
+          "latency_ms": 343,
+          "source": "",
+          "usage": null,
+          "error": "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103424570338603im0wuOzi)",
+          "errors": [
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091622328656848wk65h2nm)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091622641694063OeX4duYe)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091859857640793SslZsHfx)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091908373806272Y6idR9px)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 2026092910341639876107Vj5WEjoV)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103424570338603im0wuOzi)"
+          ],
+          "attempts": 6,
+          "width": 0,
+          "height": 0,
+          "bytes": 0
+        },
+        "text-en": {
+          "file": "",
+          "latency_ms": 577,
+          "source": "",
+          "usage": null,
+          "error": "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103426311377807z7iHUrV9)",
+          "errors": [
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 202609290916226392115449dDNpmGo)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091623439068182e7ZIpd3)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091902273582519YduXXoh8)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091910898115457BM729hRQ)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 202609291034179725247081vjfp5vF)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103426311377807z7iHUrV9)"
+          ],
+          "attempts": 6,
+          "width": 0,
+          "height": 0,
+          "bytes": 0
+        },
+        "text-zh": {
+          "file": "",
+          "latency_ms": 390,
+          "source": "",
+          "usage": null,
+          "error": "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103435784947434co4Gcwop)",
+          "errors": [
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 2026092909162339826533iqrkRCaT)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091623338056586lceML7YM)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 2026092909191798123807Ch16Ynmj)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091926438457556qppfsowQ)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103427349900422XIG5iwm9)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103435784947434co4Gcwop)"
+          ],
+          "attempts": 6,
+          "width": 0,
+          "height": 0,
+          "bytes": 0
+        },
+        "composition": {
+          "file": "",
+          "latency_ms": 422,
+          "source": "",
+          "usage": null,
+          "error": "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103441272910452usq2adPm)",
+          "errors": [
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091623418083163Zo0fzTwO)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091623762212835yhWCjkOr)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091919429174916qNFzGQm5)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091927767630388atpbbGSb)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103432934596012nw1w6mol)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103441272910452usq2adPm)"
+          ],
+          "attempts": 6,
+          "width": 0,
+          "height": 0,
+          "bytes": 0
+        },
+        "illustration": {
+          "file": "",
+          "latency_ms": 406,
+          "source": "",
+          "usage": null,
+          "error": "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103441292323711ejYMB6oj)",
+          "errors": [
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091623784619005k7sWxt0a)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 2026092909162490141958dBAyQkph)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929091934947970964FoFoPHLT)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 202609290919434407466523ig5qewt)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 202609291034329691616139ZE1NmWs)",
+            "HTTP 429: Upstream provider capacity or rate limit was reached. Please retry later. (request id: 20260929103441292323711ejYMB6oj)"
+          ],
+          "attempts": 6,
+          "width": 0,
+          "height": 0,
+          "bytes": 0
+        }
+      }
+    }
+  ]
+}

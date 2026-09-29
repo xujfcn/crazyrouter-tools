@@ -95,6 +95,8 @@
     if (pathname.indexOf('/model-timeline') !== -1) return 'model_timeline';
     if (pathname.indexOf('/model-radar') !== -1) return 'model_radar';
     if (pathname.indexOf('/background-agent-worktree-launcher') !== -1) return 'background_agent_worktree_launcher';
+    if (pathname.indexOf('/model-arena') !== -1) return 'model_arena';
+    if (pathname.indexOf('/image-arena') !== -1) return 'image_arena';
     return 'tools_index';
   }
 

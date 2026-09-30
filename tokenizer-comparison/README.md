@@ -16,6 +16,8 @@ tags:
 
 # Token Counter & Tokenizer Comparison — by CrazyRouter
 
+[GitHub source and local setup](https://github.com/xujfcn/crazyrouter-tools/tree/main/projects/tokenizer-comparison) · [GitHub Pages demo](https://xujfcn.github.io/crazyrouter-tools/tokenizer-comparison/) · [More developer tools](https://xujfcn.github.io/crazyrouter-tools/github/)
+
 One text, eight tokenizers. Compare Qwen3-8B, DeepSeek-V3, Mistral-7B-Instruct-v0.3,
 GPT `o200k_base` and `cl100k_base`, **GLM-5, Kimi K2.5 and Claude legacy**.
 Inspect token pieces and IDs, and estimate input costs using your own rates.

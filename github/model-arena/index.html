@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html data-languages="en,zh" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>LLM Degradation Test &amp; Model Comparison: GPT-6 vs Claude vs DeepSeek vs Kimi (Pelican SVG + Candy Puzzle) | Crazyrouter</title>
+<meta content="Is your model degraded (降智)? Compare GPT-6 Astra, GPT-5, Claude Opus 5.5, Claude Fable 5.1, DeepSeek V4 Pro, Kimi K3 and GLM-5.3 on the manxue.ai pelican-on-a-bicycle SVG animation test and the candy pigeonhole puzzle. Real one-run results, then test any model or API endpoint with your own key." name="description"/>
+<link href="https://crazyrouter.com/tools/model-arena/" rel="canonical"/>
+<link href="./style.css" rel="stylesheet"/>
+<link href="./logo.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body><p style="padding:10px 16px;font:14px system-ui"><a href="../">← All developer tools</a></p>
+<a class="skip-link" href="#workspace">Skip to workspace</a>
+<nav class="navbar">
+<div class="navbar-inner">
+<div class="nav-left">
+<a aria-label="Crazyrouter home" class="navbar-logo" href="https://crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">
+<svg aria-hidden="true" fill="none" viewbox="0 0 563 648" xmlns="http://www.w3.org/2000/svg"><path d="M167.5 190L276.5 190L277 191.5L253 234L247.5 235L235.5 234L217.5 234L191.5 234L164.5 235L150.5 239Q132.7 246.7 121 260.5Q108.2 275.2 102 296.5L99 312.5L99 335.5L102 351.5L110 371.5Q118.1 386.4 130.5 397Q143.5 409 164.5 413L173.5 413L258.5 414L314.5 318L433.5 318Q449.3 314.8 457 303.5L462 294.5L465 283.5L465 269.5L460 253.5L449.5 241L440.5 236L430.5 234L332.5 234L258.5 361L212.5 361L212 359.5L310.5 190L438.5 190L448.5 192L461.5 197Q476 205 486 217.5L496 233.5L502 250.5L504 260.5L504 268.5L505 269.5L505 283.5L504 284.5L503 297.5L499 311.5Q490.8 331.8 475.5 345L462.5 354L446 360.5L502 452.5L504 458L456.5 458L454 455.5L416 389.5L398.5 362L336.5 362L335 363.5L285 452.5L280.5 458L167.5 458L153.5 456Q112.4 445.6 90 416.5Q72.7 396.3 64 367.5L59 343.5L58 314.5L59 313.5L60 297.5L64 280.5L73 257.5Q85.3 233.8 104.5 217Q116.8 206.3 132.5 199L149.5 193L166.5 191L167.5 190Z" fill="#111827"></path></svg>
+          Crazyrouter
+        </a>
+<ul class="nav-links">
+<li><a href="https://crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Home</a></li>
+<li><a href="https://crazyrouter.com/console?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Console</a></li>
+<li><a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Models</a></li>
+<li><a href="https://docs.crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">API Docs</a></li>
+<li><a href="https://crazyrouter.com/blog?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Blog</a></li>
+<li><a class="active" href="https://crazyrouter.com/tools/?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Tools</a></li>
+</ul>
+</div>
+<div aria-label="Language" class="space-languages" role="group"><a aria-current="page" href="./index.html" hreflang="en">EN</a><a href="./zh.html" hreflang="zh">中文</a></div><a class="btn-signup" href="https://crazyrouter.com/console/token?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Get API Key</a>
+</div>
+</nav>
+<main>
+<section class="page-heading">
+<div>
+<p class="eyebrow">LLM DEGRADATION TEST · MODEL VS MODEL · PELICAN SVG + CANDY PUZZLE</p>
+<h1>LLM Degradation Test &amp; Model Comparison: GPT-6 vs Claude vs DeepSeek vs Kimi</h1>
+<p class="lead">Run the two probes made popular by manxue.ai — an animated pelican-on-a-bicycle SVG and a pigeonhole candy puzzle — against up to four models at once, with your own API key, and compare the answers side by side.</p>
+</div>
+<div class="heading-links">
+<a href="https://github.com/w1196396546/manxue-ai" rel="noopener" target="_blank">manxue-ai (reference)</a>
+<a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Crazyrouter Models</a>
+</div>
+</section>
+<section aria-labelledby="showcase-heading" class="showcase" hidden="" id="showcase">
+<div class="section-heading"><div><h2 id="showcase-heading">Showcase: 7 frontier models, one run</h2><p id="showcase-sub"></p></div><a class="showcase-cta" href="#workspace">Run your own comparison ↓</a><span class="section-code">SAMPLES</span></div>
+<div class="results-grid" id="showcase-grid"></div>
+<p class="hint">Real answers recorded by the maintainers with the same prompts and checks as the arena below; every SVG is re-validated in your browser before it is drawn. Scroll down, paste your own key, tick the same models and run to compare with a fresh draw.</p>
+</section>
+<div class="workspace" id="workspace">
+<section aria-labelledby="setup-heading" class="panel editor">
+<div class="section-heading"><div><h2 id="setup-heading">Setup</h2><p>Endpoint, key, models and probes</p></div><span class="section-code">REQUEST</span></div>
+<div class="connection">
+<div class="field"><label for="base-url">API base URL</label><input id="base-url" spellcheck="false" value="https://crazyrouter.com"/></div>
+<div class="field"><label for="token">API key</label><input autocomplete="off" id="token" placeholder="sk-…" spellcheck="false" type="password"/></div>
+</div>
+<div class="connection">
+<div class="field"><label for="protocol">Protocol</label><select id="protocol"><option value="chat">Chat Completions</option><option value="responses">Responses</option></select></div>
+<div class="field"><label for="effort">Reasoning effort</label><select id="effort"><option value="omit">Omit (default)</option><option value="low">low</option><option value="medium">medium</option><option value="high">high</option></select></div>
+<div class="field"><label for="max-tokens">Output cap (tokens)</label><select id="max-tokens"><option value="8000">8000</option><option value="16000">16000 (manxue)</option><option selected="" value="32000">32000 (default)</option><option value="64000">64000</option></select></div>
+</div>
+<p class="hint" id="key-hint">The key lives only in this page's memory and is sent only to the base URL above. It is never written to browser storage.</p>
+<div class="label-row"><label for="model-search">Models (up to 4)</label><span class="meta" id="model-status"></span></div>
+<input id="model-search" placeholder="Filter models…" spellcheck="false"/>
+<div class="model-list" id="model-list"></div>
+<input aria-label="Model names" hidden="" id="model-manual" placeholder="gpt-6-astra, claude-sonnet-5" spellcheck="false"/>
+<div class="probes-row">
+<label><input checked="" id="probe-pelican" type="checkbox"/> Pelican SVG animation</label>
+<label><input checked="" id="probe-candy" type="checkbox"/> Candy puzzle (answer 21)</label>
+</div>
+<p class="hint">Current scene · nonce: <code id="nonce-view"></code></p>
+<div class="notice" hidden="" id="notice" role="alert"></div>
+<div class="actions">
+<button class="primary" id="run" type="button">Run probes</button>
+<button class="secondary" id="cancel" type="button">Cancel</button>
+</div>
+<p class="hint">Each run sends one real, paid request per model per probe using your own balance. Nothing is retried. Some models reject a high output cap with HTTP 400 — lower it; that is an upstream limit, not a model failure. Claude 5 models count hidden reasoning against the cap, which is why the default is 32000 rather than manxue's 16000.</p>
+<details class="advanced"><summary>Request preview (cURL, key omitted)</summary><div class="code-tabs"><button class="quiet" id="copy" type="button">Copy</button></div><pre id="request-code"></pre></details>
+</section>
+<section aria-labelledby="results-heading" class="panel results-panel">
+<div class="section-heading"><div><h2 id="results-heading">Results</h2><p>One card per model; badges show SVG safety, animation, nonce and the candy verdict</p></div><span class="section-code">RESULTS</span></div>
+<div class="empty-state" id="empty"><div aria-hidden="true" class="empty-symbol">🚲</div><h3>Pick models and run</h3><p>SVG previews render as images (no scripts, no external resources); answers and sources are collapsible.</p></div>
+<div aria-live="polite" class="results-grid" id="results"></div>
+</section>
+</div>
+<section class="notes">
+<h2>What the probes measure</h2>
+<p>The candy verdict only checks whether the answer contains the standalone number 21; it is not a semantic grade. The pelican verdict passes when the SVG parses, contains no scripts or external references, declares an animation, and shows the nonce in a <code>&lt;text&gt;</code> element. Neither probe proves model identity or overall capability. Prompts are copied verbatim from <a href="https://github.com/w1196396546/manxue-ai" rel="noopener" target="_blank">manxue-ai</a> so results are comparable with manxue.ai.</p>
+</section>
+</main>
+<footer class="footer">
+<p>© 2026 <a href="https://crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Crazyrouter</a> — One API for 627+ AI Models</p>
+<p class="footer-links"><a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Pricing</a> · <a href="https://docs.crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">API Docs</a> · <a href="https://t.me/crzrouter" rel="noopener" target="_blank">Telegram</a> · <a href="https://twitter.com/metaviiii" rel="noopener" target="_blank">Twitter</a> · <a href="https://github.com/w1196396546/manxue-ai" rel="noopener" target="_blank">manxue-ai</a></p>
+<p class="footer-cta"><a class="run-on-site" href="https://crazyrouter.com/tools/model-arena/?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Run it on Crazyrouter without an API key →</a></p>
+<p class="credential-note">The key stays only in this page's memory</p>
+</footer>
+<script src="./app.js" type="module"></script>
+</body>
+</html>

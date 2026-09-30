@@ -1,0 +1,1680 @@
+{
+ "generatedAt": "2026-09-29",
+ "sources": {
+  "crazyrouter": "https://crazyrouter.com/api/pricing",
+  "providers": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
+  "providersSnapshotDate": "2026-09-29"
+ },
+ "models": [
+  {
+   "model": "claude-opus-5",
+   "provider": "Anthropic",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 3.25,
+    "output": 16.25,
+    "cachedInput": 0.325,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "claude-opus-5",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": 2.5,
+    "batchOutput": 12.5,
+    "context": 1000000,
+    "site": "Anthropic",
+    "url": "https://www.anthropic.com/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/claude-opus-5",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": {
+    "key": "anthropic.claude-opus-5",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "AWS Bedrock",
+    "url": "https://aws.amazon.com/bedrock/pricing/"
+   },
+   "vertex": {
+    "key": "vertex_ai/claude-opus-5",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": 2.5,
+    "batchOutput": 12.5,
+    "context": 1000000,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/anthropic/claude-opus-5",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "claude-opus-4-8",
+   "provider": "Anthropic",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 3.25,
+    "output": 16.25,
+    "cachedInput": 0.325,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "claude-opus-4-8",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": 2.5,
+    "batchOutput": 12.5,
+    "context": 1000000,
+    "site": "Anthropic",
+    "url": "https://www.anthropic.com/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/claude-opus-4-8",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": {
+    "key": "anthropic.claude-opus-4-8",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "AWS Bedrock",
+    "url": "https://aws.amazon.com/bedrock/pricing/"
+   },
+   "vertex": {
+    "key": "vertex_ai/claude-opus-4-8",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": 2.5,
+    "batchOutput": 12.5,
+    "context": 1000000,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": null
+  },
+  {
+   "model": "claude-opus-4-7",
+   "provider": "Anthropic",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 3.25,
+    "output": 16.25,
+    "cachedInput": 0.325,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "claude-opus-4-7",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": 2.5,
+    "batchOutput": 12.5,
+    "context": 1000000,
+    "site": "Anthropic",
+    "url": "https://www.anthropic.com/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/claude-opus-4-7",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": {
+    "key": "anthropic.claude-opus-4-7",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "AWS Bedrock",
+    "url": "https://aws.amazon.com/bedrock/pricing/"
+   },
+   "vertex": {
+    "key": "vertex_ai/claude-opus-4-7",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 25.0,
+    "batchInput": 2.5,
+    "batchOutput": 12.5,
+    "context": 1000000,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": null
+  },
+  {
+   "model": "claude-sonnet-5",
+   "provider": "Anthropic",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 1.3,
+    "output": 6.5,
+    "cachedInput": 0.13,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "claude-sonnet-5",
+    "input": 2.0,
+    "cachedInput": 0.2,
+    "output": 10.0,
+    "batchInput": 1.0,
+    "batchOutput": 5.0,
+    "context": 1000000,
+    "site": "Anthropic",
+    "url": "https://www.anthropic.com/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/claude-sonnet-5",
+    "input": 2.0,
+    "cachedInput": 0.2,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": {
+    "key": "anthropic.claude-sonnet-5",
+    "input": 2.0,
+    "cachedInput": 0.2,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "AWS Bedrock",
+    "url": "https://aws.amazon.com/bedrock/pricing/"
+   },
+   "vertex": {
+    "key": "vertex_ai/claude-sonnet-5",
+    "input": 2.0,
+    "cachedInput": 0.2,
+    "output": 10.0,
+    "batchInput": 1.0,
+    "batchOutput": 5.0,
+    "context": 1000000,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/anthropic/claude-sonnet-5",
+    "input": 2.0,
+    "cachedInput": 0.2,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "claude-sonnet-4-6",
+   "provider": "Anthropic",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 1.9500000000000002,
+    "output": 9.75,
+    "cachedInput": 0.19500000000000003,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "claude-sonnet-4-6",
+    "input": 3.0,
+    "cachedInput": 0.3,
+    "output": 15.0,
+    "batchInput": 1.5,
+    "batchOutput": 7.5,
+    "context": 1000000,
+    "site": "Anthropic",
+    "url": "https://www.anthropic.com/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/claude-sonnet-4-6",
+    "input": 3.0,
+    "cachedInput": 0.3,
+    "output": 15.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": {
+    "key": "anthropic.claude-sonnet-4-6",
+    "input": 3.0,
+    "cachedInput": 0.3,
+    "output": 15.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "AWS Bedrock",
+    "url": "https://aws.amazon.com/bedrock/pricing/"
+   },
+   "vertex": {
+    "key": "vertex_ai/claude-sonnet-4-6",
+    "input": 3.0,
+    "cachedInput": 0.3,
+    "output": 15.0,
+    "batchInput": 1.5,
+    "batchOutput": 7.5,
+    "context": 1000000,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": null
+  },
+  {
+   "model": "claude-haiku-4-5",
+   "provider": "Anthropic",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 0.65,
+    "output": 3.25,
+    "cachedInput": 0.065,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "claude-haiku-4-5",
+    "input": 1.0,
+    "cachedInput": 0.1,
+    "output": 5.0,
+    "batchInput": 0.5,
+    "batchOutput": 2.5,
+    "context": 200000,
+    "site": "Anthropic",
+    "url": "https://www.anthropic.com/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/claude-haiku-4-5",
+    "input": 1.0,
+    "cachedInput": 0.1,
+    "output": 5.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 200000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": {
+    "key": "anthropic.claude-haiku-4-5-20251001-v1:0",
+    "input": 1.0,
+    "cachedInput": 0.1,
+    "output": 5.0,
+    "batchInput": 0.5,
+    "batchOutput": 2.5,
+    "context": 200000,
+    "site": "AWS Bedrock",
+    "url": "https://aws.amazon.com/bedrock/pricing/"
+   },
+   "vertex": {
+    "key": "vertex_ai/claude-haiku-4-5",
+    "input": 1.0,
+    "cachedInput": 0.1,
+    "output": 5.0,
+    "batchInput": 0.5,
+    "batchOutput": 2.5,
+    "context": 200000,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": null
+  },
+  {
+   "model": "claude-fable-5",
+   "provider": "Anthropic",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 6.5,
+    "output": 32.5,
+    "cachedInput": 0.65,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "claude-fable-5",
+    "input": 10.0,
+    "cachedInput": 1.0,
+    "output": 50.0,
+    "batchInput": 5.0,
+    "batchOutput": 25.0,
+    "context": 1000000,
+    "site": "Anthropic",
+    "url": "https://www.anthropic.com/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/claude-fable-5",
+    "input": 10.0,
+    "cachedInput": 1.0,
+    "output": 50.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": {
+    "key": "anthropic.claude-fable-5",
+    "input": 10.0,
+    "cachedInput": 1.0,
+    "output": 50.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "AWS Bedrock",
+    "url": "https://aws.amazon.com/bedrock/pricing/"
+   },
+   "vertex": {
+    "key": "vertex_ai/claude-fable-5",
+    "input": 10.0,
+    "cachedInput": 1.0,
+    "output": 50.0,
+    "batchInput": 5.0,
+    "batchOutput": 25.0,
+    "context": 1000000,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/anthropic/claude-fable-5",
+    "input": 10.0,
+    "cachedInput": 1.0,
+    "output": 50.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-5",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 0.8125,
+    "output": 6.5,
+    "cachedInput": 0.0845,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-5",
+    "input": 1.25,
+    "cachedInput": 0.125,
+    "output": 10.0,
+    "batchInput": 0.625,
+    "batchOutput": 5.0,
+    "context": 272000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-5",
+    "input": 1.25,
+    "cachedInput": 0.125,
+    "output": 10.0,
+    "batchInput": 0.625,
+    "batchOutput": 5.0,
+    "context": 272000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-5",
+    "input": 1.25,
+    "cachedInput": 0.125,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 400000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-5.5",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 3.25,
+    "output": 19.5,
+    "cachedInput": 0.325,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-5.5",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 30.0,
+    "batchInput": 2.5,
+    "batchOutput": 15.0,
+    "context": 1050000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-5.5",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 30.0,
+    "batchInput": 2.5,
+    "batchOutput": 15.0,
+    "context": 1050000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-5.5",
+    "input": 5.0,
+    "cachedInput": 0.5,
+    "output": 30.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1050000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-5.4",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 1.625,
+    "output": 9.75,
+    "cachedInput": 0.1625,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-5.4",
+    "input": 2.5,
+    "cachedInput": 0.25,
+    "output": 15.0,
+    "batchInput": 1.25,
+    "batchOutput": 7.5,
+    "context": 1050000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-5.4",
+    "input": 2.5,
+    "cachedInput": 0.25,
+    "output": 15.0,
+    "batchInput": 1.25,
+    "batchOutput": 7.5,
+    "context": 1050000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-5.4",
+    "input": 2.5,
+    "cachedInput": 0.25,
+    "output": 15.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1050000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-5.4-mini",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 0.48750000000000004,
+    "output": 2.9250000000000003,
+    "cachedInput": 0.04875000000000001,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-5.4-mini",
+    "input": 0.75,
+    "cachedInput": 0.075,
+    "output": 4.5,
+    "batchInput": 0.375,
+    "batchOutput": 2.25,
+    "context": 272000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-5.4-mini",
+    "input": 0.75,
+    "cachedInput": 0.075,
+    "output": 4.5,
+    "batchInput": 0.375,
+    "batchOutput": 2.25,
+    "context": 272000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-5.4-mini",
+    "input": 0.75,
+    "cachedInput": 0.075,
+    "output": 4.5,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 400000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-5.6-sol",
+   "provider": "OpenAI",
+   "savingsPct": 5.2,
+   "crazyrouter": {
+    "input": 3.25,
+    "output": 19.5,
+    "cachedInput": 0.325,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-5.6-sol",
+    "input": 4.0,
+    "cachedInput": 0.4,
+    "output": 20.0,
+    "batchInput": 2.0,
+    "batchOutput": 10.0,
+    "context": 922000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-5.6-sol",
+    "input": 4.0,
+    "cachedInput": 0.4,
+    "output": 20.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 922000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-5.6-sol",
+    "input": 2.0,
+    "cachedInput": 0.2,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1050000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-6-astra",
+   "provider": "OpenAI",
+   "savingsPct": 67.5,
+   "crazyrouter": {
+    "input": 3.25,
+    "output": 16.25,
+    "cachedInput": 0.325,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-6-astra",
+    "input": 10.0,
+    "cachedInput": 1.0,
+    "output": 50.0,
+    "batchInput": 5.0,
+    "batchOutput": 25.0,
+    "context": 922000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-6-astra",
+    "input": 10.0,
+    "cachedInput": 1.0,
+    "output": 50.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 922000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-6-astra",
+    "input": 10.0,
+    "cachedInput": 1.0,
+    "output": 50.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1050000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-5.3-codex",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 1.1375,
+    "output": 9.1,
+    "cachedInput": 0.11375,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-5.3-codex",
+    "input": 1.75,
+    "cachedInput": 0.175,
+    "output": 14.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 272000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-5.3-codex",
+    "input": 1.75,
+    "cachedInput": 0.175,
+    "output": 14.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 272000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-5.3-codex",
+    "input": 1.75,
+    "cachedInput": 0.175,
+    "output": 14.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 400000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-5-codex",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 0.8125,
+    "output": 6.5,
+    "cachedInput": 0.0845,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-5-codex",
+    "input": 1.25,
+    "cachedInput": 0.125,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 272000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-5-codex",
+    "input": 1.25,
+    "cachedInput": 0.125,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 272000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-5-codex",
+    "input": 1.25,
+    "cachedInput": 0.125,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 272000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-4.1",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 1.3,
+    "output": 5.2,
+    "cachedInput": 0.325,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-4.1",
+    "input": 2.0,
+    "cachedInput": 0.5,
+    "output": 8.0,
+    "batchInput": 1.0,
+    "batchOutput": 4.0,
+    "context": 1047576,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-4.1",
+    "input": 2.0,
+    "cachedInput": 0.5,
+    "output": 8.0,
+    "batchInput": 1.0,
+    "batchOutput": 4.0,
+    "context": 1047576,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-4.1",
+    "input": 2.0,
+    "cachedInput": 0.5,
+    "output": 8.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1047576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-4.1-mini",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 0.26,
+    "output": 1.04,
+    "cachedInput": 0.065,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-4.1-mini",
+    "input": 0.4,
+    "cachedInput": 0.1,
+    "output": 1.6,
+    "batchInput": 0.2,
+    "batchOutput": 0.8,
+    "context": 1047576,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-4.1-mini",
+    "input": 0.4,
+    "cachedInput": 0.1,
+    "output": 1.6,
+    "batchInput": 0.2,
+    "batchOutput": 0.8,
+    "context": 1047576,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-4.1-mini",
+    "input": 0.4,
+    "cachedInput": 0.1,
+    "output": 1.6,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1047576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-4o",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 1.625,
+    "output": 6.5,
+    "cachedInput": 0.8125,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-4o",
+    "input": 2.5,
+    "cachedInput": 1.25,
+    "output": 10.0,
+    "batchInput": 1.25,
+    "batchOutput": 5.0,
+    "context": 128000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/gpt-4o",
+    "input": 2.5,
+    "cachedInput": 1.25,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 128000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-4o",
+    "input": 2.5,
+    "cachedInput": 1.25,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 128000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gpt-4o-mini",
+   "provider": "OpenAI",
+   "savingsPct": 35.0,
+   "crazyrouter": {
+    "input": 0.0975,
+    "output": 0.39,
+    "cachedInput": 0.052,
+    "discount": 0.65
+   },
+   "official": {
+    "key": "gpt-4o-mini",
+    "input": 0.15,
+    "cachedInput": 0.075,
+    "output": 0.6,
+    "batchInput": 0.075,
+    "batchOutput": 0.3,
+    "context": 128000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/global-standard/gpt-4o-mini",
+    "input": 0.15,
+    "cachedInput": null,
+    "output": 0.6,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 128000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/gpt-4o-mini",
+    "input": 0.15,
+    "cachedInput": 0.075,
+    "output": 0.6,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 128000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "o3",
+   "provider": "OpenAI",
+   "savingsPct": 0.0,
+   "crazyrouter": {
+    "input": 2,
+    "output": 8,
+    "cachedInput": 0.5,
+    "discount": 1
+   },
+   "official": {
+    "key": "o3",
+    "input": 2.0,
+    "cachedInput": 0.5,
+    "output": 8.0,
+    "batchInput": 1.0,
+    "batchOutput": 4.0,
+    "context": 200000,
+    "site": "OpenAI",
+    "url": "https://openai.com/api/pricing/"
+   },
+   "azure": {
+    "key": "azure/o3",
+    "input": 2.0,
+    "cachedInput": 0.5,
+    "output": 8.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 200000,
+    "site": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/openai/o3",
+    "input": 2.0,
+    "cachedInput": 0.5,
+    "output": 8.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 200000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gemini-3.1-pro",
+   "provider": "Google AI",
+   "savingsPct": 45.0,
+   "crazyrouter": {
+    "input": 1.1,
+    "output": 6.6000000000000005,
+    "cachedInput": 0.275,
+    "discount": 0.55
+   },
+   "official": {
+    "key": "gemini/gemini-3.1-pro-preview",
+    "input": 2.0,
+    "cachedInput": 0.2,
+    "output": 12.0,
+    "batchInput": 1.0,
+    "batchOutput": 6.0,
+    "context": 1048576,
+    "site": "Google AI",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": {
+    "key": "vertex_ai/gemini-3.1-pro-preview",
+    "input": 2.0,
+    "cachedInput": 0.2,
+    "output": 12.0,
+    "batchInput": 1.0,
+    "batchOutput": 6.0,
+    "context": 1048576,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/google/gemini-3.1-pro-preview",
+    "input": 2.0,
+    "cachedInput": 0.2,
+    "output": 12.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gemini-3-flash",
+   "provider": "Google AI",
+   "savingsPct": 57.6,
+   "crazyrouter": {
+    "input": 0.165,
+    "output": 1.32,
+    "cachedInput": 0.0165,
+    "discount": 0.55
+   },
+   "official": {
+    "key": "gemini/gemini-3-flash-preview",
+    "input": 0.5,
+    "cachedInput": 0.05,
+    "output": 3.0,
+    "batchInput": 0.25,
+    "batchOutput": 1.5,
+    "context": 1048576,
+    "site": "Google AI",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": {
+    "key": "vertex_ai/gemini-3-flash-preview",
+    "input": 0.5,
+    "cachedInput": 0.05,
+    "output": 3.0,
+    "batchInput": 0.25,
+    "batchOutput": 1.5,
+    "context": 1048576,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/google/gemini-3-flash-preview",
+    "input": 0.5,
+    "cachedInput": 0.05,
+    "output": 3.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gemini-3.8-flash",
+   "provider": "Google AI",
+   "savingsPct": 0.0,
+   "crazyrouter": {
+    "input": 0.75,
+    "output": 3.75,
+    "cachedInput": 0.07500000000000001,
+    "discount": 1
+   },
+   "official": {
+    "key": "gemini/gemini-3.8-flash",
+    "input": 0.75,
+    "cachedInput": 0.075,
+    "output": 3.75,
+    "batchInput": 0.375,
+    "batchOutput": 1.875,
+    "context": 1048576,
+    "site": "Google AI",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": {
+    "key": "vertex_ai/gemini-3.8-flash",
+    "input": 0.75,
+    "cachedInput": 0.075,
+    "output": 3.75,
+    "batchInput": 0.375,
+    "batchOutput": 1.875,
+    "context": 1048576,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/google/gemini-3.8-flash",
+    "input": 0.75,
+    "cachedInput": 0.075,
+    "output": 3.75,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gemini-2.5-pro",
+   "provider": "Google AI",
+   "savingsPct": 45.0,
+   "crazyrouter": {
+    "input": 0.6875,
+    "output": 5.5,
+    "cachedInput": 0.17049999999999998,
+    "discount": 0.55
+   },
+   "official": {
+    "key": "gemini/gemini-2.5-pro",
+    "input": 1.25,
+    "cachedInput": 0.125,
+    "output": 10.0,
+    "batchInput": 0.625,
+    "batchOutput": 5.0,
+    "context": 1048576,
+    "site": "Google AI",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": {
+    "key": "gemini-2.5-pro",
+    "input": 1.25,
+    "cachedInput": 0.125,
+    "output": 10.0,
+    "batchInput": 0.625,
+    "batchOutput": 5.0,
+    "context": 1048576,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/google/gemini-2.5-pro",
+    "input": 1.25,
+    "cachedInput": 0.125,
+    "output": 10.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gemini-2.5-flash",
+   "provider": "Google AI",
+   "savingsPct": 45.0,
+   "crazyrouter": {
+    "input": 0.165,
+    "output": 1.3750000000000002,
+    "cachedInput": 0.044000000000000004,
+    "discount": 0.55
+   },
+   "official": {
+    "key": "gemini/gemini-2.5-flash",
+    "input": 0.3,
+    "cachedInput": 0.03,
+    "output": 2.5,
+    "batchInput": 0.15,
+    "batchOutput": 1.25,
+    "context": 1048576,
+    "site": "Google AI",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": {
+    "key": "gemini-2.5-flash",
+    "input": 0.3,
+    "cachedInput": 0.03,
+    "output": 2.5,
+    "batchInput": 0.15,
+    "batchOutput": 1.25,
+    "context": 1048576,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/google/gemini-2.5-flash",
+    "input": 0.3,
+    "cachedInput": 0.03,
+    "output": 2.5,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "gemini-2.5-flash-lite",
+   "provider": "Google AI",
+   "savingsPct": 45.0,
+   "crazyrouter": {
+    "input": 0.05500000000000001,
+    "output": 0.22000000000000003,
+    "cachedInput": 0.013750000000000002,
+    "discount": 0.55
+   },
+   "official": {
+    "key": "gemini/gemini-2.5-flash-lite",
+    "input": 0.1,
+    "cachedInput": 0.01,
+    "output": 0.4,
+    "batchInput": 0.05,
+    "batchOutput": 0.2,
+    "context": 1048576,
+    "site": "Google AI",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": {
+    "key": "gemini-2.5-flash-lite",
+    "input": 0.1,
+    "cachedInput": 0.01,
+    "output": 0.4,
+    "batchInput": 0.05,
+    "batchOutput": 0.2,
+    "context": 1048576,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/google/gemini-2.5-flash-lite",
+    "input": 0.1,
+    "cachedInput": 0.01,
+    "output": 0.4,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "deepseek-v4-pro",
+   "provider": "DeepSeek",
+   "savingsPct": 49.4,
+   "crazyrouter": {
+    "input": 0.67,
+    "output": 2.0,
+    "cachedInput": 0.03,
+    "discount": 1
+   },
+   "official": {
+    "key": "deepseek/deepseek-v4-pro",
+    "input": 1.32,
+    "cachedInput": 0.044,
+    "output": 3.96,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "DeepSeek",
+    "url": "https://api-docs.deepseek.com/quick_start/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/deepseek-v4-pro",
+    "input": 1.74,
+    "cachedInput": 0.145,
+    "output": 3.48,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/deepseek/deepseek-v4-pro",
+    "input": 0.9483,
+    "cachedInput": 0.079,
+    "output": 1.8966,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "deepseek-v4-flash",
+   "provider": "DeepSeek",
+   "savingsPct": 40.0,
+   "crazyrouter": {
+    "input": 0.23,
+    "output": 0.67,
+    "cachedInput": 0.01,
+    "discount": 1
+   },
+   "official": {
+    "key": "deepseek/deepseek-v4-flash",
+    "input": 0.3,
+    "cachedInput": 0.006,
+    "output": 1.2,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "DeepSeek",
+    "url": "https://api-docs.deepseek.com/quick_start/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/deepseek-v4-flash",
+    "input": 0.19,
+    "cachedInput": 0.028,
+    "output": 0.51,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/deepseek/deepseek-v4-flash",
+    "input": 0.14,
+    "cachedInput": 0.028,
+    "output": 0.28,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "kimi-k3",
+   "provider": "Moonshot AI",
+   "savingsPct": 0.0,
+   "crazyrouter": {
+    "input": 3.0,
+    "output": 15.0,
+    "cachedInput": 0.30000000000000004,
+    "discount": 1
+   },
+   "official": {
+    "key": "moonshot/kimi-k3",
+    "input": 3.0,
+    "cachedInput": 0.3,
+    "output": 15.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "Moonshot AI",
+    "url": "https://platform.moonshot.ai/docs/pricing"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/moonshotai/kimi-k3",
+    "input": 3.0,
+    "cachedInput": 0.3,
+    "output": 15.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "kimi-k2.5",
+   "provider": "Moonshot AI",
+   "savingsPct": -4.2,
+   "crazyrouter": {
+    "input": 0.6,
+    "output": 3.15,
+    "cachedInput": 0.12,
+    "discount": 1
+   },
+   "official": {
+    "key": "moonshot/kimi-k2.5",
+    "input": 0.6,
+    "cachedInput": 0.1,
+    "output": 3.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 262144,
+    "site": "Moonshot AI",
+    "url": "https://platform.moonshot.ai/docs/pricing"
+   },
+   "azure": {
+    "key": "azure_ai/kimi-k2.5",
+    "input": 0.6,
+    "cachedInput": 0.1,
+    "output": 3.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 262144,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/moonshotai/kimi-k2.5",
+    "input": 0.45,
+    "cachedInput": 0.07,
+    "output": 2.25,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 262144,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "glm-5",
+   "provider": "Zhipu AI",
+   "savingsPct": 0.0,
+   "crazyrouter": {
+    "input": 1.0,
+    "output": 3.2,
+    "cachedInput": 0.2,
+    "discount": 1
+   },
+   "official": {
+    "key": "zai/glm-5",
+    "input": 1.0,
+    "cachedInput": 0.2,
+    "output": 3.2,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 200000,
+    "site": "Zhipu AI",
+    "url": "https://docs.z.ai/guides/overview/pricing"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/z-ai/glm-5",
+    "input": 0.6,
+    "cachedInput": 0.12,
+    "output": 1.92,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 204800,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "qwen3.8-max",
+   "provider": "Alibaba Cloud",
+   "savingsPct": 0.0,
+   "crazyrouter": {
+    "input": 2,
+    "output": 6,
+    "cachedInput": 0.25,
+    "discount": 1
+   },
+   "official": {
+    "key": "dashscope/qwen3.8-max",
+    "input": 2.0,
+    "cachedInput": 0.25,
+    "output": 6.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 991808,
+    "site": "Alibaba Cloud",
+    "url": "https://www.alibabacloud.com/help/en/model-studio/models"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/qwen/qwen3.8-max",
+    "input": 2.0,
+    "cachedInput": 0.25,
+    "output": 6.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "grok-4.6",
+   "provider": "xAI",
+   "savingsPct": 15.0,
+   "crazyrouter": {
+    "input": 1.7,
+    "output": 5.1,
+    "cachedInput": 0.272,
+    "discount": 0.85
+   },
+   "official": {
+    "key": "xai/grok-4.6",
+    "input": 2.0,
+    "cachedInput": 0.5,
+    "output": 6.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 500000,
+    "site": "xAI",
+    "url": "https://docs.x.ai/docs/models"
+   },
+   "azure": {
+    "key": "azure_ai/grok-4.6",
+    "input": 1.25,
+    "cachedInput": 0.5,
+    "output": 6.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 200000,
+    "site": "Azure AI Foundry",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/"
+   },
+   "bedrock": null,
+   "vertex": {
+    "key": "vertex_ai/xai/grok-4.6",
+    "input": 2.0,
+    "cachedInput": 0.5,
+    "output": 6.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 524288,
+    "site": "Google Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+   },
+   "openrouter": {
+    "key": "openrouter/x-ai/grok-4.6",
+    "input": 2.0,
+    "cachedInput": 0.5,
+    "output": 6.0,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 500000,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "MiniMax-M3",
+   "provider": "MiniMax",
+   "savingsPct": 0.0,
+   "crazyrouter": {
+    "input": 0.3,
+    "output": 1.2,
+    "cachedInput": null,
+    "discount": 1
+   },
+   "official": {
+    "key": "minimax/MiniMax-M3",
+    "input": 0.3,
+    "cachedInput": 0.06,
+    "output": 1.2,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1000000,
+    "site": "MiniMax",
+    "url": "https://platform.minimax.io/docs/guides/pricing"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/minimax/minimax-m3",
+    "input": 0.3,
+    "cachedInput": 0.06,
+    "output": 1.2,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  },
+  {
+   "model": "mimo-v2.6-pro",
+   "provider": "Xiaomi MiMo",
+   "savingsPct": 0.0,
+   "crazyrouter": {
+    "input": 0.435,
+    "output": 0.87,
+    "cachedInput": 0.003600000000015,
+    "discount": 1
+   },
+   "official": {
+    "key": "xiaomi_mimo/mimo-v2.6-pro",
+    "input": 0.435,
+    "cachedInput": 0.0036,
+    "output": 0.87,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "Xiaomi MiMo",
+    "url": "https://platform.xiaomimimo.com"
+   },
+   "azure": null,
+   "bedrock": null,
+   "vertex": null,
+   "openrouter": {
+    "key": "openrouter/xiaomi/mimo-v2.6-pro",
+    "input": 0.435,
+    "cachedInput": 0.0036,
+    "output": 0.87,
+    "batchInput": null,
+    "batchOutput": null,
+    "context": 1048576,
+    "site": "OpenRouter",
+    "url": "https://openrouter.ai/models"
+   }
+  }
+ ]
+}

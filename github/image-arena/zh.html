@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html data-languages="en,zh" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>AI 生图模型对比：GPT Image vs Nano Banana vs Seedream vs 千问 Qwen Image 同一提示词 17 模型实测 | Crazyrouter</title>
+<meta content="AI 生图模型横向对比实测：GPT Image 2.5、Nano Banana Pro、即梦 Seedream 5.0、千问 Qwen Image、可灵 Kling 3.0、CogView 用同一组 6 道提示词（人像、电商产品图、中英文文字渲染、多主体构图、动漫插画）出图，附价格与耗时，还能用自己的 Key 测任意提示词。" name="description"/>
+<link href="https://crazyrouter.com/tools/zh/image-arena/" rel="canonical"/>
+<link href="./style.css" rel="stylesheet"/>
+<link href="./logo.svg" rel="icon" type="image/svg+xml"/>
+</head>
+<body><p style="padding:10px 16px;font:14px system-ui"><a href="../">← All developer tools</a></p>
+<a class="skip-link" href="#gallery">跳到画廊</a>
+<nav class="navbar">
+<div class="navbar-inner">
+<div class="nav-left">
+<a aria-label="Crazyrouter 首页" class="navbar-logo" href="https://crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">
+<svg aria-hidden="true" fill="none" viewbox="0 0 563 648" xmlns="http://www.w3.org/2000/svg"><path d="M167.5 190L276.5 190L277 191.5L253 234L247.5 235L235.5 234L217.5 234L191.5 234L164.5 235L150.5 239Q132.7 246.7 121 260.5Q108.2 275.2 102 296.5L99 312.5L99 335.5L102 351.5L110 371.5Q118.1 386.4 130.5 397Q143.5 409 164.5 413L173.5 413L258.5 414L314.5 318L433.5 318Q449.3 314.8 457 303.5L462 294.5L465 283.5L465 269.5L460 253.5L449.5 241L440.5 236L430.5 234L332.5 234L258.5 361L212.5 361L212 359.5L310.5 190L438.5 190L448.5 192L461.5 197Q476 205 486 217.5L496 233.5L502 250.5L504 260.5L504 268.5L505 269.5L505 283.5L504 284.5L503 297.5L499 311.5Q490.8 331.8 475.5 345L462.5 354L446 360.5L502 452.5L504 458L456.5 458L454 455.5L416 389.5L398.5 362L336.5 362L335 363.5L285 452.5L280.5 458L167.5 458L153.5 456Q112.4 445.6 90 416.5Q72.7 396.3 64 367.5L59 343.5L58 314.5L59 313.5L60 297.5L64 280.5L73 257.5Q85.3 233.8 104.5 217Q116.8 206.3 132.5 199L149.5 193L166.5 191L167.5 190Z" fill="#111827"></path></svg>
+          Crazyrouter
+        </a>
+<ul class="nav-links">
+<li><a href="https://crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">首页</a></li>
+<li><a href="https://crazyrouter.com/console?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">控制台</a></li>
+<li><a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">模型</a></li>
+<li><a href="https://docs.crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">API 文档</a></li>
+<li><a href="https://crazyrouter.com/blog?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">博客</a></li>
+<li><a class="active" href="https://crazyrouter.com/tools/zh/?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">工具</a></li>
+</ul>
+</div>
+<div aria-label="Language" class="space-languages" role="group"><a href="./index.html" hreflang="en">EN</a><a aria-current="page" href="./zh.html" hreflang="zh">中文</a></div><a class="btn-signup" href="https://crazyrouter.com/console/token?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">获取 API Key</a>
+</div>
+</nav>
+<main>
+<section class="page-heading">
+<div>
+<p class="eyebrow">AI 生图模型对比 · 17 个模型 · 同一组 6 道提示词</p>
+<h1>AI 生图模型对比：GPT Image vs Nano Banana vs Seedream vs 千问 Qwen Image</h1>
+<p class="lead">Crazyrouter 上的全部文生图模型——GPT Image、Nano Banana、Seedream、Qwen Image、Kling、CogView——用同样六道提示词画出的结果并排展示。再用你自己的 API Key，对最多四个模型跑你自己的提示词。</p>
+</div>
+<div class="heading-links">
+<a href="#workspace">跑自己的提示词 ↓</a>
+<a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Crazyrouter 模型列表</a>
+</div>
+</section>
+<section aria-labelledby="gallery-heading" class="gallery" id="gallery">
+<div class="section-heading"><div><h2 id="gallery-heading">画廊：同一提示词，所有模型</h2><p id="gallery-sub"></p></div><span class="section-code">GALLERY</span></div>
+<div aria-label="提示词" class="prompt-tabs" id="prompt-tabs" role="tablist"></div>
+<div id="gallery-panels"></div>
+<p class="hint">图片由维护者经 Crazyrouter 用下方预览里完全相同的请求生成（<code>/v1/images/generations</code>，1024×1024，每次一张），并转存为 WebP。价格为构建时 <code>/api/pricing</code> 上的单张价格；耗时为那一次调用的实际用时。当天失败的模型明天可能成功，反之亦然——这是样本，不是基准测试。</p>
+</section>
+<div class="workspace" id="workspace">
+<section aria-labelledby="setup-heading" class="panel editor">
+<div class="section-heading"><div><h2 id="setup-heading">跑你自己的提示词</h2><p>接口、密钥、提示词、尺寸与模型</p></div><span class="section-code">REQUEST</span></div>
+<div class="connection">
+<div class="field"><label for="base-url">接口地址</label><input id="base-url" spellcheck="false" value="https://crazyrouter.com"/></div>
+<div class="field"><label for="token">API Key</label><input autocomplete="off" id="token" placeholder="sk-…" spellcheck="false" type="password"/></div>
+</div>
+<p class="hint" id="key-hint">API Key 只保存在本页内存中，只会发送到上面填写的接口地址，不会写入浏览器存储。</p>
+<div class="field"><label for="prompt">提示词（默认填入当前画廊标签的提示词）</label><textarea id="prompt" rows="4" spellcheck="false"></textarea></div>
+<div class="field"><label for="size">尺寸</label><select id="size"><option selected="" value="1024x1024">1024×1024</option><option value="1024x1536">1024×1536（竖版）</option><option value="1536x1024">1536×1024（横版）</option></select></div>
+<div class="label-row"><label for="model-search">模型（最多 4 个）</label><span class="meta" id="model-status"></span></div>
+<input id="model-search" placeholder="筛选模型…" spellcheck="false"/>
+<div class="model-list" id="model-list"></div>
+<input aria-label="模型名称" hidden="" id="model-manual" placeholder="gpt-image-2, nano-banana-pro" spellcheck="false"/>
+<div class="notice" hidden="" id="notice" role="alert"></div>
+<div class="actions">
+<button class="primary" id="run" type="button">生成</button>
+<button class="secondary" id="cancel" type="button">取消</button>
+</div>
+<p class="hint">每次运行都会用你自己的余额，对每个模型各发送一次真实的付费请求，不会自动重试。部分模型会以 HTTP 400 拒绝某些尺寸——那是上游限制而不是模型失败。只返回图片地址而非图片字节的模型会直接按该地址显示，地址通常过一段时间就会失效。</p>
+<details class="advanced"><summary>请求预览（cURL，已隐去密钥）</summary><div class="code-tabs"><button class="quiet" id="copy" type="button">复制</button></div><pre id="request-code"></pre></details>
+</section>
+<section aria-labelledby="results-heading" class="panel results-panel">
+<div class="section-heading"><div><h2 id="results-heading">结果</h2><p>每个模型一张卡片：状态、耗时、单张价格和生成的图片</p></div><span class="section-code">RESULTS</span></div>
+<div class="empty-state" id="empty"><div aria-hidden="true" class="empty-symbol">🖼</div><h3>选择模型后生成</h3><p>以 base64 返回的图片通过内存中的 blob 地址渲染；以地址返回的图片直接显示。不会上传到任何其他地方。</p></div>
+<div aria-live="polite" class="results-grid" id="results"></div>
+</section>
+</div>
+<section class="notes">
+<h2>这里展示的是什么</h2>
+<p>同一提示词、同一尺寸、每个模型只生成一次——不挑图，除了 <code>gallery.json</code> 里记录的针对 429/5xx 的一次重试外不再重跑。它能让你快速直观地感受各家模型的风格、文字渲染和对提示词的遵循程度，但不是基准测试，也不是质量排名。画廊请求均带 <code>response_format: "b64_json"</code>（<code>gpt-image-*</code> 拒绝该参数，改用 <code>output_format: "png"</code>）；只返回地址的模型由服务端下载。价格来自构建时的 <a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Crazyrouter 价格页</a>，可能变动。</p>
+</section>
+</main>
+<footer class="footer">
+<p>© 2026 <a href="https://crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">Crazyrouter</a> — 627+ AI 模型的一站式 API</p>
+<p class="footer-links"><a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">价格</a> · <a href="https://docs.crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">API 文档</a> · <a href="https://t.me/crzrouter" rel="noopener" target="_blank">Telegram</a> · <a href="https://twitter.com/metaviiii" rel="noopener" target="_blank">Twitter</a> · <a href="https://huggingface.co/spaces/xujfcn/Crazyrouter-Model-Arena" rel="noopener" target="_blank">模型竞技场</a></p>
+<p class="footer-cta"><a class="run-on-site" href="https://crazyrouter.com/tools/zh/image-arena/?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=image-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">在 Crazyrouter 上无需 API Key 直接运行 →</a></p>
+<p class="credential-note">API Key 只保存在本页内存中</p>
+</footer>
+<dialog aria-labelledby="lightbox-title" class="lightbox" id="lightbox">
+<div class="lightbox-head"><div><strong id="lightbox-title"></strong> <span class="meta" id="lightbox-label"></span></div><button aria-label="关闭" class="quiet" id="lightbox-close" type="button">✕ 关闭</button></div>
+<img alt="" id="lightbox-img"/>
+</dialog>
+<script src="./app.js" type="module"></script>
+</body>
+</html>

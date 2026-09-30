@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Compare Qwen, DeepSeek, Mistral, GPT, GLM, Kimi and legacy Claude tokenizers privately in your browser." />
+  <meta name="theme-color" content="#14543e" />
+  <title>Token Counter & Tokenizer Comparison — CrazyRouter</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%2314543e'/%3E%3Ctext x='8' y='28' fill='white' font-size='25'%3ET%3C/text%3E%3C/svg%3E" />
+  <script type="module" crossorigin src="./assets/index-sAGpuhhe.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Kww6VUKd.css">
+</head>
+<body>
+<main>
+  <nav><a class="brand" data-site="/" data-placement="header_brand">CRAZYROUTER <span>/ TOKEN LAB</span></a><div class="nav-controls"><span class="badge" data-i18n="free">FREE · NO LOGIN</span><label for="language" data-i18n="language">Language</label><select id="language"><option value="en">English</option><option value="zh">简体中文</option><option value="ja">日本語</option><option value="ko">한국어</option></select></div></nav>
+  <header>
+    <p class="eyebrow" data-i18n="eyebrow">ONE PROMPT. EIGHT TOKENIZERS.</p>
+    <h1><span data-i18n="headline">Same text.</span><br><em data-i18n="headlineAccent">Different token counts.</em></h1>
+    <p class="intro" data-i18n="intro">Compare token counts, inspect token pieces and estimate input costs across model families.</p>
+    <p class="privacy" data-i18n="privacy">Runs in your browser. Your text stays on your device.</p>
+  </header>
+  <section class="workspace" data-i18n-aria="form" aria-label="Token comparison form">
+    <div class="input-panel">
+      <div class="label-line"><label for="prompt" data-i18n="input">01 / YOUR TEXT</label><span id="char-count">0 / 50,000</span></div>
+      <textarea id="prompt" rows="9" placeholder="Paste a prompt, code, or multilingual text…" spellcheck="false"></textarea>
+      <div class="examples" data-i18n-aria="examples" aria-label="Examples"><span data-i18n="examples">TRY AN EXAMPLE</span><button data-example="zh" type="button">中文</button><button data-example="en" type="button">English</button><button data-example="ja" type="button">日本語</button><button data-example="ko" type="button">한국어</button><button data-example="code" data-i18n="code" type="button">Code</button><button data-example="mixed" data-i18n="mixed" type="button">Mixed + Emoji</button><button id="clear" data-i18n="clear" type="button">Clear</button></div>
+    </div>
+    <fieldset><legend data-i18n="choices">02 / TOKENIZERS</legend><div id="choices"></div><p class="small" data-i18n="scope"></p><p class="legacy-notice" data-i18n="legacyNote"></p></fieldset>
+  </section>
+  <details class="rates-panel"><summary data-i18n="rateTitle">Optional input cost estimate</summary><p class="small" data-i18n="rateNote"></p><div id="rates"></div></details>
+  <div class="action-line"><button id="compare" data-i18n="compare" type="button">Compare tokens ↗</button><button id="cancel" data-i18n="cancel" type="button" hidden>Cancel</button><p class="small" data-i18n="download"></p></div>
+  <p id="status" role="status" aria-live="polite"></p>
+  <section id="results" hidden data-i18n-aria="results" aria-label="Comparison results">
+    <div class="section-title"><h2 data-i18n="resultsTitle">03 / THE COMPARISON</h2><span id="stats"></span></div>
+    <div class="table-scroll" tabindex="0" role="region" data-i18n-aria="scroll" aria-label="Scrollable results"><table><thead><tr><th data-i18n="tokenizer">Tokenizer</th><th data-i18n="tokens">Tokens</th><th data-i18n="minimum">vs. minimum</th><th data-i18n="rate">Your $/1M</th><th data-i18n="cost">Input USD</th><th data-i18n="status">Status</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <p class="small" data-i18n="countNote"></p>
+    <div class="inspect-header"><h2 data-i18n="inspect">INSIDE THE TOKENS</h2><label for="inspect" data-i18n="tokenizer">Tokenizer</label><select id="inspect"></select></div>
+    <p id="legacy-result" class="legacy-notice" data-i18n="legacyNote" hidden></p>
+    <p id="preview-note" class="small"></p><div id="pieces" class="pieces"></div>
+    <p class="small" data-i18n="piecesNote"></p>
+    <details><summary data-i18n="ids">Token IDs & source</summary><pre id="ids"></pre><a id="source" data-i18n="source" target="_blank" rel="noopener noreferrer">View tokenizer source ↗</a></details>
+  </section>
+  <aside class="conversion"><div><p class="eyebrow" data-i18n="next">YOUR NEXT API CALL</p><h2 data-i18n="ctaTitle">Compare here. Build with CrazyRouter.</h2><p data-i18n="ctaText"></p></div><div class="cta-links"><a class="primary-link" data-site="/pricing" data-placement="results_pricing" data-i18n="pricing">View model pricing ↗</a><a data-site="/register" data-placement="results_register" data-i18n="signup">Get an API key ↗</a></div></aside>
+  <details class="method"><summary data-i18n="accuracy">How accurate is this?</summary><p data-i18n="method"></p><p data-i18n="legacyNote"></p><p data-i18n="validation"></p><p data-i18n="formula"></p><p data-i18n="privacyDetail"></p></details>
+  <footer><span data-i18n="built">Built by</span> <a data-site="/" data-placement="footer_brand">CrazyRouter</a> · <span data-i18n="powered">Powered by Hugging Face Tokenizers.js & js-tiktoken</span> · <a data-i18n="versions" href="./tokenizers/sources.json" target="_blank" rel="noopener">Tokenizer versions</a> · <a data-i18n="licenses" href="./THIRD_PARTY_NOTICES.txt" target="_blank" rel="noopener">Licenses</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,5 @@
+projects/tokenizer-comparison/** text eol=lf
+projects/tokenizer-comparison/public/** -text
+projects/tokenizer-comparison/public/tokenizers/** -diff
+tokenizer-comparison/** -text
+tokenizer-comparison/tokenizers/** -diff

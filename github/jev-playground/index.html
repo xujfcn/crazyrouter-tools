@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html data-languages="en,zh" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>JEV 1.13 Playground | Crazyrouter</title>
+<meta content="Run TypeSafe JEV through Crazyrouter to classify, judge, and score business decisions with structured Choice, Noul, and Score results." name="description"/>
+<link href="https://crazyrouter.com/tools/jev-decision-playground/" rel="canonical"/>
+<link href="https://crazyrouter.com/tools/jev-decision-playground/" hreflang="en" rel="alternate"/>
+<link href="https://crazyrouter.com/tools/zh/jev-decision-playground/" hreflang="zh" rel="alternate"/>
+<link href="https://crazyrouter.com/tools/jev-decision-playground/" hreflang="x-default" rel="alternate"/>
+<meta content="JEV 1.13 Playground | Crazyrouter" property="og:title"/>
+<meta content="Test structured AI decisions with 12 editable examples and your Crazyrouter token." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://crazyrouter.com/tools/jev-decision-playground/" property="og:url"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "JEV 1.13 Playground", "url": "https://crazyrouter.com/tools/jev-decision-playground/", "description": "A browser workspace for running structured TypeSafe JEV decisions through Crazyrouter.", "applicationCategory": "DeveloperApplication", "operatingSystem": "Web", "publisher": {"@type": "Organization", "name": "Crazyrouter", "url": "https://crazyrouter.com"}, "sameAs": "https://huggingface.co/spaces/xujfcn/JEV-1.13-Playground"}</script>
+<link href="./style.css" rel="stylesheet"/>
+<style>.space-languages{display:flex;gap:4px;margin-left:auto;flex-shrink:0}.space-languages a{padding:6px 9px;text-decoration:none;border-radius:4px}.space-languages [aria-current]{background:#171717;color:white}.heading-links{flex-wrap:wrap;justify-content:flex-end}.navbar-inner{flex-wrap:wrap;padding-block:10px}h1{font-size:36px}@media(max-width:640px){h1{font-size:28px}.navbar-logo{font-size:18px}.navbar-inner{gap:10px}.btn-signup{padding-inline:12px}.heading-links{justify-content:flex-start}}</style><link href="./logo.svg" rel="icon" type="image/svg+xml"/></head>
+<body><p style="padding:10px 16px;font:14px system-ui"><a href="../">← All developer tools</a></p>
+<a class="skip-link" data-i18n="skip" href="#workspace">Skip to workspace</a>
+<nav class="navbar">
+<div class="navbar-inner">
+<div class="nav-left">
+<a aria-label="Crazyrouter home" class="navbar-logo" href="https://crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">
+<svg aria-hidden="true" fill="none" viewbox="0 0 563 648" xmlns="http://www.w3.org/2000/svg"><path d="M167.5 190L276.5 190L277 191.5L253 234L247.5 235L235.5 234L217.5 234L191.5 234L164.5 235L150.5 239Q132.7 246.7 121 260.5Q108.2 275.2 102 296.5L99 312.5L99 335.5L102 351.5L110 371.5Q118.1 386.4 130.5 397Q143.5 409 164.5 413L173.5 413L258.5 414L314.5 318L433.5 318Q449.3 314.8 457 303.5L462 294.5L465 283.5L465 269.5L460 253.5L449.5 241L440.5 236L430.5 234L332.5 234L258.5 361L212.5 361L212 359.5L310.5 190L438.5 190L448.5 192L461.5 197Q476 205 486 217.5L496 233.5L502 250.5L504 260.5L504 268.5L505 269.5L505 283.5L504 284.5L503 297.5L499 311.5Q490.8 331.8 475.5 345L462.5 354L446 360.5L502 452.5L504 458L456.5 458L454 455.5L416 389.5L398.5 362L336.5 362L335 363.5L285 452.5L280.5 458L167.5 458L153.5 456Q112.4 445.6 90 416.5Q72.7 396.3 64 367.5L59 343.5L58 314.5L59 313.5L60 297.5L64 280.5L73 257.5Q85.3 233.8 104.5 217Q116.8 206.3 132.5 199L149.5 193L166.5 191L167.5 190Z" fill="#111827"></path></svg>
+          Crazyrouter
+        </a>
+<ul class="nav-links">
+<li><a href="https://crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Home</a></li>
+<li><a href="https://crazyrouter.com/console?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Console</a></li>
+<li><a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Models</a></li>
+<li><a href="https://docs.crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">API Docs</a></li>
+<li><a href="https://crazyrouter.com/blog?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Blog</a></li>
+<li><a class="active" href="https://crazyrouter.com/tools/?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Tools</a></li>
+</ul>
+</div>
+<nav aria-label="Language" class="space-languages"><a aria-current="page" href="./index.html" hreflang="en">EN</a><a href="./zh.html" hreflang="zh">中文</a></nav><a class="btn-signup" href="https://crazyrouter.com/console/token?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Get API Key</a>
+</div>
+</nav>
+<main>
+<section class="page-heading">
+<div>
+<p class="eyebrow">TYPESAFE JEV · CRAZYROUTER DECISIONS API</p>
+<h1 data-i18n="title">JEV 1.13 Playground</h1>
+<p class="lead" data-i18n="subtitle">Classify, judge, and score through one endpoint, then send structured results directly into your workflow.</p>
+</div>
+<div class="heading-links">
+<a data-i18n="officialGuide" href="https://docs.typesafe.ai/introduction/quickstart" rel="noopener" target="_blank">Official guide</a>
+<a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Crazyrouter Models</a>
+<a href="https://crazyrouter.com/en/blog/jev-1-13-guide-playground-2026-en?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">JEV 1.13 guide</a></div>
+</section>
+<section aria-label="JEV decision types" class="primitive-strip">
+<div><span class="primitive-icon">C</span><div><strong>Choice</strong><span data-i18n="choiceDesc">Select from defined options</span></div></div>
+<div><span class="primitive-icon">N</span><div><strong>Noul</strong><span data-i18n="noulDesc">Return a yes/no probability</span></div></div>
+<div><span class="primitive-icon">S</span><div><strong>Score</strong><span data-i18n="scoreDesc">Rate against ordered criteria</span></div></div>
+<div class="price-cell"><span data-i18n="referencePrice">Reference price</span><strong>$0.042 / 1M input</strong><small>$0 output</small></div>
+</section>
+<section aria-labelledby="application-heading" class="application-browser">
+<div class="section-heading browser-heading">
+<div><h2 data-i18n="applications" id="application-heading">Applications</h2><p data-i18n="applicationsDesc">Choose a scenario, then edit its state and questions.</p></div>
+<span class="count-badge" id="application-count">12 scenarios</span>
+</div>
+<div aria-label="Application categories" class="category-tabs" id="category-tabs" role="tablist"></div>
+<div class="application-list" id="application-list"></div>
+</section>
+<div class="workspace" id="workspace">
+<form class="editor panel" id="request-form">
+<div class="section-heading">
+<div><h2 data-i18n="requestTitle">Request setup</h2><p data-i18n="requestDesc">CrazyRouter token and decision input</p></div>
+<span class="section-code">REQUEST</span>
+</div>
+<div class="connection">
+<div class="field">
+<label data-i18n="modelLabel" for="model">Model</label>
+<input disabled="" id="model" spellcheck="false" value="typesafe/jev-1.13"/>
+</div>
+<div class="field">
+<label data-i18n="tokenSite" for="token" id="token-label">CrazyRouter API Token</label>
+<input autocomplete="off" id="token" placeholder="Paste your Crazyrouter token" spellcheck="false" type="password"/>
+</div>
+</div>
+<p class="endpoint" id="endpoint">https://crazyrouter.com/api/alpha/decisions</p>
+<p class="hint token-hint" data-i18n="tokenHint">The token is used only by requests in this page and is never written to browser storage.</p>
+<div class="field">
+<div class="label-row compact-row">
+<label data-i18n="scenarioLabel" for="example">Current scenario</label>
+<span class="category-label" id="example-category"></span>
+</div>
+<select id="example"></select>
+</div>
+<div class="label-row">
+<label for="state"><span data-i18n="stateLabel">State</span> <span class="field-code">STATE</span></label>
+<select aria-label="State format" id="state-format">
+<option data-i18n="plainText" value="text">Plain text</option>
+<option data-i18n="jsonValue" value="json">JSON object / array</option>
+</select>
+</div>
+<textarea id="state" required="" rows="6"></textarea>
+<div class="label-row">
+<label for="questions"><span data-i18n="questionsLabel">Questions</span> <span class="field-code">QUESTIONS</span></label>
+<button class="quiet" data-i18n="formatJson" id="format-json" type="button">Format JSON</button>
+</div>
+<textarea class="code" id="questions" required="" rows="17" spellcheck="false"></textarea>
+<p class="hint" data-i18n="questionHint">Choice uses an option object, Score uses a low-to-high array, and Noul may omit criteria.</p>
+<details class="advanced">
+<summary data-i18n="advancedFields">Advanced fields</summary>
+<label for="extra">Provider / Session / Trace</label>
+<textarea class="code" id="extra" rows="3" spellcheck="false">{}</textarea>
+</details>
+<div class="error" hidden="" id="error" role="alert"></div>
+<div class="actions">
+<button class="primary" id="run" type="submit"><span data-i18n="runDecision">Run decision</span><span aria-hidden="true">↗</span></button>
+<button class="secondary" data-i18n="previewRequest" id="preview" type="button">Preview request</button>
+</div>
+<p class="hint" data-i18n="billingHint">Submitting makes a real paid request through CrazyRouter. The page does not retry automatically.</p>
+</form>
+<section aria-labelledby="result-heading" class="results panel" id="results">
+<div class="section-heading">
+<div><h2 data-i18n="resultTitle" id="result-heading">Decision result</h2><p data-i18n="resultDesc" id="result-source">Structured answers and request metrics</p></div>
+<span aria-live="polite" class="status" data-i18n="waiting" id="status" role="status">Waiting</span>
+</div>
+<div class="empty-state" id="empty">
+<div aria-hidden="true" class="empty-symbol">{ ? }</div>
+<h3 data-i18n="emptyTitle">Choose a scenario to begin</h3>
+<p data-i18n="emptyDesc">Answers, probability distributions, latency, and token usage will appear here.</p>
+<div class="empty-tags"><span>Choice</span><span>Noul</span><span>Score</span></div>
+</div>
+<div class="metrics" hidden="" id="metrics"></div>
+<div aria-live="polite" id="answers"></div>
+<p class="notice" data-i18n="confidenceNote" hidden="" id="confidence-note">Confidence describes the certainty of a probability distribution. It is not a validated accuracy score.</p>
+<details hidden="" id="raw-section"><summary data-i18n="rawResponse">Full response JSON</summary><pre id="raw"></pre></details>
+<details hidden="" id="request-section">
+<summary data-i18n="requestCode">Request and integration code (key omitted)</summary>
+<div class="code-tabs">
+<button class="active" data-code="json" type="button">JSON</button>
+<button data-code="curl" type="button">cURL</button>
+<button data-code="js" type="button">JavaScript</button>
+<button data-code="python" type="button">Python</button>
+<button data-i18n="copy" id="copy" type="button">Copy</button>
+</div>
+<pre id="request-code"></pre>
+</details>
+</section>
+</div>
+<section aria-labelledby="resources-heading" class="resources">
+<div class="section-heading">
+<div><h2 data-i18n="resources" id="resources-heading">SDKs and examples</h2><p data-i18n="resourcesDesc">Official docs, clients, and community projects</p></div>
+<span class="section-code">RESOURCES</span>
+</div>
+<div class="resource-list">
+<a href="https://docs.typesafe.ai/introduction/quickstart" rel="noopener" target="_blank"><span>Docs</span><strong data-i18n="quickstart">TypeSafe quickstart</strong><small>docs.typesafe.ai ↗</small></a>
+<a href="https://github.com/typesafe-ai/typesafe-sdk-python" rel="noopener" target="_blank"><span>Python</span><strong>typesafe-sdk</strong><small>GitHub ↗</small></a>
+<a href="https://github.com/typesafe-ai/typesafe-sdk-js" rel="noopener" target="_blank"><span>JS / TS</span><strong>@typesafe-ai/sdk</strong><small>GitHub ↗</small></a>
+<a href="https://docs.typesafe.ai/cookbooks/parallel_questions" rel="noopener" target="_blank"><span>Cookbook</span><strong>Parallel questions</strong><small>TypeSafe Docs ↗</small></a>
+<a href="https://github.com/Anil-matcha/awesome-jev-by-typesafe" rel="noopener" target="_blank"><span>Community</span><strong>Awesome JEV</strong><small>GitHub ↗</small></a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<p>© 2026 <a href="https://crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Crazyrouter</a> — One API for 627+ AI Models</p>
+<p class="footer-links"><a href="https://crazyrouter.com/models?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Pricing</a> · <a href="https://docs.crazyrouter.com?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">API Docs</a> · <a href="https://t.me/crzrouter" rel="noopener" target="_blank">Telegram</a> · <a href="https://twitter.com/metaviiii" rel="noopener" target="_blank">Twitter</a> · <a href="https://crazyrouter.com/tools/jev-decision-playground/?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=jev-playground&amp;utm_content=tool_link" rel="noopener" target="_blank">Crazyrouter Playground</a></p>
+<p class="credential-note" data-i18n="footer">The token stays only in this page's memory</p>
+</footer>
+<script src="./app.js" type="module"></script>
+</body>
+</html>

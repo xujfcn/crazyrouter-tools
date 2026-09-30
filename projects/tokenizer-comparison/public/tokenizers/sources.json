@@ -1,0 +1,40 @@
+[
+  {
+    "key": "qwen3",
+    "repo": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+    "key": "deepseek_v3",
+    "repo": "deepseek-ai/DeepSeek-V3",
+    "revision": "e815299b0bcbac849fa540c768ef21845365c9eb",
+    "sha256": "621ac2e32d0dba658404412318818aaa8ce8cda492e59830109d8da6b517fb41"
+  },
+  {
+    "key": "mistral",
+    "repo": "mistralai/Mistral-7B-Instruct-v0.3",
+    "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+    "sha256": "e553af6fff7d7ad76e830608b218c5c0b0822998d5a1a96099a74cd3c1cb1a49"
+  },
+  {
+    "key": "glm5",
+    "repo": "zai-org/GLM-5",
+    "revision": "c183ef8c61faee82855eca1ed9bb3a9a7ce3b0b2",
+    "sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d"
+  },
+  {
+    "key": "kimi25",
+    "repo": "moonshotai/Kimi-K2.5",
+    "revision": "4d01dfe0332d63057c186e0b262165819efb6611",
+    "sha256": "b6c497a7469b33ced9c38afb1ad6e47f03f5e5dc05f15930799210ec050c5103",
+    "browser_adaptation": "ranks.json: base64 rank repack; Han intersection and case-insensitive regex rewritten for JS. Native 25,000-character run splitting and embedded special tokens preserved."
+  },
+  {
+    "key": "claude_legacy",
+    "source": "@anthropic-ai/tokenizer",
+    "version": "0.0.4",
+    "sha256": "58dad83d85e9cd57be209172449ebfbc395df2b455c11fe8b7e5b661e6f462ad",
+    "scope": "Legacy only. Not accurate for Claude 3 or later. NFKC normalization and embedded special tokens follow official package."
+  }
+]

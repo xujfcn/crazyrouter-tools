@@ -1,0 +1,22 @@
+{
+  "generated": "2026-09-29",
+  "models": [
+    "aigc-image-kling-3.0",
+    "cogview-3-flash",
+    "cogview-4",
+    "doubao-seedream-4-0",
+    "doubao-seedream-4-5",
+    "doubao-seedream-5-0",
+    "gpt-image-1.5",
+    "gpt-image-2",
+    "gpt-image-2-t",
+    "gpt-image-2.5-flare",
+    "gpt-image-2.5-sunburst",
+    "nano-banana",
+    "nano-banana-2",
+    "nano-banana-pro",
+    "qwen-image-2.0",
+    "qwen-image-max",
+    "qwen-image-plus"
+  ]
+}

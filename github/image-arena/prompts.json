@@ -1,0 +1,46 @@
+{
+  "prompts": [
+    {
+      "id": "portrait",
+      "label_en": "Photoreal portrait",
+      "label_zh": "写实人像",
+      "prompt": "An elderly man holding a black umbrella on a rain-soaked city street at night, neon reflections on wet asphalt, 35mm film grain, shallow depth of field, cinematic",
+      "prompt_zh": "夜晚雨后的城市街道上，一位老人撑着黑伞，霓虹灯映在湿漉漉的柏油路上，35mm 胶片颗粒，浅景深，电影感"
+    },
+    {
+      "id": "product",
+      "label_en": "E-commerce product",
+      "label_zh": "电商产品图",
+      "prompt": "A minimalist glass perfume bottle with a gold cap on a pure white background, soft studio lighting, subtle reflection, product photography",
+      "prompt_zh": "纯白背景上一只极简风格的玻璃香水瓶，金色瓶盖，柔和的棚拍灯光，淡淡的倒影，产品摄影"
+    },
+    {
+      "id": "text-en",
+      "label_en": "English text rendering",
+      "label_zh": "英文文字渲染",
+      "prompt": "A café chalkboard sign that reads \"OPEN 7AM – 9PM · Fresh Bagels\" in neat white chalk lettering, wooden frame, warm light",
+      "prompt_zh": "一块咖啡馆黑板招牌，用整齐的白色粉笔字写着 \"OPEN 7AM – 9PM · Fresh Bagels\"，木质边框，暖光"
+    },
+    {
+      "id": "text-zh",
+      "label_en": "Chinese text rendering",
+      "label_zh": "中文文字渲染",
+      "prompt": "一副红纸金字的春联，上面写着“福满人间”四个楷体大字，挂在木门旁，喜庆，高清",
+      "prompt_zh": "一副红纸金字的春联，上面写着“福满人间”四个楷体大字，挂在木门旁，喜庆，高清"
+    },
+    {
+      "id": "composition",
+      "label_en": "Multi-subject scene",
+      "label_zh": "多主体构图",
+      "prompt": "Three animals — a fox, a raccoon and an owl — playing poker at a round wooden table, each with a distinct expression and prop (monocle, cigar, teacup), warm lamp light, detailed",
+      "prompt_zh": "三只动物——狐狸、浣熊和猫头鹰——围坐在圆木桌旁打扑克，各有不同的表情和道具（单片眼镜、雪茄、茶杯），暖色台灯光，细节丰富"
+    },
+    {
+      "id": "illustration",
+      "label_en": "Anime / illustration",
+      "label_zh": "动画 / 插画",
+      "prompt": "A small mountain town in a valley at dawn, thin morning mist, Studio Ghibli style illustration, soft colors, hand-painted look",
+      "prompt_zh": "黎明时分山谷中的小镇，薄薄的晨雾，吉卜力工作室风格插画，柔和的色彩，手绘质感"
+    }
+  ]
+}

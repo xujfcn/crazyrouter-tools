@@ -1,0 +1,27 @@
+name: Tokenizer source verification
+on:
+  push:
+    paths: ['projects/tokenizer-comparison/**', '.github/workflows/tokenizer.yml']
+  pull_request:
+    paths: ['projects/tokenizer-comparison/**', '.github/workflows/tokenizer.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/tokenizer-comparison
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: projects/tokenizer-comparison/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - name: Check published files match source
+        run: diff -qr dist ../../tokenizer-comparison

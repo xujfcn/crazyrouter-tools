@@ -35,3 +35,13 @@ python -m http.server 8000
 分词器输入只在浏览器内处理；竞技场的密钥只保留在页面内存中，并发送给你选择的 API 地址。对外链接仅携带来源参数，不包含输入文本或密钥。价格快照与样例均有时间口径，请在使用前核对。
 
 欢迎提交可复现问题、翻译改进和新工具建议，详见 [贡献指南](CONTRIBUTING.md)。不要在 Issues 中提交密钥或敏感输入。各组件保留自己的许可证与第三方声明。
+
+## 搜索问题与使用指南
+
+- [Token 是什么？中文怎么算、1K/1M Token 与分词器对比](https://xujfcn.github.io/crazyrouter-tools/github/what-is-a-token/)
+- [API 费用怎么算？GPT、Claude、DeepSeek Token 计费计算器](https://xujfcn.github.io/crazyrouter-tools/github/api-cost-calculator/)
+- [GPT 满血与残血怎么测试？大模型降智排查与 API 对比](https://xujfcn.github.io/crazyrouter-tools/github/gpt-full-vs-degraded-test/)
+- [生图 AI 哪个好？GPT Image、Nano Banana、Seedream 同提示词对比](https://xujfcn.github.io/crazyrouter-tools/github/ai-image-generator-comparison/)
+- [JEV 是什么？JEV 1.13 在线体验、分类判断与 Agent 路由示例](https://xujfcn.github.io/crazyrouter-tools/github/jev-playground-guide/)
+
+[Keyword and canonical map](docs/seo-keyword-map.md)

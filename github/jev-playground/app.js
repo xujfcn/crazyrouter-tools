@@ -341,7 +341,7 @@ function showError(message) {
 
 function renderStaticText() {
   document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-  document.title = language === 'zh' ? 'JEV 1.13 在线体验 | Crazyrouter' : 'JEV 1.13 Playground | Crazyrouter';
+  document.title = window.JEV_SEO_TITLE || (language === 'zh' ? 'JEV 1.13 在线体验 | Crazyrouter' : 'JEV 1.13 Playground | Crazyrouter');
   for (const node of document.querySelectorAll('[data-i18n]')) node.textContent = t(node.dataset.i18n);
 }
 

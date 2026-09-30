@@ -4,13 +4,13 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>大模型降智测试与模型对比：GPT-6 vs Claude vs DeepSeek vs Kimi（鹈鹕骑车 SVG + 糖果题实测）| Crazyrouter</title>
-<meta content="模型降智了吗？用 manxue.ai 同款鹈鹕骑自行车 SVG 动画测试和糖果抽屉原理题，实测对比 GPT-6 Astra、GPT-5、Claude Opus 5.5、Claude Fable 5.1、DeepSeek V4 Pro、Kimi K3、GLM-5.3，附真实一次实跑结果；也可以用自己的 Key 测任意模型或中转接口是否降智。" name="description"/>
-<link href="https://crazyrouter.com/tools/zh/model-arena/" rel="canonical"/>
+<title>GPT 满血 / 残血测试与大模型降智排查 | CrazyRouter</title>
+
+
 <link href="./style.css" rel="stylesheet"/>
 <link href="./logo.svg" rel="icon" type="image/svg+xml"/>
-</head>
-<body><p style="padding:10px 16px;font:14px system-ui"><a href="../">← All developer tools</a></p>
+<meta content="在线并排测试 GPT、Claude、DeepSeek 与 Kimi 的鹈鹕骑车 SVG 和糖果题输出。查看样例、原始响应与检查结果，自带 API Key 排查接口表现；测试不等于模型身份认证。" name="description"/><meta content="index,follow,max-image-preview:large" name="robots"/><link href="https://crazyrouter.com/tools/zh/model-arena/" rel="canonical"/><link href="https://crazyrouter.com/tools/model-arena/" hreflang="en" rel="alternate"/><link href="https://crazyrouter.com/tools/zh/model-arena/" hreflang="zh-CN" rel="alternate"/><link href="https://crazyrouter.com/tools/model-arena/" hreflang="x-default" rel="alternate"/><meta content="GPT 满血 / 残血测试与大模型降智排查" property="og:title"/><meta content="在线并排测试 GPT、Claude、DeepSeek 与 Kimi 的鹈鹕骑车 SVG 和糖果题输出。查看样例、原始响应与检查结果，自带 API Key 排查接口表现；测试不等于模型身份认证。" property="og:description"/><meta content="https://crazyrouter.com/tools/zh/model-arena/" property="og:url"/><meta content="website" property="og:type"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://crazyrouter.com/tools/zh/model-arena/", "name": "GPT 满血 / 残血测试与大模型降智排查", "description": "在线并排测试 GPT、Claude、DeepSeek 与 Kimi 的鹈鹕骑车 SVG 和糖果题输出。查看样例、原始响应与检查结果，自带 API Key 排查接口表现；测试不等于模型身份认证。", "inLanguage": "zh-CN"}</script></head>
+<body><p style="padding:10px 16px;font:14px system-ui"><a href="../zh.html">← 全部 AI 工具与使用指南</a></p>
 <a class="skip-link" href="#workspace">跳到工作区</a>
 <nav class="navbar">
 <div class="navbar-inner">
@@ -31,11 +31,11 @@
 <div aria-label="Language" class="space-languages" role="group"><a href="./index.html" hreflang="en">EN</a><a aria-current="page" href="./zh.html" hreflang="zh">中文</a></div><a class="btn-signup" href="https://crazyrouter.com/console/token?utm_source=github&amp;utm_medium=github_pages&amp;utm_campaign=model-arena&amp;utm_content=tool_link" rel="noopener" target="_blank">获取 API Key</a>
 </div>
 </nav>
-<main>
+<main><aside class="search-guide" style="max-width:1120px;margin:20px auto;padding:20px;border:1px solid #d6e2da;background:#f4f8f3;line-height:1.8"><p>“GPT 满血”“残血”“降智”是用户对输出质量变化的非正式说法，不是统一的官方模型等级。测试可以发现某个接口在特定任务上的异常，但单道题、回答风格或模型自述都不能证明模型身份，也不能直接证明接口被替换。</p><a href="../gpt-full-vs-degraded-test/">阅读：GPT 满血与残血怎么测试？大模型降智排查与 API 对比</a></aside>
 <section class="page-heading">
 <div>
 <p class="eyebrow">大模型降智测试 · 模型对比 · 鹈鹕骑车 SVG + 糖果题</p>
-<h1>大模型降智测试与模型对比：GPT-6 vs Claude vs DeepSeek vs Kimi</h1>
+<h1>GPT 满血 / 残血测试与大模型降智排查</h1>
 <p class="lead">用你自己的 API Key，对最多四个模型同时运行 manxue.ai 带火的两道测试题——鹈鹕骑自行车的 SVG 循环动画，以及一道抽屉原理糖果题——并排对比它们的回答。</p>
 </div>
 <div class="heading-links">

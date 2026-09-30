@@ -55,3 +55,13 @@ Once you choose a model, [check current prices](https://crazyrouter.com/models?u
 - [Release notes](docs/releases/2026-09-30.md) · [Measurement and publishing guide](docs/github-growth.md)
 
 Each component retains its own license and third-party notices; this repository does not relicense model vocabularies or upstream examples.
+
+## Practical guides by search intent
+
+- [Token 是什么？中文怎么算、1K/1M Token 与分词器对比](https://xujfcn.github.io/crazyrouter-tools/github/what-is-a-token/)
+- [API 费用怎么算？GPT、Claude、DeepSeek Token 计费计算器](https://xujfcn.github.io/crazyrouter-tools/github/api-cost-calculator/)
+- [GPT 满血与残血怎么测试？大模型降智排查与 API 对比](https://xujfcn.github.io/crazyrouter-tools/github/gpt-full-vs-degraded-test/)
+- [生图 AI 哪个好？GPT Image、Nano Banana、Seedream 同提示词对比](https://xujfcn.github.io/crazyrouter-tools/github/ai-image-generator-comparison/)
+- [JEV 是什么？JEV 1.13 在线体验、分类判断与 Agent 路由示例](https://xujfcn.github.io/crazyrouter-tools/github/jev-playground-guide/)
+
+[Keyword and canonical map](docs/seo-keyword-map.md)

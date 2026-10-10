@@ -36,7 +36,7 @@ Click any image for a full-size lightbox. The gallery is data: every model name,
 ## Example request
 
 ```bash
-curl https://crazyrouter.com/v1/images/generations?utm_source=github&utm_campaign=image-arena&utm_content=readme_12__en&utm_medium=github_readme \
+curl https://crazyrouter.com/v1/images/generations \
   -H "Authorization: Bearer $API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -110,6 +110,6 @@ Guarde a chave de API numa variável de ambiente e não a publique. Os nomes dos
 import os
 from openai import OpenAI
 
-client = OpenAI(base_url="https://crazyrouter.com/v1?utm_source=github&utm_campaign=image-arena&utm_content=readme__en&utm_medium=github_readme", api_key=os.environ["CRAZYROUTER_API_KEY"])
+client = OpenAI(base_url="https://crazyrouter.com/v1", api_key=os.environ["CRAZYROUTER_API_KEY"])
 image = client.images.generate(model="gpt-image-2", prompt="A red bicycle", size="1024x1024", n=1)
 ```

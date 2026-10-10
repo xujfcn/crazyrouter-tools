@@ -24,14 +24,14 @@ Score is a probability-weighted mean of zero-indexed levels, so it can be fracti
 2. Paste your own Crazyrouter API token. Previewing a request does not require a key.
 3. Run the decision and inspect answers, probability distributions, latency, token usage, and raw JSON.
 
-The browser calls `https://crazyrouter.com/api/alpha/decisions`?utm_source=github&utm_campaign=jev-playground&utm_content=readme_04__en&utm_medium=github_readme directly. Your key is held in page memory and is not stored in localStorage, sessionStorage, or cookies. The Space does not provide a shared API key or free inference. Actual requests use your Crazyrouter balance and are not automatically retried. An upstream-reported cost is not the final Crazyrouter charge; consult your usage logs.
+The browser calls `https://crazyrouter.com/api/alpha/decisions` directly. Your key is held in page memory and is not stored in localStorage, sessionStorage, or cookies. The Space does not provide a shared API key or free inference. Actual requests use your Crazyrouter balance and are not automatically retried. An upstream-reported cost is not the final Crazyrouter charge; consult your usage logs.
 
 The public model alias is `jev-1.13`; this playground sends `typesafe/jev-1.13`. The resolved version is shown in the response. Use the **Decisions API**, not a Chat Completions endpoint.
 
 ## Example request
 
 ```bash
-curl https://crazyrouter.com/api/alpha/decisions?utm_source=github&utm_campaign=jev-playground&utm_content=readme_05__en&utm_medium=github_readme \
+curl https://crazyrouter.com/api/alpha/decisions \
   -H "Authorization: Bearer $CRAZYROUTER_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"jev-1.13","state":"Our payment integration is down and customers cannot check out.","questions":{"is_urgent":{"type":"noul","instructions":"Does this issue require urgent attention?"},"department":{"type":"choice","instructions":"Which team should handle this?","criteria":{"technical":"Bugs or integration failures","billing":"Invoices or subscriptions","sales":"Pricing or purchasing"}}}}'
@@ -101,7 +101,7 @@ Guarde a chave de API numa variável de ambiente e não a publique. Os nomes dos
 [Modelos e preços](https://crazyrouter.com/pt/pricing?utm_source=github&utm_campaign=jev-playground&utm_content=guide_prices__pt&utm_medium=github_readme) · [Criar chave de API](https://crazyrouter.com/console/token?utm_source=github&utm_campaign=jev-playground&utm_content=guide_api_key__pt&utm_medium=github_readme)
 
 ```bash
-curl https://crazyrouter.com/api/alpha/decisions?utm_source=github&utm_campaign=jev-playground&utm_content=readme__en&utm_medium=github_readme \
+curl https://crazyrouter.com/api/alpha/decisions \
   -H "Authorization: Bearer $CRAZYROUTER_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"model":"jev-1.13","state":"The payment service is down.","questions":{"urgent":{"type":"noul","instructions":"Does this need urgent attention?"}}}'

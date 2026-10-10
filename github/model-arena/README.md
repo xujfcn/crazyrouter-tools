@@ -34,7 +34,7 @@ Below the arena, a **Showcase** section shows real answers from one run of seven
 ## Example request
 
 ```bash
-curl https://crazyrouter.com/v1/chat/completions?utm_source=github&utm_campaign=model-arena&utm_content=readme_11__en&utm_medium=github_readme \
+curl https://crazyrouter.com/v1/chat/completions \
   -H "Authorization: Bearer $API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -122,7 +122,7 @@ Guarde a chave de API numa variável de ambiente e não a publique. Os nomes dos
 import os
 from openai import OpenAI
 
-client = OpenAI(base_url="https://crazyrouter.com/v1?utm_source=github&utm_campaign=model-arena&utm_content=readme__en&utm_medium=github_readme", api_key=os.environ["CRAZYROUTER_API_KEY"])
+client = OpenAI(base_url="https://crazyrouter.com/v1", api_key=os.environ["CRAZYROUTER_API_KEY"])
 response = client.chat.completions.create(
     model="gpt-4o-mini", messages=[{"role": "user", "content": "Hello"}], max_tokens=64
 )

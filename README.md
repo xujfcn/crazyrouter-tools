@@ -2,7 +2,7 @@
 
 Compare tokenizers, estimate API costs, and explore text and image model outputs before integrating an API.
 
-**[Open the tools](https://xujfcn.github.io/crazyrouter-tools/github/)** · [中文](README.zh-CN.md) · [API documentation](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=tools_hub&utm_content=docs)
+**[Open the tools](https://xujfcn.github.io/crazyrouter-tools/github/)** · [中文](README.zh-CN.md) · [API documentation](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=crazyrouter-tools&utm_content=readme_01__en)
 
 | Tool | Use it for | Online | Source / guide |
 | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ npm run dev
 
 ## From comparison to integration
 
-Once you choose a model, [check current prices](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=tools_hub&utm_content=pricing), [read the API examples](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=tools_hub&utm_content=integration), or [create a CrazyRouter account](https://crazyrouter.com/register?utm_source=github&utm_medium=github_readme&utm_campaign=tools_hub&utm_content=register). Tool access remains open whether or not you use CrazyRouter.
+Once you choose a model, [check current prices](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=crazyrouter-tools&utm_content=readme_02__en), [read the API examples](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=crazyrouter-tools&utm_content=readme_03__en), or [create a CrazyRouter account](https://crazyrouter.com/register?utm_source=github&utm_medium=github_readme&utm_campaign=crazyrouter-tools&utm_content=readme_04__en). Tool access remains open whether or not you use CrazyRouter.
 
 ## Accuracy, privacy and contributions
 

@@ -1,6 +1,12 @@
 import * as core from './core.js';
 
 const lang = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
+function channelLink(path, placement) {
+  if (location.hostname === 'crazyrouter.com') return path;
+  const github = location.hostname.endsWith('.github.io');
+  const params = new URLSearchParams({utm_source: github ? 'github' : 'huggingface', utm_medium: github ? 'github_pages' : 'space', utm_campaign: github ? 'model-arena' : 'model_arena', utm_content: `model_arena__${lang}__${placement}`});
+  return `https://crazyrouter.com${path}?${params}`;
+}
 const T = {
   en: {
     queued: 'Queued', running: 'Running', ok: 'Pass', fail: 'Fail', aborted: 'Aborted', timeout: s => `Timed out after ${s} s`,
@@ -337,7 +343,7 @@ function modelPagePath(model) {
 function modelHeading(model) {
   const h = el('h3');
   const href = modelPagePath(model);
-  if (href) { const a = el('a', 'model-link', model); a.href = 'https://crazyrouter.com' + href + (href.includes('?') ? '&' : '?') + 'utm_source=github&utm_medium=github_pages&utm_campaign=' + encodeURIComponent('model-arena') + '&utm_content=model_link'; h.append(a); }
+  if (href) { const a = el('a', 'model-link', model); a.href = channelLink(href, 'model_link'); h.append(a); }
   else h.textContent = model;
   return h;
 }
@@ -533,8 +539,8 @@ function buildAccountBar() {
 function showSignedOut(status) {
   status.replaceChildren();
   status.append(el('span', null, T.signInPrompt + ' '));
-  const login = el('a', 'account-link', T.signIn); login.href = 'https://crazyrouter.com/login?utm_source=github&utm_medium=github_pages&utm_campaign=model-arena&utm_content=sign_in';
-  const register = el('a', 'account-link', T.register); register.href = 'https://crazyrouter.com/register?utm_source=github&utm_medium=github_pages&utm_campaign=model-arena&utm_content=register';
+  const login = el('a', 'account-link', T.signIn); login.href = channelLink('/login', 'sign_in');
+  const register = el('a', 'account-link', T.register); register.href = channelLink('/register', 'register');
   status.append(login, ' · ', register);
 }
 

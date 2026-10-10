@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28",
+  "generated": "2026-10-10",
   "models": [
     "MiniMax-M2.5",
     "MiniMax-M2.7",
@@ -7,6 +7,7 @@
     "claude-fable-5",
     "claude-fable-5-1",
     "claude-haiku-4-5",
+    "claude-haiku-5-5",
     "claude-opus-4-5",
     "claude-opus-4-6",
     "claude-opus-4-7",
@@ -16,7 +17,9 @@
     "claude-sonnet-4-5",
     "claude-sonnet-4-6",
     "claude-sonnet-5",
+    "claude-sonnet-5-5",
     "deepseek-v4-flash",
+    "deepseek-v4-flash-vision-exp",
     "deepseek-v4-pro",
     "deepseek-v4.1-flash",
     "doubao-seed-1-6-251015",
@@ -68,6 +71,7 @@
     "gpt-6-astra",
     "gpt-6-luna",
     "gpt-6-sol",
+    "gpt-6.1-sol",
     "grok-4-1-fast-reasoning",
     "grok-4-20-non-reasoning",
     "grok-4-20-reasoning",
@@ -101,6 +105,7 @@
     "qwen3.7-max",
     "qwen3.8-flash",
     "qwen3.8-max",
+    "qwen3.8-omni-flash",
     "qwq-32b",
     "youtu-vita"
   ]

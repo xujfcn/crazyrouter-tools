@@ -1,11 +1,13 @@
-[Live demo](https://xujfcn.github.io/crazyrouter-tools/github/model-arena/) · [All tools](../../README.md)
-
+[Live demo](https://xujfcn.github.io/crazyrouter-tools/github/model-arena/)
 
 # LLM Degradation Test & Model Comparison: GPT-6 vs Claude vs DeepSeek vs Kimi (Pelican SVG + Candy Puzzle)
 
 Run the two probes made popular by [manxue-ai](https://github.com/w1196396546/manxue-ai) — an animated **pelican riding a bicycle** SVG and the **candy pigeonhole puzzle** — against up to four models at once through any OpenAI-compatible endpoint, with your own API key, and compare the answers side by side in the browser. English and Chinese interfaces share the same page logic.
 
-**[Run it on Crazyrouter without an API key](https://crazyrouter.com/tools/model-arena/?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)** · **[Browse Crazyrouter models and prices](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)** · **[Create a Crazyrouter API key](https://crazyrouter.com/console/token?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)** · **[API documentation](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)**
+**[Run it on Crazyrouter without an API key](https://crazyrouter.com/tools/model-arena/?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_01__en)** · **[Browse Crazyrouter models and prices](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_02__en)** · **[Create a Crazyrouter API key](https://crazyrouter.com/console/token?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_03__en)** · **[API documentation](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_04__en)**
+
+<!-- crazyrouter-site-links -->
+**Model pages with live prices, real samples and code:** [Claude models & prices](https://crazyrouter.com/en/models/anthropic?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_05__en) · [OpenAI models & prices](https://crazyrouter.com/en/models/openai?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_06__en) · [Gemini models & prices](https://crazyrouter.com/en/models/google?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_07__en) · [DeepSeek models & prices](https://crazyrouter.com/en/models/deepseek?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_08__en) · [All vendors](https://crazyrouter.com/en/models?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_09__en) · [Per-model price comparison (official vs Azure / Bedrock / Vertex / OpenRouter)](https://crazyrouter.com/en/pricing?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_10__en)
 
 ## The two probes
 
@@ -32,7 +34,7 @@ Below the arena, a **Showcase** section shows real answers from one run of seven
 ## Example request
 
 ```bash
-curl https://crazyrouter.com/v1/chat/completions \
+curl https://crazyrouter.com/v1/chat/completions?utm_source=github&utm_campaign=model-arena&utm_content=readme_11__en&utm_medium=github_readme \
   -H "Authorization: Bearer $API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -65,15 +67,64 @@ Key 只保留在页面内存中，只发送给你填写的接口地址，不写�
 
 **示例与精选模型。** 竞技场下方的“示例”区展示了 7 个前沿模型——`gpt-6-astra`、`gpt-5`、`claude-opus-5-5`、`claude-fable-5-1`、`deepseek-v4-pro`、`kimi-k3`、`glm-5.3`——在 2026-09-28（UTC）经 Crazyrouter 实跑一次的真实回答：同样的提示词、所有模型共用同一场景和校验码、Chat Completions、未发送推理力度。首日失败的题目已于 2026-09-29 用同一场景和校验码重跑（每次尝试都记录在 `samples.json` 的 attempts 里）；重跑使用 32000 的输出上限（见上文），其中 `kimi-k3` 和 `glm-5.3` 还放宽到 900 秒，因为它们会先推理好几分钟才开始输出，而页面实时运行仍是 300 秒上限；每条记录都写明了实际的上限和超时。它们是样本，不是基准测试：当天失败的模型明天可能通过，反之亦然。样本以 `samples.json` 随页面发布，页面只把它当作数据——每个 SVG 都会在你的浏览器里经过与实时运行完全相同的校验后才绘制成图片，所有字符串都以文本方式插入。这 7 个模型同时固定在模型列表顶部的“精选”分组；其余模型按字母排序，并已剔除无法回答对话提示词的图片、视频、向量、重排、语音和音乐模型。
 
-- [在 Crazyrouter 上无需 API Key 直接运行](https://crazyrouter.com/tools/zh/model-arena/?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)
-- [Crazyrouter 模型与价格](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)
-- [创建 Crazyrouter API Key](https://crazyrouter.com/console/token?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)
-- [Crazyrouter API 文档](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)
+- [在 Crazyrouter 上无需 API Key 直接运行](https://crazyrouter.com/tools/zh/model-arena/?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_12__en)
+- [Crazyrouter 模型与价格](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_13__en)
+- [创建 Crazyrouter API Key](https://crazyrouter.com/console/token?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_14__en)
+- [Crazyrouter API 文档](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_15__en)
 
 ## References and attribution
 
 - [manxue-ai on GitHub](https://github.com/w1196396546/manxue-ai) — the reference implementation whose prompts and probe rules this Space reuses
-- [Crazyrouter model catalogue](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)
-- [Crazyrouter API documentation](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=model_arena)
+- [Crazyrouter model catalogue](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_16__en)
+- [Crazyrouter API documentation](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=model-arena&utm_content=readme_17__en)
 
 Prompts and probe rules are from manxue-ai, Apache-2.0; this Space is maintained by Crazyrouter and is not affiliated with manxue.ai. No model weights are hosted here. Information checked on September 29, 2026; model availability and pricing may change.
+
+<!-- channel-localized-access -->
+
+## API access: 日本語 / 한국어 / Русский / Português
+
+Documentation below is localized. The interactive interfaces retain their existing languages. Updated 2026-10-10.
+
+### 日本語：API 接続と料金
+
+料金は USD 表示です。API 呼び出しは従量課金です。長いコンテキストでは料金区分が変わる場合があります。データセットの全区分を確認してください。
+
+API キーは環境変数に設定し、公開しないでください。モデル名は現在のモデル一覧で確認できます。
+
+[モデルと料金](https://crazyrouter.com/ja/pricing?utm_source=github&utm_campaign=model-arena&utm_content=guide_prices__ja&utm_medium=github_readme) · [API キーを作成](https://crazyrouter.com/console/token?utm_source=github&utm_campaign=model-arena&utm_content=guide_api_key__ja&utm_medium=github_readme)
+
+### 한국어: API 연결 및 요금
+
+요금은 USD 기준이며 API 호출은 사용량에 따라 청구됩니다. 긴 컨텍스트에는 다른 요금 구간이 적용될 수 있습니다. 데이터셋의 전체 구간을 확인하세요.
+
+API 키는 환경 변수로 설정하고 공개하지 마세요. 현재 모델 목록에서 모델 이름을 확인할 수 있습니다.
+
+[모델 및 요금](https://crazyrouter.com/ko/pricing?utm_source=github&utm_campaign=model-arena&utm_content=guide_prices__ko&utm_medium=github_readme) · [API 키 만들기](https://crazyrouter.com/console/token?utm_source=github&utm_campaign=model-arena&utm_content=guide_api_key__ko&utm_medium=github_readme)
+
+### Русский: подключение API и цены
+
+Цены указаны в USD. Вызовы API оплачиваются по использованию. Для длинного контекста может действовать другой тариф. Все диапазоны приведены в наборе данных.
+
+Храните ключ API в переменной окружения и не публикуйте его. Имена моделей доступны в текущем каталоге.
+
+[Модели и цены](https://crazyrouter.com/ru/pricing?utm_source=github&utm_campaign=model-arena&utm_content=guide_prices__ru&utm_medium=github_readme) · [Создать ключ API](https://crazyrouter.com/console/token?utm_source=github&utm_campaign=model-arena&utm_content=guide_api_key__ru&utm_medium=github_readme)
+
+### Português: acesso à API e preços
+
+Os preços são em USD. As chamadas de API são cobradas por uso. Contextos longos podem ter outra faixa de preço. Consulte todas as faixas no conjunto de dados.
+
+Guarde a chave de API numa variável de ambiente e não a publique. Os nomes dos modelos estão no catálogo atual.
+
+[Modelos e preços](https://crazyrouter.com/pt/pricing?utm_source=github&utm_campaign=model-arena&utm_content=guide_prices__pt&utm_medium=github_readme) · [Criar chave de API](https://crazyrouter.com/console/token?utm_source=github&utm_campaign=model-arena&utm_content=guide_api_key__pt&utm_medium=github_readme)
+
+```python
+import os
+from openai import OpenAI
+
+client = OpenAI(base_url="https://crazyrouter.com/v1?utm_source=github&utm_campaign=model-arena&utm_content=readme__en&utm_medium=github_readme", api_key=os.environ["CRAZYROUTER_API_KEY"])
+response = client.chat.completions.create(
+    model="gpt-4o-mini", messages=[{"role": "user", "content": "Hello"}], max_tokens=64
+)
+print(response.choices[0].message.content)
+```

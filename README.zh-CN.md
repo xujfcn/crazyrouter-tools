@@ -30,7 +30,7 @@ python -m http.server 8000
 
 ## 下一步：接入应用
 
-[查看当前价格](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=tools_hub&utm_content=zh_pricing) · [API 文档](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=tools_hub&utm_content=zh_docs) · [创建账号](https://crazyrouter.com/register?utm_source=github&utm_medium=github_readme&utm_campaign=tools_hub&utm_content=zh_register)
+[查看当前价格](https://crazyrouter.com/models?utm_source=github&utm_medium=github_readme&utm_campaign=crazyrouter-tools&utm_content=readme_01__zh) · [API 文档](https://docs.crazyrouter.com/?utm_source=github&utm_medium=github_readme&utm_campaign=crazyrouter-tools&utm_content=readme_02__zh) · [创建账号](https://crazyrouter.com/register?utm_source=github&utm_medium=github_readme&utm_campaign=crazyrouter-tools&utm_content=readme_03__zh)
 
 分词器输入只在浏览器内处理；竞技场的密钥只保留在页面内存中，并发送给你选择的 API 地址。对外链接仅携带来源参数，不包含输入文本或密钥。价格快照与样例均有时间口径，请在使用前核对。
 

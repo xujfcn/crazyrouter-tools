@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29",
+  "generated": "2026-10-10",
   "models": [
     "aigc-image-kling-3.0",
     "cogview-3-flash",
@@ -14,6 +14,7 @@
     "gpt-image-2.5-sunburst",
     "nano-banana",
     "nano-banana-2",
+    "nano-banana-2.1",
     "nano-banana-pro",
     "qwen-image-2.0",
     "qwen-image-max",

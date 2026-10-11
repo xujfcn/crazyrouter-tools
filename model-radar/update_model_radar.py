@@ -3,7 +3,7 @@ import csv
 import json
 from pathlib import Path
 
-BASE = Path('/root/.openclaw/workspace/crazyrouter-tools/model-radar')
+BASE = Path(__file__).resolve().parent
 SOURCES = BASE / 'sources'
 OUT = BASE / 'data.js'
 
@@ -118,6 +118,9 @@ def main():
                     'notes': f'Auto-imported from OpenRouter rankings: {slug}',
                     'ranks': {'openrouter': int(row['rank'])},
                 })
+
+    for model in models:
+        model['evidence'] = {'status': 'unverified', 'reviewedAt': None, 'collectedAt': None, 'sourceUrls': [SOURCE_META[key]['url'] for key in model.get('ranks', {}) if key in SOURCE_META]}
 
     payload = {
         'weights': models_config['weights'],

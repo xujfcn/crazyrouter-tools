@@ -46,6 +46,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 5,
         "artificial": 4,
         "opencompass": 12
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -66,6 +76,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 8,
         "artificial": 6,
         "opencompass": 15
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -86,6 +106,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 4,
         "artificial": 5,
         "opencompass": 9
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -106,6 +136,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 14,
         "artificial": 8,
         "opencompass": 22
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -126,6 +166,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 11,
         "artificial": 9,
         "opencompass": 4
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -147,6 +197,17 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 18,
         "artificial": 13,
         "opencompass": 8
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://openrouter.ai/rankings",
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -168,6 +229,17 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 6,
         "artificial": 3,
         "opencompass": 10
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://openrouter.ai/rankings",
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -189,6 +261,17 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 3,
         "artificial": 2,
         "opencompass": 7
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://openrouter.ai/rankings",
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -208,6 +291,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 7,
         "artificial": 7,
         "opencompass": 18
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -228,6 +321,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 10,
         "artificial": 11,
         "opencompass": 5
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -247,6 +350,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 16,
         "artificial": 16,
         "opencompass": 20
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -266,6 +379,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 22,
         "artificial": 17,
         "opencompass": 24
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -287,6 +410,17 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 2,
         "artificial": 1,
         "opencompass": 6
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://openrouter.ai/rankings",
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -307,6 +441,16 @@ window.MODEL_RADAR_DATA = {
         "lmsys": 1,
         "artificial": 10,
         "opencompass": 13
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://lmarena.ai/",
+          "https://artificialanalysis.ai/",
+          "https://rank.opencompass.org.cn/"
+        ]
       }
     },
     {
@@ -325,6 +469,14 @@ window.MODEL_RADAR_DATA = {
       "notes": "Fast-rising traffic signal on OpenRouter; worth watching for demand.",
       "ranks": {
         "openrouter": 1
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://openrouter.ai/rankings"
+        ]
       }
     },
     {
@@ -343,6 +495,14 @@ window.MODEL_RADAR_DATA = {
       "notes": "Could become useful if Chinese-market demand continues rising.",
       "ranks": {
         "openrouter": 6
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://openrouter.ai/rankings"
+        ]
       }
     },
     {
@@ -361,6 +521,14 @@ window.MODEL_RADAR_DATA = {
       "notes": "Fresh model with strong novelty and content marketing value.",
       "ranks": {
         "openrouter": 3
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://openrouter.ai/rankings"
+        ]
       }
     },
     {
@@ -379,6 +547,14 @@ window.MODEL_RADAR_DATA = {
       "notes": "Internal OpenRouter ecosystem signal; monitor rather than feature.",
       "ranks": {
         "openrouter": 7
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://openrouter.ai/rankings"
+        ]
       }
     },
     {
@@ -394,7 +570,13 @@ window.MODEL_RADAR_DATA = {
         "experiments"
       ],
       "notes": "Good market-signal model, but less critical than major provider flagships.",
-      "ranks": {}
+      "ranks": {},
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": []
+      }
     },
     {
       "key": "or_minimax-minimax-m2-5-20260211",
@@ -411,7 +593,20 @@ window.MODEL_RADAR_DATA = {
       "notes": "Auto-imported from OpenRouter rankings: minimax/minimax-m2.5-20260211",
       "ranks": {
         "openrouter": 2
+      },
+      "evidence": {
+        "status": "unverified",
+        "reviewedAt": "2026-10-11",
+        "collectedAt": null,
+        "sourceUrls": [
+          "https://openrouter.ai/rankings"
+        ]
       }
     }
-  ]
+  ],
+  "evidencePolicy": {
+    "reviewedAt": "2026-10-11",
+    "collectedAt": null,
+    "historicalScoresVerified": false
+  }
 };

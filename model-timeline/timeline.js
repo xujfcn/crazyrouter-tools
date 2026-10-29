@@ -9,7 +9,7 @@
   if (rows.size !== data.events.length) return; // Preserve the complete static fallback.
   const byId = new Map(data.events.map(event => [event.id, event]));
   const filters = ['search', 'provider', 'category', 'period', 'source', 'sort'];
-  const defaults = {search: '', provider: 'all', category: 'all', period: 'recent', source: 'all', sort: 'newest', view: 'list'};
+  const defaults = {search: '', provider: 'all', category: 'all', period: 'recent', source: 'all', sort: 'newest', view: 'timeline'};
   let state = {...defaults};
   let visible = [];
   let zoom = 1;
@@ -48,7 +48,7 @@
       if (value !== null && (key === 'search' || Array.from($(key).options).some(option => option.value === value))) state[key] = value;
       $(key).value = state[key];
     }
-    if (params.get('view') === 'timeline') state.view = 'timeline';
+    if (['list', 'timeline'].includes(params.get('view'))) state.view = params.get('view');
   }
   function writeURL() {
     const url = new URL(location.href);

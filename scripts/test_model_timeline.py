@@ -84,6 +84,10 @@ with sync_playwright() as p:
     for lang in ('','zh/','es/','zh-TW/','ja/','ru/'):
         page.goto(f'{base}/{lang}model-timeline/',wait_until='networkidle')
         expect(page.locator('html')).to_have_class('enhanced')
+        expect(page.locator('#timelinePanel')).to_be_visible()
+        expect(page.locator('#releaseList')).to_be_hidden()
+        expect(page.locator('#timelineView')).to_have_attribute('aria-pressed','true')
+        assert page.locator('.chart-event').count()==len(recent)
         assert ids(page)==recent,lang
         assert page.locator('img').evaluate_all('(xs)=>xs.every(i=>i.complete&&i.naturalWidth>0)'),lang
         for width in (1440,768,390,320):
@@ -113,11 +117,15 @@ with sync_playwright() as p:
     assert ids(page)==recent
     page.locator('#period').select_option('2025')
     assert ids(page)=={e['id'] for e in events if e['date'].startswith('2025')}
+    page.locator('#listView').click()
+    assert 'view=list' in page.url
+    page.reload(wait_until='networkidle')
+    expect(page.locator('#releaseList')).to_be_visible()
+    expect(page.locator('#timelinePanel')).to_be_hidden()
     page.locator('#sort').select_option('oldest')
     dates=page.locator('#releaseList .release-date time').evaluate_all('(ts)=>ts.map(t=>t.dateTime)')
     assert dates==sorted(dates)
     page.locator('#reset').click()
-    page.locator('#timelineView').click()
     expect(page.locator('#timelinePanel')).to_be_visible()
     assert page.locator('.chart-event').count()==len(recent)
     check_chart(page)

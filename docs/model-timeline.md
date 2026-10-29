@@ -59,8 +59,9 @@ No browser request uses an API key. Comparison pages and their data are separate
 
 ## Interaction and verification
 
-The default list shows the current month and two preceding calendar months,
-newest first. Search, provider, type, period and date-source filters combine.
+The default view is the provider timeline, showing the current month and two
+preceding calendar months. The release list is available through the view switch
+and sorts newest first. Search, provider, type, period and date-source filters combine.
 URL parameters preserve the selection across reloads and language changes.
 Mobile secondary filters are expandable; release sources remain visible.
 

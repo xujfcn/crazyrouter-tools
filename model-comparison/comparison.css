@@ -258,10 +258,9 @@ button:not(:disabled):active {
 }
 .filters {
   display: grid;
-  grid-template-columns: minmax(240px, 1.8fr) minmax(170px, 1fr) minmax(
-      180px,
-      1fr
-    ) auto;
+  grid-template-columns:
+    minmax(240px, 1.8fr) minmax(170px, 1fr) minmax(180px, 1fr)
+    auto;
   gap: 15px;
   align-items: end;
   padding: 0 26px 22px;
@@ -466,6 +465,95 @@ input[type='checkbox'] {
   font-weight: 650;
   font-size: 12px;
   letter-spacing: -0.4px;
+}
+.provider-mark img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.benchmark-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0 26px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+.benchmark-notice h2 {
+  font-size: 14px;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+.benchmark-notice p {
+  margin: 2px 0;
+}
+.benchmark-credit {
+  display: grid;
+  gap: 3px;
+  flex: none;
+}
+.benchmark-credit a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+.benchmark-col {
+  width: 210px;
+}
+.benchmark-col small {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.benchmark-score {
+  font-size: 17px;
+  font-weight: 650;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.benchmark-score small {
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 2px;
+}
+.benchmark-variant {
+  display: block;
+  margin-top: 4px;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.benchmark-variant:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+.comparison-table .benchmark-variant {
+  font-size: 12px;
+}
+#modelTable {
+  min-width: 980px;
+}
+@media (max-width: 640px) {
+  .benchmark-notice {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .provider-mark img {
+    width: 20px;
+    height: 20px;
+  }
+  .benchmark-col {
+    width: 165px;
+  }
+  #modelTable {
+    min-width: 790px;
+  }
 }
 .model-name {
   font-weight: 600;

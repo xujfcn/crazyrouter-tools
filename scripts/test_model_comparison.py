@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(os.environ.get('COMPARISON_TEST_OUTPUT', ROOT / '.test-output'))
 OUT.mkdir(parents=True, exist_ok=True)
 catalog = json.loads((ROOT/'model-comparison/catalog.json').read_text(encoding='utf-8'))
+benchmarks = json.loads((ROOT/'model-comparison/benchmark-snapshot.json').read_text(encoding='utf-8'))
 locales = json.loads((ROOT/'model-comparison/locales.json').read_text(encoding='utf-8'))
 class Handler(SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -30,6 +31,26 @@ with sync_playwright() as p:
     page.on('response',lambda r:missing.append(r.url) if r.status>=400 and r.url.startswith(base) else None)
     page.goto(base+'/tools/model-comparison/',wait_until='networkidle')
     expect(page.locator('#tbody tr')).to_have_count(len(catalog['models']))
+    # Actual self-hosted logos must load, including after JS replaces static rows.
+    def check_logos(target, selector='#tbody .provider-mark img'):
+        expect(target.locator(selector)).to_have_count(39)
+        assert target.locator(selector).evaluate_all('(images)=>images.every(i=>i.complete && i.naturalWidth > 0)')
+    check_logos(page)
+    for _ in range(2):
+        page.locator('th[data-sort="gpqa"] button').click()
+        values=page.locator('#tbody [data-score]').evaluate_all('(cells)=>cells.map(c=>c.dataset.score)')
+        numbers=[float(v) for v in values if v != '']
+        assert len(numbers)==38 and values[-1]=='', 'Missing score must stay last'
+        descending=page.locator('th[data-sort="gpqa"]').get_attribute('aria-sort')=='descending'
+        assert numbers==sorted(numbers,reverse=descending)
+    # Compare visible scores AND version/source identity against the curated snapshot.
+    for model in catalog['models']:
+        row=page.locator('#tbody tr').filter(has=page.locator('input[data-name="'+model['name']+'"]'))
+        aa=benchmarks['models'][model['name']]
+        score=aa['scores']['gpqa']
+        expect(row.locator('.benchmark-cell')).to_contain_text('Not available' if score is None else f'{score*100:.1f}%')
+        expect(row.locator('.benchmark-variant')).to_have_attribute('href',aa['url'])
+        expect(row.locator('.benchmark-variant')).to_contain_text(aa['name'])
     # Null prices must stay after all numeric prices for either sort direction.
     for key, index in [('input',0),('output',1)]:
         for _ in range(2):
@@ -65,6 +86,11 @@ with sync_playwright() as p:
     expect(page.locator('#compareSection')).to_be_visible()
     expect(page.locator('#comparisonTable thead th')).to_have_count(5)
     for name in names: expect(page.locator('#comparisonTable')).to_contain_text(name)
+    for metric in ['GPQA','MMLU-Pro','LiveCodeBench','AA evaluated variant','Benchmark data collected']:
+        expect(page.locator('#comparisonTable')).to_contain_text(metric)
+    expect(page.locator('#comparisonTable')).to_contain_text('66.4%')
+    expect(page.locator('#comparisonTable')).to_contain_text('78.1%')
+    expect(page.locator('#comparisonTable')).to_contain_text('48.3%')
     page.screenshot(path=str(OUT/'comparison-desktop.png'),full_page=True)
     page.set_viewport_size({'width':390,'height':844})
     page.screenshot(path=str(OUT/'comparison-mobile.png'),full_page=True)
@@ -80,6 +106,8 @@ with sync_playwright() as p:
         page.goto(url,wait_until='networkidle')
         expect(page.locator('h1')).to_have_text(translation['title'])
         expect(page.locator('#tbody tr')).to_have_count(39)
+        check_logos(page)
+        expect(page.locator('.benchmark-notice')).to_contain_text(translation['benchmarkNote'].replace('{count}','38').replace('{total}','39'))
         expect(page.locator('#resultsCount')).to_contain_text('39')
         for width in [320,390,768,1440]:
             page.set_viewport_size({'width':width,'height':1000 if width>640 else 844})
@@ -102,6 +130,13 @@ with sync_playwright() as p:
     expect(fallback.locator('#tbody')).to_contain_text('$0.065')
     expect(fallback.locator('.filters')).to_be_hidden()
     expect(fallback.locator('.noscript-note')).to_be_visible()
+    check_logos(fallback)
+    expect(fallback.locator('#tbody')).to_contain_text('66.4%')
+    # Also verify relative image paths in localized non-JS pages.
+    for lang in ['zh','ja','ru']:
+        fallback.goto(base+'/tools/'+lang+'/model-comparison/',wait_until='networkidle')
+        check_logos(fallback)
+        expect(fallback.locator('#tbody')).to_contain_text('66.4%')
     browser.close()
 server.shutdown()
 report={'models':39,'snapshotPrices':17,'locales':list(locales),'widths':[320,390,768,1440],'checks':['null-safe sorting','keyboard sorting','search trimming','provider and price filters','empty reset','cross-filter comparison','four-model limit','remove and clear selection','no JavaScript fallback','viewport containment'],'pageErrors':errors,'missingLocalAssets':missing}

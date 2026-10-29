@@ -31,7 +31,17 @@
       ? `<span class="unavailable">${escape(t.unavailable)}</span>`
       : `<span class="price">$${number.format(value)}</span>`;
   const mark = (model) =>
-    `<span class="provider-mark" aria-hidden="true">${escape(providers[model.provider].mark)}</span>`;
+    `<span class="provider-mark"><img src="${escape(data.assets + providers[model.provider].logo)}" width="24" height="24" alt="" aria-hidden="true"></span>`;
+  const score = (model, key) => {
+    const value = model.benchmark?.scores[key];
+    return value == null
+      ? `<span class="unavailable">${escape(t.unavailable)}</span>`
+      : `<span class="benchmark-score">${(value * 100).toFixed(1)}<small>%</small></span>`;
+  };
+  const variant = (model) =>
+    model.benchmark
+      ? `<a class="benchmark-variant" href="${escape(model.benchmark.url)}" target="_blank" rel="noopener noreferrer">${escape(model.benchmark.name)} ↗</a>`
+      : `<span class="unavailable">${escape(t.unavailable)}</span>`;
   const announce = (message) => {
     $('announcement').textContent = message;
   };
@@ -74,6 +84,7 @@
         ) => `<tr${selected.has(model.name) ? ' class="is-selected"' : ''}>
       <td class="select-col"><label class="selection-hit"><input type="checkbox" data-name="${escape(model.name)}" aria-label="${escape(t.select + ' ' + model.name)}" ${selected.has(model.name) ? 'checked' : ''} ${selected.size >= 4 && !selected.has(model.name) ? 'disabled' : ''}></label></td>
       <td class="model-col"><div class="model-cell">${mark(model)}<div class="model-name">${escape(model.name)}<span class="model-provider">${escape(providers[model.provider].name)}</span></div></div></td>
+      <td class="benchmark-cell" data-score="${model.gpqa === null ? '' : model.gpqa}">${score(model, 'gpqa')}${variant(model)}</td>
       <td data-price="${model.input === null ? '' : model.input}">${price(model.input)}</td>
       <td data-price="${model.output === null ? '' : model.output}">${price(model.output)}</td>
       <td>${priced(model) ? `<a class="source-link" href="${source}" target="_blank" rel="noopener noreferrer">${escape(t.priceSource)} ↗</a>` : ''}<a class="source-link secondary" href="${providers[model.provider].url}" target="_blank" rel="noopener noreferrer">${escape(t.providerDocs)} ↗</a></td>
@@ -130,6 +141,11 @@
       `<caption class="sr-only">${escape(t.compareTitle)}</caption><thead><tr><th scope="col">${escape(t.metric)}</th>${list.map((model) => `<th scope="col"><div class="compare-model-top">${mark(model)}<button class="remove-model" type="button" data-remove="${escape(model.name)}" aria-label="${escape(t.remove + ' ' + model.name)}">×</button></div><span class="compare-model">${escape(model.name)}</span><span class="model-provider">${escape(providers[model.provider].name)}</span></th>`).join('')}</tr></thead><tbody>
       ${field(t.input, (model) => price(model.input))}
       ${field(t.output, (model) => price(model.output))}
+      ${field(t.gpqa, (model) => score(model, 'gpqa'))}
+      ${field(t.mmlu, (model) => score(model, 'mmlu_pro'))}
+      ${field(t.coding, (model) => score(model, 'livecodebench'))}
+      ${field(t.benchmarkVariant, (model) => variant(model))}
+      ${field(t.benchmarkDate, () => escape(data.benchmarkDate))}
       ${field(t.modelId, (model) => (model.modelId ? `<code>${escape(model.modelId)}</code>` : `<span class="unavailable">${escape(t.unavailable)}</span>`))}
       ${field(t.snapshot, (model) => (priced(model) ? snapshotDate : `<span class="unavailable">${escape(t.unavailable)}</span>`))}
       ${field(t.sources, (model) => `${priced(model) ? `<a class="source-link" href="${source}" target="_blank" rel="noopener noreferrer">${escape(t.priceSource)} ↗</a>` : ''}<a class="source-link secondary" href="${providers[model.provider].url}" target="_blank" rel="noopener noreferrer">${escape(t.providerDocs)} ↗</a>`)}
@@ -194,7 +210,8 @@
   document.querySelectorAll('th[data-sort] button').forEach((button) =>
     button.addEventListener('click', () => {
       const key = button.closest('th').dataset.sort;
-      sortDirection = sortKey === key ? -sortDirection : 1;
+      sortDirection =
+        sortKey === key ? -sortDirection : key === 'gpqa' ? -1 : 1;
       sortKey = key;
       renderRows();
       $('tableScroll').scrollTop = 0;

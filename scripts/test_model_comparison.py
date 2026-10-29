@@ -12,6 +12,12 @@ catalog=json.loads((ROOT/'model-comparison/catalog.json').read_text(encoding='ut
 benchmark=json.loads((ROOT/'model-comparison/benchmark-snapshot.json').read_text(encoding='utf-8'))
 locales=json.loads((ROOT/'model-comparison/locales.json').read_text(encoding='utf-8'))
 source=json.loads((ROOT/'model-comparison/pricing-source.json').read_text(encoding='utf-8'))
+locale_paths={'en':'','es':'es/','zh':'zh/','zh-TW':'zh-TW/','ja':'ja/','ru':'ru/'}
+pricing_paths={'en':'en/','es':'es/','zh':'zh/','zh-TW':'zh/','ja':'en/','ru':'en/'}
+assert set(locales)==set(locale_paths)
+sitemap=(ROOT/'sitemap.xml').read_text(encoding='utf-8')
+for lang in ['es','zh-TW']:
+    assert f'https://crazyrouter.com/tools/{locale_paths[lang]}model-comparison/' in sitemap
 models=catalog['models']
 total=len(models)
 assert {m['model_name'] for m in source['data']}=={m['modelId'] for m in models}
@@ -104,6 +110,18 @@ with sync_playwright() as p:
     for lang,t in locales.items():
         page.goto(base+'/tools/'+('' if lang=='en' else lang+'/')+'model-comparison/',wait_until='networkidle')
         expect(page.locator('h1')).to_have_text(t['title'])
+        expect(page.locator('html')).to_have_attribute('lang',lang)
+        expect(page.locator('link[rel="canonical"]')).to_have_attribute('href',f'https://crazyrouter.com/tools/{locale_paths[lang]}model-comparison/')
+        expect(page.locator('meta[property="og:url"]')).to_have_attribute('content',f'https://crazyrouter.com/tools/{locale_paths[lang]}model-comparison/')
+        expect(page.locator('.languages a')).to_have_count(6)
+        expect(page.locator('.languages a[aria-current="page"]')).to_have_count(1)
+        alternates=page.locator('link[rel="alternate"][hreflang]').evaluate_all('(links)=>Object.fromEntries(links.map(link=>[link.hreflang,link.href]))')
+        for code,path in locale_paths.items():
+            assert alternates[code]==f'https://crazyrouter.com/tools/{path}model-comparison/'
+        assert alternates['x-default']=='https://crazyrouter.com/tools/model-comparison/'
+        pricing_url=f'https://crazyrouter.com/{pricing_paths[lang]}models'
+        expect(page.locator('.header-nav > a').first).to_have_attribute('href',pricing_url)
+        assert page.locator('.billing-cell a').first.get_attribute('href').startswith(pricing_url+'?search=')
         logos(page)
         expect(page.locator('#tbody tr')).to_have_count(total)
         for width in [320,390,768,1440]:
@@ -112,8 +130,14 @@ with sync_playwright() as p:
             for field in page.locator('.field input,.field select,.filters button').all():
                 box=field.bounding_box()
                 assert box and box['width']>20 and box['x']>=0 and box['x']+box['width']<=width+1,(lang,width,box)
-            if lang in ['en','zh'] and width in [390,1440]:
+            if lang in ['en','zh','es','zh-TW'] and width in [320,390,1440]:
                 page.screenshot(path=str(OUT/f'after-{lang}-{width}.png'),full_page=True)
+        if lang in ['es','zh-TW']:
+            for name in ['gpt-4.1-mini','claude-haiku-4-5']:
+                page.locator('#search').fill(name)
+                page.locator(f'#tbody input[data-name="{name}"]').check()
+            page.locator('#compareButton').click()
+            assert page.locator('#comparisonTable a[href^="https://crazyrouter.com/"]').first.get_attribute('href').startswith(pricing_url+'?search=')
     nojs=browser.new_context(java_script_enabled=False)
     nojs.route('https://**',lambda r:r.abort())
     fallback=nojs.new_page()
@@ -125,7 +149,7 @@ with sync_playwright() as p:
         expect(fallback.locator('.filters')).to_be_hidden()
     browser.close()
 server.shutdown()
-report={'models':total,'releaseDates':len(dates),'locales':list(locales),'widths':[320,390,768,1440],'checks':['pricing-page set equality','null-last release/price/metric sorting','four metric scales','type and quote filtering','full source matching','cross-filter comparison','four-model limit','no-JS dates/logos','viewport containment'],'errors':errors,'missingAssets':missing}
+report={'models':total,'releaseDates':len(dates),'locales':list(locales),'widths':[320,390,768,1440],'checks':['pricing-page set equality','locale metadata and hreflang','localized pricing links','null-last release/price/metric sorting','four metric scales','type and quote filtering','full source matching','cross-filter comparison','four-model limit','no-JS dates/logos','viewport containment'],'errors':errors,'missingAssets':missing}
 (OUT/'checks.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
 print(json.dumps(report))
 assert not errors and not missing

@@ -2,6 +2,7 @@ https://crazyrouter.com/tools/
 https://crazyrouter.com/tools/api-error-code-explainer/
 https://crazyrouter.com/tools/background-agent-worktree-launcher/
 https://crazyrouter.com/tools/base-url-config-generator/
+https://crazyrouter.com/tools/es/model-comparison/
 https://crazyrouter.com/tools/image-arena/
 https://crazyrouter.com/tools/ja/
 https://crazyrouter.com/tools/ja/background-agent-worktree-launcher/
@@ -9,20 +10,17 @@ https://crazyrouter.com/tools/ja/base-url-config-generator/
 https://crazyrouter.com/tools/ja/model-comparison/
 https://crazyrouter.com/tools/ja/model-radar/
 https://crazyrouter.com/tools/ja/model-timeline/
-https://crazyrouter.com/tools/ja/pricing-calculator/
 https://crazyrouter.com/tools/jev-decision-playground/
 https://crazyrouter.com/tools/model-arena/
 https://crazyrouter.com/tools/model-comparison/
 https://crazyrouter.com/tools/model-radar/
 https://crazyrouter.com/tools/model-timeline/
-https://crazyrouter.com/tools/pricing-calculator/
 https://crazyrouter.com/tools/ru/
 https://crazyrouter.com/tools/ru/background-agent-worktree-launcher/
 https://crazyrouter.com/tools/ru/base-url-config-generator/
 https://crazyrouter.com/tools/ru/model-comparison/
 https://crazyrouter.com/tools/ru/model-radar/
 https://crazyrouter.com/tools/ru/model-timeline/
-https://crazyrouter.com/tools/ru/pricing-calculator/
 https://crazyrouter.com/tools/tokenizer-comparison/
 https://crazyrouter.com/tools/zh/
 https://crazyrouter.com/tools/zh/background-agent-worktree-launcher/
@@ -33,4 +31,4 @@ https://crazyrouter.com/tools/zh/model-arena/
 https://crazyrouter.com/tools/zh/model-comparison/
 https://crazyrouter.com/tools/zh/model-radar/
 https://crazyrouter.com/tools/zh/model-timeline/
-https://crazyrouter.com/tools/zh/pricing-calculator/
+https://crazyrouter.com/tools/zh-TW/model-comparison/

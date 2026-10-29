@@ -35,7 +35,9 @@
   const pricingUrl = (model) =>
     model.pricingUrl.replace(
       '/zh/',
-      document.documentElement.lang === 'zh' ? '/zh/' : '/en/',
+      ({ zh: '/zh/', 'zh-TW': '/zh/', es: '/es/' }[
+        document.documentElement.lang
+      ] || '/en/'),
     );
   const release = (model) =>
     model.release

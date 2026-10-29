@@ -1220,6 +1220,21 @@ body.has-selection {
     min-height: 28px;
   }
 }
+@media (max-width: 370px) {
+  .header-inner {
+    gap: 5px;
+  }
+  .brand {
+    font-size: 14px;
+  }
+  .header-nav {
+    gap: 4px;
+  }
+  .languages a {
+    padding-inline: 3px;
+    font-size: 10px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

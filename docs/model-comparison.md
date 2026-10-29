@@ -1,10 +1,18 @@
 # Model comparison
 
-The four locales share a static catalogue, styles and progressive-enhancement
+The six locales share a static catalogue, styles and progressive-enhancement
 script. As of October 29, 2026 the catalogue includes all **179 models** returned
 by the public pricing page, across **16 providers**. The former curated list of
 39 models is replaced by the current public catalogue, including text, image,
 video, audio, embedding/reranking and 3D models.
+
+Available languages are English, Spanish, Simplified Chinese, Traditional
+Chinese, Japanese and Russian. Spanish lives at `/tools/es/model-comparison/`
+and Traditional Chinese at `/tools/zh-TW/model-comparison/`. All pages include
+the six-language switcher and reciprocal hreflang links. Spanish pricing links
+use `/es/models`; Traditional Chinese uses the existing `/zh/models` pricing
+page until a Traditional Chinese pricing route is available. The tools-directory
+breadcrumb falls back to the English or Simplified Chinese directory as needed.
 
 The default view sorts release dates newest first (unknowns last) and displays
 the AA Intelligence Index. The metric selector also offers GPQA, MMLU-Pro and
@@ -55,7 +63,7 @@ python scripts/test_model_comparison.py
 ```
 
 The AA updater fails closed if a stable ID disappears or changes its reviewed
-name/creator. All four pages link to Artificial Analysis for attribution.
+name/creator. All six pages link to Artificial Analysis for attribution.
 API documentation: https://artificialanalysis.ai/documentation.
 No browser requests to authenticated AA endpoints are made.
 

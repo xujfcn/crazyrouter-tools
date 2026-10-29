@@ -62,7 +62,9 @@ No browser request uses an API key. Comparison pages and their data are separate
 The default view is the provider timeline, showing the current month and two
 preceding calendar months. The release list is available through the view switch
 and sorts newest first. Search, provider, type, period and date-source filters combine.
-URL parameters preserve the selection across reloads and language changes.
+URL parameters preserve filters across reloads and language changes. Each new
+visit starts on the provider timeline; the list choice applies to the current
+page only. Legacy `?view=list` links are normalized without dropping filters.
 Mobile secondary filters are expandable; release sources remain visible.
 
 The chart uses collision-free lanes, real date positions, zoom and fit. A
@@ -75,3 +77,9 @@ date ordering, sources, logos, URL persistence, mobile filters, collision-free
 chart placement, zoom/fit, keyboard dialog behavior and the static fallback.
 Set `TIMELINE_TEST_OUTPUT` to an external artifact directory; set
 `TIMELINE_BASE_URL` to validate a deployed `/tools` base.
+
+The deployed Cloudflare proxy is tracked in `workers/crazyrouter-tools.js`.
+Timeline HTML must revalidate, including explicit `index.html` URLs. Versioned
+timeline asset requests preserve `v` upstream so the proxy cannot collapse
+different builds into one cache entry. Unversioned timeline resources also
+revalidate. Run `node scripts/test_tools_worker.mjs` before publishing the proxy.

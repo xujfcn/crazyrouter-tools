@@ -82,11 +82,13 @@ with sync_playwright() as p:
     page=context.new_page()
     page.on('pageerror',lambda error:errors.append(str(error)))
     for lang in ('','zh/','es/','zh-TW/','ja/','ru/'):
-        page.goto(f'{base}/{lang}model-timeline/',wait_until='networkidle')
+        # Old bookmarks must not restore the release list on a new visit.
+        page.goto(f'{base}/{lang}model-timeline/?view=list',wait_until='networkidle')
         expect(page.locator('html')).to_have_class('enhanced')
         expect(page.locator('#timelinePanel')).to_be_visible()
         expect(page.locator('#releaseList')).to_be_hidden()
         expect(page.locator('#timelineView')).to_have_attribute('aria-pressed','true')
+        assert 'view=' not in page.url
         assert page.locator('.chart-event').count()==len(recent)
         assert ids(page)==recent,lang
         assert page.locator('img').evaluate_all('(xs)=>xs.every(i=>i.complete&&i.naturalWidth>0)'),lang
@@ -118,13 +120,24 @@ with sync_playwright() as p:
     page.locator('#period').select_option('2025')
     assert ids(page)=={e['id'] for e in events if e['date'].startswith('2025')}
     page.locator('#listView').click()
-    assert 'view=list' in page.url
-    page.reload(wait_until='networkidle')
+    assert 'view=' not in page.url
     expect(page.locator('#releaseList')).to_be_visible()
     expect(page.locator('#timelinePanel')).to_be_hidden()
     page.locator('#sort').select_option('oldest')
     dates=page.locator('#releaseList .release-date time').evaluate_all('(ts)=>ts.map(t=>t.dateTime)')
     assert dates==sorted(dates)
+    # Filters persist, while a reload or a language change starts on the chart.
+    language=page.locator('.languages a[lang="es"]')
+    assert 'view=' not in language.get_attribute('href')
+    language.click()
+    expect(page.locator('#timelinePanel')).to_be_visible()
+    assert ids(page)=={e['id'] for e in events if e['date'].startswith('2025')}
+    page.locator('.languages a[lang="zh"]').click()
+    page.locator('#listView').click()
+    page.reload(wait_until='networkidle')
+    expect(page.locator('#timelinePanel')).to_be_visible()
+    expect(page.locator('#releaseList')).to_be_hidden()
+    assert ids(page)=={e['id'] for e in events if e['date'].startswith('2025')}
     page.locator('#reset').click()
     expect(page.locator('#timelinePanel')).to_be_visible()
     assert page.locator('.chart-event').count()==len(recent)
@@ -145,6 +158,9 @@ with sync_playwright() as p:
     expect(first).to_be_focused()
     page.locator('#listView').click()
     page.set_viewport_size({'width':390,'height':844})
+    page.locator('#timelineView').click()
+    page.screenshot(path=str(OUT/'after-mobile-default-zh.png'),animations='disabled')
+    page.locator('#listView').click()
     page.screenshot(path=str(OUT/'after-mobile-zh.png'),animations='disabled')
     expect(page.locator('#provider')).to_be_hidden()
     page.locator('#filterToggle').click()

@@ -48,11 +48,13 @@
       if (value !== null && (key === 'search' || Array.from($(key).options).some(option => option.value === value))) state[key] = value;
       $(key).value = state[key];
     }
-    if (['list', 'timeline'].includes(params.get('view'))) state.view = params.get('view');
+    // Each visit starts on the provider timeline, including old ?view=list links.
   }
   function writeURL() {
     const url = new URL(location.href);
-    for (const [key, value] of Object.entries(state)) {
+    url.searchParams.delete('view');
+    for (const key of filters) {
+      const value = state[key];
       if (value === defaults[key]) url.searchParams.delete(key);
       else url.searchParams.set(key, value);
     }

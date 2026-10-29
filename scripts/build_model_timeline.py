@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
 ASSETS=ROOT/'model-timeline'
-VERSION='20261029-timeline2'
+VERSION='20261030-timeline3'
 LANGUAGES=[('en','EN',''),('es','ES','es/'),('zh','简中','zh/'),('zh-TW','繁中','zh-TW/'),('ja','日本語','ja/'),('ru','RU','ru/')]
 data=json.loads((ASSETS/'releases.json').read_text(encoding='utf-8'))
 locales=json.loads((ASSETS/'locales.json').read_text(encoding='utf-8'))
@@ -66,14 +66,14 @@ for lang,label,prefix in LANGUAGES:
 <meta property="og:title" content="{t['title']}"/><meta property="og:description" content="{esc(t['description'])}"/><meta property="og:url" content="{canonical}"/><meta property="og:type" content="website"/>
 <meta property="og:image" content="https://crazyrouter.com/tools/model-timeline/social-card.png"/><meta name="twitter:card" content="summary_large_image"/>
 <link rel="icon" href="https://crazyrouter.com/favicon.ico"/><link rel="stylesheet" href="{assets}timeline.css?v={VERSION}"/>
-<script defer src="/tools/tracking-bridge.js"></script><script defer src="{assets}timeline.js?v={VERSION}"></script><script type="application/ld+json">{schema}</script></head>
+<script defer src="{assets}timeline.js?v={VERSION}"></script><script defer src="/tools/tracking-bridge.js"></script><script type="application/ld+json">{schema}</script></head>
 <body><a class="skip" href="#releases">{t['skip']}</a>
 <header class="site-header"><div class="shell header-inner"><a class="brand" href="https://crazyrouter.com/">Crazyrouter<span>.</span></a><div class="header-links"><a href="/tools/{prefix}model-comparison/">{t['compare']}</a><nav class="languages" aria-label="Language">{languages}</nav></div></div></header>
 <main class="shell" id="main"><section class="intro"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/tools/{tools_prefix}">{t['tools']}</a><span aria-hidden="true">/</span><span>{t['title']}</span></nav>
 <div class="intro-heading"><div><h1>{t['title']}</h1><p class="lede">{t['description']}</p></div><p class="as-of"><span class="status-dot" aria-hidden="true"></span>{t['asOf']}<time datetime="{data['asOf']}">{data['asOf']}</time></p></div>
 <div class="stats"><div><strong>{len(events)}</strong><span>{t['records']}</span></div><div><strong>{len(data['providers'])}</strong><span>{t['providers']}</span></div><div><strong>{this_month}</strong><span>{t['thisMonth']}</span></div></div>
 <p class="latest"><span>{t['latest']}</span><time datetime="{latest['date']}">{latest['date']}</time><strong>{esc(latest['name'])}</strong><span class="latest-stage">{t[latest['stage']]}</span></p></section>
-<section class="workspace" id="releases" aria-labelledby="exploreTitle"><div class="workspace-heading"><h2 id="exploreTitle">{t['explore']}</h2><div class="view-switch js-only" role="group" aria-label="{t['viewLabel']}"><button type="button" id="listView" aria-pressed="false" aria-controls="releaseList">{t['list']}</button><button type="button" id="timelineView" aria-pressed="true" aria-controls="timelinePanel">{t['timeline']}</button></div></div>
+<section class="workspace" id="releases" aria-labelledby="exploreTitle"><div class="workspace-heading"><h2 id="exploreTitle">{t['explore']}</h2><div class="view-switch js-only" role="group" aria-label="{t['viewLabel']}"><button type="button" id="timelineView" aria-pressed="true" aria-controls="timelinePanel">{t['timeline']}</button><button type="button" id="listView" aria-pressed="false" aria-controls="releaseList">{t['list']}</button></div></div>
 <div class="filters js-only"><div class="field search-field"><label for="search">{t['search']}</label><input type="search" id="search" placeholder="{t['searchPlaceholder']}" autocomplete="off"/></div><div class="field"><label for="provider">{t['provider']}</label><select id="provider"><option value="all">{t['allProviders']}</option>{options}</select></div><div class="field"><label for="category">{t['category']}</label><select id="category"><option value="all">{t['allTypes']}</option>{''.join(f'<option value="{c}">{t[c]}</option>' for c in ('text','image','video','audio'))}</select></div><div class="field"><label for="period">{t['period']}</label><select id="period"><option value="recent">{t['recent']}</option><option value="month">{t['month']}</option><option value="year">{t['year']}</option><option value="all">{t['allDates']}</option>{year_options}</select></div><div class="field"><label for="source">{t['source']}</label><select id="source"><option value="all">{t['allSources']}</option><option value="official">{t['official']}</option><option value="dataset">{t['dataset']}</option></select></div><button class="button reset-button" type="button" id="reset">{t['reset']}</button></div>
 <noscript><p class="no-js">{t['noJs']}</p></noscript>
 <div class="results-toolbar"><p id="resultCount" role="status" aria-live="polite">{t['results'].replace('{count}',str(len(events))).replace('{total}',str(len(events)))}</p><div class="sort-field js-only"><label for="sort">{t['sort']}</label><select id="sort"><option value="newest">{t['newest']}</option><option value="oldest">{t['oldest']}</option></select></div></div>

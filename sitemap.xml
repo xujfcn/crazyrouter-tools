@@ -11,18 +11,18 @@
   <url><loc>https://crazyrouter.com/tools/ja/base-url-config-generator/</loc></url>
   <url><loc>https://crazyrouter.com/tools/ja/model-comparison/</loc></url>
   <url><loc>https://crazyrouter.com/tools/ja/model-radar/</loc></url>
-  <url><loc>https://crazyrouter.com/tools/ja/model-timeline/</loc></url>
+  <url><loc>https://crazyrouter.com/tools/ja/model-timeline/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://crazyrouter.com/tools/jev-decision-playground/</loc></url>
   <url><loc>https://crazyrouter.com/tools/model-arena/</loc></url>
   <url><loc>https://crazyrouter.com/tools/model-comparison/</loc></url>
   <url><loc>https://crazyrouter.com/tools/model-radar/</loc></url>
-  <url><loc>https://crazyrouter.com/tools/model-timeline/</loc></url>
+  <url><loc>https://crazyrouter.com/tools/model-timeline/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://crazyrouter.com/tools/ru/</loc></url>
   <url><loc>https://crazyrouter.com/tools/ru/background-agent-worktree-launcher/</loc></url>
   <url><loc>https://crazyrouter.com/tools/ru/base-url-config-generator/</loc></url>
   <url><loc>https://crazyrouter.com/tools/ru/model-comparison/</loc></url>
   <url><loc>https://crazyrouter.com/tools/ru/model-radar/</loc></url>
-  <url><loc>https://crazyrouter.com/tools/ru/model-timeline/</loc></url>
+  <url><loc>https://crazyrouter.com/tools/ru/model-timeline/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://crazyrouter.com/tools/tokenizer-comparison/</loc></url>
   <url><loc>https://crazyrouter.com/tools/zh/</loc></url>
   <url><loc>https://crazyrouter.com/tools/zh/background-agent-worktree-launcher/</loc></url>
@@ -32,6 +32,8 @@
   <url><loc>https://crazyrouter.com/tools/zh/model-arena/</loc></url>
   <url><loc>https://crazyrouter.com/tools/zh/model-comparison/</loc></url>
   <url><loc>https://crazyrouter.com/tools/zh/model-radar/</loc></url>
-  <url><loc>https://crazyrouter.com/tools/zh/model-timeline/</loc></url>
+  <url><loc>https://crazyrouter.com/tools/zh/model-timeline/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://crazyrouter.com/tools/zh-TW/model-comparison/</loc></url>
+  <url><loc>https://crazyrouter.com/tools/es/model-timeline/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://crazyrouter.com/tools/zh-TW/model-timeline/</loc><lastmod>2026-10-29</lastmod></url>
   </urlset>

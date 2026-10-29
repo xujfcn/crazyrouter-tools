@@ -32,3 +32,5 @@ https://crazyrouter.com/tools/zh/model-comparison/
 https://crazyrouter.com/tools/zh/model-radar/
 https://crazyrouter.com/tools/zh/model-timeline/
 https://crazyrouter.com/tools/zh-TW/model-comparison/
+https://crazyrouter.com/tools/es/model-timeline/
+https://crazyrouter.com/tools/zh-TW/model-timeline/

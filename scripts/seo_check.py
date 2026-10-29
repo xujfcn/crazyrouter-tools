@@ -37,6 +37,14 @@ for url in urls:
     if '/model-comparison/' in url:
         if not b.select('#tbody tr'): errors.append(f'{url}: missing static comparison')
         if 'mmlu:93.5' in str(b): errors.append(f'{url}: legacy score returned')
+    if '/model-timeline/' in url:
+        rows = b.select('.release-row')
+        if not rows or any(not row.select_one('time[datetime]') or not row.select_one('.release-source a[href]') for row in rows):
+            errors.append(f'{url}: missing static release dates or sources')
+        for asset in b.select('script[src], link[rel=stylesheet]'):
+            value=asset.get('src') or asset.get('href')
+            resource=source(urljoin(url,value).split('?')[0])
+            if not resource or not resource.is_file(): errors.append(f'{url}: missing resource {value}')
 report = {'pages': len(urls), 'errors': errors}
 print(json.dumps(report, ensure_ascii=True))
 sys.exit(bool(errors))

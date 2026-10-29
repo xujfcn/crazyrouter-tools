@@ -8,7 +8,9 @@ import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
 ASSETS=ROOT/'model-timeline'
-VERSION='20261030-timeline3'
+VERSION='20261030-timeline4'
+HF_SPACE='https://huggingface.co/spaces/xujfcn/Crazyrouter-Model-Timeline'
+HF_APP='https://xujfcn-crazyrouter-model-timeline.static.hf.space'
 LANGUAGES=[('en','EN',''),('es','ES','es/'),('zh','简中','zh/'),('zh-TW','繁中','zh-TW/'),('ja','日本語','ja/'),('ru','RU','ru/')]
 data=json.loads((ASSETS/'releases.json').read_text(encoding='utf-8'))
 locales=json.loads((ASSETS/'locales.json').read_text(encoding='utf-8'))
@@ -71,6 +73,7 @@ for lang,label,prefix in LANGUAGES:
 <header class="site-header"><div class="shell header-inner"><a class="brand" href="https://crazyrouter.com/">Crazyrouter<span>.</span></a><div class="header-links"><a href="/tools/{prefix}model-comparison/">{t['compare']}</a><nav class="languages" aria-label="Language">{languages}</nav></div></div></header>
 <main class="shell" id="main"><section class="intro"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/tools/{tools_prefix}">{t['tools']}</a><span aria-hidden="true">/</span><span>{t['title']}</span></nav>
 <div class="intro-heading"><div><h1>{t['title']}</h1><p class="lede">{t['description']}</p></div><p class="as-of"><span class="status-dot" aria-hidden="true"></span>{t['asOf']}<time datetime="{data['asOf']}">{data['asOf']}</time></p></div>
+<p class="edition-links">{link(f'{HF_APP}/{prefix}index.html',t['mirrorLink'],'mirror-link')}</p>
 <div class="stats"><div><strong>{len(events)}</strong><span>{t['records']}</span></div><div><strong>{len(data['providers'])}</strong><span>{t['providers']}</span></div><div><strong>{this_month}</strong><span>{t['thisMonth']}</span></div></div>
 <p class="latest"><span>{t['latest']}</span><time datetime="{latest['date']}">{latest['date']}</time><strong>{esc(latest['name'])}</strong><span class="latest-stage">{t[latest['stage']]}</span></p></section>
 <section class="workspace" id="releases" aria-labelledby="exploreTitle"><div class="workspace-heading"><h2 id="exploreTitle">{t['explore']}</h2><div class="view-switch js-only" role="group" aria-label="{t['viewLabel']}"><button type="button" id="timelineView" aria-pressed="true" aria-controls="timelinePanel">{t['timeline']}</button><button type="button" id="listView" aria-pressed="false" aria-controls="releaseList">{t['list']}</button></div></div>
@@ -82,7 +85,7 @@ for lang,label,prefix in LANGUAGES:
 <div class="empty-state" id="emptyState" hidden><h3>{t['emptyTitle']}</h3><p>{t['emptyText']}</p><button class="button" type="button" id="emptyReset">{t['reset']}</button></div></section>
 <details class="methodology"><summary>{t['methodTitle']}</summary><p>{t['methodIntro']}</p><ul><li>{t['methodOfficial']}</li><li>{t['methodDataset']}</li><li>{t['methodMonth']}</li></ul><p>{t['methodCutoff'].replace('{date}',data['asOf'])}</p><div class="method-links"><a href="{assets}releases.json" download>{t['download']} ↓</a>{link('https://artificialanalysis.ai/',t['credit'])}</div></details>
 <section class="bottom-cta"><div><h2>{t['ctaTitle']}</h2><p>{t['ctaText']}</p></div><div class="cta-links"><a class="button primary" href="/tools/{prefix}model-comparison/">{t['compare']}</a><a href="https://crazyrouter.com/{pricing_locale}/models">{t['prices']} ↗</a></div></section></main>
-<footer><div class="shell footer-inner"><span>Crazyrouter · {t['tools']}</span><nav><a href="https://docs.crazyrouter.com/">{t['apiDocs']}</a><a href="https://crazyrouter.com/privacy-policy">{t['privacy']}</a><a href="https://crazyrouter.com/user-agreement">{t['terms']}</a></nav></div></footer>
+<footer><div class="shell footer-inner"><span>Crazyrouter · {t['tools']}</span><nav>{link(HF_SPACE,'Hugging Face','hosting-link')}<a href="https://docs.crazyrouter.com/">{t['apiDocs']}</a><a href="https://crazyrouter.com/privacy-policy">{t['privacy']}</a><a href="https://crazyrouter.com/user-agreement">{t['terms']}</a></nav></div></footer>
 <dialog id="releaseDialog" aria-labelledby="detailTitle"><div class="dialog-header"><span>{t['details']}</span><button type="button" id="closeDialog" class="button" aria-label="{t['close']}">×</button></div><div id="detailBody"></div></dialog>
 <script id="timeline-data" type="application/json">{payload}</script></body></html>'''
     html=html.replace('<div class="filters js-only">','<div class="filters js-only" id="filters">')

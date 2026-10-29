@@ -18,9 +18,9 @@ benchmark_date = benchmark['collectedAt'][:10]
 data['benchmarkDate'] = benchmark_date
 for model in models:
     model['benchmark'] = benchmark['models'].get(model['name'])
-    model['gpqa'] = model['benchmark']['scores']['gpqa'] if model['benchmark'] else None
-for provider_id, provider in providers.items():
-    provider['logo'] = 'logos/' + provider_id + '.svg'
+    for field in ['gpqa','artificial_analysis_intelligence_index','mmlu_pro','livecodebench']:
+        model[field] = model['benchmark']['scores'].get(field) if model['benchmark'] else None
+
 date = data['snapshotDate']
 snapshot = json.loads((ASSETS / 'pricing-snapshot.json').read_text(encoding='utf-8'))
 assert date == snapshot['collectedAt'][:10]
@@ -31,17 +31,31 @@ for model in models:
 def money(value, t):
     return f'<span class="price">${value:g}</span>' if value is not None else f'<span class="unavailable">{escape(t["unavailable"])}</span>'
 
-def score(value, t):
-    return f'<span class="benchmark-score">{value * 100:.1f}<small>%</small></span>' if value is not None else f'<span class="unavailable">{escape(t["unavailable"])}</span>'
+def score(value, t, index=False):
+    if value is None:
+        return f'<span class="unavailable">{escape(t["unavailable"])}</span>'
+    suffix='' if index else '<small>%</small>'
+    return f'<span class="benchmark-score">{value * (1 if index else 100):.1f}{suffix}</span>'
 
-def row(model, t, assets):
+def release_html(model, t):
+    r=model.get('release')
+    if not r:
+        return f'<span class="unavailable">{escape(t["releasePending"])}</span>'
+    return f'<time datetime="{r["date"]}">{r["date"]}</time><a class="source-link secondary" href="{escape(r["url"])}" target="_blank" rel="noopener noreferrer" title="{escape(r["variant"])}">{escape(t["releaseReference"])} ↗</a>'
+
+def billing_html(model, t, lang):
+    url=model['pricingUrl'].replace('/zh/', '/zh/' if lang=='zh' else '/en/')
+    fixed=f'<span class="price">${model["requestPrice"]:g}</span> · ' if model.get('requestPrice') is not None else ''
+    return f'{fixed}<span>{escape(t.get(model["billingMode"],model["billingMode"]))}</span><a class="source-link" href="{escape(url)}" target="_blank" rel="noopener noreferrer">{escape(t["pricingDetails"])} ↗</a>'
+
+def row(model, t, assets, lang):
     provider = providers[model['provider']]
     price_link = f'<a class="source-link" href="{data["source"]}" target="_blank" rel="noopener noreferrer">{t["priceSource"]} ↗</a>' if model['input'] is not None else ''
     aa = model['benchmark']
     benchmark_link = f'<a class="benchmark-variant" href="{escape(aa["url"])}" target="_blank" rel="noopener noreferrer">{escape(aa["name"])} ↗</a>' if aa else ''
     return f'''<tr><td class="select-col"><span class="sr-only">{t['select']}</span></td>
-<td class="model-col"><div class="model-cell"><span class="provider-mark"><img src="{assets}{provider['logo']}" width="24" height="24" alt="" aria-hidden="true"/></span><div class="model-name">{escape(model['name'])}<span class="model-provider">{provider['name']}</span></div></div></td>
-<td class="benchmark-cell" data-score="{'' if model['gpqa'] is None else model['gpqa']}">{score(model['gpqa'],t)}{benchmark_link}</td><td>{money(model['input'],t)}</td><td>{money(model['output'],t)}</td><td>{price_link}<a class="source-link secondary" href="{provider['url']}" target="_blank" rel="noopener noreferrer">{t['providerDocs']} ↗</a></td></tr>'''
+<td class="model-col"><div class="model-cell"><span class="provider-mark"><img src="{assets}{provider['logo']}" width="24" height="24" alt="" aria-hidden="true"/></span><div class="model-name">{escape(model['name'])}<span class="model-provider">{provider['name']} · {t[model['category']]}</span></div></div></td>
+<td class="release-cell">{release_html(model,t)}</td><td class="benchmark-cell" data-score="{'' if model['artificial_analysis_intelligence_index'] is None else model['artificial_analysis_intelligence_index']}">{score(model['artificial_analysis_intelligence_index'],t,True)}{benchmark_link}</td><td>{money(model['input'],t)}</td><td>{money(model['output'],t)}</td><td class="billing-cell">{billing_html(model,t,lang)}</td></tr>'''
 
 for lang, t in locales.items():
     assert set(t) == set(locales['en']), lang
@@ -62,11 +76,11 @@ for lang, t in locales.items():
     structured = json.loads(schema.string)
     structured.update(name=t['title'],description=t['description'],url=canonical)
     schema.string = json.dumps(structured, ensure_ascii=False)
-    head = str(soup.head).replace('</head>', f'<link rel="stylesheet" href="{assets}comparison.css?v=20261029-aa1"/><link rel="icon" href="https://crazyrouter.com/favicon.ico"/><script defer src="{assets}comparison.js?v=20261029-aa1"></script></head>')
+    head = str(soup.head).replace('</head>', f'<link rel="stylesheet" href="{assets}comparison.css?v=20261029-catalog1"/><link rel="icon" href="https://crazyrouter.com/favicon.ico"/><script defer src="{assets}comparison.js?v=20261029-catalog1"></script></head>')
     languages = ''.join(f'<a href="https://crazyrouter.com/tools/{"" if code=="en" else code+"/"}model-comparison/" lang="{code}" hreflang="{code}" {"aria-current=page" if code==lang else ""}>{label}</a>' for code,label in [('en','EN'),('zh','中文'),('ja','日本語'),('ru','RU')])
     options = ''.join(f'<option value="{key}">{provider["name"]}</option>' for key,provider in providers.items())
-    ordered = sorted(models,key=lambda m:(m['input'] is None,m['input'] if m['input'] is not None else 0,m['name']))
-    rows = '\n'.join(row(m,t,assets) for m in ordered)
+    ordered = sorted(models,key=lambda m:(m['releaseDate'] is not None,m['releaseDate'] or '',m['name']),reverse=True)
+    rows = '\n'.join(row(m,t,assets,lang) for m in ordered)
     initial_count = t['results'].replace('{count}',str(len(models))).replace('{total}',str(len(models)))
     embedded = json.dumps({**data,'text':t,'assets':assets},ensure_ascii=False).replace('<','\\u003c')
     page = f'''<!doctype html>
@@ -77,15 +91,15 @@ for lang, t in locales.items():
 <main class="shell" id="main">
 <section class="intro"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/tools/{prefix}">{t['tools']}</a><span aria-hidden="true">/</span><span>{t['title']}</span></nav>
 <h1>{t['title']}</h1><p class="lede">{t['description']}</p>
-<div class="summary"><div class="summary-item"><strong>{len(models)}</strong><span>{t['models']}</span></div><div class="summary-item"><strong>{len(providers)}</strong><span>{t['providers']}</span></div><div class="summary-item"><strong>{sum(m['input'] is not None and m['output'] is not None for m in models)}</strong><span>{t['priced']}</span></div></div></section>
+<div class="summary"><div class="summary-item"><strong>{len(models)}</strong><span>{t['models']}</span></div><div class="summary-item"><strong>{len(providers)}</strong><span>{t['providers']}</span></div><div class="summary-item"><strong>{sum(m['input'] is not None for m in models)}</strong><span>{t['priced']}</span></div></div></section>
 <aside class="snapshot"><span class="snapshot-dot" aria-hidden="true"></span><div><p><strong>{t['snapshot']} · <time datetime="{date}">{date}</time></strong></p><p>{t['snapshotNote']}</p></div><a class="snapshot-source" href="{assets}pricing-snapshot.json">{t['json']} ↓</a></aside>
-<aside class="benchmark-notice"><div><h2>{t['benchmarkTitle']}</h2><p>{t['benchmarkNote'].replace('{count}',str(sum(m['gpqa'] is not None for m in models))).replace('{total}',str(len(models)))}</p><p>{t['benchmarkHint']}</p></div><div class="benchmark-credit"><a href="https://artificialanalysis.ai/" target="_blank" rel="noopener noreferrer">{t['benchmarkSource']} ↗</a><span>{t['benchmarkDate']} · <time datetime="{benchmark['collectedAt']}">{benchmark_date}</time></span><a href="{assets}benchmark-snapshot.json">{t['json']} ↓</a></div></aside>
+<aside class="benchmark-notice"><div><h2>{t['benchmarkTitle']}</h2><p>{t['benchmarkNote'].replace('{count}',str(sum(m['gpqa'] is not None for m in models))).replace('{total}',str(len(models))).replace('{indexCount}',str(sum(m['artificial_analysis_intelligence_index'] is not None for m in models)))}</p><p>{t['benchmarkHint']}</p><p>{t['releaseCoverage'].replace('{count}',str(sum(m['releaseDate'] is not None for m in models)))}</p></div><div class="benchmark-credit"><a href="https://artificialanalysis.ai/" target="_blank" rel="noopener noreferrer">{t['benchmarkSource']} ↗</a><span>{t['benchmarkDate']} · <time datetime="{benchmark['collectedAt']}">{benchmark_date}</time></span><a href="{assets}benchmark-snapshot.json">{t['json']} ↓</a></div></aside>
 <noscript><p class="noscript-note">{t['noJs']}</p></noscript>
 <div class="workspace">
 <section id="browseSection" aria-labelledby="browseTitle"><div class="workspace-head"><h2 id="browseTitle" tabindex="-1">{t['browse']}</h2><p class="js-only">{t['browseHelp']}</p></div>
-<div class="filters js-only"><div class="field"><label for="search">{t['search']}</label><input type="search" id="search" placeholder="{t['searchPlaceholder']}" autocomplete="off"/></div><div class="field"><label for="providerFilter">{t['provider']}</label><select id="providerFilter"><option value="all">{t['allProviders']}</option>{options}</select></div><div class="field"><label for="priceFilter">{t['availability']}</label><select id="priceFilter"><option value="all">{t['allPrices']}</option><option value="available">{t['withPrices']}</option><option value="missing">{t['withoutPrices']}</option></select></div><button class="button" id="resetFilters" type="button">{t['reset']}</button></div>
+<div class="filters js-only"><div class="field"><label for="search">{t['search']}</label><input type="search" id="search" placeholder="{t['searchPlaceholder']}" autocomplete="off"/></div><div class="field"><label for="providerFilter">{t['provider']}</label><select id="providerFilter"><option value="all">{t['allProviders']}</option>{options}</select></div><div class="field"><label for="categoryFilter">{t['category']}</label><select id="categoryFilter"><option value="all">{t['allCategories']}</option>{''.join(f'<option value="{kind}">{t[kind]}</option>' for kind in ['text','image','video','audio','embedding','3d'])}</select></div><div class="field"><label for="metricFilter">{t['scoreMetric']}</label><select id="metricFilter"><option value="gpqa">{t['gpqa']}</option><option value="artificial_analysis_intelligence_index" selected>{t['intelligence']}</option><option value="mmlu_pro">{t['mmlu']}</option><option value="livecodebench">{t['coding']}</option></select></div><div class="field"><label for="priceFilter">{t['availability']}</label><select id="priceFilter"><option value="all">{t['allPrices']}</option><option value="available">{t['withPrices']}</option><option value="missing">{t['withoutPrices']}</option></select></div><button class="button" id="resetFilters" type="button">{t['reset']}</button></div>
 <div class="table-toolbar"><div><p id="resultsCount" role="status" aria-live="polite">{initial_count}</p><span class="scroll-hint">{t['scroll']} →</span></div><span class="units">{t['units']}</span></div>
-<div class="table-scroll" id="tableScroll" tabindex="0" role="region" aria-label="{t['title']}"><table id="modelTable"><caption class="sr-only">{t['title']} · {t['units']} · {date}</caption><thead><tr><th scope="col" class="select-col"><span class="sr-only">{t['select']}</span></th><th scope="col" class="model-col" data-sort="name" aria-sort="none"><button type="button">{t['model']}<span class="sort-arrow" aria-hidden="true">↕</span></button></th><th scope="col" class="benchmark-col" data-sort="gpqa" aria-sort="none"><button type="button">{t['gpqa']}<span class="sort-arrow" aria-hidden="true">↕</span></button><small>{t['scoreLabel']}</small></th><th scope="col" class="price-col" data-sort="input" aria-sort="ascending"><button type="button">{t['input']}<span class="sort-arrow" aria-hidden="true">↑</span></button></th><th scope="col" class="price-col" data-sort="output" aria-sort="none"><button type="button">{t['output']}<span class="sort-arrow" aria-hidden="true">↕</span></button></th><th scope="col" class="source-col">{t['sources']}</th></tr></thead><tbody id="tbody">{rows}</tbody></table></div>
+<div class="table-scroll" id="tableScroll" tabindex="0" role="region" aria-label="{t['title']}"><table id="modelTable"><caption class="sr-only">{t['title']} · {t['units']} · {date}</caption><thead><tr><th scope="col" class="select-col"><span class="sr-only">{t['select']}</span></th><th scope="col" class="model-col" data-sort="name" aria-sort="none"><button type="button">{t['model']}<span class="sort-arrow" aria-hidden="true">↕</span></button></th><th scope="col" class="release-col" data-sort="releaseDate" aria-sort="descending"><button type="button">{t['releaseDate']}<span class="sort-arrow" aria-hidden="true">↓</span></button></th><th scope="col" class="benchmark-col" id="scoreHeader" data-sort="artificial_analysis_intelligence_index" aria-sort="none"><button type="button"><span id="scoreLabel">{t['intelligence']}</span><span class="sort-arrow" aria-hidden="true">↕</span></button><small id="scoreUnit">{t['indexUnit']}</small></th><th scope="col" class="price-col" data-sort="input" aria-sort="none"><button type="button">{t['input']}<span class="sort-arrow" aria-hidden="true">↕</span></button></th><th scope="col" class="price-col" data-sort="output" aria-sort="none"><button type="button">{t['output']}<span class="sort-arrow" aria-hidden="true">↕</span></button></th><th scope="col" class="billing-col">{t['billing']}</th></tr></thead><tbody id="tbody">{rows}</tbody></table></div>
 <div class="empty" id="emptyState" hidden><h3>{t['emptyTitle']}</h3><p>{t['emptyHelp']}</p><button class="button" id="emptyReset" type="button">{t['reset']}</button></div>
 <div class="table-bottom"><span>{t['tableNote']}</span><span>{t['sourceNote']}</span></div></section>
 <section class="compare-section" id="compareSection" aria-labelledby="compareTitle" hidden><div class="compare-heading"><div><h2 id="compareTitle" tabindex="-1">{t['compareTitle']}</h2><p>{t['compareHelp']}</p></div><button class="button" id="backButton" type="button">← {t['backList']}</button></div><p class="scroll-hint">{t['scroll']} →</p><div class="comparison-scroll" tabindex="0" role="region" aria-label="{t['compareTitle']}"><table class="comparison-table" id="comparisonTable"></table></div><p class="compare-caption">{t['compareNote']}</p></section></div>

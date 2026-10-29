@@ -1,321 +1,3040 @@
 {
-  "snapshotDate": "2026-10-11",
+  "snapshotDate": "2026-10-29",
+  "collectedAt": "2026-10-29T11:03:44+00:00",
   "source": "https://crazyrouter.com/api/pricing",
   "providers": {
-    "openai": {
-      "name": "OpenAI",
-      "mark": "O",
-      "url": "https://platform.openai.com/docs/models"
+    "minimax": {
+      "name": "MiniMax",
+      "logo": "logos/minimax.svg",
+      "url": "https://crazyrouter.com/zh/models"
+    },
+    "kling": {
+      "name": "Kuaishou / Kling",
+      "logo": "logos/kling.svg",
+      "url": "https://crazyrouter.com/zh/models"
     },
     "anthropic": {
       "name": "Anthropic",
-      "mark": "A",
-      "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview"
+      "logo": "logos/anthropic.svg",
+      "url": "https://crazyrouter.com/zh/models"
+    },
+    "qwen": {
+      "name": "Alibaba / Qwen",
+      "logo": "logos/qwen.svg",
+      "url": "https://crazyrouter.com/zh/models"
+    },
+    "openai": {
+      "name": "OpenAI",
+      "logo": "logos/openai.svg",
+      "url": "https://crazyrouter.com/zh/models"
     },
     "google": {
       "name": "Google",
-      "mark": "G",
-      "url": "https://ai.google.dev/gemini-api/docs/models"
+      "logo": "logos/google.svg",
+      "url": "https://crazyrouter.com/zh/models"
     },
-    "meta": {
-      "name": "Meta",
-      "mark": "M",
-      "url": "https://www.llama.com/models/"
+    "tencent": {
+      "name": "Tencent",
+      "logo": "logos/tencent.svg",
+      "url": "https://crazyrouter.com/zh/models"
+    },
+    "zhipu": {
+      "name": "Zhipu / Z.ai",
+      "logo": "logos/zhipu.svg",
+      "url": "https://crazyrouter.com/zh/models"
+    },
+    "moonshot": {
+      "name": "Moonshot / Kimi",
+      "logo": "logos/moonshot.svg",
+      "url": "https://crazyrouter.com/zh/models"
     },
     "deepseek": {
       "name": "DeepSeek",
-      "mark": "D",
-      "url": "https://api-docs.deepseek.com/"
+      "logo": "logos/deepseek.svg",
+      "url": "https://crazyrouter.com/zh/models"
     },
-    "mistral": {
-      "name": "Mistral",
-      "mark": "Mi",
-      "url": "https://docs.mistral.ai/getting-started/models/"
+    "pixverse": {
+      "name": "PixVerse",
+      "logo": "logos/pixverse.svg",
+      "url": "https://crazyrouter.com/zh/models"
+    },
+    "doubao": {
+      "name": "ByteDance / Doubao",
+      "logo": "logos/doubao.svg",
+      "url": "https://crazyrouter.com/zh/models"
     },
     "xai": {
       "name": "xAI",
-      "mark": "x",
-      "url": "https://docs.x.ai/docs/models"
+      "logo": "logos/xai.svg",
+      "url": "https://crazyrouter.com/zh/models"
     },
-    "qwen": {
-      "name": "Qwen",
-      "mark": "Q",
-      "url": "https://qwenlm.github.io/"
+    "xiaomi": {
+      "name": "Xiaomi",
+      "logo": "logos/xiaomi.svg",
+      "url": "https://crazyrouter.com/zh/models"
+    },
+    "midjourney": {
+      "name": "Midjourney",
+      "logo": "logos/midjourney.svg",
+      "url": "https://crazyrouter.com/zh/models"
+    },
+    "typesafe": {
+      "name": "TypeSafe",
+      "logo": "logos/typesafe.png",
+      "url": "https://crazyrouter.com/zh/models"
     }
   },
   "models": [
     {
-      "name": "GPT-5.4",
-      "provider": "openai",
-      "modelId": null,
+      "name": "aigc-image-kling-3.0",
+      "provider": "kling",
+      "modelId": "aigc-image-kling-3.0",
       "input": null,
-      "output": null
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-image-kling-3.0",
+      "requestPrice": 0.0255
     },
     {
-      "name": "GPT-5 mini",
-      "provider": "openai",
-      "modelId": "gpt-5-mini",
-      "input": 0.1625,
-      "output": 1.3
+      "name": "aigc-video-gv-3.1",
+      "provider": "google",
+      "modelId": "aigc-video-gv-3.1",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": "2026-01",
+      "release": {
+        "date": "2026-01",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "variant": "Veo 3.1",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-gv-3.1",
+      "requestPrice": null
     },
     {
-      "name": "GPT-4.1",
+      "name": "aigc-video-gv-3.1-fast",
+      "provider": "google",
+      "modelId": "aigc-video-gv-3.1-fast",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": "2026-01",
+      "release": {
+        "date": "2026-01",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "variant": "Veo 3.1 Fast",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-gv-3.1-fast",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-gv-3.1-lite",
+      "provider": "google",
+      "modelId": "aigc-video-gv-3.1-lite",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": "2026-03",
+      "release": {
+        "date": "2026-03",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "variant": "Veo 3.1 Lite",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-gv-3.1-lite",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-hailuo-h3",
+      "provider": "minimax",
+      "modelId": "aigc-video-hailuo-h3",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-hailuo-h3",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-1.6",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-1.6",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-1.6",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-2.0",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-2.0",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-2.0",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-2.1",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-2.1",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-2.1",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-2.5-turbo",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-2.5-turbo",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-2.5-turbo",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-2.6",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-2.6",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-2.6",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-2.6-motion-control",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-2.6-motion-control",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-2.6-motion-control",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-3.0",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-3.0",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": "2026-02",
+      "release": {
+        "date": "2026-02",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "variant": "Kling 3.0 1080p (Pro)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-3.0",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-3.0-motion-control",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-3.0-motion-control",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-3.0-motion-control",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-3.0-turbo",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-3.0-turbo",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-3.0-turbo",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-avatar",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-avatar",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-avatar",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-identifyface",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-identifyface",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-identifyface",
+      "requestPrice": null
+    },
+    {
+      "name": "aigc-video-kling-o1",
+      "provider": "kling",
+      "modelId": "aigc-video-kling-o1",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=aigc-video-kling-o1",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-fable-5",
+      "provider": "anthropic",
+      "modelId": "claude-fable-5",
+      "input": 6.5,
+      "output": 32.5,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-06-09",
+      "release": {
+        "date": "2026-06-09",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-fable-5",
+        "variant": "Claude Fable 5 (Max, Opus 4.8 Fallback)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-fable-5",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-fable-5-1",
+      "provider": "anthropic",
+      "modelId": "claude-fable-5-1",
+      "input": 6.5,
+      "output": 32.5,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-09-01",
+      "release": {
+        "date": "2026-09-01",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-fable-5-1",
+        "variant": "Claude Fable 5.1 (Max, Default Fallback)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-fable-5-1",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "modelId": "claude-haiku-4-5",
+      "input": 0.65,
+      "output": 3.25,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-10-15",
+      "release": {
+        "date": "2025-10-15",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-4-5-haiku-reasoning",
+        "variant": "Claude 4.5 Haiku (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-haiku-4-5",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-haiku-5-5",
+      "provider": "anthropic",
+      "modelId": "claude-haiku-5-5",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-10-07",
+      "release": {
+        "date": "2026-10-07",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-haiku-5-5",
+        "variant": "Claude Haiku 5.5 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-haiku-5-5",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-opus-4-5",
+      "provider": "anthropic",
+      "modelId": "claude-opus-4-5",
+      "input": 3.25,
+      "output": 16.25,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-11-24",
+      "release": {
+        "date": "2025-11-24",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-opus-4-5-thinking",
+        "variant": "Claude Opus 4.5 (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-opus-4-5",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-opus-4-6",
+      "provider": "anthropic",
+      "modelId": "claude-opus-4-6",
+      "input": 3.25,
+      "output": 16.25,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-02-05",
+      "release": {
+        "date": "2026-02-05",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-opus-4-6-adaptive",
+        "variant": "Claude Opus 4.6 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-opus-4-6",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-opus-4-7",
+      "provider": "anthropic",
+      "modelId": "claude-opus-4-7",
+      "input": 3.25,
+      "output": 16.25,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-04-16",
+      "release": {
+        "date": "2026-04-16",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-opus-4-7",
+        "variant": "Claude Opus 4.7 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-opus-4-7",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-opus-4-8",
+      "provider": "anthropic",
+      "modelId": "claude-opus-4-8",
+      "input": 3.25,
+      "output": 16.25,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-05-28",
+      "release": {
+        "date": "2026-05-28",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-opus-4-8",
+        "variant": "Claude Opus 4.8 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-opus-4-8",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-opus-5",
+      "provider": "anthropic",
+      "modelId": "claude-opus-5",
+      "input": 3.25,
+      "output": 16.25,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-07-24",
+      "release": {
+        "date": "2026-07-24",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-opus-5",
+        "variant": "Claude Opus 5 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-opus-5",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-opus-5-5",
+      "provider": "anthropic",
+      "modelId": "claude-opus-5-5",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-09-22",
+      "release": {
+        "date": "2026-09-22",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+        "variant": "Claude Opus 5.5 (Max, Default Fallback)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-opus-5-5",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-sonnet-4-5",
+      "provider": "anthropic",
+      "modelId": "claude-sonnet-4-5",
+      "input": 1.95,
+      "output": 9.75,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-09-29",
+      "release": {
+        "date": "2025-09-29",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-4-5-sonnet-thinking",
+        "variant": "Claude 4.5 Sonnet (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-sonnet-4-5",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "modelId": "claude-sonnet-4-6",
+      "input": 1.95,
+      "output": 9.75,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-02-17",
+      "release": {
+        "date": "2026-02-17",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-sonnet-4-6-adaptive",
+        "variant": "Claude Sonnet 4.6 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-sonnet-4-6",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-sonnet-5",
+      "provider": "anthropic",
+      "modelId": "claude-sonnet-5",
+      "input": 1.3,
+      "output": 6.5,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-06-30",
+      "release": {
+        "date": "2026-06-30",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-sonnet-5",
+        "variant": "Claude Sonnet 5 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-sonnet-5",
+      "requestPrice": null
+    },
+    {
+      "name": "claude-sonnet-5-5",
+      "provider": "anthropic",
+      "modelId": "claude-sonnet-5-5",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-09-28",
+      "release": {
+        "date": "2026-09-28",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
+        "variant": "Claude Sonnet 5.5 (Max, Default Fallback)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=claude-sonnet-5-5",
+      "requestPrice": null
+    },
+    {
+      "name": "cogview-3-flash",
+      "provider": "zhipu",
+      "modelId": "cogview-3-flash",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=cogview-3-flash",
+      "requestPrice": 0.005
+    },
+    {
+      "name": "cogview-4",
+      "provider": "zhipu",
+      "modelId": "cogview-4",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=cogview-4",
+      "requestPrice": 0.01
+    },
+    {
+      "name": "deepseek-v4-flash",
+      "provider": "deepseek",
+      "modelId": "deepseek-v4-flash",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "time_tiered",
+      "releaseDate": "2026-07-31",
+      "release": {
+        "date": "2026-07-31",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/deepseek-v4-flash",
+        "variant": "DeepSeek V4 Flash 0731 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=deepseek-v4-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "deepseek-v4-flash-vision-exp",
+      "provider": "deepseek",
+      "modelId": "deepseek-v4-flash-vision-exp",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "time_tiered",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=deepseek-v4-flash-vision-exp",
+      "requestPrice": null
+    },
+    {
+      "name": "deepseek-v4-pro",
+      "provider": "deepseek",
+      "modelId": "deepseek-v4-pro",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "time_tiered",
+      "releaseDate": "2026-08-13",
+      "release": {
+        "date": "2026-08-13",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/deepseek-v4-pro",
+        "variant": "DeepSeek V4 Pro 0813 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=deepseek-v4-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "deepseek-v4.1-flash",
+      "provider": "deepseek",
+      "modelId": "deepseek-v4.1-flash",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "time_tiered",
+      "releaseDate": "2026-09-10",
+      "release": {
+        "date": "2026-09-10",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+        "variant": "DeepSeek V4.1 Flash (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=deepseek-v4.1-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seed-1-6-vision-250815",
+      "provider": "doubao",
+      "modelId": "doubao-seed-1-6-vision-250815",
+      "input": 0.1143,
+      "output": 1.1429,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seed-1-6-vision-250815",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seed-2-1-turbo-260628",
+      "provider": "doubao",
+      "modelId": "doubao-seed-2-1-turbo-260628",
+      "input": 0.447,
+      "output": 2.38,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seed-2-1-turbo-260628",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedance-1-0-lite-i2v",
+      "provider": "doubao",
+      "modelId": "doubao-seedance-1-0-lite-i2v",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedance-1-0-lite-i2v",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedance-1-0-lite-t2v",
+      "provider": "doubao",
+      "modelId": "doubao-seedance-1-0-lite-t2v",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedance-1-0-lite-t2v",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedance-1-0-pro",
+      "provider": "doubao",
+      "modelId": "doubao-seedance-1-0-pro",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedance-1-0-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedance-1-0-pro-fast",
+      "provider": "doubao",
+      "modelId": "doubao-seedance-1-0-pro-fast",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedance-1-0-pro-fast",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedance-1-5-pro",
+      "provider": "doubao",
+      "modelId": "doubao-seedance-1-5-pro",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedance-1-5-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedance-2-0",
+      "provider": "doubao",
+      "modelId": "doubao-seedance-2-0",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": "2026-03",
+      "release": {
+        "date": "2026-03",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "variant": "Dreamina Seedance 2.0",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedance-2-0",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedance-2-0-fast",
+      "provider": "doubao",
+      "modelId": "doubao-seedance-2-0-fast",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedance-2-0-fast",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedance-2-5",
+      "provider": "doubao",
+      "modelId": "doubao-seedance-2-5",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": "2026-07",
+      "release": {
+        "date": "2026-07",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "variant": "Dreamina Seedance 2.5",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedance-2-5",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedream-4-0",
+      "provider": "doubao",
+      "modelId": "doubao-seedream-4-0",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedream-4-0",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedream-4-5",
+      "provider": "doubao",
+      "modelId": "doubao-seedream-4-5",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": "2025-12",
+      "release": {
+        "date": "2025-12",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Seedream 4.5",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedream-4-5",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedream-5-0-flash",
+      "provider": "doubao",
+      "modelId": "doubao-seedream-5-0-flash",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedream-5-0-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedream-5-0-lite",
+      "provider": "doubao",
+      "modelId": "doubao-seedream-5-0-lite",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": "2026-02",
+      "release": {
+        "date": "2026-02",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Seedream 5.0 Lite",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedream-5-0-lite",
+      "requestPrice": null
+    },
+    {
+      "name": "doubao-seedream-5-0-pro",
+      "provider": "doubao",
+      "modelId": "doubao-seedream-5-0-pro",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": "2026-07",
+      "release": {
+        "date": "2026-07",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Seedream 5.0 Pro",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=doubao-seedream-5-0-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "provider": "google",
+      "modelId": "gemini-2.5-flash",
+      "input": 0.165,
+      "output": 1.375,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-05-20",
+      "release": {
+        "date": "2025-05-20",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-2-5-flash-reasoning",
+        "variant": "Gemini 2.5 Flash (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-2.5-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-2.5-flash-lite",
+      "provider": "google",
+      "modelId": "gemini-2.5-flash-lite",
+      "input": 0.055,
+      "output": 0.22,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-06-17",
+      "release": {
+        "date": "2025-06-17",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-2-5-flash-lite-reasoning",
+        "variant": "Gemini 2.5 Flash-Lite (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-2.5-flash-lite",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "provider": "google",
+      "modelId": "gemini-2.5-pro",
+      "input": 0.6875,
+      "output": 5.5,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-06-05",
+      "release": {
+        "date": "2025-06-05",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-2-5-pro",
+        "variant": "Gemini 2.5 Pro",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-2.5-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-3-flash",
+      "provider": "google",
+      "modelId": "gemini-3-flash",
+      "input": 0.165,
+      "output": 1.32,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-12-17",
+      "release": {
+        "date": "2025-12-17",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-3-flash-reasoning",
+        "variant": "Gemini 3 Flash Preview (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-3-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-3.1-flash-lite",
+      "provider": "google",
+      "modelId": "gemini-3.1-flash-lite",
+      "input": 0.1375,
+      "output": 0.825,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-03-03",
+      "release": {
+        "date": "2026-03-03",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-3-1-flash-lite-preview",
+        "variant": "Gemini 3.1 Flash-Lite",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-3.1-flash-lite",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-3.1-pro",
+      "provider": "google",
+      "modelId": "gemini-3.1-pro",
+      "input": 1.1,
+      "output": 6.6,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-02-19",
+      "release": {
+        "date": "2026-02-19",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
+        "variant": "Gemini 3.1 Pro Preview",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-3.1-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "provider": "google",
+      "modelId": "gemini-3.5-flash",
+      "input": 1.5,
+      "output": 9.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-05-19",
+      "release": {
+        "date": "2026-05-19",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-3-5-flash",
+        "variant": "Gemini 3.5 Flash (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-3.5-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-3.7-flash",
+      "provider": "google",
+      "modelId": "gemini-3.7-flash",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-08-13",
+      "release": {
+        "date": "2026-08-13",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-3-7-flash",
+        "variant": "Gemini 3.7 Flash (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-3.7-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-3.8-flash",
+      "provider": "google",
+      "modelId": "gemini-3.8-flash",
+      "input": 0.75,
+      "output": 3.75,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-09-02",
+      "release": {
+        "date": "2026-09-02",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-3-8-flash",
+        "variant": "Gemini 3.8 Flash (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-3.8-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "gemini-4-argon",
+      "provider": "google",
+      "modelId": "gemini-4-argon",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-09-30",
+      "release": {
+        "date": "2026-09-30",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+        "variant": "Gemini 4 Argon (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gemini-4-argon",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-5",
+      "provider": "zhipu",
+      "modelId": "glm-5",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-02-11",
+      "release": {
+        "date": "2026-02-11",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/glm-5",
+        "variant": "GLM-5 (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-5",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-5-turbo",
+      "provider": "zhipu",
+      "modelId": "glm-5-turbo",
+      "input": 1.2,
+      "output": 4.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-03-15",
+      "release": {
+        "date": "2026-03-15",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/glm-5-turbo",
+        "variant": "GLM-5-Turbo",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-5-turbo",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-5.1",
+      "provider": "zhipu",
+      "modelId": "glm-5.1",
+      "input": 1.26,
+      "output": 3.96,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-04-07",
+      "release": {
+        "date": "2026-04-07",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/glm-5-1",
+        "variant": "GLM-5.1 (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-5.1",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-5.2",
+      "provider": "zhipu",
+      "modelId": "glm-5.2",
+      "input": 0.88,
+      "output": 3.08,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-06-16",
+      "release": {
+        "date": "2026-06-16",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/glm-5-2",
+        "variant": "GLM-5.2 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-5.2",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-5.3",
+      "provider": "zhipu",
+      "modelId": "glm-5.3",
+      "input": 1.2,
+      "output": 4.18,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-08-18",
+      "release": {
+        "date": "2026-08-18",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/glm-5-3",
+        "variant": "GLM-5.3 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-5.3",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-5.3-flash",
+      "provider": "zhipu",
+      "modelId": "glm-5.3-flash",
+      "input": 0.11851852,
+      "output": 0.41481482,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-08-26",
+      "release": {
+        "date": "2026-08-26",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/glm-5-3-flash",
+        "variant": "GLM-5.3-Flash",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-5.3-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-5.3-flashx",
+      "provider": "zhipu",
+      "modelId": "glm-5.3-flashx",
+      "input": 0.28985507,
+      "output": 1.01449274,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-5.3-flashx",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-5.3-prime",
+      "provider": "zhipu",
+      "modelId": "glm-5.3-prime",
+      "input": 2.3916293,
+      "output": 8.37070255,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-5.3-prime",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-5v-turbo",
+      "provider": "zhipu",
+      "modelId": "glm-5v-turbo",
+      "input": 0.8,
+      "output": 3.52,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-04-01",
+      "release": {
+        "date": "2026-04-01",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/glm-5v-turbo",
+        "variant": "GLM 5V Turbo (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-5v-turbo",
+      "requestPrice": null
+    },
+    {
+      "name": "glm-ocr",
+      "provider": "zhipu",
+      "modelId": "glm-ocr",
+      "input": 0.03,
+      "output": 0.03,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=glm-ocr",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-4.1",
       "provider": "openai",
       "modelId": "gpt-4.1",
-      "input": 1.3,
-      "output": 5.2
+      "input": 1.6,
+      "output": 6.4,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-04-14",
+      "release": {
+        "date": "2025-04-14",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-4-1",
+        "variant": "GPT-4.1",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-4.1",
+      "requestPrice": null
     },
     {
-      "name": "GPT-4.1 mini",
+      "name": "gpt-4.1-mini",
       "provider": "openai",
       "modelId": "gpt-4.1-mini",
-      "input": 0.26,
-      "output": 1.04
+      "input": 0.32,
+      "output": 1.28,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-04-14",
+      "release": {
+        "date": "2025-04-14",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-4-1-mini",
+        "variant": "GPT-4.1 mini",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-4.1-mini",
+      "requestPrice": null
     },
     {
-      "name": "GPT-4.1 nano",
+      "name": "gpt-4.1-nano",
       "provider": "openai",
       "modelId": "gpt-4.1-nano",
-      "input": 0.065,
-      "output": 0.26
+      "input": 0.08,
+      "output": 0.32,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-04-14",
+      "release": {
+        "date": "2025-04-14",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-4-1-nano",
+        "variant": "GPT-4.1 nano",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-4.1-nano",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-4o",
+      "provider": "openai",
+      "modelId": "gpt-4o",
+      "input": 2.0,
+      "output": 8.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2024-11-20",
+      "release": {
+        "date": "2024-11-20",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-4o",
+        "variant": "GPT-4o (Nov '24)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-4o",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-4o-mini",
+      "provider": "openai",
+      "modelId": "gpt-4o-mini",
+      "input": 0.0975,
+      "output": 0.39,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2024-07-18",
+      "release": {
+        "date": "2024-07-18",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-4o-mini",
+        "variant": "GPT-4o mini",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-4o-mini",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5",
+      "provider": "openai",
+      "modelId": "gpt-5",
+      "input": 1.0,
+      "output": 8.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-08-07",
+      "release": {
+        "date": "2025-08-07",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5",
+        "variant": "GPT-5 (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5-codex",
+      "provider": "openai",
+      "modelId": "gpt-5-codex",
+      "input": 1.0,
+      "output": 8.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-09-23",
+      "release": {
+        "date": "2025-09-23",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-codex",
+        "variant": "GPT-5 Codex (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5-codex",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5-mini",
+      "provider": "openai",
+      "modelId": "gpt-5-mini",
+      "input": 0.2,
+      "output": 1.6,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-08-07",
+      "release": {
+        "date": "2025-08-07",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-mini",
+        "variant": "GPT-5 mini (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5-mini",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5-nano",
+      "provider": "openai",
+      "modelId": "gpt-5-nano",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2025-08-07",
+      "release": {
+        "date": "2025-08-07",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-nano",
+        "variant": "GPT-5 nano (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5-nano",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5-pro",
+      "provider": "openai",
+      "modelId": "gpt-5-pro",
+      "input": 15.0,
+      "output": 120.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.1",
+      "provider": "openai",
+      "modelId": "gpt-5.1",
+      "input": 1.0,
+      "output": 8.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-11-13",
+      "release": {
+        "date": "2025-11-13",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-1",
+        "variant": "GPT-5.1 (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.1",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.1-chat-latest",
+      "provider": "openai",
+      "modelId": "gpt-5.1-chat-latest",
+      "input": 1.25,
+      "output": 10.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.1-chat-latest",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.1-codex",
+      "provider": "openai",
+      "modelId": "gpt-5.1-codex",
+      "input": 1.0,
+      "output": 8.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-11-13",
+      "release": {
+        "date": "2025-11-13",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-1-codex",
+        "variant": "GPT-5.1 Codex (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.1-codex",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.1-codex-mini",
+      "provider": "openai",
+      "modelId": "gpt-5.1-codex-mini",
+      "input": 0.2,
+      "output": 1.6,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-11-13",
+      "release": {
+        "date": "2025-11-13",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-1-codex-mini",
+        "variant": "GPT-5.1 Codex mini (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.1-codex-mini",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.2",
+      "provider": "openai",
+      "modelId": "gpt-5.2",
+      "input": 1.75,
+      "output": 14.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-12-11",
+      "release": {
+        "date": "2025-12-11",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-2",
+        "variant": "GPT-5.2 (Xhigh)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.2",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.2-chat-latest",
+      "provider": "openai",
+      "modelId": "gpt-5.2-chat-latest",
+      "input": 1.75,
+      "output": 14.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.2-chat-latest",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.2-codex",
+      "provider": "openai",
+      "modelId": "gpt-5.2-codex",
+      "input": 1.4,
+      "output": 11.2,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-12-11",
+      "release": {
+        "date": "2025-12-11",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-2-codex",
+        "variant": "GPT-5.2 Codex (Xhigh)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.2-codex",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.3-chat-latest",
+      "provider": "openai",
+      "modelId": "gpt-5.3-chat-latest",
+      "input": 1.75,
+      "output": 14.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.3-chat-latest",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.3-codex",
+      "provider": "openai",
+      "modelId": "gpt-5.3-codex",
+      "input": 1.4,
+      "output": 11.2,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-02-05",
+      "release": {
+        "date": "2026-02-05",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-3-codex",
+        "variant": "GPT-5.3 Codex (Xhigh)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.3-codex",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.4",
+      "provider": "openai",
+      "modelId": "gpt-5.4",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-03-05",
+      "release": {
+        "date": "2026-03-05",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-4",
+        "variant": "GPT-5.4 (Xhigh)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.4",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "provider": "openai",
+      "modelId": "gpt-5.4-mini",
+      "input": 0.6,
+      "output": 3.6,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-03-17",
+      "release": {
+        "date": "2026-03-17",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-4-mini",
+        "variant": "GPT-5.4 mini (Xhigh)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.4-mini",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.4-nano",
+      "provider": "openai",
+      "modelId": "gpt-5.4-nano",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-03-17",
+      "release": {
+        "date": "2026-03-17",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-4-nano",
+        "variant": "GPT-5.4 nano (Xhigh)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.4-nano",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.4-pro",
+      "provider": "openai",
+      "modelId": "gpt-5.4-pro",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-03-05",
+      "release": {
+        "date": "2026-03-05",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-4-pro",
+        "variant": "GPT-5.4 Pro (Xhigh)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.4-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.5",
+      "provider": "openai",
+      "modelId": "gpt-5.5",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-04-23",
+      "release": {
+        "date": "2026-04-23",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-5",
+        "variant": "GPT-5.5 (Xhigh)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.5",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.6-luna",
+      "provider": "openai",
+      "modelId": "gpt-5.6-luna",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-07-09",
+      "release": {
+        "date": "2026-07-09",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-6-luna",
+        "variant": "GPT-5.6 Luna (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.6-luna",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.6-sol",
+      "provider": "openai",
+      "modelId": "gpt-5.6-sol",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-07-09",
+      "release": {
+        "date": "2026-07-09",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-6-sol",
+        "variant": "GPT-5.6 Sol (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.6-sol",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-5.6-terra",
+      "provider": "openai",
+      "modelId": "gpt-5.6-terra",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-07-09",
+      "release": {
+        "date": "2026-07-09",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-5-6-terra",
+        "variant": "GPT-5.6 Terra (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-5.6-terra",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-6-astra",
+      "provider": "openai",
+      "modelId": "gpt-6-astra",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-09-03",
+      "release": {
+        "date": "2026-09-03",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-6-astra",
+        "variant": "GPT-6 Astra (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-6-astra",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-6-luna",
+      "provider": "openai",
+      "modelId": "gpt-6-luna",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-09-22",
+      "release": {
+        "date": "2026-09-22",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-6-luna",
+        "variant": "GPT-6 Luna (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-6-luna",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-6-sol",
+      "provider": "openai",
+      "modelId": "gpt-6-sol",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-09-22",
+      "release": {
+        "date": "2026-09-22",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-6-sol",
+        "variant": "GPT-6 Sol (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-6-sol",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-6.1-sol",
+      "provider": "openai",
+      "modelId": "gpt-6.1-sol",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-09-29",
+      "release": {
+        "date": "2026-09-29",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-6-1-sol",
+        "variant": "GPT-6.1 Sol (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-6.1-sol",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-6.1-terra",
+      "provider": "openai",
+      "modelId": "gpt-6.1-terra",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-10-26",
+      "release": {
+        "date": "2026-10-26",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+        "variant": "GPT-6.1 Terra (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-6.1-terra",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-image-1-mini",
+      "provider": "openai",
+      "modelId": "gpt-image-1-mini",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-image-1-mini",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-image-1.5",
+      "provider": "openai",
+      "modelId": "gpt-image-1.5",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": "2025-12",
+      "release": {
+        "date": "2025-12",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "GPT Image 1.5 (high)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-image-1.5",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-image-2",
+      "provider": "openai",
+      "modelId": "gpt-image-2",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": "2026-04",
+      "release": {
+        "date": "2026-04",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "GPT Image 2 (high)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-image-2",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-image-2-t",
+      "provider": "openai",
+      "modelId": "gpt-image-2-t",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-image-2-t",
+      "requestPrice": null
+    },
+    {
+      "name": "gpt-image-2.5-flare",
+      "provider": "openai",
+      "modelId": "gpt-image-2.5-flare",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": "2026-09",
+      "release": {
+        "date": "2026-09",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "GPT Image 2.5 Flare (max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-image-2.5-flare",
+      "requestPrice": 0.058
+    },
+    {
+      "name": "gpt-image-2.5-sunburst",
+      "provider": "openai",
+      "modelId": "gpt-image-2.5-sunburst",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": "2026-09",
+      "release": {
+        "date": "2026-09",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "GPT Image 2.5 Sunburst (max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gpt-image-2.5-sunburst",
+      "requestPrice": 0.058
+    },
+    {
+      "name": "grok-4-1-fast-reasoning",
+      "provider": "xai",
+      "modelId": "grok-4-1-fast-reasoning",
+      "input": 0.17,
+      "output": 0.425,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-11-19",
+      "release": {
+        "date": "2025-11-19",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/grok-4-1-fast-reasoning",
+        "variant": "Grok 4.1 Fast (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=grok-4-1-fast-reasoning",
+      "requestPrice": null
+    },
+    {
+      "name": "grok-4-20-non-reasoning",
+      "provider": "xai",
+      "modelId": "grok-4-20-non-reasoning",
+      "input": 1.7,
+      "output": 5.1,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-04-07",
+      "release": {
+        "date": "2026-04-07",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/grok-4-20-non-reasoning",
+        "variant": "Grok 4.20 0309 v2 (Non-reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=grok-4-20-non-reasoning",
+      "requestPrice": null
+    },
+    {
+      "name": "grok-4-20-reasoning",
+      "provider": "xai",
+      "modelId": "grok-4-20-reasoning",
+      "input": 1.7,
+      "output": 5.1,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-04-07",
+      "release": {
+        "date": "2026-04-07",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/grok-4-20",
+        "variant": "Grok 4.20 0309 v2 (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=grok-4-20-reasoning",
+      "requestPrice": null
+    },
+    {
+      "name": "grok-4.3",
+      "provider": "xai",
+      "modelId": "grok-4.3",
+      "input": 1.0625,
+      "output": 2.125,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-04-30",
+      "release": {
+        "date": "2026-04-30",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/grok-4-3",
+        "variant": "Grok 4.3 (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=grok-4.3",
+      "requestPrice": null
+    },
+    {
+      "name": "grok-4.6",
+      "provider": "xai",
+      "modelId": "grok-4.6",
+      "input": 1.7,
+      "output": 5.1,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-08-12",
+      "release": {
+        "date": "2026-08-12",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/grok-4-6",
+        "variant": "Grok 4.6 (High)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=grok-4.6",
+      "requestPrice": null
+    },
+    {
+      "name": "gte-rerank-v2",
+      "provider": "qwen",
+      "modelId": "gte-rerank-v2",
+      "input": 0.11958146,
+      "output": null,
+      "category": "embedding",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=gte-rerank-v2",
+      "requestPrice": null
+    },
+    {
+      "name": "hailuo-h3",
+      "provider": "minimax",
+      "modelId": "hailuo-h3",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=hailuo-h3",
+      "requestPrice": null
+    },
+    {
+      "name": "hy-3d-3.0",
+      "provider": "tencent",
+      "modelId": "hy-3d-3.0",
+      "input": null,
+      "output": null,
+      "category": "3d",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=hy-3d-3.0",
+      "requestPrice": 10
+    },
+    {
+      "name": "hy-3d-3.1",
+      "provider": "tencent",
+      "modelId": "hy-3d-3.1",
+      "input": null,
+      "output": null,
+      "category": "3d",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=hy-3d-3.1",
+      "requestPrice": 10
+    },
+    {
+      "name": "hy-3d-component",
+      "provider": "tencent",
+      "modelId": "hy-3d-component",
+      "input": null,
+      "output": null,
+      "category": "3d",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=hy-3d-component",
+      "requestPrice": 10
+    },
+    {
+      "name": "jev-1.14",
+      "provider": "typesafe",
+      "modelId": "jev-1.14",
+      "input": 0.042,
+      "output": 0.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=jev-1.14",
+      "requestPrice": null
+    },
+    {
+      "name": "kimi-k2.5",
+      "provider": "moonshot",
+      "modelId": "kimi-k2.5",
+      "input": 0.6,
+      "output": 3.15,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-01-27",
+      "release": {
+        "date": "2026-01-27",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/kimi-k2-5",
+        "variant": "Kimi K2.5 (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=kimi-k2.5",
+      "requestPrice": null
+    },
+    {
+      "name": "kimi-k2.6",
+      "provider": "moonshot",
+      "modelId": "kimi-k2.6",
+      "input": 1.0,
+      "output": 4.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-04-20",
+      "release": {
+        "date": "2026-04-20",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/kimi-k2-6",
+        "variant": "Kimi K2.6 (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=kimi-k2.6",
+      "requestPrice": null
+    },
+    {
+      "name": "kimi-k2.7-code",
+      "provider": "moonshot",
+      "modelId": "kimi-k2.7-code",
+      "input": 0.94202899,
+      "output": 3.9130435,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-06-12",
+      "release": {
+        "date": "2026-06-12",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/kimi-k2-7-code",
+        "variant": "Kimi K2.7 Code",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=kimi-k2.7-code",
+      "requestPrice": null
+    },
+    {
+      "name": "kimi-k2.7-code-highspeed",
+      "provider": "moonshot",
+      "modelId": "kimi-k2.7-code-highspeed",
+      "input": 1.88405797,
+      "output": 7.82608695,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=kimi-k2.7-code-highspeed",
+      "requestPrice": null
+    },
+    {
+      "name": "kimi-k2.8-preview",
+      "provider": "moonshot",
+      "modelId": "kimi-k2.8-preview",
+      "input": 0.94202899,
+      "output": 3.9130435,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=kimi-k2.8-preview",
+      "requestPrice": null
+    },
+    {
+      "name": "kimi-k3",
+      "provider": "moonshot",
+      "modelId": "kimi-k3",
+      "input": 3.0,
+      "output": 15.0,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-07-16",
+      "release": {
+        "date": "2026-07-16",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/kimi-k3",
+        "variant": "Kimi K3 (Max)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=kimi-k3",
+      "requestPrice": null
+    },
+    {
+      "name": "kimi-k3.1-pro",
+      "provider": "moonshot",
+      "modelId": "kimi-k3.1-pro",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-10-23",
+      "release": {
+        "date": "2026-10-23",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+        "variant": "Kimi K3.1 Pro",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=kimi-k3.1-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "kimi-k3.1-pro-highspeed",
+      "provider": "moonshot",
+      "modelId": "kimi-k3.1-pro-highspeed",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=kimi-k3.1-pro-highspeed",
+      "requestPrice": null
+    },
+    {
+      "name": "mimo-v2.5-pro",
+      "provider": "xiaomi",
+      "modelId": "mimo-v2.5-pro",
+      "input": 0.43478261,
+      "output": 0.86956522,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-04-22",
+      "release": {
+        "date": "2026-04-22",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+        "variant": "MiMo-V2.5-Pro (Reasoning)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=mimo-v2.5-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "mimo-v2.6-flash",
+      "provider": "xiaomi",
+      "modelId": "mimo-v2.6-flash",
+      "input": 0.14,
+      "output": 0.28,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-09-21",
+      "release": {
+        "date": "2026-09-21",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
+        "variant": "MiMo-V2.6-Flash",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=mimo-v2.6-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "mimo-v2.6-pro",
+      "provider": "xiaomi",
+      "modelId": "mimo-v2.6-pro",
+      "input": 0.435,
+      "output": 0.87,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-09-21",
+      "release": {
+        "date": "2026-09-21",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+        "variant": "MiMo-V2.6-Pro",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=mimo-v2.6-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "mimo-v2.6-pro-ultraspeed",
+      "provider": "xiaomi",
+      "modelId": "mimo-v2.6-pro-ultraspeed",
+      "input": 4.35,
+      "output": 8.7,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=mimo-v2.6-pro-ultraspeed",
+      "requestPrice": null
+    },
+    {
+      "name": "MiniMax-M2.5",
+      "provider": "minimax",
+      "modelId": "MiniMax-M2.5",
+      "input": 0.3,
+      "output": 1.2,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-02-12",
+      "release": {
+        "date": "2026-02-12",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/minimax-m2-5",
+        "variant": "MiniMax-M2.5",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=MiniMax-M2.5",
+      "requestPrice": null
+    },
+    {
+      "name": "MiniMax-M2.7",
+      "provider": "minimax",
+      "modelId": "MiniMax-M2.7",
+      "input": 0.3,
+      "output": 1.2,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-03-18",
+      "release": {
+        "date": "2026-03-18",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/minimax-m2-7",
+        "variant": "MiniMax-M2.7",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=MiniMax-M2.7",
+      "requestPrice": null
+    },
+    {
+      "name": "MiniMax-M3",
+      "provider": "minimax",
+      "modelId": "MiniMax-M3",
+      "input": 0.3,
+      "output": 1.2,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-06-01",
+      "release": {
+        "date": "2026-06-01",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/minimax-m3",
+        "variant": "MiniMax-M3",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=MiniMax-M3",
+      "requestPrice": null
+    },
+    {
+      "name": "minimax-speech-2.8-hd",
+      "provider": "minimax",
+      "modelId": "minimax-speech-2.8-hd",
+      "input": null,
+      "output": null,
+      "category": "audio",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=minimax-speech-2.8-hd",
+      "requestPrice": null
+    },
+    {
+      "name": "minimax-speech-2.8-turbo",
+      "provider": "minimax",
+      "modelId": "minimax-speech-2.8-turbo",
+      "input": null,
+      "output": null,
+      "category": "audio",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=minimax-speech-2.8-turbo",
+      "requestPrice": null
+    },
+    {
+      "name": "mj_imagine",
+      "provider": "midjourney",
+      "modelId": "mj_imagine",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=mj_imagine",
+      "requestPrice": 0.1
+    },
+    {
+      "name": "mj_upscale",
+      "provider": "midjourney",
+      "modelId": "mj_upscale",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=mj_upscale",
+      "requestPrice": 0.05
+    },
+    {
+      "name": "mj_variation",
+      "provider": "midjourney",
+      "modelId": "mj_variation",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=mj_variation",
+      "requestPrice": 0.1
+    },
+    {
+      "name": "nano-banana",
+      "provider": "google",
+      "modelId": "nano-banana",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": "2025-08",
+      "release": {
+        "date": "2025-08",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Nano Banana (Gemini 2.5 Flash Image)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=nano-banana",
+      "requestPrice": null
+    },
+    {
+      "name": "nano-banana-2",
+      "provider": "google",
+      "modelId": "nano-banana-2",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": "2026-02",
+      "release": {
+        "date": "2026-02",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=nano-banana-2",
+      "requestPrice": null
+    },
+    {
+      "name": "nano-banana-2.1",
+      "provider": "google",
+      "modelId": "nano-banana-2.1",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": "2026-10",
+      "release": {
+        "date": "2026-10",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Nano Banana 2.1",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=nano-banana-2.1",
+      "requestPrice": 0.035
+    },
+    {
+      "name": "nano-banana-pro",
+      "provider": "google",
+      "modelId": "nano-banana-pro",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": "2025-11",
+      "release": {
+        "date": "2025-11",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Nano Banana Pro (Gemini 3 Pro Image)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=nano-banana-pro",
+      "requestPrice": null
     },
     {
       "name": "o3",
       "provider": "openai",
       "modelId": "o3",
       "input": 2,
-      "output": 8
+      "output": 8,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2025-04-16",
+      "release": {
+        "date": "2025-04-16",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/o3",
+        "variant": "o3",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=o3",
+      "requestPrice": null
     },
     {
-      "name": "o4-mini",
-      "provider": "openai",
-      "modelId": null,
+      "name": "pixverse-video-c1",
+      "provider": "pixverse",
+      "modelId": "pixverse-video-c1",
       "input": null,
-      "output": null
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=pixverse-video-c1",
+      "requestPrice": null
     },
     {
-      "name": "o3-mini",
-      "provider": "openai",
-      "modelId": null,
+      "name": "pixverse-video-v5.6",
+      "provider": "pixverse",
+      "modelId": "pixverse-video-v5.6",
       "input": null,
-      "output": null
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=pixverse-video-v5.6",
+      "requestPrice": null
     },
     {
-      "name": "GPT-4o",
-      "provider": "openai",
-      "modelId": "gpt-4o",
-      "input": 1.625,
-      "output": 6.5
-    },
-    {
-      "name": "GPT-4o mini",
-      "provider": "openai",
-      "modelId": "gpt-4o-mini",
-      "input": 0.0975,
-      "output": 0.39
-    },
-    {
-      "name": "Claude Opus 4.6",
-      "provider": "anthropic",
-      "modelId": "claude-opus-4-6",
-      "input": 3.25,
-      "output": 16.25
-    },
-    {
-      "name": "Claude Sonnet 4.6",
-      "provider": "anthropic",
-      "modelId": "claude-sonnet-4-6",
-      "input": 1.95,
-      "output": 9.75
-    },
-    {
-      "name": "Claude Opus 4.1",
-      "provider": "anthropic",
-      "modelId": null,
+      "name": "pixverse-video-v6.0",
+      "provider": "pixverse",
+      "modelId": "pixverse-video-v6.0",
       "input": null,
-      "output": null
+      "output": null,
+      "category": "video",
+      "billingMode": "per_output_token",
+      "releaseDate": "2026-03",
+      "release": {
+        "date": "2026-03",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+        "variant": "PixVerse V6",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=pixverse-video-v6.0",
+      "requestPrice": null
     },
     {
-      "name": "Claude Sonnet 4.5",
-      "provider": "anthropic",
-      "modelId": "claude-sonnet-4-5",
-      "input": 1.95,
-      "output": 9.75
-    },
-    {
-      "name": "Claude Haiku 4.5",
-      "provider": "anthropic",
-      "modelId": "claude-haiku-4-5",
-      "input": 0.65,
-      "output": 3.25
-    },
-    {
-      "name": "Claude Opus 4",
-      "provider": "anthropic",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Claude Sonnet 4",
-      "provider": "anthropic",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Claude 3.7 Sonnet",
-      "provider": "anthropic",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Gemini 3.1 Pro",
-      "provider": "google",
-      "modelId": "gemini-3.1-pro",
-      "input": 1.1,
-      "output": 6.6
-    },
-    {
-      "name": "Gemini 3 Deep Think",
-      "provider": "google",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Gemini 3 Flash",
-      "provider": "google",
-      "modelId": "gemini-3-flash",
-      "input": 0.165,
-      "output": 1.32
-    },
-    {
-      "name": "Gemini 2.5 Pro",
-      "provider": "google",
-      "modelId": "gemini-2.5-pro",
-      "input": 0.6875,
-      "output": 5.5
-    },
-    {
-      "name": "Gemini 2.5 Flash",
-      "provider": "google",
-      "modelId": "gemini-2.5-flash",
-      "input": 0.165,
-      "output": 1.375
-    },
-    {
-      "name": "Gemini 2.0 Flash",
-      "provider": "google",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "DeepSeek-V3 0324",
-      "provider": "deepseek",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "DeepSeek-R1-0528",
-      "provider": "deepseek",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "DeepSeek-R1",
-      "provider": "deepseek",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "DeepSeek-V3",
-      "provider": "deepseek",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Llama 4 Maverick",
-      "provider": "meta",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Llama 4 Scout",
-      "provider": "meta",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Llama 3.3 70B",
-      "provider": "meta",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Mistral Medium 3",
-      "provider": "mistral",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Mistral Small 3.1",
-      "provider": "mistral",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Mistral Large 2",
-      "provider": "mistral",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Grok 4",
-      "provider": "xai",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Grok-3",
-      "provider": "xai",
-      "modelId": null,
-      "input": null,
-      "output": null
-    },
-    {
-      "name": "Qwen3-Max",
+      "name": "qwen-audio-3.1-realtime-plus",
       "provider": "qwen",
-      "modelId": "qwen3-max",
-      "input": 2.11,
-      "output": 8.43
-    },
-    {
-      "name": "Qwen3 235B",
-      "provider": "qwen",
-      "modelId": null,
+      "modelId": "qwen-audio-3.1-realtime-plus",
       "input": null,
-      "output": null
+      "output": null,
+      "category": "audio",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen-audio-3.1-realtime-plus",
+      "requestPrice": null
     },
     {
-      "name": "QwQ-32B",
+      "name": "qwen-image-2.0",
       "provider": "qwen",
-      "modelId": "qwq-32b",
-      "input": 0.9,
-      "output": 2.7
+      "modelId": "qwen-image-2.0",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_image",
+      "releaseDate": "2026-03",
+      "release": {
+        "date": "2026-03",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Qwen Image 2.0 (2026-03-03)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen-image-2.0",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen-image-2.1-pro",
+      "provider": "qwen",
+      "modelId": "qwen-image-2.1-pro",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": "2026-10",
+      "release": {
+        "date": "2026-10",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Qwen-Image-2.1-Pro",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen-image-2.1-pro",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen-image-2.1-turbo",
+      "provider": "qwen",
+      "modelId": "qwen-image-2.1-turbo",
+      "input": null,
+      "output": null,
+      "category": "image",
+      "billingMode": "per_request",
+      "releaseDate": "2026-10",
+      "release": {
+        "date": "2026-10",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/text-to-image",
+        "variant": "Qwen-Image-2.1-Turbo",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen-image-2.1-turbo",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen-max",
+      "provider": "qwen",
+      "modelId": "qwen-max",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen-max",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen-plus",
+      "provider": "qwen",
+      "modelId": "qwen-plus",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen-plus",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3-vl-plus",
+      "provider": "qwen",
+      "modelId": "qwen3-vl-plus",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3-vl-plus",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3.5-flash",
+      "provider": "qwen",
+      "modelId": "qwen3.5-flash",
+      "input": 0.029,
+      "output": 0.287,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3.5-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3.5-plus",
+      "provider": "qwen",
+      "modelId": "qwen3.5-plus",
+      "input": 0.4,
+      "output": 2.4,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3.5-plus",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3.6-plus",
+      "provider": "qwen",
+      "modelId": "qwen3.6-plus",
+      "input": 0.3,
+      "output": 1.8,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-04-02",
+      "release": {
+        "date": "2026-04-02",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/qwen3-6-plus",
+        "variant": "Qwen3.6 Plus",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3.6-plus",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3.7-max",
+      "provider": "qwen",
+      "modelId": "qwen3.7-max",
+      "input": 1.2,
+      "output": 1.2,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": "2026-05-19",
+      "release": {
+        "date": "2026-05-19",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/qwen3-7-max",
+        "variant": "Qwen3.7 Max",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3.7-max",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3.7-plus",
+      "provider": "qwen",
+      "modelId": "qwen3.7-plus",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-06-01",
+      "release": {
+        "date": "2026-06-01",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/qwen3-7-plus",
+        "variant": "Qwen3.7 Plus",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3.7-plus",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3.8-flash",
+      "provider": "qwen",
+      "modelId": "qwen3.8-flash",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3.8-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3.8-max",
+      "provider": "qwen",
+      "modelId": "qwen3.8-max",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": "2026-09-02",
+      "release": {
+        "date": "2026-09-02",
+        "source": "Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/qwen3-8-max",
+        "variant": "Qwen3.8 Max (0902)",
+        "verified": true
+      },
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3.8-max",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3.8-omni-flash",
+      "provider": "qwen",
+      "modelId": "qwen3.8-omni-flash",
+      "input": null,
+      "output": null,
+      "category": "text",
+      "billingMode": "tiered_expr",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3.8-omni-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "qwen3.8-omni-flash-realtime",
+      "provider": "qwen",
+      "modelId": "qwen3.8-omni-flash-realtime",
+      "input": 0.22421525,
+      "output": 0.67264575,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=qwen3.8-omni-flash-realtime",
+      "requestPrice": null
+    },
+    {
+      "name": "text-embedding-3-large",
+      "provider": "openai",
+      "modelId": "text-embedding-3-large",
+      "input": 0.13,
+      "output": null,
+      "category": "embedding",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=text-embedding-3-large",
+      "requestPrice": null
+    },
+    {
+      "name": "text-embedding-3-small",
+      "provider": "openai",
+      "modelId": "text-embedding-3-small",
+      "input": 0.02,
+      "output": null,
+      "category": "embedding",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=text-embedding-3-small",
+      "requestPrice": null
+    },
+    {
+      "name": "text-embedding-ada-002",
+      "provider": "openai",
+      "modelId": "text-embedding-ada-002",
+      "input": 0.1,
+      "output": null,
+      "category": "embedding",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=text-embedding-ada-002",
+      "requestPrice": null
+    },
+    {
+      "name": "text-embedding-v1",
+      "provider": "qwen",
+      "modelId": "text-embedding-v1",
+      "input": 0.1,
+      "output": null,
+      "category": "embedding",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=text-embedding-v1",
+      "requestPrice": null
+    },
+    {
+      "name": "wan2.2-i2v-flash",
+      "provider": "qwen",
+      "modelId": "wan2.2-i2v-flash",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=wan2.2-i2v-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "wan2.2-i2v-plus",
+      "provider": "qwen",
+      "modelId": "wan2.2-i2v-plus",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=wan2.2-i2v-plus",
+      "requestPrice": null
+    },
+    {
+      "name": "wan2.2-kf2v-flash",
+      "provider": "qwen",
+      "modelId": "wan2.2-kf2v-flash",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=wan2.2-kf2v-flash",
+      "requestPrice": null
+    },
+    {
+      "name": "wan2.2-s2v",
+      "provider": "qwen",
+      "modelId": "wan2.2-s2v",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=wan2.2-s2v",
+      "requestPrice": null
+    },
+    {
+      "name": "wan2.2-t2v-plus",
+      "provider": "qwen",
+      "modelId": "wan2.2-t2v-plus",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=wan2.2-t2v-plus",
+      "requestPrice": null
+    },
+    {
+      "name": "wan2.5-t2v-preview",
+      "provider": "qwen",
+      "modelId": "wan2.5-t2v-preview",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_second",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=wan2.5-t2v-preview",
+      "requestPrice": null
+    },
+    {
+      "name": "wan3.0-video",
+      "provider": "qwen",
+      "modelId": "wan3.0-video",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=wan3.0-video",
+      "requestPrice": null
+    },
+    {
+      "name": "wan3.0-video-prime",
+      "provider": "qwen",
+      "modelId": "wan3.0-video-prime",
+      "input": null,
+      "output": null,
+      "category": "video",
+      "billingMode": "per_request",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=wan3.0-video-prime",
+      "requestPrice": null
+    },
+    {
+      "name": "whisper-1",
+      "provider": "openai",
+      "modelId": "whisper-1",
+      "input": null,
+      "output": null,
+      "category": "audio",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=whisper-1",
+      "requestPrice": null
+    },
+    {
+      "name": "youtu-vita",
+      "provider": "tencent",
+      "modelId": "youtu-vita",
+      "input": 0.162,
+      "output": 0.486,
+      "category": "text",
+      "billingMode": "per_token",
+      "releaseDate": null,
+      "release": null,
+      "pricingUrl": "https://crazyrouter.com/zh/models?search=youtu-vita",
+      "requestPrice": null
     }
   ]
 }

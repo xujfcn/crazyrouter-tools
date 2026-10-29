@@ -3,64 +3,88 @@
   "endpoint": "https://artificialanalysis.ai/api/v2/data/llms/models",
   "collectedAt": "2026-10-29T10:40:52+00:00",
   "models": {
-    "GPT-5.4": {
-      "id": "a89c4b28-2d8c-456e-88ea-255fb51fd2b6",
-      "name": "GPT-5.4 (Xhigh)",
-      "slug": "gpt-5-4",
-      "url": "https://artificialanalysis.ai/models/gpt-5-4",
+    "MiniMax-M2.7": {
+      "id": "4bbceacb-cf47-464b-b60f-e1d1fe016d67",
+      "name": "MiniMax-M2.7",
+      "slug": "minimax-m2-7",
+      "url": "https://artificialanalysis.ai/models/minimax-m2-7",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.92,
+        "gpqa": 0.874,
         "mmlu_pro": null,
         "livecodebench": null
       }
     },
-    "GPT-5 mini": {
-      "id": "29855680-7469-43eb-8b88-cd3fb1d99da3",
-      "name": "GPT-5 mini (High)",
-      "slug": "gpt-5-mini",
-      "url": "https://artificialanalysis.ai/models/gpt-5-mini",
+    "claude-haiku-5-5": {
+      "id": "7d064a11-6e78-4030-b535-cdf940615041",
+      "name": "Claude Haiku 5.5 (Max)",
+      "slug": "claude-haiku-5-5",
+      "url": "https://artificialanalysis.ai/models/claude-haiku-5-5",
       "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.828,
-        "mmlu_pro": 0.837,
-        "livecodebench": 0.838
+        "artificial_analysis_intelligence_index": 36.2,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     },
-    "GPT-4.1": {
-      "id": "3b608b70-6434-4baa-99ad-45d499703c67",
-      "name": "GPT-4.1",
-      "slug": "gpt-4-1",
-      "url": "https://artificialanalysis.ai/models/gpt-4-1",
+    "gpt-5.1-codex-mini": {
+      "id": "fd4454ff-e703-46c0-a7f5-fa69af09486d",
+      "name": "GPT-5.1 Codex mini (High)",
+      "slug": "gpt-5-1-codex-mini",
+      "url": "https://artificialanalysis.ai/models/gpt-5-1-codex-mini",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.666,
-        "mmlu_pro": 0.806,
-        "livecodebench": 0.457
+        "gpqa": 0.813,
+        "mmlu_pro": 0.82,
+        "livecodebench": 0.836
       }
     },
-    "GPT-4.1 mini": {
-      "id": "9f7c7566-a704-49a2-a383-cb3181da33a4",
-      "name": "GPT-4.1 mini",
-      "slug": "gpt-4-1-mini",
-      "url": "https://artificialanalysis.ai/models/gpt-4-1-mini",
+    "gemini-2.5-flash": {
+      "id": "219ed587-60c5-4a48-9517-8480e08d0ca1",
+      "name": "Gemini 2.5 Flash (Reasoning)",
+      "slug": "gemini-2-5-flash-reasoning",
+      "url": "https://artificialanalysis.ai/models/gemini-2-5-flash-reasoning",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.664,
-        "mmlu_pro": 0.781,
-        "livecodebench": 0.483
+        "gpqa": 0.79,
+        "mmlu_pro": 0.832,
+        "livecodebench": 0.695
       }
     },
-    "GPT-4.1 nano": {
-      "id": "72c358fd-7d45-4d68-89aa-699743710924",
-      "name": "GPT-4.1 nano",
-      "slug": "gpt-4-1-nano",
-      "url": "https://artificialanalysis.ai/models/gpt-4-1-nano",
+    "gpt-5-codex": {
+      "id": "5d11e7a1-4f70-4e5a-9364-e193761d6757",
+      "name": "GPT-5 Codex (High)",
+      "slug": "gpt-5-codex",
+      "url": "https://artificialanalysis.ai/models/gpt-5-codex",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.512,
-        "mmlu_pro": 0.657,
-        "livecodebench": 0.326
+        "gpqa": 0.837,
+        "mmlu_pro": 0.865,
+        "livecodebench": 0.84
+      }
+    },
+    "gpt-4o-mini": {
+      "id": "b5c1c91a-7474-4409-9a9c-9c2ac45d9eb6",
+      "name": "GPT-4o mini",
+      "slug": "gpt-4o-mini",
+      "url": "https://artificialanalysis.ai/models/gpt-4o-mini",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.426,
+        "mmlu_pro": 0.648,
+        "livecodebench": 0.234
+      }
+    },
+    "gemini-3-flash": {
+      "id": "7c73c3be-7f51-4d14-bec8-d5789488df25",
+      "name": "Gemini 3 Flash Preview (Reasoning)",
+      "slug": "gemini-3-flash-reasoning",
+      "url": "https://artificialanalysis.ai/models/gemini-3-flash-reasoning",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.898,
+        "mmlu_pro": 0.89,
+        "livecodebench": 0.908
       }
     },
     "o3": {
@@ -75,67 +99,55 @@
         "livecodebench": 0.808
       }
     },
-    "o4-mini": {
-      "id": "84b49308-6b93-47aa-a4f6-776ee1a1e8cd",
-      "name": "o4-mini (High)",
-      "slug": "o4-mini",
-      "url": "https://artificialanalysis.ai/models/o4-mini",
+    "gpt-6-astra": {
+      "id": "2f339a97-9a0d-499a-9cb5-e0db665bfa25",
+      "name": "GPT-6 Astra (Max)",
+      "slug": "gpt-6-astra",
+      "url": "https://artificialanalysis.ai/models/gpt-6-astra",
       "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.784,
-        "mmlu_pro": 0.832,
-        "livecodebench": 0.859
-      }
-    },
-    "o3-mini": {
-      "id": "2dad8957-4c16-4e74-bf2d-8b21514e0ae9",
-      "name": "o3-mini",
-      "slug": "o3-mini",
-      "url": "https://artificialanalysis.ai/models/o3-mini",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.748,
-        "mmlu_pro": 0.791,
-        "livecodebench": 0.717
-      }
-    },
-    "GPT-4o": {
-      "id": "c1045dc0-4fd3-4adb-9548-18763e0d051f",
-      "name": "GPT-4o (Nov '24)",
-      "slug": "gpt-4o",
-      "url": "https://artificialanalysis.ai/models/gpt-4o",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.543,
-        "mmlu_pro": 0.748,
-        "livecodebench": 0.309
-      }
-    },
-    "GPT-4o mini": {
-      "id": "b5c1c91a-7474-4409-9a9c-9c2ac45d9eb6",
-      "name": "GPT-4o mini",
-      "slug": "gpt-4o-mini",
-      "url": "https://artificialanalysis.ai/models/gpt-4o-mini",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.426,
-        "mmlu_pro": 0.648,
-        "livecodebench": 0.234
-      }
-    },
-    "Claude Opus 4.6": {
-      "id": "53c98840-47af-49aa-94e6-469fb17e9a1b",
-      "name": "Claude Opus 4.6 (Max)",
-      "slug": "claude-opus-4-6-adaptive",
-      "url": "https://artificialanalysis.ai/models/claude-opus-4-6-adaptive",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.896,
+        "artificial_analysis_intelligence_index": 56.9,
+        "gpqa": 0.961,
         "mmlu_pro": null,
         "livecodebench": null
       }
     },
-    "Claude Sonnet 4.6": {
+    "glm-5-turbo": {
+      "id": "149096f3-57b7-4413-80c2-a2c010a2995a",
+      "name": "GLM-5-Turbo",
+      "slug": "glm-5-turbo",
+      "url": "https://artificialanalysis.ai/models/glm-5-turbo",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.847,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "glm-5.3-flash": {
+      "id": "19496b81-9f41-4214-a77a-1df803b3c5ae",
+      "name": "GLM-5.3-Flash",
+      "slug": "glm-5-3-flash",
+      "url": "https://artificialanalysis.ai/models/glm-5-3-flash",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.912,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5.4-pro": {
+      "id": "5bb1f426-2d64-4d03-99fb-8041ee85c33b",
+      "name": "GPT-5.4 Pro (Xhigh)",
+      "slug": "gpt-5-4-pro",
+      "url": "https://artificialanalysis.ai/models/gpt-5-4-pro",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "claude-sonnet-4-6": {
       "id": "df8d14e0-3997-4e4d-b4ad-9c047acc9c69",
       "name": "Claude Sonnet 4.6 (Max)",
       "slug": "claude-sonnet-4-6-adaptive",
@@ -147,79 +159,151 @@
         "livecodebench": null
       }
     },
-    "Claude Opus 4.1": {
-      "id": "ccbfa8c3-a762-480b-aade-34fb9697f98c",
-      "name": "Claude 4.1 Opus (Reasoning)",
-      "slug": "claude-4-1-opus-thinking",
-      "url": "https://artificialanalysis.ai/models/claude-4-1-opus-thinking",
+    "claude-opus-4-5": {
+      "id": "2660d74f-ce79-48a8-8b53-6e668e2071a2",
+      "name": "Claude Opus 4.5 (Reasoning)",
+      "slug": "claude-opus-4-5-thinking",
+      "url": "https://artificialanalysis.ai/models/claude-opus-4-5-thinking",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.809,
-        "mmlu_pro": 0.88,
-        "livecodebench": 0.654
+        "gpqa": 0.866,
+        "mmlu_pro": 0.895,
+        "livecodebench": 0.871
       }
     },
-    "Claude Sonnet 4.5": {
-      "id": "90e078f2-051b-4c63-8919-76618971cb3f",
-      "name": "Claude 4.5 Sonnet (Reasoning)",
-      "slug": "claude-4-5-sonnet-thinking",
-      "url": "https://artificialanalysis.ai/models/claude-4-5-sonnet-thinking",
+    "MiniMax-M3": {
+      "id": "277f939a-985b-4b37-859d-b3eabc7c0b26",
+      "name": "MiniMax-M3",
+      "slug": "minimax-m3",
+      "url": "https://artificialanalysis.ai/models/minimax-m3",
+      "scores": {
+        "artificial_analysis_intelligence_index": 18.7,
+        "gpqa": 0.929,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "MiniMax-M2.5": {
+      "id": "12adec16-19fe-4d92-aeff-5ef3eb7e780a",
+      "name": "MiniMax-M2.5",
+      "slug": "minimax-m2-5",
+      "url": "https://artificialanalysis.ai/models/minimax-m2-5",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.834,
-        "mmlu_pro": 0.875,
-        "livecodebench": 0.714
+        "gpqa": 0.848,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     },
-    "Claude Haiku 4.5": {
-      "id": "a6340098-d7ae-462d-b372-0a0a67fc44b4",
-      "name": "Claude 4.5 Haiku (Reasoning)",
-      "slug": "claude-4-5-haiku-reasoning",
-      "url": "https://artificialanalysis.ai/models/claude-4-5-haiku-reasoning",
+    "claude-opus-5-5": {
+      "id": "2f3c4dc9-a450-4303-8697-0237257cf08f",
+      "name": "Claude Opus 5.5 (Max, Default Fallback)",
+      "slug": "claude-opus-5-5",
+      "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+      "scores": {
+        "artificial_analysis_intelligence_index": 58.4,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5.1-codex": {
+      "id": "04d023f3-025c-4d78-9571-53edda3eaf2a",
+      "name": "GPT-5.1 Codex (High)",
+      "slug": "gpt-5-1-codex",
+      "url": "https://artificialanalysis.ai/models/gpt-5-1-codex",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.672,
-        "mmlu_pro": 0.76,
-        "livecodebench": 0.615
+        "gpqa": 0.86,
+        "mmlu_pro": 0.86,
+        "livecodebench": 0.849
       }
     },
-    "Claude Opus 4": {
-      "id": "8a4a5ead-7789-4389-8400-30e9d20370b7",
-      "name": "Claude 4 Opus (Reasoning)",
-      "slug": "claude-4-opus-thinking",
-      "url": "https://artificialanalysis.ai/models/claude-4-opus-thinking",
+    "kimi-k2.5": {
+      "id": "a550ffca-f89e-4381-ade6-a85dc6a1fb4c",
+      "name": "Kimi K2.5 (Reasoning)",
+      "slug": "kimi-k2-5",
+      "url": "https://artificialanalysis.ai/models/kimi-k2-5",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.796,
-        "mmlu_pro": 0.873,
-        "livecodebench": 0.636
+        "gpqa": 0.879,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     },
-    "Claude Sonnet 4": {
-      "id": "a7564055-f8ba-4c4b-9e2d-060f61263645",
-      "name": "Claude 4 Sonnet (Reasoning)",
-      "slug": "claude-4-sonnet-thinking",
-      "url": "https://artificialanalysis.ai/models/claude-4-sonnet-thinking",
+    "gpt-5.4-nano": {
+      "id": "d4fc3f33-f2b0-4da1-88ee-f1f82bd4de31",
+      "name": "GPT-5.4 nano (Xhigh)",
+      "slug": "gpt-5-4-nano",
+      "url": "https://artificialanalysis.ai/models/gpt-5-4-nano",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.777,
-        "mmlu_pro": 0.842,
-        "livecodebench": 0.655
+        "gpqa": 0.817,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     },
-    "Claude 3.7 Sonnet": {
-      "id": "13358187-4584-479c-ab43-5bcdf8f297a4",
-      "name": "Claude 3.7 Sonnet (Reasoning)",
-      "slug": "claude-3-7-sonnet-thinking",
-      "url": "https://artificialanalysis.ai/models/claude-3-7-sonnet-thinking",
+    "gpt-6-sol": {
+      "id": "c50ea08c-88c0-4eb7-85b8-27f2bbf6d527",
+      "name": "GPT-6 Sol (Max)",
+      "slug": "gpt-6-sol",
+      "url": "https://artificialanalysis.ai/models/gpt-6-sol",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.772,
-        "mmlu_pro": 0.837,
-        "livecodebench": 0.473
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     },
-    "Gemini 3.1 Pro": {
+    "claude-sonnet-5-5": {
+      "id": "b171d979-5ec1-45de-b8b9-db1ee65e77ec",
+      "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
+      "slug": "claude-sonnet-5-5",
+      "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
+      "scores": {
+        "artificial_analysis_intelligence_index": 54.2,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "deepseek-v4-flash": {
+      "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+      "name": "DeepSeek V4 Flash 0731 (Max)",
+      "slug": "deepseek-v4-flash",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-flash",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.908,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "glm-5.1": {
+      "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+      "name": "GLM-5.1 (Reasoning)",
+      "slug": "glm-5-1",
+      "url": "https://artificialanalysis.ai/models/glm-5-1",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.868,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "qwen3.7-plus": {
+      "id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+      "name": "Qwen3.7 Plus",
+      "slug": "qwen3-7-plus",
+      "url": "https://artificialanalysis.ai/models/qwen3-7-plus",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.9,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gemini-3.1-pro": {
       "id": "bbd93ebe-80da-4594-bb19-61e69d0331df",
       "name": "Gemini 3.1 Pro Preview",
       "slug": "gemini-3-1-pro-preview",
@@ -231,31 +315,127 @@
         "livecodebench": null
       }
     },
-    "Gemini 3 Deep Think": {
-      "id": "a5092ece-d5a7-461f-b036-3faef262423f",
-      "name": "Gemini 3 Deep Think",
-      "slug": "gemini-3-deep-think",
-      "url": "https://artificialanalysis.ai/models/gemini-3-deep-think",
+    "qwen3.8-max": {
+      "id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+      "name": "Qwen3.8 Max (0902)",
+      "slug": "qwen3-8-max",
+      "url": "https://artificialanalysis.ai/models/qwen3-8-max",
       "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": null,
+        "artificial_analysis_intelligence_index": 33.6,
+        "gpqa": 0.928,
         "mmlu_pro": null,
         "livecodebench": null
       }
     },
-    "Gemini 3 Flash": {
-      "id": "7c73c3be-7f51-4d14-bec8-d5789488df25",
-      "name": "Gemini 3 Flash Preview (Reasoning)",
-      "slug": "gemini-3-flash-reasoning",
-      "url": "https://artificialanalysis.ai/models/gemini-3-flash-reasoning",
+    "grok-4.3": {
+      "id": "948892b5-db03-4118-a4a8-ccd51ed871ea",
+      "name": "Grok 4.3 (High)",
+      "slug": "grok-4-3",
+      "url": "https://artificialanalysis.ai/models/grok-4-3",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.898,
-        "mmlu_pro": 0.89,
-        "livecodebench": 0.908
+        "gpqa": 0.901,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     },
-    "Gemini 2.5 Pro": {
+    "kimi-k2.7-code": {
+      "id": "8d0cb231-7303-452c-9923-a9620b948475",
+      "name": "Kimi K2.7 Code",
+      "slug": "kimi-k2-7-code",
+      "url": "https://artificialanalysis.ai/models/kimi-k2-7-code",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.896,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gemini-3.8-flash": {
+      "id": "8a999846-4c1d-4ce7-a8b7-1310a7166fd7",
+      "name": "Gemini 3.8 Flash (High)",
+      "slug": "gemini-3-8-flash",
+      "url": "https://artificialanalysis.ai/models/gemini-3-8-flash",
+      "scores": {
+        "artificial_analysis_intelligence_index": 30.5,
+        "gpqa": 0.953,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "grok-4-20-reasoning": {
+      "id": "c72cb85a-18a4-4235-b455-77dff2f16c50",
+      "name": "Grok 4.20 0309 v2 (Reasoning)",
+      "slug": "grok-4-20",
+      "url": "https://artificialanalysis.ai/models/grok-4-20",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.911,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5.4": {
+      "id": "a89c4b28-2d8c-456e-88ea-255fb51fd2b6",
+      "name": "GPT-5.4 (Xhigh)",
+      "slug": "gpt-5-4",
+      "url": "https://artificialanalysis.ai/models/gpt-5-4",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.92,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "glm-5": {
+      "id": "40663ad2-b218-471e-bdd4-a1e0c2360e2b",
+      "name": "GLM-5 (Reasoning)",
+      "slug": "glm-5",
+      "url": "https://artificialanalysis.ai/models/glm-5",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.82,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gemini-3.7-flash": {
+      "id": "b2331108-72ed-415a-82d1-188633875bbc",
+      "name": "Gemini 3.7 Flash (High)",
+      "slug": "gemini-3-7-flash",
+      "url": "https://artificialanalysis.ai/models/gemini-3-7-flash",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.945,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "glm-5.3": {
+      "id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
+      "name": "GLM-5.3 (Max)",
+      "slug": "glm-5-3",
+      "url": "https://artificialanalysis.ai/models/glm-5-3",
+      "scores": {
+        "artificial_analysis_intelligence_index": 31.7,
+        "gpqa": 0.917,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-4.1": {
+      "id": "3b608b70-6434-4baa-99ad-45d499703c67",
+      "name": "GPT-4.1",
+      "slug": "gpt-4-1",
+      "url": "https://artificialanalysis.ai/models/gpt-4-1",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.666,
+        "mmlu_pro": 0.806,
+        "livecodebench": 0.457
+      }
+    },
+    "gemini-2.5-pro": {
       "id": "27202e5f-c82d-4710-92e9-4317877d4883",
       "name": "Gemini 2.5 Pro",
       "slug": "gemini-2-5-pro",
@@ -267,208 +447,556 @@
         "livecodebench": 0.801
       }
     },
-    "Gemini 2.5 Flash": {
-      "id": "219ed587-60c5-4a48-9517-8480e08d0ca1",
-      "name": "Gemini 2.5 Flash (Reasoning)",
-      "slug": "gemini-2-5-flash-reasoning",
-      "url": "https://artificialanalysis.ai/models/gemini-2-5-flash-reasoning",
+    "claude-haiku-4-5": {
+      "id": "a6340098-d7ae-462d-b372-0a0a67fc44b4",
+      "name": "Claude 4.5 Haiku (Reasoning)",
+      "slug": "claude-4-5-haiku-reasoning",
+      "url": "https://artificialanalysis.ai/models/claude-4-5-haiku-reasoning",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.79,
-        "mmlu_pro": 0.832,
-        "livecodebench": 0.695
-      }
-    },
-    "Gemini 2.0 Flash": {
-      "id": "bcca0e70-7e80-4c07-b1fa-b33bcfb19e51",
-      "name": "Gemini 2.0 Flash (Feb '25)",
-      "slug": "gemini-2-0-flash",
-      "url": "https://artificialanalysis.ai/models/gemini-2-0-flash",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.623,
-        "mmlu_pro": 0.779,
-        "livecodebench": 0.334
-      }
-    },
-    "DeepSeek-V3 0324": {
-      "id": "75e1c197-f239-4361-a9d6-66dccfead236",
-      "name": "DeepSeek V3 0324",
-      "slug": "deepseek-v3-0324",
-      "url": "https://artificialanalysis.ai/models/deepseek-v3-0324",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.655,
-        "mmlu_pro": 0.819,
-        "livecodebench": 0.405
-      }
-    },
-    "DeepSeek-R1-0528": {
-      "id": "a83f84b3-473a-4276-9ae1-8909da723159",
-      "name": "DeepSeek R1 0528 (May '25)",
-      "slug": "deepseek-r1",
-      "url": "https://artificialanalysis.ai/models/deepseek-r1",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.813,
-        "mmlu_pro": 0.849,
-        "livecodebench": 0.77
-      }
-    },
-    "DeepSeek-R1": {
-      "id": "0e34f05c-387e-4968-be15-ccec4a55d8c1",
-      "name": "DeepSeek R1 (Jan '25)",
-      "slug": "deepseek-r1-0120",
-      "url": "https://artificialanalysis.ai/models/deepseek-r1-0120",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.708,
-        "mmlu_pro": 0.844,
-        "livecodebench": 0.617
-      }
-    },
-    "DeepSeek-V3": {
-      "id": "43fc5506-c5ed-4dee-9b85-962bf7ae3986",
-      "name": "DeepSeek V3 (Dec '24)",
-      "slug": "deepseek-v3",
-      "url": "https://artificialanalysis.ai/models/deepseek-v3",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.557,
-        "mmlu_pro": 0.752,
-        "livecodebench": 0.359
-      }
-    },
-    "Llama 4 Maverick": {
-      "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
-      "name": "Llama 4 Maverick",
-      "slug": "llama-4-maverick",
-      "url": "https://artificialanalysis.ai/models/llama-4-maverick",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.671,
-        "mmlu_pro": 0.809,
-        "livecodebench": 0.397
-      }
-    },
-    "Llama 4 Scout": {
-      "id": "adf9a85e-abc3-4f28-937b-db6655cc5238",
-      "name": "Llama 4 Scout",
-      "slug": "llama-4-scout",
-      "url": "https://artificialanalysis.ai/models/llama-4-scout",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.587,
-        "mmlu_pro": 0.752,
-        "livecodebench": 0.299
-      }
-    },
-    "Llama 3.3 70B": {
-      "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
-      "name": "Llama 3.3 Instruct 70B",
-      "slug": "llama-3-3-instruct-70b",
-      "url": "https://artificialanalysis.ai/models/llama-3-3-instruct-70b",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.498,
-        "mmlu_pro": 0.713,
-        "livecodebench": 0.288
-      }
-    },
-    "Mistral Medium 3": {
-      "id": "59e22326-1bca-4432-a5fa-147fbe8854e7",
-      "name": "Mistral Medium 3",
-      "slug": "mistral-medium-3",
-      "url": "https://artificialanalysis.ai/models/mistral-medium-3",
-      "scores": {
-        "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.578,
+        "gpqa": 0.672,
         "mmlu_pro": 0.76,
-        "livecodebench": 0.4
+        "livecodebench": 0.615
       }
     },
-    "Mistral Small 3.1": {
-      "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
-      "name": "Mistral Small 3.1",
-      "slug": "mistral-small-3-1",
-      "url": "https://artificialanalysis.ai/models/mistral-small-3-1",
+    "gpt-5.6-luna": {
+      "id": "426d24c8-49ae-482a-b4a8-20f1c53f21c1",
+      "name": "GPT-5.6 Luna (Max)",
+      "slug": "gpt-5-6-luna",
+      "url": "https://artificialanalysis.ai/models/gpt-5-6-luna",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.454,
-        "mmlu_pro": 0.659,
-        "livecodebench": 0.212
+        "gpqa": 0.911,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     },
-    "Mistral Large 2": {
-      "id": "50f92d5f-f413-4c97-8dab-331101622a28",
-      "name": "Mistral Large 2 (Nov '24)",
-      "slug": "mistral-large-2",
-      "url": "https://artificialanalysis.ai/models/mistral-large-2",
+    "gpt-4.1-nano": {
+      "id": "72c358fd-7d45-4d68-89aa-699743710924",
+      "name": "GPT-4.1 nano",
+      "slug": "gpt-4-1-nano",
+      "url": "https://artificialanalysis.ai/models/gpt-4-1-nano",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.486,
-        "mmlu_pro": 0.697,
-        "livecodebench": 0.293
+        "gpqa": 0.512,
+        "mmlu_pro": 0.657,
+        "livecodebench": 0.326
       }
     },
-    "Grok 4": {
-      "id": "5ea94a4a-55ac-4ea1-8898-2b3971e94af6",
-      "name": "Grok 4",
-      "slug": "grok-4",
-      "url": "https://artificialanalysis.ai/models/grok-4",
+    "claude-sonnet-4-5": {
+      "id": "90e078f2-051b-4c63-8919-76618971cb3f",
+      "name": "Claude 4.5 Sonnet (Reasoning)",
+      "slug": "claude-4-5-sonnet-thinking",
+      "url": "https://artificialanalysis.ai/models/claude-4-5-sonnet-thinking",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.877,
-        "mmlu_pro": 0.866,
-        "livecodebench": 0.819
+        "gpqa": 0.834,
+        "mmlu_pro": 0.875,
+        "livecodebench": 0.714
       }
     },
-    "Grok-3": {
-      "id": "2443ac9e-a3db-423d-accb-8963f6fb0a53",
-      "name": "Grok 3",
-      "slug": "grok-3",
-      "url": "https://artificialanalysis.ai/models/grok-3",
+    "grok-4-1-fast-reasoning": {
+      "id": "23149f9b-c904-43e2-9ec4-afa2bf843941",
+      "name": "Grok 4.1 Fast (Reasoning)",
+      "slug": "grok-4-1-fast-reasoning",
+      "url": "https://artificialanalysis.ai/models/grok-4-1-fast-reasoning",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.693,
-        "mmlu_pro": 0.799,
-        "livecodebench": 0.425
+        "gpqa": 0.853,
+        "mmlu_pro": 0.854,
+        "livecodebench": 0.822
       }
     },
-    "Qwen3-Max": {
-      "id": "7ae943a9-9310-4472-a834-c61f0ab68485",
-      "name": "Qwen3 Max",
-      "slug": "qwen3-max",
-      "url": "https://artificialanalysis.ai/models/qwen3-max",
+    "gpt-5.6-terra": {
+      "id": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+      "name": "GPT-5.6 Terra (Max)",
+      "slug": "gpt-5-6-terra",
+      "url": "https://artificialanalysis.ai/models/gpt-5-6-terra",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.764,
-        "mmlu_pro": 0.841,
-        "livecodebench": 0.767
+        "gpqa": 0.925,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     },
-    "Qwen3 235B": {
-      "id": "bbe6d782-e630-48d5-b11c-3ce37f373f1e",
-      "name": "Qwen3 235B A22B (Reasoning)",
-      "slug": "qwen3-235b-a22b-instruct-reasoning",
-      "url": "https://artificialanalysis.ai/models/qwen3-235b-a22b-instruct-reasoning",
+    "claude-fable-5": {
+      "id": "cd55210d-358e-4df1-ba9c-9acb5f186cc9",
+      "name": "Claude Fable 5 (Max, Opus 4.8 Fallback)",
+      "slug": "claude-fable-5",
+      "url": "https://artificialanalysis.ai/models/claude-fable-5",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.7,
-        "mmlu_pro": 0.828,
-        "livecodebench": 0.622
+        "gpqa": 0.926,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     },
-    "QwQ-32B": {
-      "id": "ceb4d610-d0a4-48c1-bea0-80ed76f1e5ca",
-      "name": "QwQ 32B",
-      "slug": "qwq-32b",
-      "url": "https://artificialanalysis.ai/models/qwq-32b",
+    "kimi-k2.6": {
+      "id": "0de67206-4d36-4d10-b8f6-cf37fa747a03",
+      "name": "Kimi K2.6 (Reasoning)",
+      "slug": "kimi-k2-6",
+      "url": "https://artificialanalysis.ai/models/kimi-k2-6",
       "scores": {
         "artificial_analysis_intelligence_index": null,
-        "gpqa": 0.593,
-        "mmlu_pro": 0.764,
-        "livecodebench": 0.631
+        "gpqa": 0.911,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "claude-opus-4-6": {
+      "id": "53c98840-47af-49aa-94e6-469fb17e9a1b",
+      "name": "Claude Opus 4.6 (Max)",
+      "slug": "claude-opus-4-6-adaptive",
+      "url": "https://artificialanalysis.ai/models/claude-opus-4-6-adaptive",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.896,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "mimo-v2.6-flash": {
+      "id": "127de816-57d3-4037-8484-480a613cd413",
+      "name": "MiMo-V2.6-Flash",
+      "slug": "mimo-v2-6-flash",
+      "url": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
+      "scores": {
+        "artificial_analysis_intelligence_index": 26.7,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5.6-sol": {
+      "id": "d93edfe8-bf35-49ad-b56e-b18116142a1c",
+      "name": "GPT-5.6 Sol (Max)",
+      "slug": "gpt-5-6-sol",
+      "url": "https://artificialanalysis.ai/models/gpt-5-6-sol",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.941,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gemini-4-argon": {
+      "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+      "name": "Gemini 4 Argon (High)",
+      "slug": "gemini-4-argon",
+      "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+      "scores": {
+        "artificial_analysis_intelligence_index": 50.4,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gemini-3.5-flash": {
+      "id": "0097ebf5-124f-42f6-9463-33b00e711f03",
+      "name": "Gemini 3.5 Flash (High)",
+      "slug": "gemini-3-5-flash",
+      "url": "https://artificialanalysis.ai/models/gemini-3-5-flash",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.922,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "deepseek-v4-pro": {
+      "id": "83173329-c09a-41f1-a028-a282a5f908d7",
+      "name": "DeepSeek V4 Pro 0813 (Max)",
+      "slug": "deepseek-v4-pro",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-pro",
+      "scores": {
+        "artificial_analysis_intelligence_index": 23.1,
+        "gpqa": 0.928,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5.3-codex": {
+      "id": "59b5b14b-5365-4ee7-824a-18a8e6309644",
+      "name": "GPT-5.3 Codex (Xhigh)",
+      "slug": "gpt-5-3-codex",
+      "url": "https://artificialanalysis.ai/models/gpt-5-3-codex",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.915,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-4.1-mini": {
+      "id": "9f7c7566-a704-49a2-a383-cb3181da33a4",
+      "name": "GPT-4.1 mini",
+      "slug": "gpt-4-1-mini",
+      "url": "https://artificialanalysis.ai/models/gpt-4-1-mini",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.664,
+        "mmlu_pro": 0.781,
+        "livecodebench": 0.483
+      }
+    },
+    "gpt-5.2": {
+      "id": "498862c3-f9ac-49d2-852f-16a02bb0c38f",
+      "name": "GPT-5.2 (Xhigh)",
+      "slug": "gpt-5-2",
+      "url": "https://artificialanalysis.ai/models/gpt-5-2",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.903,
+        "mmlu_pro": 0.874,
+        "livecodebench": 0.889
+      }
+    },
+    "claude-opus-4-8": {
+      "id": "992b7b84-5069-4c6a-9295-834252553d50",
+      "name": "Claude Opus 4.8 (Max)",
+      "slug": "claude-opus-4-8",
+      "url": "https://artificialanalysis.ai/models/claude-opus-4-8",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.92,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gemini-2.5-flash-lite": {
+      "id": "f4e8194a-d0e6-48eb-92be-4307de5aeeec",
+      "name": "Gemini 2.5 Flash-Lite (Reasoning)",
+      "slug": "gemini-2-5-flash-lite-reasoning",
+      "url": "https://artificialanalysis.ai/models/gemini-2-5-flash-lite-reasoning",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.625,
+        "mmlu_pro": 0.759,
+        "livecodebench": 0.593
+      }
+    },
+    "gpt-5-mini": {
+      "id": "29855680-7469-43eb-8b88-cd3fb1d99da3",
+      "name": "GPT-5 mini (High)",
+      "slug": "gpt-5-mini",
+      "url": "https://artificialanalysis.ai/models/gpt-5-mini",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.828,
+        "mmlu_pro": 0.837,
+        "livecodebench": 0.838
+      }
+    },
+    "kimi-k3": {
+      "id": "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
+      "name": "Kimi K3 (Max)",
+      "slug": "kimi-k3",
+      "url": "https://artificialanalysis.ai/models/kimi-k3",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.935,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-6.1-sol": {
+      "id": "b25ac058-1e33-4c31-bbc9-a20c3ad0717a",
+      "name": "GPT-6.1 Sol (Max)",
+      "slug": "gpt-6-1-sol",
+      "url": "https://artificialanalysis.ai/models/gpt-6-1-sol",
+      "scores": {
+        "artificial_analysis_intelligence_index": 54.5,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-6.1-terra": {
+      "id": "b0c462cf-f2d0-4126-9434-28db9502219f",
+      "name": "GPT-6.1 Terra (Max)",
+      "slug": "gpt-6-1-terra",
+      "url": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+      "scores": {
+        "artificial_analysis_intelligence_index": 51,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5": {
+      "id": "48e50f00-1fd1-4acc-b337-61078aa341e6",
+      "name": "GPT-5 (High)",
+      "slug": "gpt-5",
+      "url": "https://artificialanalysis.ai/models/gpt-5",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.854,
+        "mmlu_pro": 0.871,
+        "livecodebench": 0.846
+      }
+    },
+    "gpt-6-luna": {
+      "id": "6fb13851-40ce-4bda-ad3f-6b38e0c5daa7",
+      "name": "GPT-6 Luna (Max)",
+      "slug": "gpt-6-luna",
+      "url": "https://artificialanalysis.ai/models/gpt-6-luna",
+      "scores": {
+        "artificial_analysis_intelligence_index": 27.8,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5.2-codex": {
+      "id": "019e86f6-e66b-42d8-8a50-235a06b53003",
+      "name": "GPT-5.2 Codex (Xhigh)",
+      "slug": "gpt-5-2-codex",
+      "url": "https://artificialanalysis.ai/models/gpt-5-2-codex",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.899,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "claude-fable-5-1": {
+      "id": "3e87c73e-a257-495e-9730-367a66229811",
+      "name": "Claude Fable 5.1 (Max, Default Fallback)",
+      "slug": "claude-fable-5-1",
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-1",
+      "scores": {
+        "artificial_analysis_intelligence_index": 49,
+        "gpqa": 0.937,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5.4-mini": {
+      "id": "ba242e40-83b7-4cd3-a0e0-b56237984914",
+      "name": "GPT-5.4 mini (Xhigh)",
+      "slug": "gpt-5-4-mini",
+      "url": "https://artificialanalysis.ai/models/gpt-5-4-mini",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.875,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gemini-3.1-flash-lite": {
+      "id": "598190f8-dc9c-4fea-a7ea-4b81c402ab18",
+      "name": "Gemini 3.1 Flash-Lite",
+      "slug": "gemini-3-1-flash-lite-preview",
+      "url": "https://artificialanalysis.ai/models/gemini-3-1-flash-lite-preview",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.822,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "claude-opus-5": {
+      "id": "b8fc61f7-5e9a-49e6-8547-6ac56db24627",
+      "name": "Claude Opus 5 (Max)",
+      "slug": "claude-opus-5",
+      "url": "https://artificialanalysis.ai/models/claude-opus-5",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.932,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5.1": {
+      "id": "4dc12a38-b18f-4c43-8e1b-678f8434b5b1",
+      "name": "GPT-5.1 (High)",
+      "slug": "gpt-5-1",
+      "url": "https://artificialanalysis.ai/models/gpt-5-1",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.873,
+        "mmlu_pro": 0.87,
+        "livecodebench": 0.868
+      }
+    },
+    "gpt-5.5": {
+      "id": "1f054429-397e-4fdb-9e71-67bc92c1735e",
+      "name": "GPT-5.5 (Xhigh)",
+      "slug": "gpt-5-5",
+      "url": "https://artificialanalysis.ai/models/gpt-5-5",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.935,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "qwen3.7-max": {
+      "id": "69534bed-2ffd-4235-832b-e20a810333ab",
+      "name": "Qwen3.7 Max",
+      "slug": "qwen3-7-max",
+      "url": "https://artificialanalysis.ai/models/qwen3-7-max",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.923,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "grok-4-20-non-reasoning": {
+      "id": "64312f37-3701-4243-a4c9-7c07a58cd6b9",
+      "name": "Grok 4.20 0309 v2 (Non-reasoning)",
+      "slug": "grok-4-20-non-reasoning",
+      "url": "https://artificialanalysis.ai/models/grok-4-20-non-reasoning",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.776,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "qwen3.6-plus": {
+      "id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
+      "name": "Qwen3.6 Plus",
+      "slug": "qwen3-6-plus",
+      "url": "https://artificialanalysis.ai/models/qwen3-6-plus",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.882,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "kimi-k3.1-pro": {
+      "id": "665c67ca-09eb-48f0-a7a3-0096e1d5de51",
+      "name": "Kimi K3.1 Pro",
+      "slug": "kimi-k3-1-pro",
+      "url": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+      "scores": {
+        "artificial_analysis_intelligence_index": 46,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "claude-sonnet-5": {
+      "id": "23c86e4a-c769-43c0-a056-79e3cd15834f",
+      "name": "Claude Sonnet 5 (Max)",
+      "slug": "claude-sonnet-5",
+      "url": "https://artificialanalysis.ai/models/claude-sonnet-5",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.911,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-5-nano": {
+      "id": "e18e5e6a-5a31-4c0b-b80b-ac401392f446",
+      "name": "GPT-5 nano (High)",
+      "slug": "gpt-5-nano",
+      "url": "https://artificialanalysis.ai/models/gpt-5-nano",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.676,
+        "mmlu_pro": 0.78,
+        "livecodebench": 0.789
+      }
+    },
+    "grok-4.6": {
+      "id": "c8adc5cf-fd5a-407b-af51-dc3bede3e49c",
+      "name": "Grok 4.6 (High)",
+      "slug": "grok-4-6",
+      "url": "https://artificialanalysis.ai/models/grok-4-6",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.949,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "gpt-4o": {
+      "id": "c1045dc0-4fd3-4adb-9548-18763e0d051f",
+      "name": "GPT-4o (Nov '24)",
+      "slug": "gpt-4o",
+      "url": "https://artificialanalysis.ai/models/gpt-4o",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.543,
+        "mmlu_pro": 0.748,
+        "livecodebench": 0.309
+      }
+    },
+    "mimo-v2.5-pro": {
+      "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
+      "name": "MiMo-V2.5-Pro (Reasoning)",
+      "slug": "mimo-v2-5-pro",
+      "url": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.866,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "glm-5v-turbo": {
+      "id": "248deb0d-426c-4fa9-86fa-bc60aa9c3719",
+      "name": "GLM 5V Turbo (Reasoning)",
+      "slug": "glm-5v-turbo",
+      "url": "https://artificialanalysis.ai/models/glm-5v-turbo",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.809,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "claude-opus-4-7": {
+      "id": "e9a09db3-8fd6-41dd-ba2f-20e0a2bff7f2",
+      "name": "Claude Opus 4.7 (Max)",
+      "slug": "claude-opus-4-7",
+      "url": "https://artificialanalysis.ai/models/claude-opus-4-7",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.914,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "deepseek-v4.1-flash": {
+      "id": "dbe7c625-3100-4463-b479-a228c41f75dd",
+      "name": "DeepSeek V4.1 Flash (Max)",
+      "slug": "deepseek-v4-1-flash",
+      "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "mimo-v2.6-pro": {
+      "id": "24d8fdfe-6241-424e-b7b7-1b6efb06e4fb",
+      "name": "MiMo-V2.6-Pro",
+      "slug": "mimo-v2-6-pro",
+      "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+      "scores": {
+        "artificial_analysis_intelligence_index": 29.9,
+        "gpqa": null,
+        "mmlu_pro": null,
+        "livecodebench": null
+      }
+    },
+    "glm-5.2": {
+      "id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
+      "name": "GLM-5.2 (Max)",
+      "slug": "glm-5-2",
+      "url": "https://artificialanalysis.ai/models/glm-5-2",
+      "scores": {
+        "artificial_analysis_intelligence_index": null,
+        "gpqa": 0.895,
+        "mmlu_pro": null,
+        "livecodebench": null
       }
     }
   }

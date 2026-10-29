@@ -1,33 +1,45 @@
 {
-  "GPT-5.4": {
-    "id": "a89c4b28-2d8c-456e-88ea-255fb51fd2b6",
-    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "reviewedName": "GPT-5.4 (Xhigh)",
-    "reviewedSlug": "gpt-5-4"
+  "MiniMax-M2.7": {
+    "id": "4bbceacb-cf47-464b-b60f-e1d1fe016d67",
+    "creatorId": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+    "reviewedName": "MiniMax-M2.7",
+    "reviewedSlug": "minimax-m2-7"
   },
-  "GPT-5 mini": {
-    "id": "29855680-7469-43eb-8b88-cd3fb1d99da3",
-    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "reviewedName": "GPT-5 mini (High)",
-    "reviewedSlug": "gpt-5-mini"
+  "claude-haiku-5-5": {
+    "id": "7d064a11-6e78-4030-b535-cdf940615041",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude Haiku 5.5 (Max)",
+    "reviewedSlug": "claude-haiku-5-5"
   },
-  "GPT-4.1": {
-    "id": "3b608b70-6434-4baa-99ad-45d499703c67",
+  "gpt-5.1-codex-mini": {
+    "id": "fd4454ff-e703-46c0-a7f5-fa69af09486d",
     "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "reviewedName": "GPT-4.1",
-    "reviewedSlug": "gpt-4-1"
+    "reviewedName": "GPT-5.1 Codex mini (High)",
+    "reviewedSlug": "gpt-5-1-codex-mini"
   },
-  "GPT-4.1 mini": {
-    "id": "9f7c7566-a704-49a2-a383-cb3181da33a4",
-    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "reviewedName": "GPT-4.1 mini",
-    "reviewedSlug": "gpt-4-1-mini"
+  "gemini-2.5-flash": {
+    "id": "219ed587-60c5-4a48-9517-8480e08d0ca1",
+    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "reviewedName": "Gemini 2.5 Flash (Reasoning)",
+    "reviewedSlug": "gemini-2-5-flash-reasoning"
   },
-  "GPT-4.1 nano": {
-    "id": "72c358fd-7d45-4d68-89aa-699743710924",
+  "gpt-5-codex": {
+    "id": "5d11e7a1-4f70-4e5a-9364-e193761d6757",
     "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "reviewedName": "GPT-4.1 nano",
-    "reviewedSlug": "gpt-4-1-nano"
+    "reviewedName": "GPT-5 Codex (High)",
+    "reviewedSlug": "gpt-5-codex"
+  },
+  "gpt-4o-mini": {
+    "id": "b5c1c91a-7474-4409-9a9c-9c2ac45d9eb6",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-4o mini",
+    "reviewedSlug": "gpt-4o-mini"
+  },
+  "gemini-3-flash": {
+    "id": "7c73c3be-7f51-4d14-bec8-d5789488df25",
+    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "reviewedName": "Gemini 3 Flash Preview (Reasoning)",
+    "reviewedSlug": "gemini-3-flash-reasoning"
   },
   "o3": {
     "id": "16c5b637-8bce-4252-81f2-1b87a36a4e4c",
@@ -35,202 +47,454 @@
     "reviewedName": "o3",
     "reviewedSlug": "o3"
   },
-  "o4-mini": {
-    "id": "84b49308-6b93-47aa-a4f6-776ee1a1e8cd",
+  "gpt-6-astra": {
+    "id": "2f339a97-9a0d-499a-9cb5-e0db665bfa25",
     "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "reviewedName": "o4-mini (High)",
-    "reviewedSlug": "o4-mini"
+    "reviewedName": "GPT-6 Astra (Max)",
+    "reviewedSlug": "gpt-6-astra"
   },
-  "o3-mini": {
-    "id": "2dad8957-4c16-4e74-bf2d-8b21514e0ae9",
+  "glm-5-turbo": {
+    "id": "149096f3-57b7-4413-80c2-a2c010a2995a",
+    "creatorId": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+    "reviewedName": "GLM-5-Turbo",
+    "reviewedSlug": "glm-5-turbo"
+  },
+  "glm-5.3-flash": {
+    "id": "19496b81-9f41-4214-a77a-1df803b3c5ae",
+    "creatorId": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+    "reviewedName": "GLM-5.3-Flash",
+    "reviewedSlug": "glm-5-3-flash"
+  },
+  "gpt-5.4-pro": {
+    "id": "5bb1f426-2d64-4d03-99fb-8041ee85c33b",
     "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "reviewedName": "o3-mini",
-    "reviewedSlug": "o3-mini"
+    "reviewedName": "GPT-5.4 Pro (Xhigh)",
+    "reviewedSlug": "gpt-5-4-pro"
   },
-  "GPT-4o": {
-    "id": "c1045dc0-4fd3-4adb-9548-18763e0d051f",
-    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "reviewedName": "GPT-4o (Nov '24)",
-    "reviewedSlug": "gpt-4o"
-  },
-  "GPT-4o mini": {
-    "id": "b5c1c91a-7474-4409-9a9c-9c2ac45d9eb6",
-    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "reviewedName": "GPT-4o mini",
-    "reviewedSlug": "gpt-4o-mini"
-  },
-  "Claude Opus 4.6": {
-    "id": "53c98840-47af-49aa-94e6-469fb17e9a1b",
-    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-    "reviewedName": "Claude Opus 4.6 (Max)",
-    "reviewedSlug": "claude-opus-4-6-adaptive"
-  },
-  "Claude Sonnet 4.6": {
+  "claude-sonnet-4-6": {
     "id": "df8d14e0-3997-4e4d-b4ad-9c047acc9c69",
     "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
     "reviewedName": "Claude Sonnet 4.6 (Max)",
     "reviewedSlug": "claude-sonnet-4-6-adaptive"
   },
-  "Claude Opus 4.1": {
-    "id": "ccbfa8c3-a762-480b-aade-34fb9697f98c",
+  "claude-opus-4-5": {
+    "id": "2660d74f-ce79-48a8-8b53-6e668e2071a2",
     "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-    "reviewedName": "Claude 4.1 Opus (Reasoning)",
-    "reviewedSlug": "claude-4-1-opus-thinking"
+    "reviewedName": "Claude Opus 4.5 (Reasoning)",
+    "reviewedSlug": "claude-opus-4-5-thinking"
   },
-  "Claude Sonnet 4.5": {
-    "id": "90e078f2-051b-4c63-8919-76618971cb3f",
+  "MiniMax-M3": {
+    "id": "277f939a-985b-4b37-859d-b3eabc7c0b26",
+    "creatorId": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+    "reviewedName": "MiniMax-M3",
+    "reviewedSlug": "minimax-m3"
+  },
+  "MiniMax-M2.5": {
+    "id": "12adec16-19fe-4d92-aeff-5ef3eb7e780a",
+    "creatorId": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+    "reviewedName": "MiniMax-M2.5",
+    "reviewedSlug": "minimax-m2-5"
+  },
+  "claude-opus-5-5": {
+    "id": "2f3c4dc9-a450-4303-8697-0237257cf08f",
     "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-    "reviewedName": "Claude 4.5 Sonnet (Reasoning)",
-    "reviewedSlug": "claude-4-5-sonnet-thinking"
+    "reviewedName": "Claude Opus 5.5 (Max, Default Fallback)",
+    "reviewedSlug": "claude-opus-5-5"
   },
-  "Claude Haiku 4.5": {
-    "id": "a6340098-d7ae-462d-b372-0a0a67fc44b4",
+  "gpt-5.1-codex": {
+    "id": "04d023f3-025c-4d78-9571-53edda3eaf2a",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.1 Codex (High)",
+    "reviewedSlug": "gpt-5-1-codex"
+  },
+  "kimi-k2.5": {
+    "id": "a550ffca-f89e-4381-ade6-a85dc6a1fb4c",
+    "creatorId": "0a177021-87dd-4250-9a37-f01df196bfe0",
+    "reviewedName": "Kimi K2.5 (Reasoning)",
+    "reviewedSlug": "kimi-k2-5"
+  },
+  "gpt-5.4-nano": {
+    "id": "d4fc3f33-f2b0-4da1-88ee-f1f82bd4de31",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.4 nano (Xhigh)",
+    "reviewedSlug": "gpt-5-4-nano"
+  },
+  "gpt-6-sol": {
+    "id": "c50ea08c-88c0-4eb7-85b8-27f2bbf6d527",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-6 Sol (Max)",
+    "reviewedSlug": "gpt-6-sol"
+  },
+  "claude-sonnet-5-5": {
+    "id": "b171d979-5ec1-45de-b8b9-db1ee65e77ec",
     "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-    "reviewedName": "Claude 4.5 Haiku (Reasoning)",
-    "reviewedSlug": "claude-4-5-haiku-reasoning"
+    "reviewedName": "Claude Sonnet 5.5 (Max, Default Fallback)",
+    "reviewedSlug": "claude-sonnet-5-5"
   },
-  "Claude Opus 4": {
-    "id": "8a4a5ead-7789-4389-8400-30e9d20370b7",
-    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-    "reviewedName": "Claude 4 Opus (Reasoning)",
-    "reviewedSlug": "claude-4-opus-thinking"
+  "deepseek-v4-flash": {
+    "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+    "creatorId": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+    "reviewedName": "DeepSeek V4 Flash 0731 (Max)",
+    "reviewedSlug": "deepseek-v4-flash"
   },
-  "Claude Sonnet 4": {
-    "id": "a7564055-f8ba-4c4b-9e2d-060f61263645",
-    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-    "reviewedName": "Claude 4 Sonnet (Reasoning)",
-    "reviewedSlug": "claude-4-sonnet-thinking"
+  "glm-5.1": {
+    "id": "5aa1c578-af76-4b91-8699-cdd43582b3af",
+    "creatorId": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+    "reviewedName": "GLM-5.1 (Reasoning)",
+    "reviewedSlug": "glm-5-1"
   },
-  "Claude 3.7 Sonnet": {
-    "id": "13358187-4584-479c-ab43-5bcdf8f297a4",
-    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-    "reviewedName": "Claude 3.7 Sonnet (Reasoning)",
-    "reviewedSlug": "claude-3-7-sonnet-thinking"
+  "qwen3.7-plus": {
+    "id": "a87fce42-eea3-4e45-a96d-fe057814f371",
+    "creatorId": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+    "reviewedName": "Qwen3.7 Plus",
+    "reviewedSlug": "qwen3-7-plus"
   },
-  "Gemini 3.1 Pro": {
+  "gemini-3.1-pro": {
     "id": "bbd93ebe-80da-4594-bb19-61e69d0331df",
     "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
     "reviewedName": "Gemini 3.1 Pro Preview",
     "reviewedSlug": "gemini-3-1-pro-preview"
   },
-  "Gemini 3 Deep Think": {
-    "id": "a5092ece-d5a7-461f-b036-3faef262423f",
-    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
-    "reviewedName": "Gemini 3 Deep Think",
-    "reviewedSlug": "gemini-3-deep-think"
+  "qwen3.8-max": {
+    "id": "b112af07-3bd5-4647-b09f-b23204361bb2",
+    "creatorId": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+    "reviewedName": "Qwen3.8 Max (0902)",
+    "reviewedSlug": "qwen3-8-max"
   },
-  "Gemini 3 Flash": {
-    "id": "7c73c3be-7f51-4d14-bec8-d5789488df25",
-    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
-    "reviewedName": "Gemini 3 Flash Preview (Reasoning)",
-    "reviewedSlug": "gemini-3-flash-reasoning"
+  "grok-4.3": {
+    "id": "948892b5-db03-4118-a4a8-ccd51ed871ea",
+    "creatorId": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+    "reviewedName": "Grok 4.3 (High)",
+    "reviewedSlug": "grok-4-3"
   },
-  "Gemini 2.5 Pro": {
+  "kimi-k2.7-code": {
+    "id": "8d0cb231-7303-452c-9923-a9620b948475",
+    "creatorId": "0a177021-87dd-4250-9a37-f01df196bfe0",
+    "reviewedName": "Kimi K2.7 Code",
+    "reviewedSlug": "kimi-k2-7-code"
+  },
+  "gemini-3.8-flash": {
+    "id": "8a999846-4c1d-4ce7-a8b7-1310a7166fd7",
+    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "reviewedName": "Gemini 3.8 Flash (High)",
+    "reviewedSlug": "gemini-3-8-flash"
+  },
+  "grok-4-20-reasoning": {
+    "id": "c72cb85a-18a4-4235-b455-77dff2f16c50",
+    "creatorId": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+    "reviewedName": "Grok 4.20 0309 v2 (Reasoning)",
+    "reviewedSlug": "grok-4-20"
+  },
+  "gpt-5.4": {
+    "id": "a89c4b28-2d8c-456e-88ea-255fb51fd2b6",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.4 (Xhigh)",
+    "reviewedSlug": "gpt-5-4"
+  },
+  "glm-5": {
+    "id": "40663ad2-b218-471e-bdd4-a1e0c2360e2b",
+    "creatorId": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+    "reviewedName": "GLM-5 (Reasoning)",
+    "reviewedSlug": "glm-5"
+  },
+  "gemini-3.7-flash": {
+    "id": "b2331108-72ed-415a-82d1-188633875bbc",
+    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "reviewedName": "Gemini 3.7 Flash (High)",
+    "reviewedSlug": "gemini-3-7-flash"
+  },
+  "glm-5.3": {
+    "id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
+    "creatorId": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+    "reviewedName": "GLM-5.3 (Max)",
+    "reviewedSlug": "glm-5-3"
+  },
+  "gpt-4.1": {
+    "id": "3b608b70-6434-4baa-99ad-45d499703c67",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-4.1",
+    "reviewedSlug": "gpt-4-1"
+  },
+  "gemini-2.5-pro": {
     "id": "27202e5f-c82d-4710-92e9-4317877d4883",
     "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
     "reviewedName": "Gemini 2.5 Pro",
     "reviewedSlug": "gemini-2-5-pro"
   },
-  "Gemini 2.5 Flash": {
-    "id": "219ed587-60c5-4a48-9517-8480e08d0ca1",
-    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
-    "reviewedName": "Gemini 2.5 Flash (Reasoning)",
-    "reviewedSlug": "gemini-2-5-flash-reasoning"
+  "claude-haiku-4-5": {
+    "id": "a6340098-d7ae-462d-b372-0a0a67fc44b4",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude 4.5 Haiku (Reasoning)",
+    "reviewedSlug": "claude-4-5-haiku-reasoning"
   },
-  "Gemini 2.0 Flash": {
-    "id": "bcca0e70-7e80-4c07-b1fa-b33bcfb19e51",
-    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
-    "reviewedName": "Gemini 2.0 Flash (Feb '25)",
-    "reviewedSlug": "gemini-2-0-flash"
+  "gpt-5.6-luna": {
+    "id": "426d24c8-49ae-482a-b4a8-20f1c53f21c1",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.6 Luna (Max)",
+    "reviewedSlug": "gpt-5-6-luna"
   },
-  "DeepSeek-V3 0324": {
-    "id": "75e1c197-f239-4361-a9d6-66dccfead236",
-    "creatorId": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-    "reviewedName": "DeepSeek V3 0324",
-    "reviewedSlug": "deepseek-v3-0324"
+  "gpt-4.1-nano": {
+    "id": "72c358fd-7d45-4d68-89aa-699743710924",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-4.1 nano",
+    "reviewedSlug": "gpt-4-1-nano"
   },
-  "DeepSeek-R1-0528": {
-    "id": "a83f84b3-473a-4276-9ae1-8909da723159",
-    "creatorId": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-    "reviewedName": "DeepSeek R1 0528 (May '25)",
-    "reviewedSlug": "deepseek-r1"
+  "claude-sonnet-4-5": {
+    "id": "90e078f2-051b-4c63-8919-76618971cb3f",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude 4.5 Sonnet (Reasoning)",
+    "reviewedSlug": "claude-4-5-sonnet-thinking"
   },
-  "DeepSeek-R1": {
-    "id": "0e34f05c-387e-4968-be15-ccec4a55d8c1",
-    "creatorId": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-    "reviewedName": "DeepSeek R1 (Jan '25)",
-    "reviewedSlug": "deepseek-r1-0120"
-  },
-  "DeepSeek-V3": {
-    "id": "43fc5506-c5ed-4dee-9b85-962bf7ae3986",
-    "creatorId": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
-    "reviewedName": "DeepSeek V3 (Dec '24)",
-    "reviewedSlug": "deepseek-v3"
-  },
-  "Llama 4 Maverick": {
-    "id": "922c69c7-9037-43c6-8bcf-a1c555e7f3eb",
-    "creatorId": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
-    "reviewedName": "Llama 4 Maverick",
-    "reviewedSlug": "llama-4-maverick"
-  },
-  "Llama 4 Scout": {
-    "id": "adf9a85e-abc3-4f28-937b-db6655cc5238",
-    "creatorId": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
-    "reviewedName": "Llama 4 Scout",
-    "reviewedSlug": "llama-4-scout"
-  },
-  "Llama 3.3 70B": {
-    "id": "976cc8ad-7904-4056-83c5-960181f47d5f",
-    "creatorId": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
-    "reviewedName": "Llama 3.3 Instruct 70B",
-    "reviewedSlug": "llama-3-3-instruct-70b"
-  },
-  "Mistral Medium 3": {
-    "id": "59e22326-1bca-4432-a5fa-147fbe8854e7",
-    "creatorId": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-    "reviewedName": "Mistral Medium 3",
-    "reviewedSlug": "mistral-medium-3"
-  },
-  "Mistral Small 3.1": {
-    "id": "24ac5b00-5f03-4c47-8e37-522d1195383e",
-    "creatorId": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-    "reviewedName": "Mistral Small 3.1",
-    "reviewedSlug": "mistral-small-3-1"
-  },
-  "Mistral Large 2": {
-    "id": "50f92d5f-f413-4c97-8dab-331101622a28",
-    "creatorId": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-    "reviewedName": "Mistral Large 2 (Nov '24)",
-    "reviewedSlug": "mistral-large-2"
-  },
-  "Grok 4": {
-    "id": "5ea94a4a-55ac-4ea1-8898-2b3971e94af6",
+  "grok-4-1-fast-reasoning": {
+    "id": "23149f9b-c904-43e2-9ec4-afa2bf843941",
     "creatorId": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
-    "reviewedName": "Grok 4",
-    "reviewedSlug": "grok-4"
+    "reviewedName": "Grok 4.1 Fast (Reasoning)",
+    "reviewedSlug": "grok-4-1-fast-reasoning"
   },
-  "Grok-3": {
-    "id": "2443ac9e-a3db-423d-accb-8963f6fb0a53",
+  "gpt-5.6-terra": {
+    "id": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.6 Terra (Max)",
+    "reviewedSlug": "gpt-5-6-terra"
+  },
+  "claude-fable-5": {
+    "id": "cd55210d-358e-4df1-ba9c-9acb5f186cc9",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude Fable 5 (Max, Opus 4.8 Fallback)",
+    "reviewedSlug": "claude-fable-5"
+  },
+  "kimi-k2.6": {
+    "id": "0de67206-4d36-4d10-b8f6-cf37fa747a03",
+    "creatorId": "0a177021-87dd-4250-9a37-f01df196bfe0",
+    "reviewedName": "Kimi K2.6 (Reasoning)",
+    "reviewedSlug": "kimi-k2-6"
+  },
+  "claude-opus-4-6": {
+    "id": "53c98840-47af-49aa-94e6-469fb17e9a1b",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude Opus 4.6 (Max)",
+    "reviewedSlug": "claude-opus-4-6-adaptive"
+  },
+  "mimo-v2.6-flash": {
+    "id": "127de816-57d3-4037-8484-480a613cd413",
+    "creatorId": "5147c8b4-61d5-4070-9324-8adf8aa144c2",
+    "reviewedName": "MiMo-V2.6-Flash",
+    "reviewedSlug": "mimo-v2-6-flash"
+  },
+  "gpt-5.6-sol": {
+    "id": "d93edfe8-bf35-49ad-b56e-b18116142a1c",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.6 Sol (Max)",
+    "reviewedSlug": "gpt-5-6-sol"
+  },
+  "gemini-4-argon": {
+    "id": "d366dfa1-d940-4788-aa73-d298c45699b3",
+    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "reviewedName": "Gemini 4 Argon (High)",
+    "reviewedSlug": "gemini-4-argon"
+  },
+  "gemini-3.5-flash": {
+    "id": "0097ebf5-124f-42f6-9463-33b00e711f03",
+    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "reviewedName": "Gemini 3.5 Flash (High)",
+    "reviewedSlug": "gemini-3-5-flash"
+  },
+  "deepseek-v4-pro": {
+    "id": "83173329-c09a-41f1-a028-a282a5f908d7",
+    "creatorId": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+    "reviewedName": "DeepSeek V4 Pro 0813 (Max)",
+    "reviewedSlug": "deepseek-v4-pro"
+  },
+  "gpt-5.3-codex": {
+    "id": "59b5b14b-5365-4ee7-824a-18a8e6309644",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.3 Codex (Xhigh)",
+    "reviewedSlug": "gpt-5-3-codex"
+  },
+  "gpt-4.1-mini": {
+    "id": "9f7c7566-a704-49a2-a383-cb3181da33a4",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-4.1 mini",
+    "reviewedSlug": "gpt-4-1-mini"
+  },
+  "gpt-5.2": {
+    "id": "498862c3-f9ac-49d2-852f-16a02bb0c38f",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.2 (Xhigh)",
+    "reviewedSlug": "gpt-5-2"
+  },
+  "claude-opus-4-8": {
+    "id": "992b7b84-5069-4c6a-9295-834252553d50",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude Opus 4.8 (Max)",
+    "reviewedSlug": "claude-opus-4-8"
+  },
+  "gemini-2.5-flash-lite": {
+    "id": "f4e8194a-d0e6-48eb-92be-4307de5aeeec",
+    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "reviewedName": "Gemini 2.5 Flash-Lite (Reasoning)",
+    "reviewedSlug": "gemini-2-5-flash-lite-reasoning"
+  },
+  "gpt-5-mini": {
+    "id": "29855680-7469-43eb-8b88-cd3fb1d99da3",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5 mini (High)",
+    "reviewedSlug": "gpt-5-mini"
+  },
+  "kimi-k3": {
+    "id": "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
+    "creatorId": "0a177021-87dd-4250-9a37-f01df196bfe0",
+    "reviewedName": "Kimi K3 (Max)",
+    "reviewedSlug": "kimi-k3"
+  },
+  "gpt-6.1-sol": {
+    "id": "b25ac058-1e33-4c31-bbc9-a20c3ad0717a",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-6.1 Sol (Max)",
+    "reviewedSlug": "gpt-6-1-sol"
+  },
+  "gpt-6.1-terra": {
+    "id": "b0c462cf-f2d0-4126-9434-28db9502219f",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-6.1 Terra (Max)",
+    "reviewedSlug": "gpt-6-1-terra"
+  },
+  "gpt-5": {
+    "id": "48e50f00-1fd1-4acc-b337-61078aa341e6",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5 (High)",
+    "reviewedSlug": "gpt-5"
+  },
+  "gpt-6-luna": {
+    "id": "6fb13851-40ce-4bda-ad3f-6b38e0c5daa7",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-6 Luna (Max)",
+    "reviewedSlug": "gpt-6-luna"
+  },
+  "gpt-5.2-codex": {
+    "id": "019e86f6-e66b-42d8-8a50-235a06b53003",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.2 Codex (Xhigh)",
+    "reviewedSlug": "gpt-5-2-codex"
+  },
+  "claude-fable-5-1": {
+    "id": "3e87c73e-a257-495e-9730-367a66229811",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude Fable 5.1 (Max, Default Fallback)",
+    "reviewedSlug": "claude-fable-5-1"
+  },
+  "gpt-5.4-mini": {
+    "id": "ba242e40-83b7-4cd3-a0e0-b56237984914",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.4 mini (Xhigh)",
+    "reviewedSlug": "gpt-5-4-mini"
+  },
+  "gemini-3.1-flash-lite": {
+    "id": "598190f8-dc9c-4fea-a7ea-4b81c402ab18",
+    "creatorId": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "reviewedName": "Gemini 3.1 Flash-Lite",
+    "reviewedSlug": "gemini-3-1-flash-lite-preview"
+  },
+  "claude-opus-5": {
+    "id": "b8fc61f7-5e9a-49e6-8547-6ac56db24627",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude Opus 5 (Max)",
+    "reviewedSlug": "claude-opus-5"
+  },
+  "gpt-5.1": {
+    "id": "4dc12a38-b18f-4c43-8e1b-678f8434b5b1",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.1 (High)",
+    "reviewedSlug": "gpt-5-1"
+  },
+  "gpt-5.5": {
+    "id": "1f054429-397e-4fdb-9e71-67bc92c1735e",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5.5 (Xhigh)",
+    "reviewedSlug": "gpt-5-5"
+  },
+  "qwen3.7-max": {
+    "id": "69534bed-2ffd-4235-832b-e20a810333ab",
+    "creatorId": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+    "reviewedName": "Qwen3.7 Max",
+    "reviewedSlug": "qwen3-7-max"
+  },
+  "grok-4-20-non-reasoning": {
+    "id": "64312f37-3701-4243-a4c9-7c07a58cd6b9",
     "creatorId": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
-    "reviewedName": "Grok 3",
-    "reviewedSlug": "grok-3"
+    "reviewedName": "Grok 4.20 0309 v2 (Non-reasoning)",
+    "reviewedSlug": "grok-4-20-non-reasoning"
   },
-  "Qwen3-Max": {
-    "id": "7ae943a9-9310-4472-a834-c61f0ab68485",
+  "qwen3.6-plus": {
+    "id": "f371ad68-6947-4767-a78f-1f6c81f96b93",
     "creatorId": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-    "reviewedName": "Qwen3 Max",
-    "reviewedSlug": "qwen3-max"
+    "reviewedName": "Qwen3.6 Plus",
+    "reviewedSlug": "qwen3-6-plus"
   },
-  "Qwen3 235B": {
-    "id": "bbe6d782-e630-48d5-b11c-3ce37f373f1e",
-    "creatorId": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-    "reviewedName": "Qwen3 235B A22B (Reasoning)",
-    "reviewedSlug": "qwen3-235b-a22b-instruct-reasoning"
+  "kimi-k3.1-pro": {
+    "id": "665c67ca-09eb-48f0-a7a3-0096e1d5de51",
+    "creatorId": "0a177021-87dd-4250-9a37-f01df196bfe0",
+    "reviewedName": "Kimi K3.1 Pro",
+    "reviewedSlug": "kimi-k3-1-pro"
   },
-  "QwQ-32B": {
-    "id": "ceb4d610-d0a4-48c1-bea0-80ed76f1e5ca",
-    "creatorId": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-    "reviewedName": "QwQ 32B",
-    "reviewedSlug": "qwq-32b"
+  "claude-sonnet-5": {
+    "id": "23c86e4a-c769-43c0-a056-79e3cd15834f",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude Sonnet 5 (Max)",
+    "reviewedSlug": "claude-sonnet-5"
+  },
+  "gpt-5-nano": {
+    "id": "e18e5e6a-5a31-4c0b-b80b-ac401392f446",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-5 nano (High)",
+    "reviewedSlug": "gpt-5-nano"
+  },
+  "grok-4.6": {
+    "id": "c8adc5cf-fd5a-407b-af51-dc3bede3e49c",
+    "creatorId": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+    "reviewedName": "Grok 4.6 (High)",
+    "reviewedSlug": "grok-4-6"
+  },
+  "gpt-4o": {
+    "id": "c1045dc0-4fd3-4adb-9548-18763e0d051f",
+    "creatorId": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "reviewedName": "GPT-4o (Nov '24)",
+    "reviewedSlug": "gpt-4o"
+  },
+  "mimo-v2.5-pro": {
+    "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
+    "creatorId": "5147c8b4-61d5-4070-9324-8adf8aa144c2",
+    "reviewedName": "MiMo-V2.5-Pro (Reasoning)",
+    "reviewedSlug": "mimo-v2-5-pro"
+  },
+  "glm-5v-turbo": {
+    "id": "248deb0d-426c-4fa9-86fa-bc60aa9c3719",
+    "creatorId": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+    "reviewedName": "GLM 5V Turbo (Reasoning)",
+    "reviewedSlug": "glm-5v-turbo"
+  },
+  "claude-opus-4-7": {
+    "id": "e9a09db3-8fd6-41dd-ba2f-20e0a2bff7f2",
+    "creatorId": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "reviewedName": "Claude Opus 4.7 (Max)",
+    "reviewedSlug": "claude-opus-4-7"
+  },
+  "deepseek-v4.1-flash": {
+    "id": "dbe7c625-3100-4463-b479-a228c41f75dd",
+    "creatorId": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+    "reviewedName": "DeepSeek V4.1 Flash (Max)",
+    "reviewedSlug": "deepseek-v4-1-flash"
+  },
+  "mimo-v2.6-pro": {
+    "id": "24d8fdfe-6241-424e-b7b7-1b6efb06e4fb",
+    "creatorId": "5147c8b4-61d5-4070-9324-8adf8aa144c2",
+    "reviewedName": "MiMo-V2.6-Pro",
+    "reviewedSlug": "mimo-v2-6-pro"
+  },
+  "glm-5.2": {
+    "id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
+    "creatorId": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+    "reviewedName": "GLM-5.2 (Max)",
+    "reviewedSlug": "glm-5-2"
   }
 }

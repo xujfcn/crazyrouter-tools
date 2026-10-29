@@ -1,74 +1,68 @@
 # Model comparison
 
-The English, Chinese, Japanese and Russian pages share the assets under
-`model-comparison/`. This is a static HTML tool with progressive enhancement,
-with separate historical prices and sourced benchmark results.
+The four locales share a static catalogue, styles and progressive-enhancement
+script. As of October 29, 2026 the catalogue includes all **179 models** returned
+by the public pricing page, across **16 providers**. The former curated list of
+39 models is replaced by the current public catalogue, including text, image,
+video, audio, embedding/reranking and 3D models.
 
-The October 29, 2026 redesign preserves the October 11, 2026 snapshot: 39
-catalogue entries, eight providers and 17 available input/output price pairs.
-Artificial Analysis evaluations were added on October 29, 2026: GPQA covers
-38/39 models, MMLU-Pro and LiveCodeBench each cover 34/39. The response provides
-no AA Intelligence Index values for these models, so the UI uses individual
-benchmarks instead of inventing a composite score. Scores are percentages
-(raw fractions multiplied by 100), rounded to one decimal. Missing scores and
-prices sort last in either direction and are never interpreted as zero.
+The default view sorts release dates newest first (unknowns last) and displays
+the AA Intelligence Index. The metric selector also offers GPQA, MMLU-Pro and
+LiveCodeBench; the index uses its original scale and individual tests use
+percentages. Never mix scales or substitute one metric for another.
 
-Every score links to its exact AA evaluated variant. Reviewed mappings use
-stable model and creator IDs. Reasoning variants are used where available,
-with their reasoning settings visible in the source name; this is a reference
-configuration, not a claim about CrazyRouter routing defaults. GPT-4o uses
-the November 2024 variant, Mistral Large 2 uses November 2024, DeepSeek-R1
-uses January 2025 while R1-0528 uses May 2025. Gemini 3 Flash and 3.1 Pro
-explicitly reference Preview evaluations. Gemini 3 Deep Think has no scores.
-Dates are acquisition dates, not necessarily evaluation run dates. Do not
-conflate the independent benchmark acquisition date with the pricing snapshot.
+## Provenance and units
 
-Users can search by display name, provider or snapshot API model ID, filter by
-provider and price availability, and compare two to four models side by side.
-Selections persist across filters. Removing models or clearing the selection
-keeps keyboard focus usable. The original static table remains readable when
-JavaScript is disabled. Narrow layouts scroll within the table, keeping model
-names visible.
+- `pricing-source.json` is the public pricing API response with its collection
+  timestamp. Public visibility follows the pricing page rule: exclude
+  suno_music and models/series containing llama (none in this snapshot).
+- `catalog.json` and `pricing-snapshot.json` are generated from that response.
+  Model IDs are kept verbatim, so aliases and media API products remain visible.
+- Fixed token quotes use model_ratio × 2 × default group ratio × group discount,
+  with completion_ratio for output. There are 80 fixed input quotes. Embeddings
+  have no output quote. Tier expressions, time tiers, audio, image and video
+  rates are deliberately not flattened into token prices. They retain their
+  billing method and link to their filtered pricing-page entry. Plain per-request
+  charges are shown only when a positive fixed charge is supplied.
+- `benchmark-mapping.json` explicitly maps 83 API entries to reviewed AA model
+  and creator IDs. Reference variants and reasoning effort remain visible.
+  GPQA has 70 results, MMLU-Pro and LiveCodeBench have 22 each, and the
+  Intelligence Index has 17. Missing results stay null.
+- `release-sources.json` contains 104 dated references from AA LLM and media
+  datasets. Each entry includes the source URL and source variant. Month-only
+  release dates retain month precision. Existing site dates without independent
+  evidence are not used. The other 75 entries show "To be verified"; these
+  include aliases/products whose exact release has not been established.
+  A model release date is not the data collection date or necessarily the
+  first release of the broader model family. No date later than collection is
+  accepted as an already released model.
+- Brand marks are self-hosted in `logos/`. LobeHub icons use the included MIT
+  license; TypeSafe uses the existing CrazyRouter brand asset.
 
-## Update and verify
+## Refresh
 
-- `catalog.json`: model names, provider references and preserved snapshot values.
-- `pricing-snapshot.json`: downloadable historical pricing source.
-- `locales.json`: interface copy for all four locales.
-- `comparison.css` and `comparison.js`: shared presentation and interactions.
-- `benchmark-mapping.json`: reviewed model/creator IDs and exact source names.
-- `benchmark-snapshot.json`: public selected results and attribution, no secrets.
-- `logos/`: self-hosted OpenAI, Claude, Gemini, DeepSeek, Meta, Mistral, xAI and
-  Qwen marks exported from @lobehub/icons 5.18.0; MIT license included.
-
-To change prices, update both JSON datasets and the actual collection date.
-The renderer checks that the values agree. Do not change the collection date
-merely because the layout was updated.
-
-Refresh benchmarks using `python scripts/update_aa_benchmarks.py --key-file
-<private-key-file-outside-checkout>` (or `--response-file` for an existing API
-response). Never commit the key, include it in HTML, or call AA from the browser.
-The updater fails if reviewed model identities change; review mappings first.
-The acquisition timestamp comes from the API fetch time or saved response's
-modification time. Rebuild HTML after updating and review the coverage copy if
-AA adds composite indices. All four locales provide attribution linking to
-Artificial Analysis as required by its free API documentation:
-https://artificialanalysis.ai/documentation.
+Save a fresh public pricing response as `pricing-source.json`, adding its true
+`collectedAt` timestamp. Review release references and explicit benchmark
+mapping before adding scores or dates for newly listed API IDs. Keep credentials
+and raw authenticated responses outside this public checkout.
 
 ```sh
+python scripts/update_aa_benchmarks.py --key-file /private/path/to/key
+python scripts/sync_pricing_catalog.py
 python scripts/build_model_comparison.py
 python scripts/seo_check.py
 python scripts/test_model_comparison.py
 ```
 
-The renderer and SEO check require BeautifulSoup. Browser tests require
-Playwright with Chromium. Set `COMPARISON_TEST_OUTPUT` to an external artifact
-directory to save screenshots and the check report outside the checkout.
-Tests cover sorting, filters, selection, four locales, 320–1440px layouts and
-the no-JavaScript fallback, benchmark values/source variants and loaded logos.
-They make no model API calls.
+The AA updater fails closed if a stable ID disappears or changes its reviewed
+name/creator. All four pages link to Artificial Analysis for attribution.
+API documentation: https://artificialanalysis.ai/documentation.
+No browser requests to authenticated AA endpoints are made.
 
-Public Sans is self-hosted; its license is in `model-comparison/FONT-LICENSE.txt`.
-Canonical URLs, language alternates, structured data and the tracking bridge
-are preserved. Publishing these pages does not change the retired calculator
-routes or the Cloudflare Worker.
+Browser checks verify full pricing-page set equality, source/date display,
+metric units, null-last sorting, type filtering, four-model comparison,
+all logos, no-JavaScript fallback and widths from 320px to 1440px.
+Tests require Playwright/Chromium; renderer and SEO checks use BeautifulSoup.
+COMPARISON_TEST_OUTPUT can point to an artifact directory outside the checkout.
+
+The retired pricing-calculator routes and main-site navigation are not changed.

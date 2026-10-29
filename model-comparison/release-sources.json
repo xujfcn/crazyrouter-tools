@@ -1,0 +1,730 @@
+{
+  "MiniMax-M2.7": {
+    "date": "2026-03-18",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/minimax-m2-7",
+    "variant": "MiniMax-M2.7",
+    "verified": true
+  },
+  "claude-haiku-5-5": {
+    "date": "2026-10-07",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-haiku-5-5",
+    "variant": "Claude Haiku 5.5 (Max)",
+    "verified": true
+  },
+  "qwen-image-2.0": {
+    "date": "2026-03",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Qwen Image 2.0 (2026-03-03)",
+    "verified": true
+  },
+  "gpt-5.1-codex-mini": {
+    "date": "2025-11-13",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-1-codex-mini",
+    "variant": "GPT-5.1 Codex mini (High)",
+    "verified": true
+  },
+  "gemini-2.5-flash": {
+    "date": "2025-05-20",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-2-5-flash-reasoning",
+    "variant": "Gemini 2.5 Flash (Reasoning)",
+    "verified": true
+  },
+  "gpt-5-codex": {
+    "date": "2025-09-23",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-codex",
+    "variant": "GPT-5 Codex (High)",
+    "verified": true
+  },
+  "aigc-video-gv-3.1": {
+    "date": "2026-01",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+    "variant": "Veo 3.1",
+    "verified": true
+  },
+  "gpt-4o-mini": {
+    "date": "2024-07-18",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-4o-mini",
+    "variant": "GPT-4o mini",
+    "verified": true
+  },
+  "gemini-3-flash": {
+    "date": "2025-12-17",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-3-flash-reasoning",
+    "variant": "Gemini 3 Flash Preview (Reasoning)",
+    "verified": true
+  },
+  "o3": {
+    "date": "2025-04-16",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/o3",
+    "variant": "o3",
+    "verified": true
+  },
+  "gpt-6-astra": {
+    "date": "2026-09-03",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-6-astra",
+    "variant": "GPT-6 Astra (Max)",
+    "verified": true
+  },
+  "glm-5-turbo": {
+    "date": "2026-03-15",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/glm-5-turbo",
+    "variant": "GLM-5-Turbo",
+    "verified": true
+  },
+  "glm-5.3-flash": {
+    "date": "2026-08-26",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/glm-5-3-flash",
+    "variant": "GLM-5.3-Flash",
+    "verified": true
+  },
+  "gpt-5.4-pro": {
+    "date": "2026-03-05",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-4-pro",
+    "variant": "GPT-5.4 Pro (Xhigh)",
+    "verified": true
+  },
+  "gpt-image-2": {
+    "date": "2026-04",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "GPT Image 2 (high)",
+    "verified": true
+  },
+  "claude-sonnet-4-6": {
+    "date": "2026-02-17",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-sonnet-4-6-adaptive",
+    "variant": "Claude Sonnet 4.6 (Max)",
+    "verified": true
+  },
+  "claude-opus-4-5": {
+    "date": "2025-11-24",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-opus-4-5-thinking",
+    "variant": "Claude Opus 4.5 (Reasoning)",
+    "verified": true
+  },
+  "MiniMax-M3": {
+    "date": "2026-06-01",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/minimax-m3",
+    "variant": "MiniMax-M3",
+    "verified": true
+  },
+  "MiniMax-M2.5": {
+    "date": "2026-02-12",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/minimax-m2-5",
+    "variant": "MiniMax-M2.5",
+    "verified": true
+  },
+  "claude-opus-5-5": {
+    "date": "2026-09-22",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+    "variant": "Claude Opus 5.5 (Max, Default Fallback)",
+    "verified": true
+  },
+  "gpt-5.1-codex": {
+    "date": "2025-11-13",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-1-codex",
+    "variant": "GPT-5.1 Codex (High)",
+    "verified": true
+  },
+  "kimi-k2.5": {
+    "date": "2026-01-27",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/kimi-k2-5",
+    "variant": "Kimi K2.5 (Reasoning)",
+    "verified": true
+  },
+  "gpt-5.4-nano": {
+    "date": "2026-03-17",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-4-nano",
+    "variant": "GPT-5.4 nano (Xhigh)",
+    "verified": true
+  },
+  "gpt-6-sol": {
+    "date": "2026-09-22",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-6-sol",
+    "variant": "GPT-6 Sol (Max)",
+    "verified": true
+  },
+  "claude-sonnet-5-5": {
+    "date": "2026-09-28",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
+    "variant": "Claude Sonnet 5.5 (Max, Default Fallback)",
+    "verified": true
+  },
+  "deepseek-v4-flash": {
+    "date": "2026-07-31",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/deepseek-v4-flash",
+    "variant": "DeepSeek V4 Flash 0731 (Max)",
+    "verified": true
+  },
+  "glm-5.1": {
+    "date": "2026-04-07",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/glm-5-1",
+    "variant": "GLM-5.1 (Reasoning)",
+    "verified": true
+  },
+  "doubao-seedream-5-0-lite": {
+    "date": "2026-02",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Seedream 5.0 Lite",
+    "verified": true
+  },
+  "qwen3.7-plus": {
+    "date": "2026-06-01",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/qwen3-7-plus",
+    "variant": "Qwen3.7 Plus",
+    "verified": true
+  },
+  "gemini-3.1-pro": {
+    "date": "2026-02-19",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-3-1-pro-preview",
+    "variant": "Gemini 3.1 Pro Preview",
+    "verified": true
+  },
+  "qwen3.8-max": {
+    "date": "2026-09-02",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/qwen3-8-max",
+    "variant": "Qwen3.8 Max (0902)",
+    "verified": true
+  },
+  "grok-4.3": {
+    "date": "2026-04-30",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/grok-4-3",
+    "variant": "Grok 4.3 (High)",
+    "verified": true
+  },
+  "kimi-k2.7-code": {
+    "date": "2026-06-12",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/kimi-k2-7-code",
+    "variant": "Kimi K2.7 Code",
+    "verified": true
+  },
+  "gemini-3.8-flash": {
+    "date": "2026-09-02",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-3-8-flash",
+    "variant": "Gemini 3.8 Flash (High)",
+    "verified": true
+  },
+  "grok-4-20-reasoning": {
+    "date": "2026-04-07",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/grok-4-20",
+    "variant": "Grok 4.20 0309 v2 (Reasoning)",
+    "verified": true
+  },
+  "gpt-5.4": {
+    "date": "2026-03-05",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-4",
+    "variant": "GPT-5.4 (Xhigh)",
+    "verified": true
+  },
+  "glm-5": {
+    "date": "2026-02-11",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/glm-5",
+    "variant": "GLM-5 (Reasoning)",
+    "verified": true
+  },
+  "qwen-image-2.1-turbo": {
+    "date": "2026-10",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Qwen-Image-2.1-Turbo",
+    "verified": true
+  },
+  "doubao-seedream-5-0-pro": {
+    "date": "2026-07",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Seedream 5.0 Pro",
+    "verified": true
+  },
+  "gemini-3.7-flash": {
+    "date": "2026-08-13",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-3-7-flash",
+    "variant": "Gemini 3.7 Flash (High)",
+    "verified": true
+  },
+  "glm-5.3": {
+    "date": "2026-08-18",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/glm-5-3",
+    "variant": "GLM-5.3 (Max)",
+    "verified": true
+  },
+  "gpt-4.1": {
+    "date": "2025-04-14",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-4-1",
+    "variant": "GPT-4.1",
+    "verified": true
+  },
+  "gemini-2.5-pro": {
+    "date": "2025-06-05",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-2-5-pro",
+    "variant": "Gemini 2.5 Pro",
+    "verified": true
+  },
+  "nano-banana-2": {
+    "date": "2026-02",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Nano Banana 2 (Gemini 3.1 Flash Image)",
+    "verified": true
+  },
+  "claude-haiku-4-5": {
+    "date": "2025-10-15",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-4-5-haiku-reasoning",
+    "variant": "Claude 4.5 Haiku (Reasoning)",
+    "verified": true
+  },
+  "gpt-5.6-luna": {
+    "date": "2026-07-09",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-6-luna",
+    "variant": "GPT-5.6 Luna (Max)",
+    "verified": true
+  },
+  "gpt-image-2.5-sunburst": {
+    "date": "2026-09",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "GPT Image 2.5 Sunburst (max)",
+    "verified": true
+  },
+  "nano-banana": {
+    "date": "2025-08",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Nano Banana (Gemini 2.5 Flash Image)",
+    "verified": true
+  },
+  "gpt-4.1-nano": {
+    "date": "2025-04-14",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-4-1-nano",
+    "variant": "GPT-4.1 nano",
+    "verified": true
+  },
+  "claude-sonnet-4-5": {
+    "date": "2025-09-29",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-4-5-sonnet-thinking",
+    "variant": "Claude 4.5 Sonnet (Reasoning)",
+    "verified": true
+  },
+  "grok-4-1-fast-reasoning": {
+    "date": "2025-11-19",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/grok-4-1-fast-reasoning",
+    "variant": "Grok 4.1 Fast (Reasoning)",
+    "verified": true
+  },
+  "gpt-5.6-terra": {
+    "date": "2026-07-09",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-6-terra",
+    "variant": "GPT-5.6 Terra (Max)",
+    "verified": true
+  },
+  "claude-fable-5": {
+    "date": "2026-06-09",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-fable-5",
+    "variant": "Claude Fable 5 (Max, Opus 4.8 Fallback)",
+    "verified": true
+  },
+  "doubao-seedance-2-0": {
+    "date": "2026-03",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+    "variant": "Dreamina Seedance 2.0",
+    "verified": true
+  },
+  "kimi-k2.6": {
+    "date": "2026-04-20",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/kimi-k2-6",
+    "variant": "Kimi K2.6 (Reasoning)",
+    "verified": true
+  },
+  "claude-opus-4-6": {
+    "date": "2026-02-05",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-opus-4-6-adaptive",
+    "variant": "Claude Opus 4.6 (Max)",
+    "verified": true
+  },
+  "mimo-v2.6-flash": {
+    "date": "2026-09-21",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
+    "variant": "MiMo-V2.6-Flash",
+    "verified": true
+  },
+  "aigc-video-gv-3.1-lite": {
+    "date": "2026-03",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+    "variant": "Veo 3.1 Lite",
+    "verified": true
+  },
+  "nano-banana-pro": {
+    "date": "2025-11",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Nano Banana Pro (Gemini 3 Pro Image)",
+    "verified": true
+  },
+  "gpt-5.6-sol": {
+    "date": "2026-07-09",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-6-sol",
+    "variant": "GPT-5.6 Sol (Max)",
+    "verified": true
+  },
+  "gemini-4-argon": {
+    "date": "2026-09-30",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+    "variant": "Gemini 4 Argon (High)",
+    "verified": true
+  },
+  "gemini-3.5-flash": {
+    "date": "2026-05-19",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-3-5-flash",
+    "variant": "Gemini 3.5 Flash (High)",
+    "verified": true
+  },
+  "deepseek-v4-pro": {
+    "date": "2026-08-13",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/deepseek-v4-pro",
+    "variant": "DeepSeek V4 Pro 0813 (Max)",
+    "verified": true
+  },
+  "gpt-5.3-codex": {
+    "date": "2026-02-05",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-3-codex",
+    "variant": "GPT-5.3 Codex (Xhigh)",
+    "verified": true
+  },
+  "gpt-4.1-mini": {
+    "date": "2025-04-14",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-4-1-mini",
+    "variant": "GPT-4.1 mini",
+    "verified": true
+  },
+  "gpt-5.2": {
+    "date": "2025-12-11",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-2",
+    "variant": "GPT-5.2 (Xhigh)",
+    "verified": true
+  },
+  "claude-opus-4-8": {
+    "date": "2026-05-28",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-opus-4-8",
+    "variant": "Claude Opus 4.8 (Max)",
+    "verified": true
+  },
+  "gemini-2.5-flash-lite": {
+    "date": "2025-06-17",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-2-5-flash-lite-reasoning",
+    "variant": "Gemini 2.5 Flash-Lite (Reasoning)",
+    "verified": true
+  },
+  "gpt-5-mini": {
+    "date": "2025-08-07",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-mini",
+    "variant": "GPT-5 mini (High)",
+    "verified": true
+  },
+  "doubao-seedance-2-5": {
+    "date": "2026-07",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+    "variant": "Dreamina Seedance 2.5",
+    "verified": true
+  },
+  "kimi-k3": {
+    "date": "2026-07-16",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/kimi-k3",
+    "variant": "Kimi K3 (Max)",
+    "verified": true
+  },
+  "gpt-6.1-sol": {
+    "date": "2026-09-29",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-6-1-sol",
+    "variant": "GPT-6.1 Sol (Max)",
+    "verified": true
+  },
+  "gpt-6.1-terra": {
+    "date": "2026-10-26",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+    "variant": "GPT-6.1 Terra (Max)",
+    "verified": true
+  },
+  "gpt-5": {
+    "date": "2025-08-07",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5",
+    "variant": "GPT-5 (High)",
+    "verified": true
+  },
+  "doubao-seedream-4-5": {
+    "date": "2025-12",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Seedream 4.5",
+    "verified": true
+  },
+  "gpt-6-luna": {
+    "date": "2026-09-22",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-6-luna",
+    "variant": "GPT-6 Luna (Max)",
+    "verified": true
+  },
+  "gpt-5.2-codex": {
+    "date": "2025-12-11",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-2-codex",
+    "variant": "GPT-5.2 Codex (Xhigh)",
+    "verified": true
+  },
+  "claude-fable-5-1": {
+    "date": "2026-09-01",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-fable-5-1",
+    "variant": "Claude Fable 5.1 (Max, Default Fallback)",
+    "verified": true
+  },
+  "gpt-5.4-mini": {
+    "date": "2026-03-17",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-4-mini",
+    "variant": "GPT-5.4 mini (Xhigh)",
+    "verified": true
+  },
+  "gemini-3.1-flash-lite": {
+    "date": "2026-03-03",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gemini-3-1-flash-lite-preview",
+    "variant": "Gemini 3.1 Flash-Lite",
+    "verified": true
+  },
+  "claude-opus-5": {
+    "date": "2026-07-24",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-opus-5",
+    "variant": "Claude Opus 5 (Max)",
+    "verified": true
+  },
+  "gpt-5.1": {
+    "date": "2025-11-13",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-1",
+    "variant": "GPT-5.1 (High)",
+    "verified": true
+  },
+  "gpt-5.5": {
+    "date": "2026-04-23",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-5",
+    "variant": "GPT-5.5 (Xhigh)",
+    "verified": true
+  },
+  "qwen3.7-max": {
+    "date": "2026-05-19",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/qwen3-7-max",
+    "variant": "Qwen3.7 Max",
+    "verified": true
+  },
+  "grok-4-20-non-reasoning": {
+    "date": "2026-04-07",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/grok-4-20-non-reasoning",
+    "variant": "Grok 4.20 0309 v2 (Non-reasoning)",
+    "verified": true
+  },
+  "qwen3.6-plus": {
+    "date": "2026-04-02",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/qwen3-6-plus",
+    "variant": "Qwen3.6 Plus",
+    "verified": true
+  },
+  "pixverse-video-v6.0": {
+    "date": "2026-03",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+    "variant": "PixVerse V6",
+    "verified": true
+  },
+  "kimi-k3.1-pro": {
+    "date": "2026-10-23",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+    "variant": "Kimi K3.1 Pro",
+    "verified": true
+  },
+  "claude-sonnet-5": {
+    "date": "2026-06-30",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-sonnet-5",
+    "variant": "Claude Sonnet 5 (Max)",
+    "verified": true
+  },
+  "gpt-5-nano": {
+    "date": "2025-08-07",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-5-nano",
+    "variant": "GPT-5 nano (High)",
+    "verified": true
+  },
+  "qwen-image-2.1-pro": {
+    "date": "2026-10",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Qwen-Image-2.1-Pro",
+    "verified": true
+  },
+  "grok-4.6": {
+    "date": "2026-08-12",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/grok-4-6",
+    "variant": "Grok 4.6 (High)",
+    "verified": true
+  },
+  "gpt-image-2.5-flare": {
+    "date": "2026-09",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "GPT Image 2.5 Flare (max)",
+    "verified": true
+  },
+  "gpt-image-1.5": {
+    "date": "2025-12",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "GPT Image 1.5 (high)",
+    "verified": true
+  },
+  "gpt-4o": {
+    "date": "2024-11-20",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/gpt-4o",
+    "variant": "GPT-4o (Nov '24)",
+    "verified": true
+  },
+  "mimo-v2.5-pro": {
+    "date": "2026-04-22",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+    "variant": "MiMo-V2.5-Pro (Reasoning)",
+    "verified": true
+  },
+  "glm-5v-turbo": {
+    "date": "2026-04-01",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/glm-5v-turbo",
+    "variant": "GLM 5V Turbo (Reasoning)",
+    "verified": true
+  },
+  "claude-opus-4-7": {
+    "date": "2026-04-16",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/claude-opus-4-7",
+    "variant": "Claude Opus 4.7 (Max)",
+    "verified": true
+  },
+  "deepseek-v4.1-flash": {
+    "date": "2026-09-10",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+    "variant": "DeepSeek V4.1 Flash (Max)",
+    "verified": true
+  },
+  "mimo-v2.6-pro": {
+    "date": "2026-09-21",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+    "variant": "MiMo-V2.6-Pro",
+    "verified": true
+  },
+  "aigc-video-kling-3.0": {
+    "date": "2026-02",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+    "variant": "Kling 3.0 1080p (Pro)",
+    "verified": true
+  },
+  "aigc-video-gv-3.1-fast": {
+    "date": "2026-01",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/video/leaderboard/text-to-video",
+    "variant": "Veo 3.1 Fast",
+    "verified": true
+  },
+  "glm-5.2": {
+    "date": "2026-06-16",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/models/glm-5-2",
+    "variant": "GLM-5.2 (Max)",
+    "verified": true
+  },
+  "nano-banana-2.1": {
+    "date": "2026-10",
+    "source": "Artificial Analysis",
+    "url": "https://artificialanalysis.ai/text-to-image",
+    "variant": "Nano Banana 2.1",
+    "verified": true
+  }
+}

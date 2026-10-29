@@ -1,3 +1,39 @@
+/* Full public catalogue: keep dates readable and price units independent. */
+.release-col {
+  width: 135px;
+}
+.release-cell {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.billing-col {
+  width: 145px;
+}
+.billing-cell {
+  font-size: 11px;
+  line-height: 1.6;
+}
+#modelTable .price-col {
+  width: 115px;
+}
+#modelTable .benchmark-col {
+  width: 185px;
+}
+#modelTable .model-col {
+  width: 260px;
+}
+@media (max-width: 640px) {
+  #modelTable .model-col {
+    width: 172px;
+  }
+  .release-col {
+    width: 125px;
+  }
+  #modelTable .benchmark-col {
+    width: 160px;
+  }
+}
 @font-face {
   font-family: Public Sans;
   src: url('./public-sans-latin.woff2') format('woff2');
@@ -258,9 +294,7 @@ button:not(:disabled):active {
 }
 .filters {
   display: grid;
-  grid-template-columns:
-    minmax(240px, 1.8fr) minmax(170px, 1fr) minmax(180px, 1fr)
-    auto;
+  grid-template-columns: minmax(220px, 1.7fr) repeat(2, minmax(150px, 1fr));
   gap: 15px;
   align-items: end;
   padding: 0 26px 22px;
@@ -536,7 +570,7 @@ input[type='checkbox'] {
   font-size: 12px;
 }
 #modelTable {
-  min-width: 980px;
+  min-width: 1100px;
 }
 @media (max-width: 640px) {
   .benchmark-notice {
@@ -552,7 +586,7 @@ input[type='checkbox'] {
     width: 165px;
   }
   #modelTable {
-    min-width: 790px;
+    min-width: 1000px;
   }
 }
 .model-name {

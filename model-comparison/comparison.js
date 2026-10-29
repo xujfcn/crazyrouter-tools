@@ -10,8 +10,8 @@
     numeric: true,
   });
   const number = new Intl.NumberFormat('en-US', { maximumFractionDigits: 6 });
-  let sortKey = 'input',
-    sortDirection = 1,
+  let sortKey = 'releaseDate',
+    sortDirection = -1,
     comparing = false;
   const escape = (value) =>
     String(value).replace(
@@ -25,7 +25,24 @@
           "'": '&#39;',
         })[char],
     );
-  const priced = (model) => model.input !== null && model.output !== null;
+  const priced = (model) => model.input !== null;
+  const metricKeys = {
+    gpqa: 'gpqa',
+    artificial_analysis_intelligence_index: 'intelligence',
+    mmlu_pro: 'mmlu',
+    livecodebench: 'coding',
+  };
+  const pricingUrl = (model) =>
+    model.pricingUrl.replace(
+      '/zh/',
+      document.documentElement.lang === 'zh' ? '/zh/' : '/en/',
+    );
+  const release = (model) =>
+    model.release
+      ? `<time datetime="${escape(model.releaseDate)}">${escape(model.releaseDate)}</time><a class="source-link secondary" href="${escape(model.release.url)}" title="${escape(model.release.variant)}" target="_blank" rel="noopener noreferrer">${escape(t.releaseReference)} ↗</a>`
+      : `<span class="unavailable">${escape(t.releasePending)}</span>`;
+  const billing = (model) =>
+    `${model.requestPrice !== null ? price(model.requestPrice) + ' · ' : ''}<span>${escape(t[model.billingMode] || model.billingMode)}</span><a class="source-link" href="${escape(pricingUrl(model))}" target="_blank" rel="noopener noreferrer">${escape(t.pricingDetails)} ↗</a>`;
   const price = (value) =>
     value === null
       ? `<span class="unavailable">${escape(t.unavailable)}</span>`
@@ -36,7 +53,7 @@
     const value = model.benchmark?.scores[key];
     return value == null
       ? `<span class="unavailable">${escape(t.unavailable)}</span>`
-      : `<span class="benchmark-score">${(value * 100).toFixed(1)}<small>%</small></span>`;
+      : `<span class="benchmark-score">${(value * (key === 'artificial_analysis_intelligence_index' ? 1 : 100)).toFixed(1)}${key === 'artificial_analysis_intelligence_index' ? '' : '<small>%</small>'}</span>`;
   };
   const variant = (model) =>
     model.benchmark
@@ -52,8 +69,10 @@
       .filter((model) => {
         const provider = $('providerFilter').value;
         const availability = $('priceFilter').value;
+        const category = $('categoryFilter').value;
         return (
           (provider === 'all' || model.provider === provider) &&
+          (category === 'all' || model.category === category) &&
           (availability === 'all' ||
             (availability === 'available') === priced(model)) &&
           (!query ||
@@ -77,17 +96,19 @@
 
   function renderRows() {
     const list = filtered();
+    const metric = $('metricFilter').value;
     $('tbody').innerHTML = list
       .map(
         (
           model,
         ) => `<tr${selected.has(model.name) ? ' class="is-selected"' : ''}>
       <td class="select-col"><label class="selection-hit"><input type="checkbox" data-name="${escape(model.name)}" aria-label="${escape(t.select + ' ' + model.name)}" ${selected.has(model.name) ? 'checked' : ''} ${selected.size >= 4 && !selected.has(model.name) ? 'disabled' : ''}></label></td>
-      <td class="model-col"><div class="model-cell">${mark(model)}<div class="model-name">${escape(model.name)}<span class="model-provider">${escape(providers[model.provider].name)}</span></div></div></td>
-      <td class="benchmark-cell" data-score="${model.gpqa === null ? '' : model.gpqa}">${score(model, 'gpqa')}${variant(model)}</td>
+      <td class="model-col"><div class="model-cell">${mark(model)}<div class="model-name">${escape(model.name)}<span class="model-provider">${escape(providers[model.provider].name)} · ${escape(t[model.category])}</span></div></div></td>
+      <td class="release-cell" data-release="${escape(model.releaseDate || '')}">${release(model)}</td>
+      <td class="benchmark-cell" data-score="${model[metric] === null ? '' : model[metric]}">${score(model, metric)}${model.benchmark ? variant(model) : ''}</td>
       <td data-price="${model.input === null ? '' : model.input}">${price(model.input)}</td>
       <td data-price="${model.output === null ? '' : model.output}">${price(model.output)}</td>
-      <td>${priced(model) ? `<a class="source-link" href="${source}" target="_blank" rel="noopener noreferrer">${escape(t.priceSource)} ↗</a>` : ''}<a class="source-link secondary" href="${providers[model.provider].url}" target="_blank" rel="noopener noreferrer">${escape(t.providerDocs)} ↗</a></td>
+      <td class="billing-cell">${billing(model)}</td>
     </tr>`,
       )
       .join('');
@@ -139,16 +160,20 @@
     $('comparisonTable').style.minWidth = `${180 + list.length * 220}px`;
     $('comparisonTable').innerHTML =
       `<caption class="sr-only">${escape(t.compareTitle)}</caption><thead><tr><th scope="col">${escape(t.metric)}</th>${list.map((model) => `<th scope="col"><div class="compare-model-top">${mark(model)}<button class="remove-model" type="button" data-remove="${escape(model.name)}" aria-label="${escape(t.remove + ' ' + model.name)}">×</button></div><span class="compare-model">${escape(model.name)}</span><span class="model-provider">${escape(providers[model.provider].name)}</span></th>`).join('')}</tr></thead><tbody>
+      ${field(t.releaseDate, (model) => release(model))}
+      ${field(t.category, (model) => escape(t[model.category]))}
       ${field(t.input, (model) => price(model.input))}
       ${field(t.output, (model) => price(model.output))}
+      ${field(t.billing, (model) => billing(model))}
+      ${field(t.intelligence, (model) => score(model, 'artificial_analysis_intelligence_index'))}
       ${field(t.gpqa, (model) => score(model, 'gpqa'))}
       ${field(t.mmlu, (model) => score(model, 'mmlu_pro'))}
       ${field(t.coding, (model) => score(model, 'livecodebench'))}
       ${field(t.benchmarkVariant, (model) => variant(model))}
       ${field(t.benchmarkDate, () => escape(data.benchmarkDate))}
       ${field(t.modelId, (model) => (model.modelId ? `<code>${escape(model.modelId)}</code>` : `<span class="unavailable">${escape(t.unavailable)}</span>`))}
-      ${field(t.snapshot, (model) => (priced(model) ? snapshotDate : `<span class="unavailable">${escape(t.unavailable)}</span>`))}
-      ${field(t.sources, (model) => `${priced(model) ? `<a class="source-link" href="${source}" target="_blank" rel="noopener noreferrer">${escape(t.priceSource)} ↗</a>` : ''}<a class="source-link secondary" href="${providers[model.provider].url}" target="_blank" rel="noopener noreferrer">${escape(t.providerDocs)} ↗</a>`)}
+      ${field(t.snapshot, () => snapshotDate)}
+      ${field(t.sources, (model) => `<a class="source-link" href="${escape(pricingUrl(model))}" target="_blank" rel="noopener noreferrer">${escape(t.pricingDetails)} ↗</a>${model.benchmark ? variant(model) : ''}`)}
       </tbody>`;
   }
 
@@ -211,7 +236,11 @@
     button.addEventListener('click', () => {
       const key = button.closest('th').dataset.sort;
       sortDirection =
-        sortKey === key ? -sortDirection : key === 'gpqa' ? -1 : 1;
+        sortKey === key
+          ? -sortDirection
+          : key === 'releaseDate' || key in metricKeys
+            ? -1
+            : 1;
       sortKey = key;
       renderRows();
       $('tableScroll').scrollTop = 0;
@@ -225,12 +254,25 @@
     $('search').value = '';
     $('providerFilter').value = 'all';
     $('priceFilter').value = 'all';
+    $('categoryFilter').value = 'all';
     filterChanged();
     $('search').focus();
   }
   $('search').addEventListener('input', filterChanged);
   $('providerFilter').addEventListener('change', filterChanged);
   $('priceFilter').addEventListener('change', filterChanged);
+  $('categoryFilter').addEventListener('change', filterChanged);
+  $('metricFilter').addEventListener('change', () => {
+    const metric = $('metricFilter').value;
+    $('scoreHeader').dataset.sort = metric;
+    $('scoreLabel').textContent = t[metricKeys[metric]];
+    $('scoreUnit').textContent =
+      metric === 'artificial_analysis_intelligence_index'
+        ? t.indexUnit
+        : t.scoreLabel;
+    if (sortKey in metricKeys) sortKey = metric;
+    filterChanged();
+  });
   $('resetFilters').addEventListener('click', resetFilters);
   $('emptyReset').addEventListener('click', resetFilters);
   document.documentElement.classList.add('js-ready');
